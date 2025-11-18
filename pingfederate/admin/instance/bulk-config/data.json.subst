@@ -650,8 +650,8 @@
                         }
                     ]
                 },
-                "name": "TOKENPROCESSOR",
-                "id": "TOKENPROCESSOR",
+                "name": "PFTOKENPROCESSOR",
+                "id": "PFTOKENPROCESSOR",
                 "lastModified": "2025-11-18T02:52:18.346Z",
                 "pluginDescriptorRef": {
                     "location": "https://localhost:-1/pf-admin-api/v1/idp/tokenProcessors/descriptors/org.sourceid.wstrust.processor.oauth.BearerAccessTokenTokenProcessor",
@@ -836,15 +836,15 @@
                         "value": "sub"
                     }},
                     "actorTokenProcessor": {
-                        "location": "https://localhost:-1/pf-admin-api/v1/idp/tokenProcessors/TOKENPROCESSOR",
-                        "id": "TOKENPROCESSOR"
+                        "location": "https://localhost:-1/pf-admin-api/v1/idp/tokenProcessors/PFTOKENPROCESSOR",
+                        "id": "PFTOKENPROCESSOR"
                     },
                     "actorTokenType": "urn:ietf:params:oauth:token-type:access_token",
                     "attributeSources": [],
                     "issuanceCriteria": {"conditionalCriteria": []},
                     "subjectTokenProcessor": {
-                        "location": "https://localhost:-1/pf-admin-api/v1/idp/tokenProcessors/TOKENPROCESSOR",
-                        "id": "TOKENPROCESSOR"
+                        "location": "https://localhost:-1/pf-admin-api/v1/idp/tokenProcessors/PFTOKENPROCESSOR",
+                        "id": "PFTOKENPROCESSOR"
                     }
                 }],
                 "actorTokenRequired": false,
