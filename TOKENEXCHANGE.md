@@ -42,6 +42,50 @@ curl --location 'https://engine.ping.darkedges.com/as/token.oauth2' \
     --data-urlencode 'scope=openid profile email'
 ```
 
+returns
+
+```json
+{
+    "access_token": "eyJhbGciOiJSUzI1NiIsImtpZCI6IjNzYnNsNl9MUGxyMS1ST0VfdjJYeWNiZWdpMF9SUzI1NiIsInBpLmF0bSI6IjRld3AifQ.eyJzY29wZSI6Im9wZW5pZCBwcm9maWxlIGVtYWlsIiwiYXV0aG9yaXphdGlvbl9kZXRhaWxzIjpbXSwiY2xpZW50X2lkIjoidG9rZW5leGNoYW5nZWNsaWVudCIsImlhdCI6MTc2MzQ0MzUxNiwianRpIjoiekJObVBydkJBa3M2SUJhdkFaM2FwbCIsInN1YiI6IjBCVVRmT0tmS2JDaTJSZjRTLWtyTmNGUVVBSjJSNFlESXFmOFh2bDVuSzQiLCJlbWFpbCI6Im5pcnZpbmd1a0Bob3RtYWlsLmNvbSIsImV4cCI6MTc2MzQ1MDcxNn0.XtcpBxZvyZWUVtk5Daa6D07vO_tuaJ7AgrQ_CYeNlgE0Y7m4xzQyKgtdeBIIrnTECvdxUAgwIQqy42wHKFdF4fHldSIQlZQ6Upv7AOMPVWLFDcFLWixZHNZ0sGzRHqxB7V1l-OM-cU7yJvfCgJcC466juLUB1rMPDvXI8g3X9-CvLH84k-eI0uzK4uyFiqj2sInwQqCoIlefxANelZl6LkVW4eceZDx1tUssZHT6qfd86qSdAI4qnP8p2uZiz9thUlmLdimwpTqIAyUQEFNIlQJrOUGP5ks46jy84SOZy8p7vMCn14FD8Fu2b2wN-b78CRPtpOcY7EckYRTnhhnNTQ",
+    "sub": "0BUTfOKfKbCi2Rf4S-krNcFQUAJ2R4YDIqf8Xvl5nK4",
+    "issued_token_type": "urn:ietf:params:oauth:token-type:access_token",
+    "id_token": "eyJhbGciOiJSUzI1NiIsImtpZCI6IjNzYnNsNl9MUGxyMS1ST0VfdjJYeWNiZWdpMF9SUzI1NiJ9.eyJzdWIiOiIwQlVUZk9LZktiQ2kyUmY0Uy1rck5jRlFVQUoyUjRZRElxZjhYdmw1bks0IiwiYXVkIjoidG9rZW5leGNoYW5nZWNsaWVudCIsImp0aSI6IjBZUk93RVNjRmRrcUtFVEhIcmo2V3YiLCJpc3MiOiJodHRwczovL2VuZ2luZS5waW5nLmRhcmtlZGdlcy5jb20iLCJpYXQiOjE3NjM0NDM1MTYsImV4cCI6MTc2MzQ0MzgxNiwiZW1haWwiOiJuaXJ2aW5ndWtAaG90bWFpbC5jb20ifQ.LuRslU69TwkX9XqCBFiadEzwsUXI9ztwWXJjDrmhUyarPPK8D4ZBqfDkG4vYIT3-Ole4QGGxw818FYVtKq6ocGgTrh3WmUaWfkXitpQGYnNhXHZqz91EwbCoth4-IVUZcNmUU9vy1K5BgVrEgnkR5Lyf0bF7AtVSbzA6yOl9Aeb2lLYTfBAPiuu9xYWqpTzJiE225pjQQuYPkrUje2g7m9_yDDF574-wROpvhx2DJxSDJJvnxGxzQJpxTz0adAbkG4r7sYkv9EUWue6hvbBREsi7L9Jmt_dxZ-fCPDBEsYCqqR9coC8V0P2dqmGZrzjKpK6IWuMLFQeOVQDVMHRZKQ",
+    "token_type": "Bearer",
+    "expires_in": 7199,
+    "email": "nirvinguk@hotmail.com"
+}
+```
+
+### Decoded Access Token
+
+```json
+{
+  "scope": "openid profile email",
+  "authorization_details": [],
+  "client_id": "tokenexchangeclient",
+  "iat": 1763443516,
+  "jti": "zBNmPrvBAks6IBavAZ3apl",
+  "sub": "0BUTfOKfKbCi2Rf4S-krNcFQUAJ2R4YDIqf8Xvl5nK4",
+  "email": "nirvinguk@hotmail.com",
+  "exp": 1763450716
+}
+```
+
+### Decoded Identity Token
+
+```json
+{
+  "sub": "0BUTfOKfKbCi2Rf4S-krNcFQUAJ2R4YDIqf8Xvl5nK4",
+  "aud": "tokenexchangeclient",
+  "jti": "0YROwEScFdkqKETHHrj6Wv",
+  "iss": "https://engine.ping.darkedges.com",
+  "iat": 1763443516,
+  "exp": 1763443816,
+  "email": "nirvinguk@hotmail.com"
+}
+```
+
+
 ## Authentication
 
 ![alt text](images/image.png)
