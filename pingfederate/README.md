@@ -55,6 +55,12 @@ The `bulk-export/shared/` directory contains exportable configurations:
 - **data.json.subst**: Template version for environment-specific deployments
 - **env_vars**: Variable placeholders for secure credential management
 
+```bash
+curl --location --request GET 'https:/admin.ping.darkedges.com/pf-admin-api/v1/bulk/export' --header 'X-XSRF-Header: PingFederate' --user "administrator:2FederateM0re" -k > bulk-export/shared/data.json
+docker run --rm -v $PWD/bulk-export/shared:/shared darkedges/ping-bulkexport-tools:latest /shared/pf-config.json /shared/data.json /shared/env_vars /shared/data.json.subst > bulk-export/shared/convert.log
+cp bulk-export/shared/data.json.subst admin/instance/bulk-config/
+```
+
 ### Helm Deployment
 
 See the [helm/README.md](helm/README.md) for detailed deployment instructions.
