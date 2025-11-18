@@ -863,7 +863,18 @@
                 "allowUnidentifiedClientROCreds": false,
                 "persistentGrantLifetimeUnit": "DAYS",
                 "activationCodeCheckMode": "AFTER_AUTHENTICATION",
-                "scopes": [],
+                "scopes": [
+                    {
+                        "name": "email",
+                        "description": "email",
+                        "dynamic": false
+                    },
+                    {
+                        "name": "profile",
+                        "description": "profile",
+                        "dynamic": false
+                    }
+                ],
                 "enableCookielessUserAuthorizationAuthenticationApi": false,
                 "scopeForOAuthGrantManagement": "",
                 "exclusiveScopes": [],
@@ -1025,7 +1036,9 @@
                             "multiValued": false
                         },
                         {
+                            "includeInUserInfo": false,
                             "name": "email",
+                            "includeInIdToken": true,
                             "multiValued": false
                         },
                         {
@@ -1076,7 +1089,7 @@
                 "allowIdTokenIntrospection": false,
                 "id": "OPENIDCONNECTPOLICYMANAGEMENT",
                 "reissueIdTokenInHybridFlow": false,
-                "lastModified": "2025-11-18T04:35:19.777Z",
+                "lastModified": "2025-11-18T04:40:24.748Z",
                 "idTokenLifetime": 5,
                 "accessTokenManagerRef": {
                     "location": "https://localhost:-1/pf-admin-api/v1/oauth/accessTokenManagers/AccessTokenManagement",
