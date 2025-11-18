@@ -61,6 +61,12 @@ docker run --rm -v $PWD/bulk-export/shared:/shared darkedges/ping-bulkexport-too
 cp bulk-export/shared/data.json.subst admin/instance/bulk-config/
 ```
 
+### Restart Pod
+
+```bash
+kubectl delete pod -l app.kubernetes.io/name=pingfederate-admin   
+```
+
 ### Helm Deployment
 
 See the [helm/README.md](helm/README.md) for detailed deployment instructions.

@@ -158,7 +158,7 @@
                 "name": "ProvisionerDS (sa)",
                 "connectionUrl": "jdbc:hsqldb:${pf.server.data.dir}${/}hypersonic${/}ProvisionerDefaultDB;hsqldb.lock_file=false",
                 "id": "ProvisionerDS",
-                "lastModified": "2025-11-18T02:19:26.863Z",
+                "lastModified": "2025-11-18T03:29:07.068Z",
                 "maxPoolSize": 100,
                 "blockingTimeout": 5000
             }],
@@ -341,11 +341,11 @@
             "items": [{
                 "password": "${PING_IDENTITY_PASSWORD}",
                 "roles": [
-                    "EXPRESSION_ADMINISTRATOR",
+                    "ADMINISTRATOR",
+                    "USER_ADMINISTRATOR",
                     "DATA_COLLECTION_ADMINISTRATOR",
                     "CRYPTO_ADMINISTRATOR",
-                    "ADMINISTRATOR",
-                    "USER_ADMINISTRATOR"
+                    "EXPRESSION_ADMINISTRATOR"
                 ],
                 "auditor": false,
                 "description": "Initial administrator user",
@@ -503,7 +503,7 @@
                         },
                         {
                             "name": "Include X.509 Thumbprint Header Parameter",
-                            "value": ""
+                            "value": "false"
                         },
                         {
                             "name": "Default JWKS URL Cache Duration",
@@ -515,7 +515,7 @@
                         },
                         {
                             "name": "Include JWE X.509 Thumbprint Header Parameter",
-                            "value": ""
+                            "value": "false"
                         },
                         {
                             "name": "Client ID Claim Name",
@@ -571,11 +571,11 @@
                         },
                         {
                             "name": "Publish Key ID X.509 URL",
-                            "value": ""
+                            "value": "false"
                         },
                         {
                             "name": "Publish Thumbprint X.509 URL",
-                            "value": ""
+                            "value": "false"
                         },
                         {
                             "name": "Expand Scope Groups",
@@ -597,7 +597,7 @@
                 },
                 "name": "AccessTokenManagement",
                 "id": "AccessTokenManagement",
-                "lastModified": "2025-11-18T02:47:24.777Z",
+                "lastModified": "2025-11-18T03:29:07.399Z",
                 "pluginDescriptorRef": {
                     "location": "https://localhost:-1/pf-admin-api/v1/oauth/accessTokenManagers/descriptors/com.pingidentity.pf.access.token.management.plugins.JwtBearerAccessTokenManagementPlugin",
                     "id": "com.pingidentity.pf.access.token.management.plugins.JwtBearerAccessTokenManagementPlugin"
@@ -636,61 +636,147 @@
         },
         {
             "operationType": "SAVE",
-            "items": [{
-                "configuration": {
-                    "tables": [],
-                    "fields": [
-                        {
-                            "name": "Access Token Manager",
-                            "value": "AccessTokenManagement"
-                        },
-                        {
-                            "name": "Scope value as single string",
-                            "value": "false"
-                        }
-                    ]
+            "items": [
+                {
+                    "configuration": {
+                        "tables": [
+                            {
+                                "name": "Allowed Issuers",
+                                "rows": [{
+                                    "defaultRow": false,
+                                    "fields": [
+                                        {
+                                            "name": "Issuer",
+                                            "value": "https://sts.windows.net/4161be3f-bf2b-41d4-a02b-e6f82b529d53/"
+                                        },
+                                        {
+                                            "name": "JWKS URL",
+                                            "value": "https://login.microsoftonline.com/common/discovery/keys"
+                                        },
+                                        {
+                                            "name": "JWKS",
+                                            "value": ""
+                                        }
+                                    ]
+                                }]
+                            },
+                            {
+                                "name": "Allowed Audiences",
+                                "rows": [{
+                                    "defaultRow": false,
+                                    "fields": [{
+                                        "name": "Audience",
+                                        "value": "https://fram.connectid.darkedges.com/openam/oauth2"
+                                    }]
+                                }]
+                            }
+                        ],
+                        "fields": [
+                            {
+                                "name": "Require Audience",
+                                "value": "true"
+                            },
+                            {
+                                "name": "Require Expiration Time",
+                                "value": "true"
+                            },
+                            {
+                                "name": "Require Issued At Time",
+                                "value": "false"
+                            },
+                            {
+                                "name": "Require Not Before Time",
+                                "value": "false"
+                            },
+                            {
+                                "name": "Default Cache Duration",
+                                "value": "720"
+                            },
+                            {
+                                "name": "Allowed Clock Skew",
+                                "value": "0"
+                            },
+                            {
+                                "name": "Max Future Validity",
+                                "value": ""
+                            }
+                        ]
+                    },
+                    "name": "MSFTTOKENPROCESSOR",
+                    "id": "MSFTTOKENPROCESSOR",
+                    "lastModified": "2025-11-18T03:35:33.160Z",
+                    "pluginDescriptorRef": {
+                        "location": "https://localhost:-1/pf-admin-api/v1/idp/tokenProcessors/descriptors/com.pingidentity.pf.tokenprocessors.jwt.JwtTokenProcessor",
+                        "id": "com.pingidentity.pf.tokenprocessors.jwt.JwtTokenProcessor"
+                    },
+                    "attributeContract": {
+                        "maskOgnlValues": false,
+                        "coreAttributes": [{
+                            "masked": false,
+                            "name": "sub"
+                        }],
+                        "extendedAttributes": [{
+                            "masked": false,
+                            "name": "email"
+                        }]
+                    }
                 },
-                "name": "PFTOKENPROCESSOR",
-                "id": "PFTOKENPROCESSOR",
-                "lastModified": "2025-11-18T02:52:18.346Z",
-                "pluginDescriptorRef": {
-                    "location": "https://localhost:-1/pf-admin-api/v1/idp/tokenProcessors/descriptors/org.sourceid.wstrust.processor.oauth.BearerAccessTokenTokenProcessor",
-                    "id": "org.sourceid.wstrust.processor.oauth.BearerAccessTokenTokenProcessor"
-                },
-                "attributeContract": {
-                    "maskOgnlValues": false,
-                    "coreAttributes": [
-                        {
+                {
+                    "configuration": {
+                        "tables": [],
+                        "fields": [
+                            {
+                                "name": "Access Token Manager",
+                                "value": "AccessTokenManagement"
+                            },
+                            {
+                                "name": "Scope value as single string",
+                                "value": "false"
+                            }
+                        ]
+                    },
+                    "name": "PFTOKENPROCESSOR",
+                    "id": "PFTOKENPROCESSOR",
+                    "lastModified": "2025-11-18T03:29:07.408Z",
+                    "pluginDescriptorRef": {
+                        "location": "https://localhost:-1/pf-admin-api/v1/idp/tokenProcessors/descriptors/org.sourceid.wstrust.processor.oauth.BearerAccessTokenTokenProcessor",
+                        "id": "org.sourceid.wstrust.processor.oauth.BearerAccessTokenTokenProcessor"
+                    },
+                    "attributeContract": {
+                        "maskOgnlValues": false,
+                        "coreAttributes": [
+                            {
+                                "masked": false,
+                                "name": "aud"
+                            },
+                            {
+                                "masked": false,
+                                "name": "expires_at"
+                            },
+                            {
+                                "masked": false,
+                                "name": "authorization_details"
+                            },
+                            {
+                                "masked": false,
+                                "name": "scope"
+                            },
+                            {
+                                "masked": false,
+                                "name": "iss"
+                            },
+                            {
+                                "masked": false,
+                                "name": "client_id"
+                            }
+                        ],
+                        "extendedAttributes": [{
                             "masked": false,
-                            "name": "aud"
-                        },
-                        {
-                            "masked": false,
-                            "name": "expires_at"
-                        },
-                        {
-                            "masked": false,
-                            "name": "authorization_details"
-                        },
-                        {
-                            "masked": false,
-                            "name": "scope"
-                        },
-                        {
-                            "masked": false,
-                            "name": "iss"
-                        },
-                        {
-                            "masked": false,
-                            "name": "client_id"
-                        }
-                    ],
-                    "extendedAttributes": [{
-                        "masked": false,
-                        "name": "sub"
-                    }]
+                            "name": "sub"
+                        }]
+                    }
                 }
-            }],
+            ],
             "resourceType": "/idp/tokenProcessors"
         },
         {
@@ -843,8 +929,8 @@
                     "attributeSources": [],
                     "issuanceCriteria": {"conditionalCriteria": []},
                     "subjectTokenProcessor": {
-                        "location": "https://localhost:-1/pf-admin-api/v1/idp/tokenProcessors/PFTOKENPROCESSOR",
-                        "id": "PFTOKENPROCESSOR"
+                        "location": "https://localhost:-1/pf-admin-api/v1/idp/tokenProcessors/MSFTTOKENPROCESSOR",
+                        "id": "MSFTTOKENPROCESSOR"
                     }
                 }],
                 "actorTokenRequired": false,
@@ -876,7 +962,6 @@
                 "persistentGrantReuseType": "SERVER_DEFAULT",
                 "persistentGrantIdleTimeoutType": "SERVER_DEFAULT",
                 "requireSignedRequests": false,
-                "description": "",
                 "persistentGrantIdleTimeout": 0,
                 "enabled": true,
                 "requireOfflineAccessScopeToIssueRefreshTokens": "SERVER_DEFAULT",
@@ -903,23 +988,22 @@
                 "allowAuthenticationApiInit": false,
                 "refreshTokenRollingGracePeriodType": "SERVER_DEFAULT",
                 "replicationStatus": "REPLICATED",
-                "creationDate": "2025-11-18T03:04:58.482Z",
+                "creationDate": "2025-11-18T03:29:07.619Z",
                 "deviceFlowSettingType": "SERVER_DEFAULT",
                 "redirectUris": [],
-                "logoUrl": "",
                 "authorizationDetailTypes": [],
                 "grantTypes": [
                     "CLIENT_CREDENTIALS",
                     "TOKEN_EXCHANGE"
                 ],
-                "modificationDate": "2025-11-18T03:04:58.482Z",
+                "modificationDate": "2025-11-18T03:29:07.619Z",
                 "defaultAccessTokenManagerRef": {
                     "location": "https://localhost:-1/pf-admin-api/v1/oauth/accessTokenManagers/AccessTokenManagement",
                     "id": "AccessTokenManagement"
                 },
                 "clientSecretRetentionPeriodType": "SERVER_DEFAULT",
                 "requirePushedAuthorizationRequests": false,
-                "clientSecretChangedTime": "2025-11-18T03:04:58.000Z",
+                "clientSecretChangedTime": "2025-11-18T03:29:07.000Z",
                 "name": "tokenexchangeclient",
                 "refreshTokenRollingIntervalType": "SERVER_DEFAULT",
                 "persistentGrantExpirationType": "SERVER_DEFAULT",
