@@ -604,7 +604,7 @@
                 },
                 "name": "AccessTokenManagement",
                 "id": "AccessTokenManagement",
-                "lastModified": "2025-11-18T04:24:01.145Z",
+                "lastModified": "2025-11-18T04:34:19.798Z",
                 "pluginDescriptorRef": {
                     "location": "https://localhost:-1/pf-admin-api/v1/oauth/accessTokenManagers/descriptors/com.pingidentity.pf.access.token.management.plugins.JwtBearerAccessTokenManagementPlugin",
                     "id": "com.pingidentity.pf.access.token.management.plugins.JwtBearerAccessTokenManagementPlugin"
@@ -615,10 +615,16 @@
                 },
                 "attributeContract": {
                     "coreAttributes": [],
-                    "extendedAttributes": [{
-                        "name": "sub",
-                        "multiValued": false
-                    }]
+                    "extendedAttributes": [
+                        {
+                            "name": "sub",
+                            "multiValued": false
+                        },
+                        {
+                            "name": "email",
+                            "multiValued": false
+                        }
+                    ]
                 },
                 "selectionSettings": {"resourceUris": []}
             }],
@@ -1047,7 +1053,7 @@
                         "nickname": {"source": {"type": "NO_MAPPING"}},
                         "email": {
                             "source": {"type": "TOKEN"},
-                            "value": "sub"
+                            "value": "email"
                         },
                         "website": {"source": {"type": "NO_MAPPING"}},
                         "email_verified": {"source": {"type": "NO_MAPPING"}},
@@ -1070,7 +1076,7 @@
                 "allowIdTokenIntrospection": false,
                 "id": "OPENIDCONNECTPOLICYMANAGEMENT",
                 "reissueIdTokenInHybridFlow": false,
-                "lastModified": "2025-11-18T04:22:29.367Z",
+                "lastModified": "2025-11-18T04:35:19.777Z",
                 "idTokenLifetime": 5,
                 "accessTokenManagerRef": {
                     "location": "https://localhost:-1/pf-admin-api/v1/oauth/accessTokenManagers/AccessTokenManagement",
@@ -1152,6 +1158,7 @@
                 "persistentGrantReuseType": "SERVER_DEFAULT",
                 "persistentGrantIdleTimeoutType": "SERVER_DEFAULT",
                 "requireSignedRequests": false,
+                "description": "",
                 "persistentGrantIdleTimeout": 0,
                 "enabled": true,
                 "requireOfflineAccessScopeToIssueRefreshTokens": "SERVER_DEFAULT",
@@ -1181,15 +1188,20 @@
                 "creationDate": "2025-11-18T04:20:13.094Z",
                 "deviceFlowSettingType": "SERVER_DEFAULT",
                 "redirectUris": [],
+                "logoUrl": "",
                 "authorizationDetailTypes": [],
                 "grantTypes": [
                     "CLIENT_CREDENTIALS",
                     "TOKEN_EXCHANGE"
                 ],
-                "modificationDate": "2025-11-18T04:20:13.094Z",
+                "modificationDate": "2025-11-18T04:27:46.694Z",
                 "defaultAccessTokenManagerRef": {
                     "location": "https://localhost:-1/pf-admin-api/v1/oauth/accessTokenManagers/AccessTokenManagement",
                     "id": "AccessTokenManagement"
+                },
+                "tokenExchangeProcessorPolicyRef": {
+                    "location": "https://localhost:-1/pf-admin-api/v1/oauth/tokenExchange/processor/policies/PROCESSORPOLICIES",
+                    "id": "PROCESSORPOLICIES"
                 },
                 "clientSecretRetentionPeriodType": "SERVER_DEFAULT",
                 "requirePushedAuthorizationRequests": false,
@@ -1223,10 +1235,16 @@
                     },
                     "type": "TOKEN_EXCHANGE_PROCESSOR_POLICY"
                 },
-                "attributeContractFulfillment": {"sub": {
-                    "source": {"type": "TOKEN_EXCHANGE_PROCESSOR_POLICY"},
-                    "value": "subject"
-                }},
+                "attributeContractFulfillment": {
+                    "sub": {
+                        "source": {"type": "TOKEN_EXCHANGE_PROCESSOR_POLICY"},
+                        "value": "subject"
+                    },
+                    "email": {
+                        "source": {"type": "TOKEN_EXCHANGE_PROCESSOR_POLICY"},
+                        "value": "email"
+                    }
+                },
                 "id": "urn:ietf:params:oauth:grant-type:token-exchange|PROCESSORPOLICIES|AccessTokenManagement",
                 "attributeSources": [],
                 "issuanceCriteria": {"conditionalCriteria": []},
