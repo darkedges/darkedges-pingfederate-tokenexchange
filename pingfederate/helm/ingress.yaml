@@ -1,0 +1,111 @@
+global:
+  envs:
+    PING_IDENTITY_ACCEPT_EULA: "YES"
+  ingress:
+    enabled: true
+    annotations:
+      nginx.ingress.kubernetes.io/backend-protocol: "HTTPS"
+      cert-manager.io/cluster-issuer: vault-issuer
+    spec:
+      ingressClassName: nginx
+pingauthorize:
+  ingress:
+    hosts:
+      - host: pingauthorize.pingauthorize.internal.darkedges.com.au
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              serviceName: https
+    tls:
+      - secretName: pingauthorize
+        hosts:
+          - pingauthorize.pingauthorize.internal.darkedges.com.au
+  workload:
+    type: StatefulSet
+    statefulSet:
+      podManagementPolicy: OrderedReady
+      persistentvolume:
+        volumes:
+          out-dir:
+            persistentVolumeClaim:
+              resources:
+                requests:
+                  storage: 8Gi
+
+pingauthorizepap:
+  ingress:
+    hosts:
+      - host: pingauthorizepap.pingauthorize.internal.darkedges.com.au
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              serviceName: https
+    tls:
+      - secretName: pingauthorizepap
+        hosts:
+          - pingauthorizepap.pingauthorize.internal.darkedges.com.au
+  workload:
+    type: StatefulSet
+    statefulSet:
+      podManagementPolicy: OrderedReady
+      persistentvolume:
+        volumes:
+          out-dir:
+            persistentVolumeClaim:
+              resources:
+                requests:
+                  storage: 8Gi
+pingdataconsole:
+  ingress:
+    hosts:
+      - host: pingdataconsole.pingauthorize.internal.darkedges.com.au
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              serviceName: https
+    tls:
+      - secretName: pingdataconsole
+        hosts:
+          - pingdataconsole.pingauthorize.internal.darkedges.com.au
+pingdirectory:
+  ingress:
+    hosts:
+      - host: pingdirectory.pingauthorize.internal.darkedges.com.au
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              serviceName: https
+    tls:
+      - secretName: pingdirectory
+        hosts:
+          - pingdirectory.pingauthorize.internal.darkedges.com.au
+pingfederate-admin:
+  ingress:
+    hosts:
+      - host: admin.ping.darkedges.com
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              serviceName: https
+    tls:
+      - secretName: pingfederate-admin
+        hosts:
+          - admin.ping.darkedges.com
+pingfederate-engine:
+  ingress:
+    hosts:
+      - host: engine.ping.darkedges.com
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              serviceName: https
+    tls:
+      - secretName: pingfederate-engine
+        hosts:
+          - engine.ping.darkedges.com
