@@ -10,14 +10,14 @@ This folder provides a complete PingFederate setup with pre-configured server pr
 
 ```text
 pingfederate/
-├── admin/                      # PingFederate Admin server profile
+├── admin/                     # PingFederate Admin server profile
 │   ├── env_vars               # Environment-specific variables
 │   ├── motd                   # Message of the day
 │   └── instance/              # Server instance configuration
 │       ├── bulk-config/       # Bulk configuration data
 │       │   └── data.json.subst
 │       └── server/default/data/
-│           └── pf.jwk        # JSON Web Key for signing/encryption
+│           └── pf.jwk         # JSON Web Key for signing/encryption
 ├── bulk-export/               # Configuration export/backup
 │   └── shared/
 │       ├── data.json          # Exported configuration
@@ -157,3 +157,4 @@ This configuration is built for **PingFederate version 12.3.3.1**.
 - Environment-specific values should be managed through `env_vars` files
 - JWK files contain cryptographic keys and should be protected
 - Configuration exports enable versioning and disaster recovery
+
