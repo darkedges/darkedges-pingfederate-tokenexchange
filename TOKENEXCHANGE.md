@@ -41,3 +41,15 @@ curl --location 'https://engine.ping.darkedges.com/as/token.oauth2' \
     --data-urlencode 'requested_token_type=urn:ietf:params:oauth:token-type:access_token' \
     --data-urlencode 'scope=openid profile email'
 ```
+
+## Authentication
+
+![alt text](images/image.png)
+
+## Application
+
+![alt text](images/image-1.png)
+![alt text](images/image-2.png)
+![alt text](images/image-3.png)
+![alt text](images/image-4.png)
+![alt text](images/image-5.png)
