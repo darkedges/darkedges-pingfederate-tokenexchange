@@ -704,7 +704,7 @@
                     },
                     "name": "MSFTTOKENPROCESSOR",
                     "id": "MSFTTOKENPROCESSOR",
-                    "lastModified": "2025-11-18T04:08:16.297Z",
+                    "lastModified": "2025-11-18T04:15:14.339Z",
                     "pluginDescriptorRef": {
                         "location": "https://localhost:-1/pf-admin-api/v1/idp/tokenProcessors/descriptors/com.pingidentity.pf.tokenprocessors.jwt.JwtTokenProcessor",
                         "id": "com.pingidentity.pf.tokenprocessors.jwt.JwtTokenProcessor"
@@ -737,7 +737,7 @@
                     },
                     "name": "PFTOKENPROCESSOR",
                     "id": "PFTOKENPROCESSOR",
-                    "lastModified": "2025-11-18T04:08:16.317Z",
+                    "lastModified": "2025-11-18T04:16:42.815Z",
                     "pluginDescriptorRef": {
                         "location": "https://localhost:-1/pf-admin-api/v1/idp/tokenProcessors/descriptors/org.sourceid.wstrust.processor.oauth.BearerAccessTokenTokenProcessor",
                         "id": "org.sourceid.wstrust.processor.oauth.BearerAccessTokenTokenProcessor"
@@ -770,10 +770,16 @@
                                 "name": "client_id"
                             }
                         ],
-                        "extendedAttributes": [{
-                            "masked": false,
-                            "name": "sub"
-                        }]
+                        "extendedAttributes": [
+                            {
+                                "masked": false,
+                                "name": "sub"
+                            },
+                            {
+                                "masked": false,
+                                "name": "email"
+                            }
+                        ]
                     }
                 }
             ],
@@ -1082,10 +1088,16 @@
                 "id": "PROCESSORPOLICIES",
                 "processorMappings": [{
                     "subjectTokenType": "urn:ietf:params:oauth:token-type:access_token",
-                    "attributeContractFulfillment": {"subject": {
-                        "source": {"type": "ACTOR_TOKEN"},
-                        "value": "sub"
-                    }},
+                    "attributeContractFulfillment": {
+                        "subject": {
+                            "source": {"type": "SUBJECT_TOKEN"},
+                            "value": "sub"
+                        },
+                        "email": {
+                            "source": {"type": "SUBJECT_TOKEN"},
+                            "value": "sub"
+                        }
+                    },
                     "actorTokenProcessor": {
                         "location": "https://localhost:-1/pf-admin-api/v1/idp/tokenProcessors/PFTOKENPROCESSOR",
                         "id": "PFTOKENPROCESSOR"
@@ -1101,7 +1113,7 @@
                 "actorTokenRequired": false,
                 "attributeContract": {
                     "coreAttributes": [{"name": "subject"}],
-                    "extendedAttributes": []
+                    "extendedAttributes": [{"name": "email"}]
                 }
             }],
             "resourceType": "/oauth/tokenExchange/processor/policies"
