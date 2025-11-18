@@ -158,7 +158,7 @@
                 "name": "ProvisionerDS (sa)",
                 "connectionUrl": "jdbc:hsqldb:${pf.server.data.dir}${/}hypersonic${/}ProvisionerDefaultDB;hsqldb.lock_file=false",
                 "id": "ProvisionerDS",
-                "lastModified": "2025-11-18T03:50:35.337Z",
+                "lastModified": "2025-11-18T03:53:15.656Z",
                 "maxPoolSize": 100,
                 "blockingTimeout": 5000
             }],
@@ -341,11 +341,11 @@
             "items": [{
                 "password": "${PING_IDENTITY_PASSWORD}",
                 "roles": [
-                    "DATA_COLLECTION_ADMINISTRATOR",
-                    "CRYPTO_ADMINISTRATOR",
-                    "EXPRESSION_ADMINISTRATOR",
                     "ADMINISTRATOR",
-                    "USER_ADMINISTRATOR"
+                    "USER_ADMINISTRATOR",
+                    "CRYPTO_ADMINISTRATOR",
+                    "DATA_COLLECTION_ADMINISTRATOR",
+                    "EXPRESSION_ADMINISTRATOR"
                 ],
                 "auditor": false,
                 "description": "Initial administrator user",
@@ -597,7 +597,7 @@
                 },
                 "name": "AccessTokenManagement",
                 "id": "AccessTokenManagement",
-                "lastModified": "2025-11-18T03:50:35.865Z",
+                "lastModified": "2025-11-18T03:53:16.135Z",
                 "pluginDescriptorRef": {
                     "location": "https://localhost:-1/pf-admin-api/v1/oauth/accessTokenManagers/descriptors/com.pingidentity.pf.access.token.management.plugins.JwtBearerAccessTokenManagementPlugin",
                     "id": "com.pingidentity.pf.access.token.management.plugins.JwtBearerAccessTokenManagementPlugin"
@@ -704,7 +704,7 @@
                     },
                     "name": "MSFTTOKENPROCESSOR",
                     "id": "MSFTTOKENPROCESSOR",
-                    "lastModified": "2025-11-18T03:50:35.903Z",
+                    "lastModified": "2025-11-18T03:53:16.147Z",
                     "pluginDescriptorRef": {
                         "location": "https://localhost:-1/pf-admin-api/v1/idp/tokenProcessors/descriptors/com.pingidentity.pf.tokenprocessors.jwt.JwtTokenProcessor",
                         "id": "com.pingidentity.pf.tokenprocessors.jwt.JwtTokenProcessor"
@@ -737,7 +737,7 @@
                     },
                     "name": "PFTOKENPROCESSOR",
                     "id": "PFTOKENPROCESSOR",
-                    "lastModified": "2025-11-18T03:50:35.922Z",
+                    "lastModified": "2025-11-18T03:53:16.161Z",
                     "pluginDescriptorRef": {
                         "location": "https://localhost:-1/pf-admin-api/v1/idp/tokenProcessors/descriptors/org.sourceid.wstrust.processor.oauth.BearerAccessTokenTokenProcessor",
                         "id": "org.sourceid.wstrust.processor.oauth.BearerAccessTokenTokenProcessor"
@@ -988,7 +988,7 @@
                 "allowAuthenticationApiInit": false,
                 "refreshTokenRollingGracePeriodType": "SERVER_DEFAULT",
                 "replicationStatus": "REPLICATED",
-                "creationDate": "2025-11-18T03:50:36.174Z",
+                "creationDate": "2025-11-18T03:53:16.424Z",
                 "deviceFlowSettingType": "SERVER_DEFAULT",
                 "redirectUris": [],
                 "authorizationDetailTypes": [],
@@ -996,14 +996,14 @@
                     "CLIENT_CREDENTIALS",
                     "TOKEN_EXCHANGE"
                 ],
-                "modificationDate": "2025-11-18T03:50:36.174Z",
+                "modificationDate": "2025-11-18T03:53:16.424Z",
                 "defaultAccessTokenManagerRef": {
                     "location": "https://localhost:-1/pf-admin-api/v1/oauth/accessTokenManagers/AccessTokenManagement",
                     "id": "AccessTokenManagement"
                 },
                 "clientSecretRetentionPeriodType": "SERVER_DEFAULT",
                 "requirePushedAuthorizationRequests": false,
-                "clientSecretChangedTime": "2025-11-18T03:50:36.000Z",
+                "clientSecretChangedTime": "2025-11-18T03:53:16.000Z",
                 "name": "tokenexchangeclient",
                 "refreshTokenRollingIntervalType": "SERVER_DEFAULT",
                 "persistentGrantExpirationType": "SERVER_DEFAULT",
@@ -1022,6 +1022,30 @@
             "operationType": "SAVE",
             "items": [{"clientMetadata": []}],
             "resourceType": "/oauth/clientSettings"
+        },
+        {
+            "operationType": "SAVE",
+            "items": [{
+                "context": {
+                    "contextRef": {
+                        "location": "https://localhost:-1/pf-admin-api/v1/oauth/tokenExchange/processor/policies/PROCESSORPOLICIES",
+                        "id": "PROCESSORPOLICIES"
+                    },
+                    "type": "TOKEN_EXCHANGE_PROCESSOR_POLICY"
+                },
+                "attributeContractFulfillment": {"sub": {
+                    "source": {"type": "TOKEN_EXCHANGE_PROCESSOR_POLICY"},
+                    "value": "subject"
+                }},
+                "id": "urn:ietf:params:oauth:grant-type:token-exchange|PROCESSORPOLICIES|AccessTokenManagement",
+                "attributeSources": [],
+                "issuanceCriteria": {"conditionalCriteria": []},
+                "accessTokenManagerRef": {
+                    "location": "https://localhost:-1/pf-admin-api/v1/oauth/accessTokenManagers/AccessTokenManagement",
+                    "id": "AccessTokenManagement"
+                }
+            }],
+            "resourceType": "/oauth/accessTokenMappings"
         },
         {
             "operationType": "SAVE",
