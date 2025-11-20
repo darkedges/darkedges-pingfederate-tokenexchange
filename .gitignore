@@ -1,3 +1,4 @@
 pingfederate/bulk-export/shared/convert.log
 pingfederate/bulk-export/shared/data.json
 pingfederate/bulk-export/shared/data.json.subst
+pingfederate/admin/instance/server/bin/oidc.properties
