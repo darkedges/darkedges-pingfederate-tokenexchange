@@ -107,7 +107,7 @@ authorization.endpoint=${PF_OIDC_AUTHORIZATION_ENDPOINT}
 #   -----------------------------
 #   The full HTTPS URL of pushed authorization request (PAR) endpoint at the OP.
 #   When configured, authorization requests shall be sent to PAR endpoint to obtain request_uri.
-pushed.authorization.request.endpoint=
+#pushed.authorization.request.endpoint=
 
 #   -----------------------------
 #   Token Endpoint (REQUIRED)
