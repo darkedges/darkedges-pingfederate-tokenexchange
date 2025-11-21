@@ -140,7 +140,7 @@ issuer=${PF_OIDC_ISSUER}
 #   Authentication Context Class Reference Values (OPTIONAL)
 #   -----------------------------
 #   The Authentication Context Class Reference Values which shall be used by OP. Multiple values must be space separated.
-acr.values=${PF_OIDC_ACR_VALUES}
+#acr.values=${PF_OIDC_ACR_VALUES}
 
 #   -----------------------------
 #   Scopes (REQUIRED)

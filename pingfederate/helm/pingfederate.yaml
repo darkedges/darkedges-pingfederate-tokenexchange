@@ -4,7 +4,7 @@ pingfederate-admin:
     SERVER_PROFILE_URL: https://github.com/darkedges/darkedges-pingfederate-tokenexchange.git
     SERVER_PROFILE_PATH: pingfederate/admin
     PING_IDENTITY_PASSWORD: 2FederateM0re
-    # PF_CONSOLE_AUTHENTICATION: OIDC
+    PF_CONSOLE_AUTHENTICATION: OIDC
     PF_OIDC_CLIENT_ID: "a1864fbd39555db85c33b085ba34f42f0e4dba07377b89ad389cdc2b1de0680"
     PF_OIDC_CLIENT_AUTHN_METHOD: "client_secret_post"
     PF_OIDC_CLIENT_SECRET: "OBF:JWE:eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2Iiwia2lkIjoiOEZJVzBpWExuRiIsInZlcnNpb24iOiIxMi4zLjMuMSJ9..BHLFzXGtHMbwHrRGQ7n6fw.ZoWmz08K5Fu9ZK0XEiJMxA._0MAhYLwv7YADeMbanYBrg"
@@ -23,6 +23,9 @@ pingfederate-admin:
     PF_OIDC_ROLE_EXPRESSIONADMIN: "expressionadmin"
     PF_OIDC_ROLE_AUDITOR: "auditor"
     PF_OIDC_ROLE_DATACOLLECTIONADMIN: "datacollectionadmin"
+    PING_DEBUG: "true"
+    VERBOSE: "true"
+    PF_ADMIN_DEBUG: "true"
   
 
 
