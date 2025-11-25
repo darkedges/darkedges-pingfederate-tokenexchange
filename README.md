@@ -52,3 +52,19 @@ docker compose run --rm terraform-init init
 docker compose run --rm terraform-init plan 
 docker compose run --rm terraform-init apply --auto-approve 
 ```
+
+## Ping Federate Console
+
+connect to <https://pfconsole.ping.darkedges.com/>
+
+| username        | password        |
+| --------------- | --------------- |
+| `administrator` | `2FederateM0re` |
+
+## Ping Data Console
+
+connect to <https://pdconsole.ping.darkedges.com/>
+
+| server                                    | username        | password        |
+| ----------------------------------------- | --------------- | --------------- |
+| `pingfederate-pingdirectory-cluster:1636` | `administrator` | `2FederateM0re` |

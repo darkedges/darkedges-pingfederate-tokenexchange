@@ -34,6 +34,7 @@ pingdirectory:
       - secretName: pingdirectory
         hosts:
           - pingdirectory.ping.darkedges.com
+          - pingfederate-pingdirectory-0.pingfederate-pingdirectory-cluster.pingfed.svc.cluster.local
 pingfederate-admin:
   ingress:
     hosts:
