@@ -38,13 +38,13 @@ pingdirectory:
 pingfederate-admin:
   ingress:
     hosts:
-      - host: pfconsole.ping.darkedges.com
+      - host: pfconsole.ping.internal.darkedges.com
         paths:
           - path: /
             pathType: Prefix
             backend:
               serviceName: https
-      - host: pfconsole.ping.internal.darkedges.com
+      - host: pfconsole.ping.darkedges.com
         paths:
           - path: /
             pathType: Prefix

@@ -157,6 +157,24 @@
         },
         {
             "operationType": "SAVE",
+            "items": [{
+                "encryptedCredential": "eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2Iiwia2lkIjoiUWVzOVR5eTV5WiIsInZlcnNpb24iOiIxMi4zLjEuMCJ9..d01ZB4vdejOH0DQUFF-Jiw.RMvkYBwtFAQDDdilo0Xh1OH9CM-Rfha9E9aS2JTfLGCCJ6rifGVN90Rr1zZF21ZfWZ9mmblwFeBAOt2J9YXgP5gLt7dUvfuETzpIPazrb4DQFZhiYhH1znnjzqjB-5_kbsx_O3Jb9lFOy5e9c79h9FW0kzeLlCQCupsJi_jxOCAt_CyCgMx02qwXzKyPlBgHqN5zTrXt3fbJ6IgW-lICkgNigMhaYup7VZuMTr9NM9zygf-LbrAT7hTuD-LsaZ8MEeTo7fRHv3KqrZglR96vTGrawRZ_3WtiS1HJAEE6o40WZ2bCqSBc_xrav_ViObxTW-UZgQPogF3hByZf1-y63LmPzy7H5MC37oU4WryJ-Vn9mkPQ_HGtSVRv9aGkCRHsvc5HOspSLPWTLEFpDY75KbNj6S8p3CnBxCrSI6EWWPngVn4VmFCrlqhhsdTW9tdQigQCwBButhVhafAtfrtmvAKsM_VWTwTBXAjobCdq2ZaG5OF-uHvgdvNepwdfQn-2RxHZ2kY0A-cIMWVAxHOzHeaqlaPXVoa-00-PcPYqzO10pR48vns23HZVsOEJ8ofQZjwARJzIUgWb9-5O_HZmho-55wFJZJpLw75baT-P3l-tt9gaLxRkZbQRJlex89vv75NBdA5YMeXQvZ6xDKSon2xGT4_B0nHt0aTRh6BHBqidJ2lNXaHpnMs9R6SpcR325KjJif4PdESgXaTKjToRq4mcHk68-evu9e9k3bOqid6q4Dj1E1G5zsUE6DtazQIqFKVx3NH3IvrMZ8uQB7m0ISPpMthc0VfOLzp_dSQRfhys4Bih4qZtj8MZiCo8ubGtT9uA4-o9cbzvlJjSu8hnt-xx1CciMffC6vqDy-R-NMmn3NNqOINTCXYg2ZcrXL64aVrEpPBiCVxvQHc1A7HbIbx8ygzEOlsrZAk-gIKAWyzTCYOBfi4IPDPEMuIczMZMXz0seEyxRar_K-NtUsKmR19TSBDMN2_DKK_3fYb-zVaLQ5Q6FWqDnFAYN68XJiD8k9FS-7LKPE09MRNqZ45aGdIiVoVS_tPjO0kk9hOswtcBWkPb878Nk3reIIXb3LDn3O1D9XDPu-t8q8h7qQl7PywOgBsKaDNcIlzurtWDkx9XXv9QLOMSGRCEUqL1tqGyNbSuC_3RGgiP8L832V6kIq8ivNfyXOoY0zUIkC6FWipnpF20EsnTSPJZsK_Sght5GlTX39Do-fD08wWUaOPjn9_WhUFktZK9sux8dgZWQ96y53a4TH73BiftqJvoHRRC-dPD_ww_oWHUqX8E7iFnqEY2-fma2c70vqPGeGCNfEvxdh_-KOfQokukvf2G63MfJpFzhEj75yzCy79ucFOfGFmtRvkUUJV_Grgv7SfP5elVFr1duc3NMVzZLvcv8PcaeEkTldLRptyo71UC_QYdpHAoUIOuakXXc00dlf0kDdGLMcHxUkUBKoK4zez8Kobt1fKIvH2dNLMdRWApwSYQ-hnXYvBFMS8Yv5ehezM8ZPRhXQMKk2Gqle3RNdHkBO8VopNOkq0IcpLN9-LzOHDuJQcf1HArRSfXVdtYqaNKxqmFxI1omOksnhP8z9agBE0HWFqON252Fh_eZ2JZuLgf9tD9vHAbr351TwF9OWVr8thTAyTqBWlQCldu0S1xxZez02ifMbVisWWvWliWW2rdzjO_epVP0Epn2hzXp1dFQKI.izaaWAjOonlvuGuZ__FgPw",
+                "pingOneConnectionId": "3a0c50c2-d5de-45b1-bd2a-9aedf6f3477e",
+                "environmentId": "314177e2-5da7-433b-a5b5-9bdcc20b45a3",
+                "organizationName": "trial_cba.com_1544259280",
+                "name": "trial_cba.com_1544259280",
+                "active": true,
+                "credentialId": "d9a48f36-d483-4847-9d9e-da3dc95bd359",
+                "pingOneAuthenticationApiEndpoint": "https://auth.pingone.com.au",
+                "id": "mImpgs4t0rrk7n7mfAMOcP",
+                "creationDate": "2025-11-25T23:30:59.206Z",
+                "region": "Australia",
+                "pingOneManagementApiEndpoint": "https://api.pingone.com.au"
+            }],
+            "resourceType": "/pingOneConnections"
+        },
+        {
+            "operationType": "SAVE",
             "items": [
                 {
                     "hostnamesTags": [{
@@ -188,7 +206,7 @@
                     "readTimeout": 3000,
                     "name": "PingDirectory",
                     "useStartTLS": false,
-                    "lastModified": "2025-11-25T21:40:29.284Z",
+                    "lastModified": "2025-11-25T22:23:11.802Z",
                     "retryFailedOperations": false,
                     "userDN": "cn=administrator"
                 },
@@ -208,7 +226,7 @@
                     "name": "ProvisionerDS (sa)",
                     "connectionUrl": "jdbc:hsqldb:${pf.server.data.dir}${/}hypersonic${/}ProvisionerDefaultDB;hsqldb.lock_file=false",
                     "id": "ProvisionerDS",
-                    "lastModified": "2025-11-25T21:11:00.010Z",
+                    "lastModified": "2025-11-25T22:23:11.815Z",
                     "maxPoolSize": 100,
                     "blockingTimeout": 5000
                 }
@@ -389,20 +407,36 @@
         },
         {
             "operationType": "SAVE",
-            "items": [{
-                "password": "${PING_IDENTITY_PASSWORD}",
-                "roles": [
-                    "EXPRESSION_ADMINISTRATOR",
-                    "USER_ADMINISTRATOR",
-                    "CRYPTO_ADMINISTRATOR",
-                    "DATA_COLLECTION_ADMINISTRATOR",
-                    "ADMINISTRATOR"
-                ],
-                "auditor": false,
-                "description": "Initial administrator user",
-                "active": true,
-                "username": "Administrator"
-            }],
+            "items": [
+                {
+                    "password": "${PING_IDENTITY_PASSWORD}",
+                    "roles": [
+                        "USER_ADMINISTRATOR",
+                        "EXPRESSION_ADMINISTRATOR",
+                        "CRYPTO_ADMINISTRATOR",
+                        "DATA_COLLECTION_ADMINISTRATOR",
+                        "ADMINISTRATOR"
+                    ],
+                    "auditor": false,
+                    "description": "Initial administrator user",
+                    "active": true,
+                    "username": "Administrator"
+                },
+                {
+                    "password": "${administrativeAccounts_items_nirving_password}",
+                    "roles": [
+                        "USER_ADMINISTRATOR",
+                        "EXPRESSION_ADMINISTRATOR",
+                        "CRYPTO_ADMINISTRATOR",
+                        "DATA_COLLECTION_ADMINISTRATOR",
+                        "ADMINISTRATOR"
+                    ],
+                    "auditor": false,
+                    "description": "description",
+                    "active": true,
+                    "username": "nirving"
+                }
+            ],
             "resourceType": "/administrativeAccounts"
         },
         {
@@ -655,7 +689,7 @@
                 },
                 "name": "AccessTokenManagement",
                 "id": "AccessTokenManagement",
-                "lastModified": "2025-11-25T21:11:00.424Z",
+                "lastModified": "2025-11-25T22:23:12.251Z",
                 "pluginDescriptorRef": {
                     "location": "https://localhost:-1/pf-admin-api/v1/oauth/accessTokenManagers/descriptors/com.pingidentity.pf.access.token.management.plugins.JwtBearerAccessTokenManagementPlugin",
                     "id": "com.pingidentity.pf.access.token.management.plugins.JwtBearerAccessTokenManagementPlugin"
@@ -697,6 +731,98 @@
                 "keySetRetentionPeriodMins": 610
             }],
             "resourceType": "/kerberos/realms/settings"
+        },
+        {
+            "operationType": "SAVE",
+            "items": [{
+                "attributeMapping": {
+                    "attributeContractFulfillment": {
+                        "subject": {
+                            "source": {
+                                "id": "PINGDIRECTORY",
+                                "type": "LDAP_DATA_STORE"
+                            },
+                            "value": "uid"
+                        },
+                        "domain": {
+                            "source": {"type": "ADAPTER"},
+                            "value": "domain"
+                        }
+                    },
+                    "attributeSources": [{
+                        "memberOfNestedGroup": false,
+                        "binaryAttributeSettings": {},
+                        "searchScope": "SUBTREE",
+                        "dataStoreRef": {
+                            "location": "https://localhost:-1/pf-admin-api/v1/dataStores/LDAP-4D65BD30F2946A712E86940F0F7442EDCDC16646",
+                            "id": "LDAP-4D65BD30F2946A712E86940F0F7442EDCDC16646"
+                        },
+                        "description": "PINGDIRECTORY",
+                        "id": "PINGDIRECTORY",
+                        "searchAttributes": [
+                            "Subject DN",
+                            "uid"
+                        ],
+                        "type": "LDAP",
+                        "baseDn": "ou=People,dc=example,dc=com",
+                        "searchFilter": "(&(telephoneNumber=${subject}))"
+                    }],
+                    "issuanceCriteria": {"conditionalCriteria": []}
+                },
+                "configuration": {
+                    "tables": [],
+                    "fields": [
+                        {
+                            "name": "Identifier Cookie Lifetime",
+                            "value": "30"
+                        },
+                        {
+                            "name": "Allow Cancelling Identifier Selection",
+                            "value": "false"
+                        },
+                        {
+                            "name": "Maximum Identifiers Count",
+                            "value": "5"
+                        },
+                        {
+                            "name": "Identifier Selection Template",
+                            "value": "identifier.first.template.html"
+                        },
+                        {
+                            "name": "Enable Risk Provider",
+                            "value": "false"
+                        },
+                        {
+                            "name": "Risk Provider",
+                            "value": ""
+                        }
+                    ]
+                },
+                "name": "IDENTIFIERFIRST",
+                "id": "IDENTIFIERFIRST",
+                "lastModified": "2025-11-25T23:22:37.398Z",
+                "pluginDescriptorRef": {
+                    "location": "https://localhost:-1/pf-admin-api/v1/idp/adapters/descriptors/com.pingidentity.adapters.identifierfirst.idp.IdentifierFirstAdapter",
+                    "id": "com.pingidentity.adapters.identifierfirst.idp.IdentifierFirstAdapter"
+                },
+                "attributeContract": {
+                    "maskOgnlValues": false,
+                    "coreAttributes": [
+                        {
+                            "masked": false,
+                            "name": "subject",
+                            "pseudonym": true
+                        },
+                        {
+                            "masked": false,
+                            "name": "domain",
+                            "pseudonym": false
+                        }
+                    ],
+                    "extendedAttributes": []
+                }
+            }],
+            "resourceType": "/idp/adapters"
         },
         {
             "operationType": "SAVE",
@@ -768,7 +894,7 @@
                     },
                     "name": "MSFTTOKENPROCESSOR",
                     "id": "MSFTTOKENPROCESSOR",
-                    "lastModified": "2025-11-25T21:11:00.436Z",
+                    "lastModified": "2025-11-25T22:23:12.267Z",
                     "pluginDescriptorRef": {
                         "location": "https://localhost:-1/pf-admin-api/v1/idp/tokenProcessors/descriptors/com.pingidentity.pf.tokenprocessors.jwt.JwtTokenProcessor",
                         "id": "com.pingidentity.pf.tokenprocessors.jwt.JwtTokenProcessor"
@@ -801,7 +927,7 @@
                     },
                     "name": "PFTOKENPROCESSOR",
                     "id": "PFTOKENPROCESSOR",
-                    "lastModified": "2025-11-25T21:11:00.451Z",
+                    "lastModified": "2025-11-25T22:23:12.284Z",
                     "pluginDescriptorRef": {
                         "location": "https://localhost:-1/pf-admin-api/v1/idp/tokenProcessors/descriptors/org.sourceid.wstrust.processor.oauth.BearerAccessTokenTokenProcessor",
                         "id": "org.sourceid.wstrust.processor.oauth.BearerAccessTokenTokenProcessor"
@@ -1140,7 +1266,7 @@
                 "allowIdTokenIntrospection": false,
                 "id": "OPENIDCONNECTPOLICYMANAGEMENT",
                 "reissueIdTokenInHybridFlow": false,
-                "lastModified": "2025-11-25T21:11:00.697Z",
+                "lastModified": "2025-11-25T22:23:12.503Z",
                 "idTokenLifetime": 5,
                 "accessTokenManagerRef": {
                     "location": "https://localhost:-1/pf-admin-api/v1/oauth/accessTokenManagers/AccessTokenManagement",
@@ -1216,70 +1342,124 @@
         },
         {
             "operationType": "SAVE",
-            "items": [{
-                "bypassApprovalPage": false,
-                "offlineAccessRequireConsentPrompt": "SERVER_DEFAULT",
-                "persistentGrantReuseType": "SERVER_DEFAULT",
-                "persistentGrantIdleTimeoutType": "SERVER_DEFAULT",
-                "requireSignedRequests": false,
-                "persistentGrantIdleTimeout": 0,
-                "enabled": true,
-                "requireOfflineAccessScopeToIssueRefreshTokens": "SERVER_DEFAULT",
-                "oidcPolicy": {
-                    "grantAccessSessionRevocationApi": false,
-                    "grantAccessSessionSessionManagementApi": false,
-                    "pingAccessLogoutCapable": false,
-                    "logoutMode": "NONE",
-                    "pairwiseIdentifierUserType": false
+            "items": [
+                {
+                    "bypassApprovalPage": true,
+                    "offlineAccessRequireConsentPrompt": "SERVER_DEFAULT",
+                    "persistentGrantReuseType": "SERVER_DEFAULT",
+                    "persistentGrantIdleTimeoutType": "SERVER_DEFAULT",
+                    "requireSignedRequests": false,
+                    "description": "Contact Client for testing purposes",
+                    "persistentGrantIdleTimeout": 0,
+                    "enabled": true,
+                    "requireOfflineAccessScopeToIssueRefreshTokens": "SERVER_DEFAULT",
+                    "oidcPolicy": {
+                        "grantAccessSessionRevocationApi": false,
+                        "grantAccessSessionSessionManagementApi": false,
+                        "pingAccessLogoutCapable": false,
+                        "logoutMode": "NONE",
+                        "pairwiseIdentifierUserType": false
+                    },
+                    "persistentGrantExpirationTime": 0,
+                    "restrictedResponseTypes": [],
+                    "lockoutMaxMaliciousActionsType": "SERVER_DEFAULT",
+                    "requireProofKeyForCodeExchange": false,
+                    "enableCookielessAuthenticationApi": false,
+                    "persistentGrantIdleTimeoutTimeUnit": "DAYS",
+                    "restrictToDefaultAccessTokenManager": false,
+                    "validateUsingAllEligibleAtms": false,
+                    "restrictScopes": true,
+                    "clientId": "contact-oauth-client",
+                    "requireJwtSecuredAuthorizationResponseMode": false,
+                    "persistentGrantExpirationTimeUnit": "DAYS",
+                    "requireDpop": false,
+                    "allowAuthenticationApiInit": true,
+                    "refreshTokenRollingGracePeriodType": "SERVER_DEFAULT",
+                    "replicationStatus": "REPLICATED",
+                    "creationDate": "2025-11-25T23:05:01.468Z",
+                    "deviceFlowSettingType": "SERVER_DEFAULT",
+                    "redirectUris": ["https://contact.ping.darkedges.com/callback"],
+                    "authorizationDetailTypes": [],
+                    "grantTypes": ["AUTHORIZATION_CODE"],
+                    "modificationDate": "2025-11-25T23:05:01.468Z",
+                    "clientSecretRetentionPeriodType": "SERVER_DEFAULT",
+                    "requirePushedAuthorizationRequests": false,
+                    "name": "Contact Client",
+                    "refreshTokenRollingIntervalType": "SERVER_DEFAULT",
+                    "persistentGrantExpirationType": "SERVER_DEFAULT",
+                    "restrictedScopes": [],
+                    "refreshRolling": "SERVER_DEFAULT",
+                    "exclusiveScopes": [],
+                    "clientAuth": {
+                        "secondarySecrets": [],
+                        "type": "NONE"
+                    }
                 },
-                "persistentGrantExpirationTime": 0,
-                "restrictedResponseTypes": [],
-                "lockoutMaxMaliciousActionsType": "SERVER_DEFAULT",
-                "requireProofKeyForCodeExchange": false,
-                "enableCookielessAuthenticationApi": false,
-                "persistentGrantIdleTimeoutTimeUnit": "DAYS",
-                "restrictToDefaultAccessTokenManager": false,
-                "validateUsingAllEligibleAtms": false,
-                "restrictScopes": false,
-                "clientId": "tokenexchangeclient",
-                "requireJwtSecuredAuthorizationResponseMode": false,
-                "persistentGrantExpirationTimeUnit": "DAYS",
-                "requireDpop": false,
-                "allowAuthenticationApiInit": false,
-                "refreshTokenRollingGracePeriodType": "SERVER_DEFAULT",
-                "replicationStatus": "REPLICATED",
-                "creationDate": "2025-11-25T21:11:00.789Z",
-                "deviceFlowSettingType": "SERVER_DEFAULT",
-                "redirectUris": [],
-                "authorizationDetailTypes": [],
-                "grantTypes": [
-                    "CLIENT_CREDENTIALS",
-                    "TOKEN_EXCHANGE"
-                ],
-                "modificationDate": "2025-11-25T21:11:00.789Z",
-                "defaultAccessTokenManagerRef": {
-                    "location": "https://localhost:-1/pf-admin-api/v1/oauth/accessTokenManagers/AccessTokenManagement",
-                    "id": "AccessTokenManagement"
-                },
-                "tokenExchangeProcessorPolicyRef": {
-                    "location": "https://localhost:-1/pf-admin-api/v1/oauth/tokenExchange/processor/policies/PROCESSORPOLICIES",
-                    "id": "PROCESSORPOLICIES"
-                },
-                "clientSecretRetentionPeriodType": "SERVER_DEFAULT",
-                "requirePushedAuthorizationRequests": false,
-                "clientSecretChangedTime": "2025-11-25T21:11:00.000Z",
-                "name": "tokenexchangeclient",
-                "refreshTokenRollingIntervalType": "SERVER_DEFAULT",
-                "persistentGrantExpirationType": "SERVER_DEFAULT",
-                "restrictedScopes": [],
-                "refreshRolling": "SERVER_DEFAULT",
-                "exclusiveScopes": [],
-                "clientAuth": {
-                    "secondarySecrets": [],
-                    "secret": "${oauth_clients_items_clientAuth_tokenexchangeclient_secret}",
-                    "type": "SECRET"
+                {
+                    "bypassApprovalPage": false,
+                    "offlineAccessRequireConsentPrompt": "SERVER_DEFAULT",
+                    "persistentGrantReuseType": "SERVER_DEFAULT",
+                    "persistentGrantIdleTimeoutType": "SERVER_DEFAULT",
+                    "requireSignedRequests": false,
+                    "persistentGrantIdleTimeout": 0,
+                    "enabled": true,
+                    "requireOfflineAccessScopeToIssueRefreshTokens": "SERVER_DEFAULT",
+                    "oidcPolicy": {
+                        "grantAccessSessionRevocationApi": false,
+                        "grantAccessSessionSessionManagementApi": false,
+                        "pingAccessLogoutCapable": false,
+                        "logoutMode": "NONE",
+                        "pairwiseIdentifierUserType": false
+                    },
+                    "persistentGrantExpirationTime": 0,
+                    "restrictedResponseTypes": [],
+                    "lockoutMaxMaliciousActionsType": "SERVER_DEFAULT",
+                    "requireProofKeyForCodeExchange": false,
+                    "enableCookielessAuthenticationApi": false,
+                    "persistentGrantIdleTimeoutTimeUnit": "DAYS",
+                    "restrictToDefaultAccessTokenManager": false,
+                    "validateUsingAllEligibleAtms": false,
+                    "restrictScopes": false,
+                    "clientId": "tokenexchangeclient",
+                    "requireJwtSecuredAuthorizationResponseMode": false,
+                    "persistentGrantExpirationTimeUnit": "DAYS",
+                    "requireDpop": false,
+                    "allowAuthenticationApiInit": false,
+                    "refreshTokenRollingGracePeriodType": "SERVER_DEFAULT",
+                    "replicationStatus": "REPLICATED",
+                    "creationDate": "2025-11-25T22:23:12.603Z",
+                    "deviceFlowSettingType": "SERVER_DEFAULT",
+                    "redirectUris": [],
+                    "authorizationDetailTypes": [],
+                    "grantTypes": [
+                        "CLIENT_CREDENTIALS",
+                        "TOKEN_EXCHANGE"
+                    ],
+                    "modificationDate": "2025-11-25T22:23:12.603Z",
+                    "defaultAccessTokenManagerRef": {
+                        "location": "https://localhost:-1/pf-admin-api/v1/oauth/accessTokenManagers/AccessTokenManagement",
+                        "id": "AccessTokenManagement"
+                    },
+                    "tokenExchangeProcessorPolicyRef": {
+                        "location": "https://localhost:-1/pf-admin-api/v1/oauth/tokenExchange/processor/policies/PROCESSORPOLICIES",
+                        "id": "PROCESSORPOLICIES"
+                    },
+                    "clientSecretRetentionPeriodType": "SERVER_DEFAULT",
+                    "requirePushedAuthorizationRequests": false,
+                    "clientSecretChangedTime": "2025-11-25T22:23:12.000Z",
+                    "name": "tokenexchangeclient",
+                    "refreshTokenRollingIntervalType": "SERVER_DEFAULT",
+                    "persistentGrantExpirationType": "SERVER_DEFAULT",
+                    "restrictedScopes": [],
+                    "refreshRolling": "SERVER_DEFAULT",
+                    "exclusiveScopes": [],
+                    "clientAuth": {
+                        "secondarySecrets": [],
+                        "secret": "${oauth_clients_items_clientAuth_tokenexchangeclient_secret}",
+                        "type": "SECRET"
+                    }
                 }
-            }],
+            ],
             "resourceType": "/oauth/clients"
         },
         {
@@ -1316,6 +1496,21 @@
                 }
             }],
             "resourceType": "/oauth/accessTokenMappings"
+        },
+        {
+            "operationType": "SAVE",
+            "items": [{
+                "clientForRedirectlessModeRef": {
+                    "location": "https://localhost:-1/pf-admin-api/v1/oauth/clients/contact-oauth-client",
+                    "id": "contact-oauth-client"
+                },
+                "additionalAllowedOrigins": [],
+                "name": "My Sample Application",
+                "description": "My Sample application",
+                "id": "t8CAiKyUYjMFmbWWuD92AL3Oc",
+                "url": "https://contact.ping.darkedges.com"
+            }],
+            "resourceType": "/authenticationApi"
         },
         {
             "operationType": "SAVE",

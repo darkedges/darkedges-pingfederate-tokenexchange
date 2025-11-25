@@ -1,7 +1,7 @@
 variable "pf_admin_base_url" {
   description = "Fully qualified URL where the Next.js UI will run."
   type        = string
-  default     = "https://10.0.0.30:9999"
+  default     = "https://pfconsole.ping.internal.darkedges.com"
 }
 
 variable "pf_admin_context" {

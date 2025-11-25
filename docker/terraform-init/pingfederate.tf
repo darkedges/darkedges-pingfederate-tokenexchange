@@ -35,3 +35,78 @@ resource "pingfederate_oauth_client" "connectOAuthClient" {
   ]
   allow_authentication_api_init = true
 }
+
+data "pingfederate_data_store" "pingdirectory" {
+  data_store_id = "LDAP-4D65BD30F2946A712E86940F0F7442EDCDC16646"
+}
+
+# docker compose run --rm terraform-init import pingfederate_idp_adapter.identifierFirstAdapter IDENTIFIERFIRST
+resource "pingfederate_idp_adapter" "identifierFirstAdapter" {
+  name       = "IDENTIFIERFIRST"
+  adapter_id = "IDENTIFIERFIRST"
+  configuration = {
+
+  }
+  plugin_descriptor_ref = {
+    id = "com.pingidentity.adapters.identifierfirst.idp.IdentifierFirstAdapter"
+  }
+  attribute_mapping = {
+    core_attributes = [
+      {
+        masked    = false
+        name      = "domain"
+        pseudonym = false
+      },
+      {
+        masked    = false
+        name      = "subject"
+        pseudonym = true
+      }
+    ]
+    attribute_sources = [
+      {
+        ldap_attribute_source = {
+          base_dn = "ou=People,dc=example,dc=com"
+          data_store_ref = {
+            id = data.pingfederate_data_store.pingdirectory.data_store_id
+          }
+          description            = "PINGDIRECTORY"
+          id                     = "PINGDIRECTORY"
+          member_of_nested_group = false
+          search_attributes = [
+            "Subject DN",
+            "uid",
+          ]
+          search_filter = "(&(telephoneNumber=$${subject}))"
+          search_scope  = "SUBTREE"
+          type          = "LDAP"
+        }
+      }
+    ]
+    attribute_contract_fulfillment = {
+      "domain" = {
+        source_type = "ADAPTER"
+        value       = "domain"
+      }
+      "subject" = {
+        source_type = "LDAP_DATA_STORE"
+        id          = "PINGDIRECTORY"
+        value       = "uid"
+      }
+    }
+  }
+  attribute_contract = {
+    core_attributes = [
+      {
+        masked    = false
+        name      = "domain"
+        pseudonym = false
+      },
+      {
+        masked    = false
+        name      = "subject"
+        pseudonym = true
+      },
+    ]
+  }
+}
