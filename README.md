@@ -44,3 +44,11 @@ See [pingfederate/README.md](pingfederate/README.md) for full documentation.
     docker build . -t darkedges/pingfederate:edge
     docker push darkedges/pingfederate:edge  
     ```
+
+## Terraform
+
+```console
+docker compose run --rm terraform-init init 
+docker compose run --rm terraform-init plan 
+docker compose run --rm terraform-init apply --auto-approve 
+```

@@ -1,0 +1,62 @@
+global:
+  envs:
+    PING_IDENTITY_ACCEPT_EULA: "YES"
+  ingress:
+    enabled: true
+    annotations:
+      nginx.ingress.kubernetes.io/backend-protocol: "HTTPS"
+      cert-manager.io/cluster-issuer: vault-issuer
+    spec:
+      ingressClassName: nginx
+pingdataconsole:
+  ingress:
+    hosts:
+      - host: pdconsole.ping.darkedges.com
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              serviceName: https
+    tls:
+      - secretName: pingdataconsole
+        hosts:
+          -  pdconsole.ping.darkedges.com
+pingdirectory:
+  ingress:
+    hosts:
+      - host: pingdirectory.ping.darkedges.com
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              serviceName: https
+    tls:
+      - secretName: pingdirectory
+        hosts:
+          - pingdirectory.ping.darkedges.com
+pingfederate-admin:
+  ingress:
+    hosts:
+      - host: pfconsole.ping.darkedges.com
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              serviceName: https
+    tls:
+      - secretName: pingfederate-admin
+        hosts:
+          - pfconsole.ping.darkedges.com
+pingfederate-engine:
+  ingress:
+    hosts:
+      - host: id.ping.darkedges.com
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              serviceName: https
+    tls:
+      - secretName: pingfederate-engine
+        hosts:
+          - id.ping.darkedges.com

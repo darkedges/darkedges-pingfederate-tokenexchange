@@ -6,7 +6,7 @@ pingfederate-admin:
     tag: edge
   envs:
     SERVER_PROFILE_URL: https://github.com/darkedges/darkedges-pingfederate-tokenexchange.git
-    SERVER_PROFILE_PATH: pingfederate/admin
+    SERVER_PROFILE_PATH: profiles/pingfederate/admin
     PING_IDENTITY_PASSWORD: 2FederateM0re
     # PF_CONSOLE_AUTHENTICATION: OIDC
     PF_OIDC_CLIENT_ID: "a1864fbd39555db85c33b085ba34f42f0e4dba07377b89ad389cdc2b1de0680"
@@ -37,3 +37,12 @@ pingfederate-engine:
     repository: darkedges
     name: pingfederate
     tag: edge
+
+pingdirectory:
+  enabled: true
+  envs:
+    SERVER_PROFILE_URL: https://github.com/darkedges/darkedges-pingfederate-tokenexchange.git
+    SERVER_PROFILE_PATH: profiles/pingdirectory
+
+pingdataconsole:
+  enabled: true
