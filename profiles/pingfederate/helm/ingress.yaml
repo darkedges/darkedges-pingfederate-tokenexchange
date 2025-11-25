@@ -44,10 +44,17 @@ pingfederate-admin:
             pathType: Prefix
             backend:
               serviceName: https
+      - host: pfconsole.ping.internal.darkedges.com
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              serviceName: https
     tls:
       - secretName: pingfederate-admin
         hosts:
           - pfconsole.ping.darkedges.com
+          - pfconsole.ping.internal.darkedges.com
 pingfederate-engine:
   ingress:
     hosts:

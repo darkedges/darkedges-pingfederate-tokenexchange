@@ -1,14 +1,21 @@
 {
-    "metadata": {"pfVersion": "12.3.3.1"},
+    "metadata": {"pfVersion": "12.3.1.0"},
     "operations": [
         {
             "operationType": "SAVE",
             "subResource": "cert-time-tracking",
-            "items": [{
-                "stringValue": "1763428329",
-                "id": "w5yh0l80eojioziuvjmdakgvd",
-                "type": "STRING"
-            }],
+            "items": [
+                {
+                    "stringValue": "1764106644",
+                    "id": "sqqnju571a0uyste1jhhzubc4",
+                    "type": "STRING"
+                },
+                {
+                    "stringValue": "1763428329",
+                    "id": "w5yh0l80eojioziuvjmdakgvd",
+                    "type": "STRING"
+                }
+            ],
             "resourceType": "/configStore"
         },
         {
@@ -96,6 +103,14 @@
         {
             "operationType": "SAVE",
             "items": [{
+                "fileData": "${certificates_ca_items_sqqnju571a0uyste1jhhzubc4_sqqnju571a0uyste1jhhzubc4_fileData}",
+                "id": "sqqnju571a0uyste1jhhzubc4"
+            }],
+            "resourceType": "/certificates/ca"
+        },
+        {
+            "operationType": "SAVE",
+            "items": [{
                 "password": "${keyPairs_sslServer_items_w5yh0l80eojioziuvjmdakgvd_w5yh0l80eojioziuvjmdakgvd_password}",
                 "fileData": "${keyPairs_sslServer_items_w5yh0l80eojioziuvjmdakgvd_w5yh0l80eojioziuvjmdakgvd_fileData}",
                 "format": "PKCS12",
@@ -142,26 +157,62 @@
         },
         {
             "operationType": "SAVE",
-            "items": [{
-                "connectionUrlTags": [{
+            "items": [
+                {
+                    "hostnamesTags": [{
+                        "defaultSource": true,
+                        "hostnames": ["pingfederate-pingdirectory-0.pingfederate-pingdirectory-cluster.pingfed.svc.cluster.local:1636"]
+                    }],
+                    "timeBetweenEvictions": 60000,
+                    "binaryAttributes": [],
+                    "ldapType": "PING_DIRECTORY",
+                    "type": "LDAP",
+                    "password": "${dataStores_items_LDAP_4D65BD30F2946A712E86940F0F7442EDCDC16646_LDAP_4D65BD30F2946A712E86940F0F7442EDCDC16646_password}",
+                    "minConnections": 10,
+                    "createIfNecessary": true,
+                    "id": "LDAP-4D65BD30F2946A712E86940F0F7442EDCDC16646",
+                    "ldapDnsSrvPrefix": "_ldap._tcp",
+                    "connectionTimeout": 3000,
+                    "maxConnections": 100,
+                    "ldapsDnsSrvPrefix": "_ldaps._tcp",
+                    "useDnsSrvRecords": false,
+                    "bindAnonymously": false,
+                    "maxWait": -1,
+                    "verifyHost": true,
+                    "hostnames": ["pingfederate-pingdirectory-0.pingfederate-pingdirectory-cluster.pingfed.svc.cluster.local:1636"],
+                    "dnsTtl": 60000,
+                    "useSsl": true,
+                    "maskAttributeValues": false,
+                    "testOnBorrow": false,
+                    "testOnReturn": false,
+                    "readTimeout": 3000,
+                    "name": "PingDirectory",
+                    "useStartTLS": false,
+                    "lastModified": "2025-11-25T21:40:29.284Z",
+                    "retryFailedOperations": false,
+                    "userDN": "cn=administrator"
+                },
+                {
+                    "connectionUrlTags": [{
+                        "connectionUrl": "jdbc:hsqldb:${pf.server.data.dir}${/}hypersonic${/}ProvisionerDefaultDB;hsqldb.lock_file=false",
+                        "defaultSource": true
+                    }],
+                    "type": "JDBC",
+                    "userName": "sa",
+                    "maskAttributeValues": false,
+                    "password": "${dataStores_items_ProvisionerDS_ProvisionerDS_password}",
+                    "minPoolSize": 10,
+                    "allowMultiValueAttributes": false,
+                    "driverClass": "org.hsqldb.jdbcDriver",
+                    "idleTimeout": 5,
+                    "name": "ProvisionerDS (sa)",
                     "connectionUrl": "jdbc:hsqldb:${pf.server.data.dir}${/}hypersonic${/}ProvisionerDefaultDB;hsqldb.lock_file=false",
-                    "defaultSource": true
-                }],
-                "type": "JDBC",
-                "userName": "sa",
-                "maskAttributeValues": false,
-                "password": "${dataStores_items_ProvisionerDS_ProvisionerDS_password}",
-                "minPoolSize": 10,
-                "allowMultiValueAttributes": false,
-                "driverClass": "org.hsqldb.jdbcDriver",
-                "idleTimeout": 5,
-                "name": "ProvisionerDS (sa)",
-                "connectionUrl": "jdbc:hsqldb:${pf.server.data.dir}${/}hypersonic${/}ProvisionerDefaultDB;hsqldb.lock_file=false",
-                "id": "ProvisionerDS",
-                "lastModified": "2025-11-18T04:20:12.384Z",
-                "maxPoolSize": 100,
-                "blockingTimeout": 5000
-            }],
+                    "id": "ProvisionerDS",
+                    "lastModified": "2025-11-25T21:11:00.010Z",
+                    "maxPoolSize": 100,
+                    "blockingTimeout": 5000
+                }
+            ],
             "resourceType": "/dataStores"
         },
         {
@@ -341,11 +392,11 @@
             "items": [{
                 "password": "${PING_IDENTITY_PASSWORD}",
                 "roles": [
-                    "DATA_COLLECTION_ADMINISTRATOR",
-                    "CRYPTO_ADMINISTRATOR",
                     "EXPRESSION_ADMINISTRATOR",
-                    "ADMINISTRATOR",
-                    "USER_ADMINISTRATOR"
+                    "USER_ADMINISTRATOR",
+                    "CRYPTO_ADMINISTRATOR",
+                    "DATA_COLLECTION_ADMINISTRATOR",
+                    "ADMINISTRATOR"
                 ],
                 "auditor": false,
                 "description": "Initial administrator user",
@@ -604,7 +655,7 @@
                 },
                 "name": "AccessTokenManagement",
                 "id": "AccessTokenManagement",
-                "lastModified": "2025-11-18T04:34:19.798Z",
+                "lastModified": "2025-11-25T21:11:00.424Z",
                 "pluginDescriptorRef": {
                     "location": "https://localhost:-1/pf-admin-api/v1/oauth/accessTokenManagers/descriptors/com.pingidentity.pf.access.token.management.plugins.JwtBearerAccessTokenManagementPlugin",
                     "id": "com.pingidentity.pf.access.token.management.plugins.JwtBearerAccessTokenManagementPlugin"
@@ -717,7 +768,7 @@
                     },
                     "name": "MSFTTOKENPROCESSOR",
                     "id": "MSFTTOKENPROCESSOR",
-                    "lastModified": "2025-11-18T04:20:12.776Z",
+                    "lastModified": "2025-11-25T21:11:00.436Z",
                     "pluginDescriptorRef": {
                         "location": "https://localhost:-1/pf-admin-api/v1/idp/tokenProcessors/descriptors/com.pingidentity.pf.tokenprocessors.jwt.JwtTokenProcessor",
                         "id": "com.pingidentity.pf.tokenprocessors.jwt.JwtTokenProcessor"
@@ -750,7 +801,7 @@
                     },
                     "name": "PFTOKENPROCESSOR",
                     "id": "PFTOKENPROCESSOR",
-                    "lastModified": "2025-11-18T04:20:12.789Z",
+                    "lastModified": "2025-11-25T21:11:00.451Z",
                     "pluginDescriptorRef": {
                         "location": "https://localhost:-1/pf-admin-api/v1/idp/tokenProcessors/descriptors/org.sourceid.wstrust.processor.oauth.BearerAccessTokenTokenProcessor",
                         "id": "org.sourceid.wstrust.processor.oauth.BearerAccessTokenTokenProcessor"
@@ -865,13 +916,13 @@
                 "activationCodeCheckMode": "AFTER_AUTHENTICATION",
                 "scopes": [
                     {
-                        "name": "email",
-                        "description": "email",
+                        "name": "profile",
+                        "description": "profile",
                         "dynamic": false
                     },
                     {
-                        "name": "profile",
-                        "description": "profile",
+                        "name": "email",
+                        "description": "email",
                         "dynamic": false
                     }
                 ],
@@ -1089,7 +1140,7 @@
                 "allowIdTokenIntrospection": false,
                 "id": "OPENIDCONNECTPOLICYMANAGEMENT",
                 "reissueIdTokenInHybridFlow": false,
-                "lastModified": "2025-11-18T04:40:24.748Z",
+                "lastModified": "2025-11-25T21:11:00.697Z",
                 "idTokenLifetime": 5,
                 "accessTokenManagerRef": {
                     "location": "https://localhost:-1/pf-admin-api/v1/oauth/accessTokenManagers/AccessTokenManagement",
@@ -1171,7 +1222,6 @@
                 "persistentGrantReuseType": "SERVER_DEFAULT",
                 "persistentGrantIdleTimeoutType": "SERVER_DEFAULT",
                 "requireSignedRequests": false,
-                "description": "",
                 "persistentGrantIdleTimeout": 0,
                 "enabled": true,
                 "requireOfflineAccessScopeToIssueRefreshTokens": "SERVER_DEFAULT",
@@ -1198,16 +1248,15 @@
                 "allowAuthenticationApiInit": false,
                 "refreshTokenRollingGracePeriodType": "SERVER_DEFAULT",
                 "replicationStatus": "REPLICATED",
-                "creationDate": "2025-11-18T04:20:13.094Z",
+                "creationDate": "2025-11-25T21:11:00.789Z",
                 "deviceFlowSettingType": "SERVER_DEFAULT",
                 "redirectUris": [],
-                "logoUrl": "",
                 "authorizationDetailTypes": [],
                 "grantTypes": [
                     "CLIENT_CREDENTIALS",
                     "TOKEN_EXCHANGE"
                 ],
-                "modificationDate": "2025-11-18T04:27:46.694Z",
+                "modificationDate": "2025-11-25T21:11:00.789Z",
                 "defaultAccessTokenManagerRef": {
                     "location": "https://localhost:-1/pf-admin-api/v1/oauth/accessTokenManagers/AccessTokenManagement",
                     "id": "AccessTokenManagement"
@@ -1218,7 +1267,7 @@
                 },
                 "clientSecretRetentionPeriodType": "SERVER_DEFAULT",
                 "requirePushedAuthorizationRequests": false,
-                "clientSecretChangedTime": "2025-11-18T04:20:13.000Z",
+                "clientSecretChangedTime": "2025-11-25T21:11:00.000Z",
                 "name": "tokenexchangeclient",
                 "refreshTokenRollingIntervalType": "SERVER_DEFAULT",
                 "persistentGrantExpirationType": "SERVER_DEFAULT",
