@@ -1,3 +1,10 @@
 pingfederate/bulk-export/shared/convert.log
 pingfederate/bulk-export/shared/data.json
 pingfederate/bulk-export/shared/data.json.subst
+docker/pf-pingid-integration-kit-2.29.0.zip
+docker/pingfederate/pf-pingid-integration-kit-2.29.0.zip
+docker/pingfederate/pf-pingone-mfa-integration-kit-3.1.zip
+docker/terraform-init/.terraform.lock.hcl
+docker/terraform-init/terraform.tfstate
+docker/terraform-init/terraform.tfstate.backup
+docker/terraform-init/.terraform/

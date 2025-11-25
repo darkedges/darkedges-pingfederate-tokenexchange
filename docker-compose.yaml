@@ -1,0 +1,14 @@
+services:
+  terraform-init:
+    image: hashicorp/terraform:1.6.6
+    container_name: pingfederate-terraform-init
+    profiles: ["init"]
+    working_dir: /workspace/docker/terraform-init
+    entrypoint: ["terraform"]
+    command: ["init"]
+    env_file:
+      - .env.terraform
+    environment:
+      TF_IN_AUTOMATION: "true"
+    volumes:
+      - ./:/workspace

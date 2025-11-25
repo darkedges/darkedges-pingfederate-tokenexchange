@@ -33,3 +33,14 @@ See [pingfederate/README.md](pingfederate/README.md) for full documentation.
 - [PingFederate Docs](https://docs.pingidentity.com/pingfederate/)
 - [Ping DevOps Helm Charts](https://helm.pingidentity.com/)
 - [RFC 8693 - Token Exchange](https://datatracker.ietf.org/doc/html/rfc8693)
+
+
+## Build Custom Image
+
+1. Download the integration kit to the `docker` folder.
+2. issue the following command to build
+
+    ```console
+    docker build . -t darkedges/pingfederate:edge
+    docker push darkedges/pingfederate:edge  
+    ```
