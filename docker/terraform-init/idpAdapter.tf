@@ -18,6 +18,11 @@ resource "pingfederate_idp_adapter" "identifierFirstAdapter" {
         masked    = false
         name      = "subject"
         pseudonym = true
+      },
+      {
+        masked    = false
+        name      = "telephoneNumber"
+        pseudonym = false
       }
     ]
     attribute_sources = [
@@ -34,7 +39,7 @@ resource "pingfederate_idp_adapter" "identifierFirstAdapter" {
             "Subject DN",
             "uid",
           ]
-          search_filter = "(&(telephoneNumber=$${subject}))"
+          search_filter = "(&(telephoneNumber=$${telephoneNumber}))"
           search_scope  = "SUBTREE"
           type          = "LDAP"
         }
@@ -50,6 +55,11 @@ resource "pingfederate_idp_adapter" "identifierFirstAdapter" {
         id          = "PINGDIRECTORY"
         value       = "uid"
       }
+      "telephoneNumber" = {
+        source_type = "LDAP_DATA_STORE"
+        id          = "PINGDIRECTORY"
+        value       = "telephoneNumber"
+      }
     }
   }
   attribute_contract = {
@@ -63,6 +73,13 @@ resource "pingfederate_idp_adapter" "identifierFirstAdapter" {
         masked    = false
         name      = "subject"
         pseudonym = true
+      },
+    ]
+    extended_attributes = [
+      {
+        masked    = false
+        name      = "telephoneNumber"
+        pseudonym = false
       },
     ]
   }
