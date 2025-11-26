@@ -30,7 +30,7 @@ resource "pingfederate_oauth_idp_adapter_mapping" "identifierfirst" {
         id                     = "IDENTIFIERFIRST"
         member_of_nested_group = false
         search_attributes      = ["Subject DN", "mail", "uid"]
-        search_filter          = "telephoneNumber=$${telephoneNumber}"
+        search_filter          = "telephoneNumber=$${subject}"
         search_scope           = "SUBTREE"
         type                   = "LDAP"
       }

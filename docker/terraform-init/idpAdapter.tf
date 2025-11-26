@@ -39,7 +39,7 @@ resource "pingfederate_idp_adapter" "identifierFirstAdapter" {
             "Subject DN",
             "uid",
           ]
-          search_filter = "(&(telephoneNumber=$${telephoneNumber}))"
+          search_filter = "(&(telephoneNumber=$${subject}))"
           search_scope  = "SUBTREE"
           type          = "LDAP"
         }
