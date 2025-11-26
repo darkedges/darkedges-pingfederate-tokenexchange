@@ -55,21 +55,21 @@ helm uninstall pingone-ldap-gateway \
 
 ### Basic Parameters
 
-| Parameter | Description | Default |
-|-----------|-------------|---------|
-| `pingoneLdapGateway.enabled` | Enable PingOne LDAP Gateway deployment | `true` |
-| `pingoneLdapGateway.replicaCount` | Number of replicas | `1` |
-| `pingoneLdapGateway.image.repository` | Image repository | `pingidentity/pingone-ldap-gateway` |
-| `pingoneLdapGateway.image.tag` | Image tag | `latest` |
-| `pingoneLdapGateway.image.pullPolicy` | Image pull policy | `IfNotPresent` |
+| Parameter                             | Description                            | Default                             |
+| ------------------------------------- | -------------------------------------- | ----------------------------------- |
+| `pingoneLdapGateway.enabled`          | Enable PingOne LDAP Gateway deployment | `true`                              |
+| `pingoneLdapGateway.replicaCount`     | Number of replicas                     | `1`                                 |
+| `pingoneLdapGateway.image.repository` | Image repository                       | `pingidentity/pingone-ldap-gateway` |
+| `pingoneLdapGateway.image.tag`        | Image tag                              | `latest`                            |
+| `pingoneLdapGateway.image.pullPolicy` | Image pull policy                      | `IfNotPresent`                      |
 
 ### Service Parameters
 
-| Parameter | Description | Default |
-|-----------|-------------|---------|
-| `pingoneLdapGateway.service.type` | Service type | `ClusterIP` |
-| `pingoneLdapGateway.service.ports.ldap.port` | LDAP port | `389` |
-| `pingoneLdapGateway.service.ports.ldaps.port` | LDAPS (SSL/TLS) port | `636` |
+| Parameter                                     | Description          | Default     |
+| --------------------------------------------- | -------------------- | ----------- |
+| `pingoneLdapGateway.service.type`             | Service type         | `ClusterIP` |
+| `pingoneLdapGateway.service.ports.ldap.port`  | LDAP port            | `389`       |
+| `pingoneLdapGateway.service.ports.ldaps.port` | LDAPS (SSL/TLS) port | `636`       |
 
 ### Resource Management
 
