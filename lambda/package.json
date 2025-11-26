@@ -1,0 +1,30 @@
+{
+  "name": "pingfederate-aws-connect-auth",
+  "version": "1.0.0",
+  "description": "AWS Lambda functions for PingFederate headless authentication flow with AWS Connect",
+  "main": "src/initiate-auth.js",
+  "type": "module",
+  "scripts": {
+    "deploy": "serverless deploy",
+    "deploy:dev": "serverless deploy --stage dev",
+    "deploy:prod": "serverless deploy --stage prod",
+    "offline": "serverless offline start",
+    "logs:initiate": "serverless logs -f initiate-auth",
+    "logs:verify": "serverless logs -f verify-token",
+    "invoke:initiate": "serverless invoke local -f initiate-auth",
+    "invoke:verify": "serverless invoke local -f verify-token"
+  },
+  "keywords": [
+    "aws-lambda",
+    "pingfederate",
+    "oauth2",
+    "aws-connect"
+  ],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "serverless": "^3.38.0",
+    "serverless-offline": "^13.2.4",
+    "serverless-dotenv-plugin": "^4.0.2"
+  }
+}

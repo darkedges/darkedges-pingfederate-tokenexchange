@@ -1,0 +1,56 @@
+service: pingfederate-auth-flow
+
+frameworkVersion: '3'
+useDotenv: true
+
+provider:
+  name: aws
+  runtime: nodejs18.x
+  region: ${env:AWS_REGION, 'us-east-1'}
+  stage: ${env:STAGE, 'dev'}
+  memorySize: 256
+  timeout: 30
+  environment:
+    PF_BASE_URL: ${env:PF_BASE_URL}
+    CLIENT_ID: ${env:CLIENT_ID}
+    CLIENT_SECRET: ${env:CLIENT_SECRET}
+    REDIRECT_URI: ${env:REDIRECT_URI}
+  iam:
+    role:
+      statements:
+        - Effect: Allow
+          Action:
+            - logs:CreateLogGroup
+            - logs:CreateLogStream
+            - logs:PutLogEvents
+          Resource: arn:aws:logs:${aws:region}:${aws:accountId}:log-group:/aws/lambda/*
+
+functions:
+  initiate-auth:
+    handler: src/initiate-auth.handler
+    description: Initiate OAuth flow and trigger OTP via SMS
+    events:
+      - http:
+          path: auth/initiate
+          method: post
+          cors: true
+
+  verify-token:
+    handler: src/verify-token.handler
+    description: Verify OTP and exchange code for access token
+    events:
+      - http:
+          path: auth/verify
+          method: post
+          cors: true
+
+plugins:
+  - serverless-offline
+  - serverless-dotenv-plugin
+
+package:
+  individually: true
+  patterns:
+    - '!node_modules/**'
+    - '!.git/**'
+    - '!.gitignore'

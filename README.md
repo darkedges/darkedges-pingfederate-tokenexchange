@@ -4,7 +4,10 @@ PingFederate server profiles for OAuth2 token exchange implementation.
 
 ## Structure
 
-- `pingfederate/` - Server profiles and Helm charts
+- `profiles/pingfederate/` - Server profiles and Helm charts
+- `docker/` - Custom PingFederate Docker image with adapters (PingID, PingOne MFA)
+- `lambda/` - AWS Lambda functions for headless auth flow (OAuth2 with OTP)
+- `docker/terraform-init/` - Infrastructure-as-Code for PingFederate resources
 
 ## Quick Start
 
@@ -24,9 +27,16 @@ helm upgrade --install pingfederate pingidentity/ping-devops \
   -f pingfederate/helm/ingress.yaml
 ```
 
-## Details
+## Component Documentation
 
-See [pingfederate/README.md](pingfederate/README.md) for full documentation.
+### PingFederate Configuration
+See [profiles/pingfederate/README.md](profiles/pingfederate/README.md) for full configuration documentation.
+
+### Lambda Functions (AWS Connect Integration)
+See [lambda/README.md](lambda/README.md) for headless authentication flow between AWS Connect and PingFederate.
+
+### Token Exchange Details
+See [TOKENEXCHANGE.md](TOKENEXCHANGE.md) for complete OAuth2 token exchange implementation examples.
 
 ## Resources
 

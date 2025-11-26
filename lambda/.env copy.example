@@ -1,0 +1,11 @@
+# PingFederate Configuration
+PF_BASE_URL=https://engine.ping.darkedges.com
+
+# OAuth Client Configuration
+CLIENT_ID=tokenexchangeclient
+CLIENT_SECRET=2FederateM0re
+REDIRECT_URI=https://myapp.example.com/callback
+
+# AWS Configuration
+AWS_REGION=us-east-1
+STAGE=dev
