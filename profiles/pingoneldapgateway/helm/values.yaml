@@ -1,0 +1,113 @@
+# Default values for pingone-ldap-gateway
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+
+# PingOne LDAP Gateway Deployment
+pingoneLdapGateway:
+  enabled: true
+  
+  # Docker image configuration
+  image:
+    repository: pingidentity/pingone-ldap-gateway
+    pullPolicy: IfNotPresent
+    tag: "latest"
+  
+  # Replica count
+  replicaCount: 1
+  
+  # Resource requests and limits
+  resources:
+    requests:
+      memory: "512Mi"
+      cpu: "250m"
+    limits:
+      memory: "1Gi"
+      cpu: "500m"
+  
+  # Service configuration
+  service:
+    type: ClusterIP
+    ports:
+      ldap:
+        port: 389
+        targetPort: 389
+        protocol: TCP
+      ldaps:
+        port: 636
+        targetPort: 636
+        protocol: TCP
+  
+  # Environment variables
+  env:
+    - name: gatewayCredential
+      value: ""
+    - name: PING_IDENTITY_ACCEPT_EULA
+      value: "yes"
+  
+  # Secrets (optional - reference existing secrets)
+  secrets: []
+  
+  # Probes configuration
+  livenessProbe:
+    enabled: true
+    initialDelaySeconds: 60
+    periodSeconds: 10
+    timeoutSeconds: 5
+    failureThreshold: 3
+  
+  readinessProbe:
+    enabled: true
+    initialDelaySeconds: 30
+    periodSeconds: 10
+    timeoutSeconds: 5
+    failureThreshold: 3
+  
+  # Volume mounts for configuration
+  volumeMounts: []
+  
+  # Volumes
+  volumes: []
+
+# Ingress configuration (optional - LDAP typically doesn't use HTTP ingress)
+ingress:
+  enabled: false
+
+# NetworkPolicy (optional)
+networkPolicy:
+  enabled: false
+
+# Pod security policy
+podSecurityPolicy:
+  enabled: false
+
+# Service account
+serviceAccount:
+  create: true
+  name: pingone-ldap-gateway
+  annotations: {}
+
+# Pod annotations
+podAnnotations: {}
+
+# Security context
+securityContext:
+  runAsNonRoot: false
+  runAsUser: 0
+  fsGroup: 0
+
+# Node selector
+nodeSelector: {}
+
+# Tolerations
+tolerations: []
+
+# Affinity
+affinity: {}
+
+# Autoscaling (optional - Horizontal Pod Autoscaler)
+autoscaling:
+  enabled: false
+  minReplicas: 1
+  maxReplicas: 3
+  targetCPUUtilizationPercentage: 80
+  targetMemoryUtilizationPercentage: 80

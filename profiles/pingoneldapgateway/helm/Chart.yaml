@@ -1,0 +1,16 @@
+apiVersion: v2
+name: pingone-ldap-gateway
+description: Helm chart for PingOne LDAP Gateway
+type: application
+version: 0.1.0
+appVersion: "1.0"
+keywords:
+  - pingone
+  - ldap
+  - gateway
+  - identity
+home: https://github.com/darkedges/darkedges-pingfederate-tokenexchange
+sources:
+  - https://github.com/darkedges/darkedges-pingfederate-tokenexchange
+maintainers:
+  - name: darkedges

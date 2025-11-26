@@ -1,0 +1,108 @@
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: {{ .Values.serviceAccount.name }}
+  namespace: {{ .Release.Namespace }}
+  annotations:
+    {{- toYaml .Values.serviceAccount.annotations | nindent 4 }}
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ include "pingone-ldap-gateway.fullname" . }}
+  namespace: {{ .Release.Namespace }}
+  labels:
+    {{- include "pingone-ldap-gateway.labels" . | nindent 4 }}
+spec:
+  type: {{ .Values.pingoneLdapGateway.service.type }}
+  ports:
+    - name: ldap
+      port: {{ .Values.pingoneLdapGateway.service.ports.ldap.port }}
+      targetPort: {{ .Values.pingoneLdapGateway.service.ports.ldap.targetPort }}
+      protocol: {{ .Values.pingoneLdapGateway.service.ports.ldap.protocol }}
+    - name: ldaps
+      port: {{ .Values.pingoneLdapGateway.service.ports.ldaps.port }}
+      targetPort: {{ .Values.pingoneLdapGateway.service.ports.ldaps.targetPort }}
+      protocol: {{ .Values.pingoneLdapGateway.service.ports.ldaps.protocol }}
+  selector:
+    {{- include "pingone-ldap-gateway.selectorLabels" . | nindent 4 }}
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ include "pingone-ldap-gateway.fullname" . }}
+  namespace: {{ .Release.Namespace }}
+  labels:
+    {{- include "pingone-ldap-gateway.labels" . | nindent 4 }}
+spec:
+  {{- if not (default false .Values.autoscaling.enabled) }}
+  replicas: {{ .Values.pingoneLdapGateway.replicaCount }}
+  {{- end }}
+  selector:
+    matchLabels:
+      {{- include "pingone-ldap-gateway.selectorLabels" . | nindent 6 }}
+  template:
+    metadata:
+      {{- with .Values.podAnnotations }}
+      annotations:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      labels:
+        {{- include "pingone-ldap-gateway.selectorLabels" . | nindent 8 }}
+    spec:
+      serviceAccountName: {{ .Values.serviceAccount.name }}
+      securityContext:
+        {{- toYaml .Values.securityContext | nindent 8 }}
+      containers:
+        - name: pingone-ldap-gateway
+          image: "{{ .Values.pingoneLdapGateway.image.repository }}:{{ .Values.pingoneLdapGateway.image.tag | default .Chart.AppVersion }}"
+          imagePullPolicy: {{ .Values.pingoneLdapGateway.image.pullPolicy }}
+          ports:
+            - name: ldap
+              containerPort: {{ .Values.pingoneLdapGateway.service.ports.ldap.targetPort }}
+              protocol: TCP
+            - name: ldaps
+              containerPort: {{ .Values.pingoneLdapGateway.service.ports.ldaps.targetPort }}
+              protocol: TCP
+          env:
+            {{- toYaml .Values.pingoneLdapGateway.env | nindent 12 }}
+          {{- if .Values.pingoneLdapGateway.livenessProbe.enabled }}
+          livenessProbe:
+            tcpSocket:
+              port: ldap
+            initialDelaySeconds: {{ .Values.pingoneLdapGateway.livenessProbe.initialDelaySeconds }}
+            periodSeconds: {{ .Values.pingoneLdapGateway.livenessProbe.periodSeconds }}
+            timeoutSeconds: {{ .Values.pingoneLdapGateway.livenessProbe.timeoutSeconds }}
+            failureThreshold: {{ .Values.pingoneLdapGateway.livenessProbe.failureThreshold }}
+          {{- end }}
+          {{- if .Values.pingoneLdapGateway.readinessProbe.enabled }}
+          readinessProbe:
+            tcpSocket:
+              port: ldap
+            initialDelaySeconds: {{ .Values.pingoneLdapGateway.readinessProbe.initialDelaySeconds }}
+            periodSeconds: {{ .Values.pingoneLdapGateway.readinessProbe.periodSeconds }}
+            timeoutSeconds: {{ .Values.pingoneLdapGateway.readinessProbe.timeoutSeconds }}
+            failureThreshold: {{ .Values.pingoneLdapGateway.readinessProbe.failureThreshold }}
+          {{- end }}
+          resources:
+            {{- toYaml .Values.pingoneLdapGateway.resources | nindent 12 }}
+          {{- with .Values.pingoneLdapGateway.volumeMounts }}
+          volumeMounts:
+            {{- toYaml . | nindent 12 }}
+          {{- end }}
+      {{- with .Values.pingoneLdapGateway.volumes }}
+      volumes:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      {{- with .Values.nodeSelector }}
+      nodeSelector:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      {{- with .Values.affinity }}
+      affinity:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      {{- with .Values.tolerations }}
+      tolerations:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
