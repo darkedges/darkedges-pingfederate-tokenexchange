@@ -168,13 +168,13 @@
         {
             "operationType": "SAVE",
             "items": [{
-                "encryptedCredential": "eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2Iiwia2lkIjoiUWVzOVR5eTV5WiIsInZlcnNpb24iOiIxMi4zLjEuMCJ9..kc2yD6au7llbQDmIUGVJWg.ywz7puTu4JTqrCA8GgdevVAP-xfX-FPibO9Qt-wdPhW74DexsknYzekvKgqEdmLxt54k5FBj_04Dan6QwjVwuKkLO9XsqD6TlDBEisn-zik5THAEvsIXVNNd4LM1XPYSZ00RgWVbGzInJVZUWZNkyO55XOkSEaFwrUtMN9KZwHSHgOVvUcXR2lcxWlrAV8g0-zb2fFSdHUZTUQfHvgrLI8bFNgIExUUQFA8wteMtaHbmCqAhC1nZDYDg4PDnS4COHDjvkTLVCdmGFZIqoOvk38HzmUl-tY8cM1blL8vgUDZjcDPH0byXvG8LlUCSFUODVAEwrVheM9SahP4257ZFNdKC0dP9i74p3xkPVPFgP9HoqEo5eSifp5poyY4rpow38-IMjHJlh4JSyyrZAwDhcoB81L5Bf71VhPW0riQCvfr9oYOdovCUmor7q3xx3bax0GQSO_KgBtqCHC4eLRMQe4VCtsRwKQjO7ap2OO6asUONgvRHzXifzgzLFsC3F9_JX_0URM-EVSAAv41YuQFJWp3qpxVcizZQe5Mtzmmd-kDU2fSvy_54LdWQ6Y1pvWd_yn3bmT8mD4ZR-WZgIUXWaAt5fz0VPJGX1tsHRlBnfPdK8Faa80VvGUR1nJWiikdUWs9lfmbXOflfeT0_3izh4m4h466VSqyzSVnCjqIwLkdbXZbWCDEwufhkjI_qQK4act3zRxyPjD8hQd48yMkskffSWECGVELFlxxVaN3uPlmEkrI4AfqetDFKlpYdcfhN5VvZ81_p-nch3QssMu02OvI0QL9CWnaXlNvfJMhieWpp34SxEbD0qvSGDcp4iWlDr9SwsONXFdU2BZnnQk6Yu1aLEcVWkykVfigxMfemT_qLC2OIOP7ycq7bh-CfasXxLu289ehC1Iy89wMkl6BIJB7F9EhlVhJhKXcS-8jrEiEqK7WpFv-RfvsGMCnzEnx7GObIwV5hA76S8HNQvdyGUIvxH1oI4duDEV4g6Qp7FyL7pPJH_28iBY9FRV-dPwMUkpbbcO6ERpKRDt3IE8fh5KTXl33PzAxMFHqGsklyzezdtec2f2AtDf93cr-4E-gvCC4lq3Rrerx9N2A-53z76NWKN1fPwiajxt3pIpZqDCbnbjmM0zVnyHTN9UAE4reWaq6MrjVYNLG1hX_sqpbWrk0dwkaqVxQUMXGRJlsceMlU9zLQN7UWgH8GxqUgk0m2gxKpMReI0Rar6wCe9p4XkK-7Mz2Bz5FC0LMcx-0LcARdWqc0oB9e9UVxvovG0IJqqmDfB_I_o76189GmJR8y_OEHHSnKJtS0XY9l4Df1whu5neVoP6lMlF_EwrlfToVLfTXuBraD_8H80zds81NfOg8jsF19KyS2CBL5CmFRdd1mEZ6n7M4_tJ7njx2rYwsQFrSCMJ6BSLeuC6XlxQur87V36imMtc2nMK-leX9ADQ3N668oYomCX6BfjAWJq_X0d6kLBt0KdwB8yU4eg0Xlowh6Gh792koULs7AjflRKXuQM7eUu_wzucW5_JyyfQdoIpaPvBM9X8qElXE3GqNd9IsB0T0_P-wnbjL8qvDUyZ4CIMxwl0HGhonGIzORsW6M7Kz3x8Kxe-0v9FTjBG6hryaouWVi-jQ6JAqli3CR1JL-Zs0BQq6QVXCpAm5A1qN3ZZGYgKwp125crfo5sRh9q2_5MSAcYOfhuQkmvi-imrI.wQ7AxemTOw18rzM6ZRTU1A",
+                "encryptedCredential": "eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2Iiwia2lkIjoiUWVzOVR5eTV5WiIsInZlcnNpb24iOiIxMi4zLjEuMCJ9..z_mcnkere_E7PsUbWZum0w.IJOAzAHHrLBDGg_G-1Kmai6_5Qa-L0DXyIpfo923kHAVwlpEfhykyLGeZwqczo1r5qMtiYCl8sZ0A-a6qEmEGlIWdO_iQzekwnTzDEDKewQISMPEl9lvn7EkEW9bs-xBKyGxUqYpZGbTEfJtk8mq6bHU_dLYwehFWUCBxfKy0gBQEgnmi4k3NWVLLj8gTJyydKZ805tuU9bPhDzr2XtYi22YnS9qoPRGJOU3rQrD6TIKJjyyrvPAOPO55LLryn2BOgUm5JbiAMplmKXWUm-SLB-DuY7eLCqcaSrWpvHzTVC8sEOTy2lBhG5INt6EwGt47yQuWLUWUgrMSOAJnuHi7hjPpWwqma9aupIKq1Kc7oM1xoz8mWMqOzwy-eVpA84kkXFMGIq-To7TEBsr6US5hjJ2TjhoaCrbPj1saXPE-f0PhBJE-jmBwC2Lec8Z_NwfITBd8RpNdRU0lERmtbCRcwMNVcinDRH-4a1H6gXd9UZzvV2KHdMEeBJKrkWD2fW_qrZmuglvQxAzIcjGESw8cgHNwfG5kYtSHE6dN5ZQTaUG17aj_x5Opx-8cGXNbo1ZW68Hotl0yv7DBQUxD_8WhsygFfA61BlqojVDkzQ9wgPgE2Vv9_-W5hjCT4teqRTum7ciPTmc05_kSBR-a9UP-UAwPEiTEaA5frHnV8BrGpCI8zNTe8zb-gVsqJchP_sUikYfC9Qwx54a89gRD5YGfexjNUbgi1UOsJgQEObd9NK2tjolF_-fA5_FOKzJaXsFk7Q3FGcR4uddqbR58C9IOf6F-pOL58rPxE9V5OLvMIW0KFswwqNja6T-6Jd5SXoB3uuhlDpiXxYNBWQ4zo_I70GAvD-L_Y96lufn7CS_XEGVpTQogXjHUB-aTrvGkU-28oTEVqSCL7_ciQHCXMprQCE3ddUkZvfGwESMCMkMc_0GQe37T64HQrAlVE-ht7SB1LRDUkCdCGEow5wgVcpO23bSxwlFDvfdHleVQC-zFaAXjqlfrnMRtV9s0W7MZwOvvkMuSnWlIXur21byJYcwIFY4raQAJ9cERtXSBDTQbEETIir6G_Jb1fn3lBkmryaNkX1lGWJ-YtpHHbpRv87Zrz0b6KvhYomVkST4CO1Yr03u8yl2HDVkvMhvlLhBQTaH2AWVih3fZ3XnHh1fkCntCzkunLv92-hVnvyq8rx1oUJPDxor5MwmnMIYIQNpgfq59y1IaE_RSf8FcE_fTWrKwRoqfboWJaPJpNhv8jjFBKHZTkYr-uX5lh8YZcdKXQeOCNq9Y4Sr_YiKzZyAkZdm8k_m5blQDYMmhzq1TD1zamtnuIOEwQ_Dn0HVB7y4tWqQ9H1uisGbbAXlt0QXvnarXw0ukuY2kxN6YtgCg7AXw0IAub55CQYetO8n4mIjlZ0DjyySocrhznbuQGuDK68jnA8xakqHAQ9lgzPKaSAxEfMbt0Gj1HdtFpvqPT06Ll-IKgBjNkcq5M1dlB17kpA-2soxNN_t-lzK3H9aqQT3NO9QoUzWZrQizgXpHVJEEDZLlNx93ZsY31Ggw3d1TbVKZuJoOPmlCcC3lT3ZtPKikZm2EOfPqhOQ3Kk9k-ypKvaoq0I08RgeibMfUu1tuD7nt7vfEkykju5QB7hAoK5vJ1oWK4SJ1LJoFuqs9DxjVCh-1ejtgTR_vbSiJynGIgclZGbg4FT93zDblcYkjNEzbvI.KCUc9GRm3ZUkAvXHnUHuIg",
                 "pingOneConnectionId": "3a0c50c2-d5de-45b1-bd2a-9aedf6f3477e",
                 "environmentId": "314177e2-5da7-433b-a5b5-9bdcc20b45a3",
                 "organizationName": "trial_cba.com_1544259280",
                 "name": "trial_cba.com_1544259280",
                 "active": true,
-                "credentialId": "d9a48f36-d483-4847-9d9e-da3dc95bd359",
+                "credentialId": "e112d200-1d68-448c-91d4-1fd4da7adc69",
                 "pingOneAuthenticationApiEndpoint": "https://auth.pingone.com.au",
                 "id": "mImpgs4t0rrk7n7mfAMOcP",
                 "creationDate": "2025-11-26T07:31:39.608Z",
@@ -260,8 +260,14 @@
                                 "name": "Proxy Settings",
                                 "value": "System Defaults"
                             },
-                            {"name": "Custom Proxy Host"},
-                            {"name": "Custom Proxy Port"}
+                            {
+                                "name": "Custom Proxy Host",
+                                "value": ""
+                            },
+                            {
+                                "name": "Custom Proxy Port",
+                                "value": ""
+                            }
                         ]
                     },
                     "name": "PINGONEDATASTORE",
@@ -957,7 +963,7 @@
                             },
                             {
                                 "name": "PingOne Population",
-                                "value": "3ff5b0e7-3eda-4e70-9a92-412453ab5243"
+                                "value": "f18888ef-fbaf-42bb-b7fa-022a96facb28"
                             },
                             {
                                 "name": "Application",
@@ -969,7 +975,7 @@
                             },
                             {
                                 "name": "MFA policy for registration",
-                                "value": ""
+                                "value": "Default MFA Policy"
                             },
                             {
                                 "name": "PingOne Management API",
@@ -1123,7 +1129,7 @@
                     },
                     "name": "PINGONEMFA",
                     "id": "PINGONEMFA",
-                    "lastModified": "2025-11-26T07:54:18.088Z",
+                    "lastModified": "2025-11-26T09:52:54.674Z",
                     "pluginDescriptorRef": {
                         "location": "https://localhost:-1/pf-admin-api/v1/idp/adapters/descriptors/com.pingidentity.adapters.pingone.mfa.PingOneMfaIdpAdapter",
                         "id": "com.pingidentity.adapters.pingone.mfa.PingOneMfaIdpAdapter"
