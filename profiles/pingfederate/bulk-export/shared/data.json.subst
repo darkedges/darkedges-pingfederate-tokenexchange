@@ -738,6 +738,13 @@
                 {
                     "attributeMapping": {
                         "attributeContractFulfillment": {
+                            "telephoneNumber": {
+                                "source": {
+                                    "id": "PINGDIRECTORY",
+                                    "type": "LDAP_DATA_STORE"
+                                },
+                                "value": "telephoneNumber"
+                            },
                             "subject": {
                                 "source": {
                                     "id": "PINGDIRECTORY",
@@ -762,6 +769,7 @@
                             "id": "PINGDIRECTORY",
                             "searchAttributes": [
                                 "Subject DN",
+                                "telephoneNumber",
                                 "uid"
                             ],
                             "type": "LDAP",
@@ -801,7 +809,7 @@
                     },
                     "name": "IDENTIFIERFIRST",
                     "id": "IDENTIFIERFIRST",
-                    "lastModified": "2025-11-26T01:58:22.955Z",
+                    "lastModified": "2025-11-26T04:18:47.160Z",
                     "pluginDescriptorRef": {
                         "location": "https://localhost:-1/pf-admin-api/v1/idp/adapters/descriptors/com.pingidentity.adapters.identifierfirst.idp.IdentifierFirstAdapter",
                         "id": "com.pingidentity.adapters.identifierfirst.idp.IdentifierFirstAdapter"
@@ -820,7 +828,11 @@
                                 "pseudonym": false
                             }
                         ],
-                        "extendedAttributes": []
+                        "extendedAttributes": [{
+                            "masked": false,
+                            "name": "telephoneNumber",
+                            "pseudonym": false
+                        }]
                     }
                 },
                 {
@@ -1430,13 +1442,13 @@
                     "description": "IDENTIFIERFIRST",
                     "id": "IDENTIFIERFIRST",
                     "searchAttributes": [
-                        "mail",
                         "Subject DN",
+                        "mail",
                         "uid"
                     ],
                     "type": "LDAP",
                     "baseDn": "ou=People,dc=example,dc=com",
-                    "searchFilter": "uid=${subject}"
+                    "searchFilter": "telephoneNumber=${telephoneNumber}"
                 }],
                 "issuanceCriteria": {"conditionalCriteria": []}
             }],
@@ -1902,17 +1914,27 @@
         {
             "operationType": "SAVE",
             "items": [{
-                "apiEnabled": false,
+                "apiEnabled": true,
                 "restrictAccessToRedirectlessMode": true,
-                "includeRequestContext": false,
-                "enableApiDescriptions": true
+                "includeRequestContext": true,
+                "enableApiDescriptions": true,
+                "defaultApplicationRef": {
+                    "location": "https://localhost:-1/pf-admin-api/v1/authenticationApi/applications/t8CAiKyUYjMFmbWWuD92AL3Oc",
+                    "id": "t8CAiKyUYjMFmbWWuD92AL3Oc"
+                }
             }],
             "resourceType": "/authenticationApi/settings"
         },
         {
             "operationType": "SAVE",
             "items": [{
-                "defaultAuthenticationSources": [],
+                "defaultAuthenticationSources": [{
+                    "type": "IDP_ADAPTER",
+                    "sourceRef": {
+                        "location": "https://localhost:-1/pf-admin-api/v1/idp/adapters/IDENTIFIERFIRST",
+                        "id": "IDENTIFIERFIRST"
+                    }
+                }],
                 "failIfNoSelection": false,
                 "authnSelectionTrees": [{
                     "name": "IDENTIFIERFIRSTPOLICY",
@@ -1969,7 +1991,7 @@
             "operationType": "SAVE",
             "items": [{
                 "enableSpAuthnSelection": false,
-                "enableIdpAuthnSelection": false
+                "enableIdpAuthnSelection": true
             }],
             "resourceType": "/authenticationPolicies/settings"
         }
