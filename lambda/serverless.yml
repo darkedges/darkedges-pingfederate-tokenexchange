@@ -7,7 +7,7 @@ provider:
   name: aws
   runtime: nodejs18.x
   region: ${env:AWS_REGION, 'us-east-1'}
-  stage: ${env:STAGE, 'dev'}
+  stage: ${opt:stage, 'dev'}
   memorySize: 256
   timeout: 30
   environment:
@@ -15,15 +15,6 @@ provider:
     CLIENT_ID: ${env:CLIENT_ID}
     CLIENT_SECRET: ${env:CLIENT_SECRET}
     REDIRECT_URI: ${env:REDIRECT_URI}
-  iam:
-    role:
-      statements:
-        - Effect: Allow
-          Action:
-            - logs:CreateLogGroup
-            - logs:CreateLogStream
-            - logs:PutLogEvents
-          Resource: arn:aws:logs:${aws:region}:${aws:accountId}:log-group:/aws/lambda/*
 
 functions:
   initiate-auth:
