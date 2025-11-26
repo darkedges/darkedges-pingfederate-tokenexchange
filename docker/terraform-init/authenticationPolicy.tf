@@ -1,12 +1,14 @@
 resource "pingfederate_authentication_policies" "identityFirstPolicy" {
   authn_selection_trees = [
     {
-      authentication_api_application_ref = null
-      description                        = null
-      enabled                            = true
-      handle_failures_locally            = false
-      id                                 = "IDENTIFIERFIRSTPOLICY"
-      name                               = "IDENTIFIERFIRSTPOLICY"
+      authentication_api_application_ref = {
+        id = "t8CAiKyUYjMFmbWWuD92AL3Oc"
+      }
+      description             = null
+      enabled                 = true
+      handle_failures_locally = false
+      id                      = "IDENTIFIERFIRSTPOLICY"
+      name                    = "IDENTIFIERFIRSTPOLICY"
       root_node = {
         action = {
           apc_mapping_policy_action    = null
