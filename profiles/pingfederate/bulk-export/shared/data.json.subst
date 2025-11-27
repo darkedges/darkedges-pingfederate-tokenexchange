@@ -3072,7 +3072,7 @@
         {
             "operationType": "SAVE",
             "items": [{
-                "apiEnabled": true,
+                "apiEnabled": false,
                 "restrictAccessToRedirectlessMode": true,
                 "includeRequestContext": true,
                 "enableApiDescriptions": true,
