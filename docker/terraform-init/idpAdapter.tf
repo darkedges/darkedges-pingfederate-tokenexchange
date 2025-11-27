@@ -37,6 +37,8 @@ resource "pingfederate_idp_adapter" "identifierFirstAdapter" {
           member_of_nested_group = false
           search_attributes = [
             "Subject DN",
+            "mail",
+            "telephoneNumber",
             "uid",
           ]
           search_filter = "(&(telephoneNumber=$${subject}))"
@@ -60,9 +62,28 @@ resource "pingfederate_idp_adapter" "identifierFirstAdapter" {
         id          = "PINGDIRECTORY"
         value       = "telephoneNumber"
       }
+      "mail" = {
+        source = {
+          id   = "PINGDIRECTORY"
+          type = "LDAP_DATA_STORE"
+        }
+        value = "mail"
+      }
     }
   }
   attribute_contract = {
+    # core_attributes_all = [
+    #   {
+    #     masked    = false
+    #     name      = "domain"
+    #     pseudonym = false
+    #   },
+    #   {
+    #     masked    = false
+    #     name      = "subject"
+    #     pseudonym = true
+    #   },
+    # ]
     core_attributes = [
       {
         masked    = false
@@ -79,6 +100,11 @@ resource "pingfederate_idp_adapter" "identifierFirstAdapter" {
       {
         masked    = false
         name      = "telephoneNumber"
+        pseudonym = false
+      },
+      {
+        masked    = false
+        name      = "mail"
         pseudonym = false
       },
     ]
@@ -343,7 +369,7 @@ resource "pingfederate_idp_adapter" "pingOneMfaAdapter" {
       },
       {
         name  = "PingOne Population"
-        value = "3ff5b0e7-3eda-4e70-9a92-412453ab5243"
+        value = "f18888ef-fbaf-42bb-b7fa-022a96facb28"
       },
       {
         name  = "Prompt Users to Set Up MFA"
@@ -355,7 +381,7 @@ resource "pingfederate_idp_adapter" "pingOneMfaAdapter" {
       },
       {
         name  = "Provision Users and Authentication Methods"
-        value = jsonencode(false)
+        value = jsonencode(true)
       },
       {
         name  = "Proxy Settings"

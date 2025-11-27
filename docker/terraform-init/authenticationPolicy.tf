@@ -11,20 +11,14 @@ resource "pingfederate_authentication_policies" "identityFirstPolicy" {
       name                    = "IDENTIFIERFIRSTPOLICY"
       root_node = {
         action = {
-          apc_mapping_policy_action    = null
-          authn_selector_policy_action = null
-          authn_source_policy_action = {
-            attribute_rules = null
-            authentication_source = {
-              source_ref = {
-                id = "IDENTIFIERFIRST"
-              }
-              type = "IDP_ADAPTER"
+          apc_mapping_policy_action = null
+          authn_selector_policy_action = {
+            authentication_selector_ref = {
+              id = "OAUTHCLIENTSELECTOR"
             }
-            context               = null
-            input_user_id_mapping = null
-            user_id_authenticated = null
+            context = null
           }
+          authn_source_policy_action           = null
           continue_policy_action               = null
           done_policy_action                   = null
           fragment_policy_action               = null
@@ -34,16 +28,16 @@ resource "pingfederate_authentication_policies" "identityFirstPolicy" {
         children = [
           {
             action = {
-              apc_mapping_policy_action            = null
-              authn_selector_policy_action         = null
-              authn_source_policy_action           = null
-              continue_policy_action               = null
+              apc_mapping_policy_action    = null
+              authn_selector_policy_action = null
+              authn_source_policy_action   = null
+              continue_policy_action = {
+                context = "No"
+              }
               done_policy_action                   = null
               fragment_policy_action               = null
               local_identity_mapping_policy_action = null
-              restart_policy_action = {
-                context = "Fail"
-              }
+              restart_policy_action                = null
             }
             children = [
             ]
@@ -56,11 +50,11 @@ resource "pingfederate_authentication_policies" "identityFirstPolicy" {
                 attribute_rules = null
                 authentication_source = {
                   source_ref = {
-                    id = "PINGONEMFA"
+                    id = "IDENTIFIERFIRST"
                   }
                   type = "IDP_ADAPTER"
                 }
-                context               = "Success"
+                context               = "Yes"
                 input_user_id_mapping = null
                 user_id_authenticated = null
               }
@@ -91,16 +85,98 @@ resource "pingfederate_authentication_policies" "identityFirstPolicy" {
                 action = {
                   apc_mapping_policy_action    = null
                   authn_selector_policy_action = null
-                  authn_source_policy_action   = null
-                  continue_policy_action       = null
-                  done_policy_action = {
+                  authn_source_policy_action = {
+                    attribute_rules = null
+                    authentication_source = {
+                      source_ref = {
+                        id = "PINGID"
+                      }
+                      type = "IDP_ADAPTER"
+                    }
                     context = "Success"
+                    input_user_id_mapping = {
+                      source = {
+                        id   = "IDENTIFIERFIRST"
+                        type = "ADAPTER"
+                      }
+                      value = "subject"
+                    }
+                    user_id_authenticated = true
                   }
+                  continue_policy_action               = null
+                  done_policy_action                   = null
                   fragment_policy_action               = null
                   local_identity_mapping_policy_action = null
                   restart_policy_action                = null
                 }
                 children = [
+                  {
+                    action = {
+                      apc_mapping_policy_action            = null
+                      authn_selector_policy_action         = null
+                      authn_source_policy_action           = null
+                      continue_policy_action               = null
+                      done_policy_action                   = null
+                      fragment_policy_action               = null
+                      local_identity_mapping_policy_action = null
+                      restart_policy_action = {
+                        context = "Fail"
+                      }
+                    }
+                    children = [
+                    ]
+                  },
+                  {
+                    action = {
+                      apc_mapping_policy_action = {
+                        attribute_mapping = {
+                          attribute_contract_fulfillment = {
+                            mail = {
+                              source = {
+                                id   = "IDENTIFIERFIRST"
+                                type = "ADAPTER"
+                              }
+                              value = "mail"
+                            }
+                            subject = {
+                              source = {
+                                id   = "IDENTIFIERFIRST"
+                                type = "ADAPTER"
+                              }
+                              value = "subject"
+                            }
+                            uid = {
+                              source = {
+                                id   = "IDENTIFIERFIRST"
+                                type = "ADAPTER"
+                              }
+                              value = "subject"
+                            }
+                          }
+                          attribute_sources = [
+                          ]
+                          issuance_criteria = {
+                            conditional_criteria = [
+                            ]
+                            expression_criteria = null
+                          }
+                        }
+                        authentication_policy_contract_ref = {
+                          id = "KUzfpHBOZeqF0vVo"
+                        }
+                        context = "Success"
+                      }
+                      authn_selector_policy_action         = null
+                      authn_source_policy_action           = null
+                      continue_policy_action               = null
+                      done_policy_action                   = null
+                      fragment_policy_action               = null
+                      local_identity_mapping_policy_action = null
+                      restart_policy_action                = null
+                    }
+                    children = [
+                    ]
+                  },
                 ]
               },
             ]

@@ -8,7 +8,7 @@ resource "pingfederate_oauth_access_token_mapping" "default" {
         id   = "PINGDIRECTORY"
         type = "LDAP_DATA_STORE"
       }
-      value = "emailAddress"
+      value = "mail"
     }
     sub = {
       source = {
@@ -32,7 +32,7 @@ resource "pingfederate_oauth_access_token_mapping" "default" {
         description            = "PINGDIRECTORY"
         id                     = "PINGDIRECTORY"
         member_of_nested_group = false
-        search_attributes      = ["Subject DN", "emailAddress", "uid"]
+        search_attributes      = ["Subject DN", "mail", "uid"]
         search_filter          = "uid=$${USER_KEY}"
         search_scope           = "SUBTREE"
         type                   = "LDAP"
