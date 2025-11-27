@@ -2859,14 +2859,18 @@
                     "logoUrl": "",
                     "authorizationDetailTypes": [],
                     "grantTypes": ["AUTHORIZATION_CODE"],
-                    "modificationDate": "2025-11-27T21:52:44.739Z",
+                    "modificationDate": "2025-11-27T21:54:51.249Z",
                     "clientSecretRetentionPeriodType": "SERVER_DEFAULT",
                     "requirePushedAuthorizationRequests": false,
                     "clientSecretChangedTime": "2025-11-27T04:39:14.000Z",
                     "name": "Contact Client",
                     "refreshTokenRollingIntervalType": "SERVER_DEFAULT",
                     "persistentGrantExpirationType": "SERVER_DEFAULT",
-                    "restrictedScopes": ["openid"],
+                    "restrictedScopes": [
+                        "email",
+                        "openid",
+                        "profile"
+                    ],
                     "refreshRolling": "SERVER_DEFAULT",
                     "exclusiveScopes": [],
                     "clientAuth": {
