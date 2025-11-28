@@ -590,11 +590,16 @@
             "items": [{
                 "name": "POLICYCONTRACT",
                 "id": "KUzfpHBOZeqF0vVo",
-                "lastModified": "2025-11-27T04:39:11.385Z",
+                "lastModified": "2025-11-28T21:39:00.285Z",
                 "coreAttributes": [{"name": "subject"}],
                 "extendedAttributes": [
                     {"name": "uid"},
-                    {"name": "mail"}
+                    {"name": "telephoneNumber"},
+                    {"name": "mail"},
+                    {"name": "givenName"},
+                    {"name": "groups"},
+                    {"name": "sn"},
+                    {"name": "cn"}
                 ]
             }],
             "resourceType": "/authenticationPolicyContracts"
@@ -769,7 +774,7 @@
                             "mappedScopes": []
                         },
                         {
-                            "name": "email",
+                            "name": "groups",
                             "multiValued": false,
                             "mappedScopes": []
                         }
@@ -777,7 +782,7 @@
                 },
                 "name": "AccessTokenManagement",
                 "id": "AccessTokenManagement",
-                "lastModified": "2025-11-28T02:06:55.266Z",
+                "lastModified": "2025-11-28T22:02:38.208Z",
                 "pluginDescriptorRef": {
                     "location": "https://localhost:-1/pf-admin-api/v1/oauth/accessTokenManagers/descriptors/com.pingidentity.pf.access.token.management.plugins.JwtBearerAccessTokenManagementPlugin",
                     "id": "com.pingidentity.pf.access.token.management.plugins.JwtBearerAccessTokenManagementPlugin"
@@ -802,7 +807,7 @@
                             "multiValued": false
                         },
                         {
-                            "name": "email",
+                            "name": "groups",
                             "multiValued": false
                         }
                     ]
@@ -858,6 +863,31 @@
                             "domain": {
                                 "source": {"type": "ADAPTER"},
                                 "value": "domain"
+                            },
+                            "givenName": {
+                                "source": {
+                                    "id": "PINGDIRECTORY",
+                                    "type": "LDAP_DATA_STORE"
+                                },
+                                "value": "givenName"
+                            },
+                            "groups": {
+                                "source": {"type": "EXPRESSION"},
+                                "value": "#log = @org.apache.commons.logging.LogFactory@getLog(\"com.pingidentity.ognl.logger\"),\n#groupList = new java.util.ArrayList(),\n#groups = #this.get(\"ds.PINGDIRECTORY.isMemberOf\")!=null?#this.get(\"ds.PINGDIRECTORY.isMemberOf\").getValues():{},\n#groups.{\n    #group = #this, #group = new javax.naming.ldap.LdapName(#group),\n    #cn = #group.getRdn(#group.size() - 1).getValue().toString(),\n    #group = #cn.toLowerCase(),\n    #groupList.add(#cn)\n},\n#log.debug(\"groups: \"+#groupList),\n#groupList"
+                            },
+                            "cn": {
+                                "source": {
+                                    "id": "PINGDIRECTORY",
+                                    "type": "LDAP_DATA_STORE"
+                                },
+                                "value": "cn"
+                            },
+                            "sn": {
+                                "source": {
+                                    "id": "PINGDIRECTORY",
+                                    "type": "LDAP_DATA_STORE"
+                                },
+                                "value": "sn"
                             }
                         },
                         "attributeSources": [{
@@ -871,7 +901,11 @@
                             "description": "PINGDIRECTORY",
                             "id": "PINGDIRECTORY",
                             "searchAttributes": [
+                                "cn",
+                                "givenName",
+                                "isMemberOf",
                                 "mail",
+                                "sn",
                                 "Subject DN",
                                 "telephoneNumber",
                                 "uid"
@@ -913,7 +947,7 @@
                     },
                     "name": "IDENTIFIERFIRST",
                     "id": "IDENTIFIERFIRST",
-                    "lastModified": "2025-11-27T04:39:11.507Z",
+                    "lastModified": "2025-11-28T21:39:53.235Z",
                     "pluginDescriptorRef": {
                         "location": "https://localhost:-1/pf-admin-api/v1/idp/adapters/descriptors/com.pingidentity.adapters.identifierfirst.idp.IdentifierFirstAdapter",
                         "id": "com.pingidentity.adapters.identifierfirst.idp.IdentifierFirstAdapter"
@@ -941,6 +975,26 @@
                             {
                                 "masked": false,
                                 "name": "mail",
+                                "pseudonym": false
+                            },
+                            {
+                                "masked": false,
+                                "name": "givenName",
+                                "pseudonym": false
+                            },
+                            {
+                                "masked": false,
+                                "name": "groups",
+                                "pseudonym": false
+                            },
+                            {
+                                "masked": false,
+                                "name": "sn",
+                                "pseudonym": false
+                            },
+                            {
+                                "masked": false,
+                                "name": "cn",
                                 "pseudonym": false
                             }
                         ]
@@ -1817,7 +1871,7 @@
                 "defaultScopeDescription": "",
                 "authorizationCodeEntropy": 30,
                 "rollRefreshTokenValues": false,
-                "requireOfflineAccessScopeToIssueRefreshTokens": false,
+                "requireOfflineAccessScopeToIssueRefreshTokens": true,
                 "allowedOrigins": [],
                 "allowUnidentifiedClientExtensionGrants": false,
                 "bypassAuthorizationForApprovedConsents": false,
@@ -2600,7 +2654,25 @@
             "items": [{
                 "returnIdTokenOnTokenExchangeGrant": true,
                 "idTokenTypHeaderValue": "",
-                "scopeAttributeMappings": {},
+                "scopeAttributeMappings": {"profile": {"values": [
+                    "birthdate",
+                    "email",
+                    "family_name",
+                    "gender",
+                    "given_name",
+                    "groups",
+                    "locale",
+                    "middle_name",
+                    "name",
+                    "nickname",
+                    "phone_number",
+                    "picture",
+                    "preferred_username",
+                    "profile",
+                    "updated_at",
+                    "website",
+                    "zoneinfo"
+                ]}},
                 "returnIdTokenOnRefreshGrant": false,
                 "includeSriInIdToken": false,
                 "includeSHashInIdToken": false,
@@ -2616,10 +2688,6 @@
                             "multiValued": false
                         },
                         {
-                            "name": "website",
-                            "multiValued": false
-                        },
-                        {
                             "name": "address.locality",
                             "multiValued": false
                         },
@@ -2628,19 +2696,7 @@
                             "multiValued": false
                         },
                         {
-                            "name": "email_verified",
-                            "multiValued": false
-                        },
-                        {
                             "name": "gender",
-                            "multiValued": false
-                        },
-                        {
-                            "name": "profile",
-                            "multiValued": false
-                        },
-                        {
-                            "name": "phone_number_verified",
                             "multiValued": false
                         },
                         {
@@ -2649,18 +2705,6 @@
                         },
                         {
                             "name": "locale",
-                            "multiValued": false
-                        },
-                        {
-                            "name": "given_name",
-                            "multiValued": false
-                        },
-                        {
-                            "name": "middle_name",
-                            "multiValued": false
-                        },
-                        {
-                            "name": "picture",
                             "multiValued": false
                         },
                         {
@@ -2684,11 +2728,57 @@
                             "multiValued": false
                         },
                         {
-                            "name": "name",
+                            "includeInUserInfo": true,
+                            "name": "email",
+                            "includeInIdToken": true,
                             "multiValued": false
                         },
                         {
+                            "name": "website",
+                            "multiValued": false
+                        },
+                        {
+                            "name": "email_verified",
+                            "multiValued": false
+                        },
+                        {
+                            "name": "profile",
+                            "multiValued": false
+                        },
+                        {
+                            "includeInUserInfo": true,
+                            "name": "groups",
+                            "includeInIdToken": true,
+                            "multiValued": false
+                        },
+                        {
+                            "name": "phone_number_verified",
+                            "multiValued": false
+                        },
+                        {
+                            "includeInUserInfo": true,
+                            "name": "given_name",
+                            "includeInIdToken": true,
+                            "multiValued": false
+                        },
+                        {
+                            "name": "middle_name",
+                            "multiValued": false
+                        },
+                        {
+                            "name": "picture",
+                            "multiValued": false
+                        },
+                        {
+                            "includeInUserInfo": true,
+                            "name": "name",
+                            "includeInIdToken": true,
+                            "multiValued": false
+                        },
+                        {
+                            "includeInUserInfo": true,
                             "name": "phone_number",
+                            "includeInIdToken": true,
                             "multiValued": false
                         },
                         {
@@ -2696,12 +2786,8 @@
                             "multiValued": false
                         },
                         {
-                            "name": "family_name",
-                            "multiValued": false
-                        },
-                        {
                             "includeInUserInfo": true,
-                            "name": "email",
+                            "name": "family_name",
                             "includeInIdToken": true,
                             "multiValued": false
                         },
@@ -2729,23 +2815,75 @@
                         "address.region": {"source": {"type": "NO_MAPPING"}},
                         "nickname": {"source": {"type": "NO_MAPPING"}},
                         "email": {
-                            "source": {"type": "TOKEN"},
-                            "value": "email"
+                            "source": {
+                                "id": "PINGDIRECTORY",
+                                "type": "LDAP_DATA_STORE"
+                            },
+                            "value": "mail"
                         },
                         "website": {"source": {"type": "NO_MAPPING"}},
                         "email_verified": {"source": {"type": "NO_MAPPING"}},
                         "profile": {"source": {"type": "NO_MAPPING"}},
+                        "groups": {
+                            "source": {"type": "TOKEN"},
+                            "value": "groups"
+                        },
                         "phone_number_verified": {"source": {"type": "NO_MAPPING"}},
-                        "given_name": {"source": {"type": "NO_MAPPING"}},
+                        "given_name": {
+                            "source": {
+                                "id": "PINGDIRECTORY",
+                                "type": "LDAP_DATA_STORE"
+                            },
+                            "value": "givenName"
+                        },
                         "middle_name": {"source": {"type": "NO_MAPPING"}},
                         "picture": {"source": {"type": "NO_MAPPING"}},
-                        "name": {"source": {"type": "NO_MAPPING"}},
-                        "phone_number": {"source": {"type": "NO_MAPPING"}},
+                        "name": {
+                            "source": {
+                                "id": "PINGDIRECTORY",
+                                "type": "LDAP_DATA_STORE"
+                            },
+                            "value": "cn"
+                        },
+                        "phone_number": {
+                            "source": {
+                                "id": "PINGDIRECTORY",
+                                "type": "LDAP_DATA_STORE"
+                            },
+                            "value": "telephoneNumber"
+                        },
                         "address.formatted": {"source": {"type": "NO_MAPPING"}},
-                        "family_name": {"source": {"type": "NO_MAPPING"}},
+                        "family_name": {
+                            "source": {
+                                "id": "PINGDIRECTORY",
+                                "type": "LDAP_DATA_STORE"
+                            },
+                            "value": "sn"
+                        },
                         "address.street_address": {"source": {"type": "NO_MAPPING"}}
                     },
-                    "attributeSources": [],
+                    "attributeSources": [{
+                        "memberOfNestedGroup": false,
+                        "binaryAttributeSettings": {},
+                        "searchScope": "SUBTREE",
+                        "dataStoreRef": {
+                            "location": "https://localhost:-1/pf-admin-api/v1/dataStores/LDAP-4D65BD30F2946A712E86940F0F7442EDCDC16646",
+                            "id": "LDAP-4D65BD30F2946A712E86940F0F7442EDCDC16646"
+                        },
+                        "description": "PINGDIRECTORY",
+                        "id": "PINGDIRECTORY",
+                        "searchAttributes": [
+                            "Subject DN",
+                            "cn",
+                            "givenName",
+                            "mail",
+                            "sn",
+                            "telephoneNumber"
+                        ],
+                        "type": "LDAP",
+                        "baseDn": "ou=People,dc=example,dc=com",
+                        "searchFilter": "uid=${sub}"
+                    }],
                     "issuanceCriteria": {"conditionalCriteria": []}
                 },
                 "includeX5tInIdToken": false,
@@ -2753,7 +2891,7 @@
                 "allowIdTokenIntrospection": false,
                 "id": "OPENIDCONNECTPOLICYMANAGEMENT",
                 "reissueIdTokenInHybridFlow": false,
-                "lastModified": "2025-11-28T02:23:40.588Z",
+                "lastModified": "2025-11-28T22:07:56.465Z",
                 "idTokenLifetime": 5,
                 "accessTokenManagerRef": {
                     "location": "https://localhost:-1/pf-admin-api/v1/oauth/accessTokenManagers/AccessTokenManagement",
@@ -2830,6 +2968,68 @@
         {
             "operationType": "SAVE",
             "items": [
+                {
+                    "bypassApprovalPage": true,
+                    "offlineAccessRequireConsentPrompt": "NO",
+                    "persistentGrantReuseType": "SERVER_DEFAULT",
+                    "persistentGrantIdleTimeoutType": "SERVER_DEFAULT",
+                    "requireSignedRequests": false,
+                    "description": "",
+                    "persistentGrantIdleTimeout": 0,
+                    "enabled": true,
+                    "requireOfflineAccessScopeToIssueRefreshTokens": "YES",
+                    "oidcPolicy": {
+                        "grantAccessSessionRevocationApi": false,
+                        "grantAccessSessionSessionManagementApi": false,
+                        "pingAccessLogoutCapable": false,
+                        "logoutMode": "NONE",
+                        "pairwiseIdentifierUserType": false
+                    },
+                    "persistentGrantExpirationTime": 0,
+                    "restrictedResponseTypes": [],
+                    "lockoutMaxMaliciousActionsType": "SERVER_DEFAULT",
+                    "requireProofKeyForCodeExchange": true,
+                    "enableCookielessAuthenticationApi": false,
+                    "persistentGrantIdleTimeoutTimeUnit": "DAYS",
+                    "restrictToDefaultAccessTokenManager": false,
+                    "validateUsingAllEligibleAtms": false,
+                    "restrictScopes": true,
+                    "clientId": "contact-hr-client",
+                    "requireJwtSecuredAuthorizationResponseMode": false,
+                    "persistentGrantExpirationTimeUnit": "DAYS",
+                    "requireDpop": false,
+                    "allowAuthenticationApiInit": false,
+                    "refreshTokenRollingGracePeriodType": "SERVER_DEFAULT",
+                    "replicationStatus": "REPLICATED",
+                    "creationDate": "2025-11-28T19:44:36.337Z",
+                    "deviceFlowSettingType": "SERVER_DEFAULT",
+                    "redirectUris": ["http://localhost:3000/api/auth/callback"],
+                    "logoUrl": "",
+                    "authorizationDetailTypes": [],
+                    "grantTypes": [
+                        "AUTHORIZATION_CODE",
+                        "REFRESH_TOKEN"
+                    ],
+                    "modificationDate": "2025-11-28T20:47:15.252Z",
+                    "clientSecretRetentionPeriodType": "SERVER_DEFAULT",
+                    "requirePushedAuthorizationRequests": false,
+                    "clientSecretChangedTime": "2025-11-28T19:44:36.000Z",
+                    "name": "contact-hr-client",
+                    "refreshTokenRollingIntervalType": "SERVER_DEFAULT",
+                    "persistentGrantExpirationType": "SERVER_DEFAULT",
+                    "restrictedScopes": [
+                        "email",
+                        "openid",
+                        "profile"
+                    ],
+                    "refreshRolling": "SERVER_DEFAULT",
+                    "exclusiveScopes": [],
+                    "clientAuth": {
+                        "secondarySecrets": [],
+                        "secret": "${oauth_clients_items_clientAuth_contact_hr_client_secret}",
+                        "type": "SECRET"
+                    }
+                },
                 {
                     "bypassApprovalPage": true,
                     "offlineAccessRequireConsentPrompt": "SERVER_DEFAULT",
@@ -2989,9 +3189,9 @@
                             "source": {"type": "CONTEXT"},
                             "value": "OAuthScopes"
                         },
-                        "email": {
+                        "groups": {
                             "source": {"type": "AUTHENTICATION_POLICY_CONTRACT"},
-                            "value": "mail"
+                            "value": "groups"
                         }
                     },
                     "id": "authz_req|apc.KUzfpHBOZeqF0vVo|AccessTokenManagement",
@@ -3019,13 +3219,6 @@
                         "scope": {
                             "source": {"type": "CONTEXT"},
                             "value": "OAuthScopes"
-                        },
-                        "email": {
-                            "source": {
-                                "id": "PINGDIRECTORY",
-                                "type": "LDAP_DATA_STORE"
-                            },
-                            "value": "mail"
                         }
                     },
                     "id": "default|AccessTokenManagement",
@@ -3062,16 +3255,10 @@
                         },
                         "type": "TOKEN_EXCHANGE_PROCESSOR_POLICY"
                     },
-                    "attributeContractFulfillment": {
-                        "sub": {
-                            "source": {"type": "TOKEN_EXCHANGE_PROCESSOR_POLICY"},
-                            "value": "subject"
-                        },
-                        "email": {
-                            "source": {"type": "TOKEN_EXCHANGE_PROCESSOR_POLICY"},
-                            "value": "email"
-                        }
-                    },
+                    "attributeContractFulfillment": {"sub": {
+                        "source": {"type": "TOKEN_EXCHANGE_PROCESSOR_POLICY"},
+                        "value": "subject"
+                    }},
                     "id": "urn:ietf:params:oauth:grant-type:token-exchange|PROCESSORPOLICIES|AccessTokenManagement",
                     "attributeSources": [],
                     "issuanceCriteria": {"conditionalCriteria": []},
@@ -3089,19 +3276,28 @@
                 "configuration": {
                     "tables": [{
                         "name": "Clients",
-                        "rows": [{
-                            "defaultRow": false,
-                            "fields": [{
-                                "name": "Client ID",
-                                "value": "contact-oauth-client"
-                            }]
-                        }]
+                        "rows": [
+                            {
+                                "defaultRow": false,
+                                "fields": [{
+                                    "name": "Client ID",
+                                    "value": "contact-oauth-client"
+                                }]
+                            },
+                            {
+                                "defaultRow": false,
+                                "fields": [{
+                                    "name": "Client ID",
+                                    "value": "contact-hr-client"
+                                }]
+                            }
+                        ]
                     }],
                     "fields": []
                 },
                 "name": "OAUTHCLIENTSELECTOR",
                 "id": "OAUTHCLIENTSELECTOR",
-                "lastModified": "2025-11-27T04:39:14.129Z",
+                "lastModified": "2025-11-28T20:51:26.323Z",
                 "pluginDescriptorRef": {
                     "location": "https://localhost:-1/pf-admin-api/v1/authenticationSelectors/descriptors/com.pingidentity.pf.selectors.oauthclient.OAuthClientAdapterSelector",
                     "id": "com.pingidentity.pf.selectors.oauthclient.OAuthClientAdapterSelector"
@@ -3181,6 +3377,13 @@
                                                             },
                                                             "value": "subject"
                                                         },
+                                                        "telephoneNumber": {
+                                                            "source": {
+                                                                "id": "IDENTIFIERFIRST",
+                                                                "type": "ADAPTER"
+                                                            },
+                                                            "value": "telephoneNumber"
+                                                        },
                                                         "mail": {
                                                             "source": {
                                                                 "id": "IDENTIFIERFIRST",
@@ -3194,6 +3397,34 @@
                                                                 "type": "ADAPTER"
                                                             },
                                                             "value": "subject"
+                                                        },
+                                                        "givenName": {
+                                                            "source": {
+                                                                "id": "IDENTIFIERFIRST",
+                                                                "type": "ADAPTER"
+                                                            },
+                                                            "value": "givenName"
+                                                        },
+                                                        "groups": {
+                                                            "source": {
+                                                                "id": "IDENTIFIERFIRST",
+                                                                "type": "ADAPTER"
+                                                            },
+                                                            "value": "groups"
+                                                        },
+                                                        "cn": {
+                                                            "source": {
+                                                                "id": "IDENTIFIERFIRST",
+                                                                "type": "ADAPTER"
+                                                            },
+                                                            "value": "cn"
+                                                        },
+                                                        "sn": {
+                                                            "source": {
+                                                                "id": "IDENTIFIERFIRST",
+                                                                "type": "ADAPTER"
+                                                            },
+                                                            "value": "sn"
                                                         }
                                                     },
                                                     "attributeSources": [],
