@@ -2867,12 +2867,13 @@
                     "deviceFlowSettingType": "SERVER_DEFAULT",
                     "redirectUris": [
                         "https://contact.ping.darkedges.com/callback",
-                        "http://localhost:8000/auth/oauth/pingfederate/callback"
+                        "http://localhost:8000/auth/oauth/pingfederate/callback",
+                        "http://chatbot.ping.darkedges.com/auth/oauth/pingfederate/callback"
                     ],
                     "logoUrl": "",
                     "authorizationDetailTypes": [],
                     "grantTypes": ["AUTHORIZATION_CODE"],
-                    "modificationDate": "2025-11-27T21:54:51.249Z",
+                    "modificationDate": "2025-11-28T11:37:45.932Z",
                     "clientSecretRetentionPeriodType": "SERVER_DEFAULT",
                     "requirePushedAuthorizationRequests": false,
                     "clientSecretChangedTime": "2025-11-27T04:39:14.000Z",
