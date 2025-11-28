@@ -703,7 +703,7 @@
                         },
                         {
                             "name": "Issuer Claim Value",
-                            "value": ""
+                            "value": "https://id.ping.darkedges.com"
                         },
                         {
                             "name": "Audience Claim Value",
@@ -764,6 +764,11 @@
                             "mappedScopes": []
                         },
                         {
+                            "name": "scope",
+                            "multiValued": false,
+                            "mappedScopes": []
+                        },
+                        {
                             "name": "email",
                             "multiValued": false,
                             "mappedScopes": []
@@ -772,7 +777,7 @@
                 },
                 "name": "AccessTokenManagement",
                 "id": "AccessTokenManagement",
-                "lastModified": "2025-11-27T04:39:11.461Z",
+                "lastModified": "2025-11-28T02:06:55.266Z",
                 "pluginDescriptorRef": {
                     "location": "https://localhost:-1/pf-admin-api/v1/oauth/accessTokenManagers/descriptors/com.pingidentity.pf.access.token.management.plugins.JwtBearerAccessTokenManagementPlugin",
                     "id": "com.pingidentity.pf.access.token.management.plugins.JwtBearerAccessTokenManagementPlugin"
@@ -786,6 +791,14 @@
                     "extendedAttributes": [
                         {
                             "name": "sub",
+                            "multiValued": false
+                        },
+                        {
+                            "name": "aud",
+                            "multiValued": false
+                        },
+                        {
+                            "name": "scope",
                             "multiValued": false
                         },
                         {
@@ -2462,13 +2475,13 @@
         {
             "operationType": "SAVE",
             "items": [{
-                "persistentSessions": false,
-                "hashUniqueUserKeyAttribute": false,
+                "persistentSessions": true,
+                "hashUniqueUserKeyAttribute": true,
                 "maxTimeoutMins": 480,
                 "maxTimeoutDisplayUnit": "MINUTES",
                 "idleTimeoutMins": 60,
                 "idleTimeoutDisplayUnit": "MINUTES",
-                "enableSessions": false
+                "enableSessions": true
             }],
             "resourceType": "/session/authenticationSessionPolicies/global"
         },
@@ -2957,12 +2970,20 @@
                 {
                     "context": {"type": "DEFAULT"},
                     "attributeContractFulfillment": {
+                        "aud": {
+                            "source": {"type": "CONTEXT"},
+                            "value": "ClientId"
+                        },
                         "sub": {
                             "source": {
                                 "id": "PINGDIRECTORY",
                                 "type": "LDAP_DATA_STORE"
                             },
                             "value": "uid"
+                        },
+                        "scope": {
+                            "source": {"type": "CONTEXT"},
+                            "value": "OAuthScopes"
                         },
                         "email": {
                             "source": {
@@ -2984,8 +3005,8 @@
                         "description": "PINGDIRECTORY",
                         "id": "PINGDIRECTORY",
                         "searchAttributes": [
-                            "mail",
                             "Subject DN",
+                            "mail",
                             "uid"
                         ],
                         "type": "LDAP",
