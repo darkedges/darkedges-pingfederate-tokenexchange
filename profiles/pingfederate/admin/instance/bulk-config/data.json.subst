@@ -2700,7 +2700,7 @@
                             "multiValued": false
                         },
                         {
-                            "includeInUserInfo": false,
+                            "includeInUserInfo": true,
                             "name": "email",
                             "includeInIdToken": true,
                             "multiValued": false
@@ -2753,7 +2753,7 @@
                 "allowIdTokenIntrospection": false,
                 "id": "OPENIDCONNECTPOLICYMANAGEMENT",
                 "reissueIdTokenInHybridFlow": false,
-                "lastModified": "2025-11-27T04:39:13.980Z",
+                "lastModified": "2025-11-28T02:23:40.588Z",
                 "idTokenLifetime": 5,
                 "accessTokenManagerRef": {
                     "location": "https://localhost:-1/pf-admin-api/v1/oauth/accessTokenManagers/AccessTokenManagement",
@@ -2967,6 +2967,40 @@
         {
             "operationType": "SAVE",
             "items": [
+                {
+                    "context": {
+                        "contextRef": {
+                            "location": "https://localhost:-1/pf-admin-api/v1/authenticationPolicyContracts/KUzfpHBOZeqF0vVo",
+                            "id": "KUzfpHBOZeqF0vVo"
+                        },
+                        "type": "AUTHENTICATION_POLICY_CONTRACT"
+                    },
+                    "attributeContractFulfillment": {
+                        "aud": {
+                            "source": {"type": "CONTEXT"},
+                            "value": "ClientId"
+                        },
+                        "sub": {
+                            "source": {"type": "AUTHENTICATION_POLICY_CONTRACT"},
+                            "value": "uid"
+                        },
+                        "scope": {
+                            "source": {"type": "CONTEXT"},
+                            "value": "OAuthScopes"
+                        },
+                        "email": {
+                            "source": {"type": "AUTHENTICATION_POLICY_CONTRACT"},
+                            "value": "mail"
+                        }
+                    },
+                    "id": "authz_req|apc.KUzfpHBOZeqF0vVo|AccessTokenManagement",
+                    "attributeSources": [],
+                    "issuanceCriteria": {"conditionalCriteria": []},
+                    "accessTokenManagerRef": {
+                        "location": "https://localhost:-1/pf-admin-api/v1/oauth/accessTokenManagers/AccessTokenManagement",
+                        "id": "AccessTokenManagement"
+                    }
+                },
                 {
                     "context": {"type": "DEFAULT"},
                     "attributeContractFulfillment": {
