@@ -2974,6 +2974,7 @@
                     "persistentGrantReuseType": "SERVER_DEFAULT",
                     "persistentGrantIdleTimeoutType": "SERVER_DEFAULT",
                     "requireSignedRequests": false,
+                    "description": "",
                     "persistentGrantIdleTimeout": 0,
                     "enabled": true,
                     "requireOfflineAccessScopeToIssueRefreshTokens": "YES",
@@ -3002,13 +3003,17 @@
                     "replicationStatus": "REPLICATED",
                     "creationDate": "2025-11-30T08:40:32.845Z",
                     "deviceFlowSettingType": "SERVER_DEFAULT",
-                    "redirectUris": ["http://localhost:3000/api/auth/callback"],
+                    "redirectUris": [
+                        "http://localhost:3000/api/auth/callback",
+                        "https://hr.ping.darkedges.com/api/auth/callback"
+                    ],
+                    "logoUrl": "",
                     "authorizationDetailTypes": [],
                     "grantTypes": [
                         "AUTHORIZATION_CODE",
                         "REFRESH_TOKEN"
                     ],
-                    "modificationDate": "2025-11-30T08:40:32.845Z",
+                    "modificationDate": "2025-11-30T23:06:20.969Z",
                     "clientSecretRetentionPeriodType": "SERVER_DEFAULT",
                     "requirePushedAuthorizationRequests": false,
                     "clientSecretChangedTime": "2025-11-30T08:40:32.000Z",
