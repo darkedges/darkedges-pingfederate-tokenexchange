@@ -2930,18 +2930,6 @@
                         "email": {
                             "source": {"type": "SUBJECT_TOKEN"},
                             "value": "email"
-                        },
-                        "aud": {
-                            "source": {"type": "CONTEXT"},
-                            "value": "ClientId"
-                        },
-                        "scope": {
-                            "source": {"type": "CONTEXT"},
-                            "value": "OAuthScopes"
-                        },
-                        "groups": {
-                            "source": {"type": "AUTHENTICATION_POLICY_CONTRACT"},
-                            "value": "groups"
                         }
                     },
                     "actorTokenProcessor": {
@@ -3231,7 +3219,11 @@
                         "scope": {
                             "source": {"type": "CONTEXT"},
                             "value": "OAuthScopes"
-                        }
+                        },
+                         "groups": {
+                            "source": {"type": "CONTEXT"},
+                            "value": "ClientId"
+                        },
                     },
                     "id": "default|AccessTokenManagement",
                     "attributeSources": [{
@@ -3267,10 +3259,24 @@
                         },
                         "type": "TOKEN_EXCHANGE_PROCESSOR_POLICY"
                     },
-                    "attributeContractFulfillment": {"sub": {
-                        "source": {"type": "TOKEN_EXCHANGE_PROCESSOR_POLICY"},
-                        "value": "subject"
-                    }},
+                    "attributeContractFulfillment": {
+                        "sub": {
+                            "source": {"type": "TOKEN_EXCHANGE_PROCESSOR_POLICY"},
+                            "value": "subject"
+                        },
+                         "aud": {
+                            "source": {"type": "TOKEN_EXCHANGE_PROCESSOR_POLICY"},
+                            "value": "subject"
+                        },
+                         "scope": {
+                            "source": {"type": "TOKEN_EXCHANGE_PROCESSOR_POLICY"},
+                            "value": "subject"
+                        },
+                         "groups": {
+                            "source": {"type": "TOKEN_EXCHANGE_PROCESSOR_POLICY"},
+                            "value": "subject"
+                        }
+                    },
                     "id": "urn:ietf:params:oauth:grant-type:token-exchange|PROCESSORPOLICIES|AccessTokenManagement",
                     "attributeSources": [],
                     "issuanceCriteria": {"conditionalCriteria": []},
