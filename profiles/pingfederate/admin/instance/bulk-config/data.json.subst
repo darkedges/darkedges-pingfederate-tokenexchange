@@ -2930,6 +2930,18 @@
                         "email": {
                             "source": {"type": "SUBJECT_TOKEN"},
                             "value": "email"
+                        },
+                        "aud": {
+                            "source": {"type": "CONTEXT"},
+                            "value": "ClientId"
+                        },
+                        "scope": {
+                            "source": {"type": "CONTEXT"},
+                            "value": "OAuthScopes"
+                        },
+                        "groups": {
+                            "source": {"type": "AUTHENTICATION_POLICY_CONTRACT"},
+                            "value": "groups"
                         }
                     },
                     "actorTokenProcessor": {
