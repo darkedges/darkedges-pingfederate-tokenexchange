@@ -3223,7 +3223,7 @@
                          "groups": {
                             "source": {"type": "CONTEXT"},
                             "value": "ClientId"
-                        },
+                        }
                     },
                     "id": "default|AccessTokenManagement",
                     "attributeSources": [{
