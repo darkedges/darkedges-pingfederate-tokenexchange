@@ -3169,9 +3169,13 @@
                         "http://localhost:8000/auth/oauth/pingfederate/callback",
                         "https://chatbot.ping.darkedges.com/auth/oauth/pingfederate/callback"
                     ],
+                    "logoUrl": "",
                     "authorizationDetailTypes": [],
-                    "grantTypes": ["AUTHORIZATION_CODE"],
-                    "modificationDate": "2025-11-30T08:40:32.874Z",
+                    "grantTypes": [
+                        "AUTHORIZATION_CODE",
+                        "CLIENT_CREDENTIALS"
+                    ],
+                    "modificationDate": "2025-12-02T11:53:11.447Z",
                     "clientSecretRetentionPeriodType": "SERVER_DEFAULT",
                     "requirePushedAuthorizationRequests": false,
                     "clientSecretChangedTime": "2025-11-30T08:40:32.000Z",
