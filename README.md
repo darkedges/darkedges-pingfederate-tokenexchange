@@ -30,12 +30,15 @@ helm upgrade --install pingfederate pingidentity/ping-devops \
 ## Component Documentation
 
 ### PingFederate Configuration
+
 See [profiles/pingfederate/README.md](profiles/pingfederate/README.md) for full configuration documentation.
 
 ### Lambda Functions (AWS Connect Integration)
+
 See [lambda/README.md](lambda/README.md) for headless authentication flow between AWS Connect and PingFederate.
 
 ### Token Exchange Details
+
 See [TOKENEXCHANGE.md](TOKENEXCHANGE.md) for complete OAuth2 token exchange implementation examples.
 
 ## Resources
