@@ -11,6 +11,11 @@
                     "type": "STRING"
                 },
                 {
+                    "stringValue": "1764668386",
+                    "id": "ulwwb71v5nmhh7v56tnb42a9k",
+                    "type": "STRING"
+                },
+                {
                     "stringValue": "1763428329",
                     "id": "w5yh0l80eojioziuvjmdakgvd",
                     "type": "STRING"
@@ -149,6 +154,16 @@
                 }
             }],
             "resourceType": "/keyPairs/sslServer/settings"
+        },
+        {
+            "operationType": "SAVE",
+            "items": [{
+                "password": "${keyPairs_signing_items_ulwwb71v5nmhh7v56tnb42a9k_ulwwb71v5nmhh7v56tnb42a9k_password}",
+                "fileData": "${keyPairs_signing_items_ulwwb71v5nmhh7v56tnb42a9k_ulwwb71v5nmhh7v56tnb42a9k_fileData}",
+                "format": "PKCS12",
+                "id": "ulwwb71v5nmhh7v56tnb42a9k"
+            }],
+            "resourceType": "/keyPairs/signing"
         },
         {
             "operationType": "SAVE",
@@ -1912,593 +1927,673 @@
         },
         {
             "operationType": "SAVE",
-            "items": [{
-                "contactInfo": {},
-                "credentials": {"certs": []},
-                "active": true,
-                "entityId": "PingOne Connector",
-                "loggingMode": "STANDARD",
-                "replicationStatus": "REPLICATED",
-                "type": "SP",
-                "creationDate": "2025-11-30T08:40:32.480Z",
-                "connectionTargetType": "STANDARD",
-                "baseUrl": "https://api.pingone.com/v1",
-                "modificationDate": "2025-11-30T08:40:32.481Z",
-                "virtualEntityIds": [],
-                "outboundProvision": {
-                    "channels": [{
-                        "attributeMapping": [
-                            {
-                                "fieldName": "populationID",
-                                "saasFieldInfo": {
-                                    "createOnly": false,
-                                    "attributeNames": ["businessCategory"],
-                                    "expression": "",
-                                    "trim": false,
-                                    "parser": "NONE",
-                                    "defaultValue": "f18888ef-fbaf-42bb-b7fa-022a96facb28",
-                                    "masked": false,
-                                    "characterCase": "NONE"
+            "items": [
+                {
+                    "contactInfo": {},
+                    "credentials": {"certs": []},
+                    "active": true,
+                    "entityId": "PingOne Connector",
+                    "loggingMode": "STANDARD",
+                    "replicationStatus": "REPLICATED",
+                    "type": "SP",
+                    "creationDate": "2025-11-30T08:40:32.480Z",
+                    "connectionTargetType": "STANDARD",
+                    "baseUrl": "https://api.pingone.com/v1",
+                    "modificationDate": "2025-11-30T08:40:32.481Z",
+                    "virtualEntityIds": [],
+                    "outboundProvision": {
+                        "channels": [{
+                            "attributeMapping": [
+                                {
+                                    "fieldName": "username",
+                                    "saasFieldInfo": {
+                                        "createOnly": false,
+                                        "attributeNames": ["uid"],
+                                        "expression": "",
+                                        "trim": false,
+                                        "parser": "NONE",
+                                        "defaultValue": "",
+                                        "masked": false,
+                                        "characterCase": "NONE"
+                                    }
+                                },
+                                {
+                                    "fieldName": "populationID",
+                                    "saasFieldInfo": {
+                                        "createOnly": false,
+                                        "attributeNames": ["businessCategory"],
+                                        "expression": "",
+                                        "trim": false,
+                                        "parser": "NONE",
+                                        "defaultValue": "f18888ef-fbaf-42bb-b7fa-022a96facb28",
+                                        "masked": false,
+                                        "characterCase": "NONE"
+                                    }
+                                },
+                                {
+                                    "fieldName": "accountID",
+                                    "saasFieldInfo": {
+                                        "createOnly": false,
+                                        "attributeNames": [],
+                                        "expression": "",
+                                        "trim": false,
+                                        "parser": "NONE",
+                                        "defaultValue": "",
+                                        "masked": false,
+                                        "characterCase": "NONE"
+                                    }
+                                },
+                                {
+                                    "fieldName": "authoritativeIdp",
+                                    "saasFieldInfo": {
+                                        "createOnly": false,
+                                        "attributeNames": [],
+                                        "expression": "",
+                                        "trim": false,
+                                        "parser": "NONE",
+                                        "defaultValue": "",
+                                        "masked": false,
+                                        "characterCase": "NONE"
+                                    }
+                                },
+                                {
+                                    "fieldName": "country",
+                                    "saasFieldInfo": {
+                                        "createOnly": false,
+                                        "attributeNames": [],
+                                        "expression": "",
+                                        "trim": false,
+                                        "parser": "NONE",
+                                        "defaultValue": "",
+                                        "masked": false,
+                                        "characterCase": "NONE"
+                                    }
+                                },
+                                {
+                                    "fieldName": "email",
+                                    "saasFieldInfo": {
+                                        "createOnly": false,
+                                        "attributeNames": ["mail"],
+                                        "expression": "",
+                                        "trim": false,
+                                        "parser": "NONE",
+                                        "defaultValue": "",
+                                        "masked": false,
+                                        "characterCase": "NONE"
+                                    }
+                                },
+                                {
+                                    "fieldName": "externalID",
+                                    "saasFieldInfo": {
+                                        "createOnly": false,
+                                        "attributeNames": [],
+                                        "expression": "",
+                                        "trim": false,
+                                        "parser": "NONE",
+                                        "defaultValue": "",
+                                        "masked": false,
+                                        "characterCase": "NONE"
+                                    }
+                                },
+                                {
+                                    "fieldName": "lastName",
+                                    "saasFieldInfo": {
+                                        "createOnly": false,
+                                        "attributeNames": ["sn"],
+                                        "expression": "",
+                                        "trim": false,
+                                        "parser": "NONE",
+                                        "defaultValue": "",
+                                        "masked": false,
+                                        "characterCase": "NONE"
+                                    }
+                                },
+                                {
+                                    "fieldName": "forceChangePassword",
+                                    "saasFieldInfo": {
+                                        "createOnly": false,
+                                        "attributeNames": [],
+                                        "expression": "",
+                                        "trim": false,
+                                        "parser": "NONE",
+                                        "defaultValue": "",
+                                        "masked": false,
+                                        "characterCase": "NONE"
+                                    }
+                                },
+                                {
+                                    "fieldName": "fullName",
+                                    "saasFieldInfo": {
+                                        "createOnly": false,
+                                        "attributeNames": [],
+                                        "expression": "",
+                                        "trim": false,
+                                        "parser": "NONE",
+                                        "defaultValue": "",
+                                        "masked": false,
+                                        "characterCase": "NONE"
+                                    }
+                                },
+                                {
+                                    "fieldName": "firstName",
+                                    "saasFieldInfo": {
+                                        "createOnly": false,
+                                        "attributeNames": ["givenName"],
+                                        "expression": "",
+                                        "trim": false,
+                                        "parser": "NONE",
+                                        "defaultValue": "",
+                                        "masked": false,
+                                        "characterCase": "NONE"
+                                    }
+                                },
+                                {
+                                    "fieldName": "honorificPrefix",
+                                    "saasFieldInfo": {
+                                        "createOnly": false,
+                                        "attributeNames": [],
+                                        "expression": "",
+                                        "trim": false,
+                                        "parser": "NONE",
+                                        "defaultValue": "",
+                                        "masked": false,
+                                        "characterCase": "NONE"
+                                    }
+                                },
+                                {
+                                    "fieldName": "honorificSuffix",
+                                    "saasFieldInfo": {
+                                        "createOnly": false,
+                                        "attributeNames": [],
+                                        "expression": "",
+                                        "trim": false,
+                                        "parser": "NONE",
+                                        "defaultValue": "",
+                                        "masked": false,
+                                        "characterCase": "NONE"
+                                    }
+                                },
+                                {
+                                    "fieldName": "locale",
+                                    "saasFieldInfo": {
+                                        "createOnly": false,
+                                        "attributeNames": [],
+                                        "expression": "",
+                                        "trim": false,
+                                        "parser": "NONE",
+                                        "defaultValue": "en-US",
+                                        "masked": false,
+                                        "characterCase": "NONE"
+                                    }
+                                },
+                                {
+                                    "fieldName": "city",
+                                    "saasFieldInfo": {
+                                        "createOnly": false,
+                                        "attributeNames": ["l"],
+                                        "expression": "",
+                                        "trim": false,
+                                        "parser": "NONE",
+                                        "defaultValue": "",
+                                        "masked": false,
+                                        "characterCase": "NONE"
+                                    }
+                                },
+                                {
+                                    "fieldName": "mfaDeviceEmail1",
+                                    "saasFieldInfo": {
+                                        "createOnly": false,
+                                        "attributeNames": ["mail"],
+                                        "expression": "",
+                                        "trim": false,
+                                        "parser": "NONE",
+                                        "defaultValue": "",
+                                        "masked": false,
+                                        "characterCase": "NONE"
+                                    }
+                                },
+                                {
+                                    "fieldName": "mfaDeviceEmail2",
+                                    "saasFieldInfo": {
+                                        "createOnly": false,
+                                        "attributeNames": [],
+                                        "expression": "",
+                                        "trim": false,
+                                        "parser": "NONE",
+                                        "defaultValue": "",
+                                        "masked": false,
+                                        "characterCase": "NONE"
+                                    }
+                                },
+                                {
+                                    "fieldName": "mfaDeviceEmail3",
+                                    "saasFieldInfo": {
+                                        "createOnly": false,
+                                        "attributeNames": [],
+                                        "expression": "",
+                                        "trim": false,
+                                        "parser": "NONE",
+                                        "defaultValue": "",
+                                        "masked": false,
+                                        "characterCase": "NONE"
+                                    }
+                                },
+                                {
+                                    "fieldName": "mfaDeviceSms1",
+                                    "saasFieldInfo": {
+                                        "createOnly": false,
+                                        "attributeNames": ["mobile"],
+                                        "expression": "",
+                                        "trim": false,
+                                        "parser": "NONE",
+                                        "defaultValue": "",
+                                        "masked": false,
+                                        "characterCase": "NONE"
+                                    }
+                                },
+                                {
+                                    "fieldName": "mfaDeviceSms2",
+                                    "saasFieldInfo": {
+                                        "createOnly": false,
+                                        "attributeNames": [],
+                                        "expression": "",
+                                        "trim": false,
+                                        "parser": "NONE",
+                                        "defaultValue": "",
+                                        "masked": false,
+                                        "characterCase": "NONE"
+                                    }
+                                },
+                                {
+                                    "fieldName": "mfaDeviceSms3",
+                                    "saasFieldInfo": {
+                                        "createOnly": false,
+                                        "attributeNames": [],
+                                        "expression": "",
+                                        "trim": false,
+                                        "parser": "NONE",
+                                        "defaultValue": "",
+                                        "masked": false,
+                                        "characterCase": "NONE"
+                                    }
+                                },
+                                {
+                                    "fieldName": "mfaDeviceVoice1",
+                                    "saasFieldInfo": {
+                                        "createOnly": false,
+                                        "attributeNames": ["mobile"],
+                                        "expression": "",
+                                        "trim": false,
+                                        "parser": "NONE",
+                                        "defaultValue": "",
+                                        "masked": false,
+                                        "characterCase": "NONE"
+                                    }
+                                },
+                                {
+                                    "fieldName": "mfaDeviceVoice2",
+                                    "saasFieldInfo": {
+                                        "createOnly": false,
+                                        "attributeNames": [],
+                                        "expression": "",
+                                        "trim": false,
+                                        "parser": "NONE",
+                                        "defaultValue": "",
+                                        "masked": false,
+                                        "characterCase": "NONE"
+                                    }
+                                },
+                                {
+                                    "fieldName": "mfaDeviceVoice3",
+                                    "saasFieldInfo": {
+                                        "createOnly": false,
+                                        "attributeNames": [],
+                                        "expression": "",
+                                        "trim": false,
+                                        "parser": "NONE",
+                                        "defaultValue": "",
+                                        "masked": false,
+                                        "characterCase": "NONE"
+                                    }
+                                },
+                                {
+                                    "fieldName": "middleName",
+                                    "saasFieldInfo": {
+                                        "createOnly": false,
+                                        "attributeNames": [],
+                                        "expression": "",
+                                        "trim": false,
+                                        "parser": "NONE",
+                                        "defaultValue": "",
+                                        "masked": false,
+                                        "characterCase": "NONE"
+                                    }
+                                },
+                                {
+                                    "fieldName": "mobilePhone",
+                                    "saasFieldInfo": {
+                                        "createOnly": false,
+                                        "attributeNames": ["mobile"],
+                                        "expression": "",
+                                        "trim": false,
+                                        "parser": "NONE",
+                                        "defaultValue": "",
+                                        "masked": false,
+                                        "characterCase": "NONE"
+                                    }
+                                },
+                                {
+                                    "fieldName": "mfaEnabled",
+                                    "saasFieldInfo": {
+                                        "createOnly": false,
+                                        "attributeNames": [],
+                                        "expression": "",
+                                        "trim": false,
+                                        "parser": "NONE",
+                                        "defaultValue": "",
+                                        "masked": false,
+                                        "characterCase": "NONE"
+                                    }
+                                },
+                                {
+                                    "fieldName": "nickname",
+                                    "saasFieldInfo": {
+                                        "createOnly": false,
+                                        "attributeNames": [],
+                                        "expression": "",
+                                        "trim": false,
+                                        "parser": "NONE",
+                                        "defaultValue": "",
+                                        "masked": false,
+                                        "characterCase": "NONE"
+                                    }
+                                },
+                                {
+                                    "fieldName": "password",
+                                    "saasFieldInfo": {
+                                        "createOnly": false,
+                                        "attributeNames": [],
+                                        "expression": "",
+                                        "trim": false,
+                                        "parser": "NONE",
+                                        "defaultValue": "",
+                                        "masked": false,
+                                        "characterCase": "NONE"
+                                    }
+                                },
+                                {
+                                    "fieldName": "profileImage",
+                                    "saasFieldInfo": {
+                                        "createOnly": false,
+                                        "attributeNames": [],
+                                        "expression": "",
+                                        "trim": false,
+                                        "parser": "NONE",
+                                        "defaultValue": "",
+                                        "masked": false,
+                                        "characterCase": "NONE"
+                                    }
+                                },
+                                {
+                                    "fieldName": "ZIPCode",
+                                    "saasFieldInfo": {
+                                        "createOnly": false,
+                                        "attributeNames": ["postalCode"],
+                                        "expression": "",
+                                        "trim": false,
+                                        "parser": "NONE",
+                                        "defaultValue": "",
+                                        "masked": false,
+                                        "characterCase": "NONE"
+                                    }
+                                },
+                                {
+                                    "fieldName": "preferredLanguage",
+                                    "saasFieldInfo": {
+                                        "createOnly": false,
+                                        "attributeNames": [],
+                                        "expression": "",
+                                        "trim": false,
+                                        "parser": "NONE",
+                                        "defaultValue": "en-us",
+                                        "masked": false,
+                                        "characterCase": "NONE"
+                                    }
+                                },
+                                {
+                                    "fieldName": "primaryPhone",
+                                    "saasFieldInfo": {
+                                        "createOnly": false,
+                                        "attributeNames": ["telephoneNumber"],
+                                        "expression": "",
+                                        "trim": false,
+                                        "parser": "NONE",
+                                        "defaultValue": "",
+                                        "masked": false,
+                                        "characterCase": "NONE"
+                                    }
+                                },
+                                {
+                                    "fieldName": "stateRegion",
+                                    "saasFieldInfo": {
+                                        "createOnly": false,
+                                        "attributeNames": ["st"],
+                                        "expression": "",
+                                        "trim": false,
+                                        "parser": "NONE",
+                                        "defaultValue": "",
+                                        "masked": false,
+                                        "characterCase": "NONE"
+                                    }
+                                },
+                                {
+                                    "fieldName": "streetAddress",
+                                    "saasFieldInfo": {
+                                        "createOnly": false,
+                                        "attributeNames": ["streetAddress"],
+                                        "expression": "",
+                                        "trim": false,
+                                        "parser": "NONE",
+                                        "defaultValue": "",
+                                        "masked": false,
+                                        "characterCase": "NONE"
+                                    }
+                                },
+                                {
+                                    "fieldName": "timezone",
+                                    "saasFieldInfo": {
+                                        "createOnly": false,
+                                        "attributeNames": [],
+                                        "expression": "",
+                                        "trim": false,
+                                        "parser": "NONE",
+                                        "defaultValue": "",
+                                        "masked": false,
+                                        "characterCase": "NONE"
+                                    }
+                                },
+                                {
+                                    "fieldName": "jobTitle",
+                                    "saasFieldInfo": {
+                                        "createOnly": false,
+                                        "attributeNames": ["title"],
+                                        "expression": "",
+                                        "trim": false,
+                                        "parser": "NONE",
+                                        "defaultValue": "",
+                                        "masked": false,
+                                        "characterCase": "NONE"
+                                    }
+                                },
+                                {
+                                    "fieldName": "userType",
+                                    "saasFieldInfo": {
+                                        "createOnly": false,
+                                        "attributeNames": [],
+                                        "expression": "",
+                                        "trim": false,
+                                        "parser": "NONE",
+                                        "defaultValue": "",
+                                        "masked": false,
+                                        "characterCase": "NONE"
+                                    }
                                 }
+                            ],
+                            "name": "PROVISION",
+                            "active": true,
+                            "maxThreads": 1,
+                            "timeout": 60,
+                            "channelSource": {
+                                "changeDetectionSettings": {
+                                    "timeStampAttributeName": "modifyTimestamp",
+                                    "changedUsersAlgorithm": "TIMESTAMP_NO_NEGATION",
+                                    "userObjectClass": "inetOrgPerson",
+                                    "groupObjectClass": "groupOfUniqueNames"
+                                },
+                                "guidBinary": false,
+                                "accountManagementSettings": {
+                                    "flagComparisonValue": "true",
+                                    "defaultStatus": true,
+                                    "flagComparisonStatus": false,
+                                    "accountStatusAlgorithm": "ACCOUNT_STATUS_ALGORITHM_FLAG",
+                                    "accountStatusAttributeName": "nsaccountlock"
+                                },
+                                "groupMembershipDetection": {"groupMemberAttributeName": "uniqueMember"},
+                                "userSourceLocation": {
+                                    "filter": "uid=*",
+                                    "nestedSearch": false
+                                },
+                                "groupSourceLocation": {"nestedSearch": false},
+                                "baseDn": "dc=example,dc=com",
+                                "dataSource": {
+                                    "location": "https://localhost:-1/pf-admin-api/v1/dataStores/LDAP-4D65BD30F2946A712E86940F0F7442EDCDC16646",
+                                    "id": "LDAP-4D65BD30F2946A712E86940F0F7442EDCDC16646"
+                                },
+                                "guidAttributeName": "entryUUID"
+                            }
+                        }],
+                        "targetSettings": [
+                            {
+                                "name": "PINGONE_ENVIRONMENT",
+                                "value": "mImpgs4t0rrk7n7mfAMOcP|314177e2-5da7-433b-a5b5-9bdcc20b45a3"
                             },
                             {
-                                "fieldName": "username",
-                                "saasFieldInfo": {
-                                    "createOnly": false,
-                                    "attributeNames": ["uid"],
-                                    "expression": "",
-                                    "trim": false,
-                                    "parser": "NONE",
-                                    "defaultValue": "",
-                                    "masked": false,
-                                    "characterCase": "NONE"
-                                }
+                                "name": "Provisioning Options",
+                                "value": ""
                             },
                             {
-                                "fieldName": "accountID",
-                                "saasFieldInfo": {
-                                    "createOnly": false,
-                                    "attributeNames": [],
-                                    "expression": "",
-                                    "trim": false,
-                                    "parser": "NONE",
-                                    "defaultValue": "",
-                                    "masked": false,
-                                    "characterCase": "NONE"
-                                }
+                                "name": "CREATE_USERS_PROV_OPT",
+                                "value": "true"
                             },
                             {
-                                "fieldName": "authoritativeIdp",
-                                "saasFieldInfo": {
-                                    "createOnly": false,
-                                    "attributeNames": [],
-                                    "expression": "",
-                                    "trim": false,
-                                    "parser": "NONE",
-                                    "defaultValue": "",
-                                    "masked": false,
-                                    "characterCase": "NONE"
-                                }
+                                "name": "UPDATE_USERS_PROV_OPT",
+                                "value": "true"
                             },
                             {
-                                "fieldName": "country",
-                                "saasFieldInfo": {
-                                    "createOnly": false,
-                                    "attributeNames": [],
-                                    "expression": "",
-                                    "trim": false,
-                                    "parser": "NONE",
-                                    "defaultValue": "",
-                                    "masked": false,
-                                    "characterCase": "NONE"
-                                }
+                                "name": "REMOVE_USERS_PROV_OPT",
+                                "value": "true"
                             },
                             {
-                                "fieldName": "email",
-                                "saasFieldInfo": {
-                                    "createOnly": false,
-                                    "attributeNames": ["mail"],
-                                    "expression": "",
-                                    "trim": false,
-                                    "parser": "NONE",
-                                    "defaultValue": "",
-                                    "masked": false,
-                                    "characterCase": "NONE"
-                                }
+                                "name": "PROVISION_DISABLED_USERS_PROV_OPT",
+                                "value": "true"
                             },
                             {
-                                "fieldName": "externalID",
-                                "saasFieldInfo": {
-                                    "createOnly": false,
-                                    "attributeNames": [],
-                                    "expression": "",
-                                    "trim": false,
-                                    "parser": "NONE",
-                                    "defaultValue": "",
-                                    "masked": false,
-                                    "characterCase": "NONE"
-                                }
+                                "name": "REMOVE_ACTION",
+                                "value": "Disable"
                             },
                             {
-                                "fieldName": "lastName",
-                                "saasFieldInfo": {
-                                    "createOnly": false,
-                                    "attributeNames": ["sn"],
-                                    "expression": "",
-                                    "trim": false,
-                                    "parser": "NONE",
-                                    "defaultValue": "",
-                                    "masked": false,
-                                    "characterCase": "NONE"
-                                }
+                                "name": "MFA_USER_DEVICE_MANAGEMENT",
+                                "value": "Merge with devices in PingOne"
                             },
                             {
-                                "fieldName": "forceChangePassword",
-                                "saasFieldInfo": {
-                                    "createOnly": false,
-                                    "attributeNames": [],
-                                    "expression": "",
-                                    "trim": false,
-                                    "parser": "NONE",
-                                    "defaultValue": "",
-                                    "masked": false,
-                                    "characterCase": "NONE"
-                                }
-                            },
-                            {
-                                "fieldName": "fullName",
-                                "saasFieldInfo": {
-                                    "createOnly": false,
-                                    "attributeNames": [],
-                                    "expression": "",
-                                    "trim": false,
-                                    "parser": "NONE",
-                                    "defaultValue": "",
-                                    "masked": false,
-                                    "characterCase": "NONE"
-                                }
-                            },
-                            {
-                                "fieldName": "firstName",
-                                "saasFieldInfo": {
-                                    "createOnly": false,
-                                    "attributeNames": ["givenName"],
-                                    "expression": "",
-                                    "trim": false,
-                                    "parser": "NONE",
-                                    "defaultValue": "",
-                                    "masked": false,
-                                    "characterCase": "NONE"
-                                }
-                            },
-                            {
-                                "fieldName": "honorificPrefix",
-                                "saasFieldInfo": {
-                                    "createOnly": false,
-                                    "attributeNames": [],
-                                    "expression": "",
-                                    "trim": false,
-                                    "parser": "NONE",
-                                    "defaultValue": "",
-                                    "masked": false,
-                                    "characterCase": "NONE"
-                                }
-                            },
-                            {
-                                "fieldName": "honorificSuffix",
-                                "saasFieldInfo": {
-                                    "createOnly": false,
-                                    "attributeNames": [],
-                                    "expression": "",
-                                    "trim": false,
-                                    "parser": "NONE",
-                                    "defaultValue": "",
-                                    "masked": false,
-                                    "characterCase": "NONE"
-                                }
-                            },
-                            {
-                                "fieldName": "locale",
-                                "saasFieldInfo": {
-                                    "createOnly": false,
-                                    "attributeNames": [],
-                                    "expression": "",
-                                    "trim": false,
-                                    "parser": "NONE",
-                                    "defaultValue": "en-US",
-                                    "masked": false,
-                                    "characterCase": "NONE"
-                                }
-                            },
-                            {
-                                "fieldName": "city",
-                                "saasFieldInfo": {
-                                    "createOnly": false,
-                                    "attributeNames": ["l"],
-                                    "expression": "",
-                                    "trim": false,
-                                    "parser": "NONE",
-                                    "defaultValue": "",
-                                    "masked": false,
-                                    "characterCase": "NONE"
-                                }
-                            },
-                            {
-                                "fieldName": "mfaDeviceEmail1",
-                                "saasFieldInfo": {
-                                    "createOnly": false,
-                                    "attributeNames": ["mail"],
-                                    "expression": "",
-                                    "trim": false,
-                                    "parser": "NONE",
-                                    "defaultValue": "",
-                                    "masked": false,
-                                    "characterCase": "NONE"
-                                }
-                            },
-                            {
-                                "fieldName": "mfaDeviceEmail2",
-                                "saasFieldInfo": {
-                                    "createOnly": false,
-                                    "attributeNames": [],
-                                    "expression": "",
-                                    "trim": false,
-                                    "parser": "NONE",
-                                    "defaultValue": "",
-                                    "masked": false,
-                                    "characterCase": "NONE"
-                                }
-                            },
-                            {
-                                "fieldName": "mfaDeviceEmail3",
-                                "saasFieldInfo": {
-                                    "createOnly": false,
-                                    "attributeNames": [],
-                                    "expression": "",
-                                    "trim": false,
-                                    "parser": "NONE",
-                                    "defaultValue": "",
-                                    "masked": false,
-                                    "characterCase": "NONE"
-                                }
-                            },
-                            {
-                                "fieldName": "mfaDeviceSms1",
-                                "saasFieldInfo": {
-                                    "createOnly": false,
-                                    "attributeNames": ["mobile"],
-                                    "expression": "",
-                                    "trim": false,
-                                    "parser": "NONE",
-                                    "defaultValue": "",
-                                    "masked": false,
-                                    "characterCase": "NONE"
-                                }
-                            },
-                            {
-                                "fieldName": "mfaDeviceSms2",
-                                "saasFieldInfo": {
-                                    "createOnly": false,
-                                    "attributeNames": [],
-                                    "expression": "",
-                                    "trim": false,
-                                    "parser": "NONE",
-                                    "defaultValue": "",
-                                    "masked": false,
-                                    "characterCase": "NONE"
-                                }
-                            },
-                            {
-                                "fieldName": "mfaDeviceSms3",
-                                "saasFieldInfo": {
-                                    "createOnly": false,
-                                    "attributeNames": [],
-                                    "expression": "",
-                                    "trim": false,
-                                    "parser": "NONE",
-                                    "defaultValue": "",
-                                    "masked": false,
-                                    "characterCase": "NONE"
-                                }
-                            },
-                            {
-                                "fieldName": "mfaDeviceVoice1",
-                                "saasFieldInfo": {
-                                    "createOnly": false,
-                                    "attributeNames": ["mobile"],
-                                    "expression": "",
-                                    "trim": false,
-                                    "parser": "NONE",
-                                    "defaultValue": "",
-                                    "masked": false,
-                                    "characterCase": "NONE"
-                                }
-                            },
-                            {
-                                "fieldName": "mfaDeviceVoice2",
-                                "saasFieldInfo": {
-                                    "createOnly": false,
-                                    "attributeNames": [],
-                                    "expression": "",
-                                    "trim": false,
-                                    "parser": "NONE",
-                                    "defaultValue": "",
-                                    "masked": false,
-                                    "characterCase": "NONE"
-                                }
-                            },
-                            {
-                                "fieldName": "mfaDeviceVoice3",
-                                "saasFieldInfo": {
-                                    "createOnly": false,
-                                    "attributeNames": [],
-                                    "expression": "",
-                                    "trim": false,
-                                    "parser": "NONE",
-                                    "defaultValue": "",
-                                    "masked": false,
-                                    "characterCase": "NONE"
-                                }
-                            },
-                            {
-                                "fieldName": "middleName",
-                                "saasFieldInfo": {
-                                    "createOnly": false,
-                                    "attributeNames": [],
-                                    "expression": "",
-                                    "trim": false,
-                                    "parser": "NONE",
-                                    "defaultValue": "",
-                                    "masked": false,
-                                    "characterCase": "NONE"
-                                }
-                            },
-                            {
-                                "fieldName": "mobilePhone",
-                                "saasFieldInfo": {
-                                    "createOnly": false,
-                                    "attributeNames": ["mobile"],
-                                    "expression": "",
-                                    "trim": false,
-                                    "parser": "NONE",
-                                    "defaultValue": "",
-                                    "masked": false,
-                                    "characterCase": "NONE"
-                                }
-                            },
-                            {
-                                "fieldName": "mfaEnabled",
-                                "saasFieldInfo": {
-                                    "createOnly": false,
-                                    "attributeNames": [],
-                                    "expression": "",
-                                    "trim": false,
-                                    "parser": "NONE",
-                                    "defaultValue": "",
-                                    "masked": false,
-                                    "characterCase": "NONE"
-                                }
-                            },
-                            {
-                                "fieldName": "nickname",
-                                "saasFieldInfo": {
-                                    "createOnly": false,
-                                    "attributeNames": [],
-                                    "expression": "",
-                                    "trim": false,
-                                    "parser": "NONE",
-                                    "defaultValue": "",
-                                    "masked": false,
-                                    "characterCase": "NONE"
-                                }
-                            },
-                            {
-                                "fieldName": "password",
-                                "saasFieldInfo": {
-                                    "createOnly": false,
-                                    "attributeNames": [],
-                                    "expression": "",
-                                    "trim": false,
-                                    "parser": "NONE",
-                                    "defaultValue": "",
-                                    "masked": false,
-                                    "characterCase": "NONE"
-                                }
-                            },
-                            {
-                                "fieldName": "profileImage",
-                                "saasFieldInfo": {
-                                    "createOnly": false,
-                                    "attributeNames": [],
-                                    "expression": "",
-                                    "trim": false,
-                                    "parser": "NONE",
-                                    "defaultValue": "",
-                                    "masked": false,
-                                    "characterCase": "NONE"
-                                }
-                            },
-                            {
-                                "fieldName": "ZIPCode",
-                                "saasFieldInfo": {
-                                    "createOnly": false,
-                                    "attributeNames": ["postalCode"],
-                                    "expression": "",
-                                    "trim": false,
-                                    "parser": "NONE",
-                                    "defaultValue": "",
-                                    "masked": false,
-                                    "characterCase": "NONE"
-                                }
-                            },
-                            {
-                                "fieldName": "preferredLanguage",
-                                "saasFieldInfo": {
-                                    "createOnly": false,
-                                    "attributeNames": [],
-                                    "expression": "",
-                                    "trim": false,
-                                    "parser": "NONE",
-                                    "defaultValue": "en-us",
-                                    "masked": false,
-                                    "characterCase": "NONE"
-                                }
-                            },
-                            {
-                                "fieldName": "primaryPhone",
-                                "saasFieldInfo": {
-                                    "createOnly": false,
-                                    "attributeNames": ["telephoneNumber"],
-                                    "expression": "",
-                                    "trim": false,
-                                    "parser": "NONE",
-                                    "defaultValue": "",
-                                    "masked": false,
-                                    "characterCase": "NONE"
-                                }
-                            },
-                            {
-                                "fieldName": "stateRegion",
-                                "saasFieldInfo": {
-                                    "createOnly": false,
-                                    "attributeNames": ["st"],
-                                    "expression": "",
-                                    "trim": false,
-                                    "parser": "NONE",
-                                    "defaultValue": "",
-                                    "masked": false,
-                                    "characterCase": "NONE"
-                                }
-                            },
-                            {
-                                "fieldName": "streetAddress",
-                                "saasFieldInfo": {
-                                    "createOnly": false,
-                                    "attributeNames": ["streetAddress"],
-                                    "expression": "",
-                                    "trim": false,
-                                    "parser": "NONE",
-                                    "defaultValue": "",
-                                    "masked": false,
-                                    "characterCase": "NONE"
-                                }
-                            },
-                            {
-                                "fieldName": "timezone",
-                                "saasFieldInfo": {
-                                    "createOnly": false,
-                                    "attributeNames": [],
-                                    "expression": "",
-                                    "trim": false,
-                                    "parser": "NONE",
-                                    "defaultValue": "",
-                                    "masked": false,
-                                    "characterCase": "NONE"
-                                }
-                            },
-                            {
-                                "fieldName": "jobTitle",
-                                "saasFieldInfo": {
-                                    "createOnly": false,
-                                    "attributeNames": ["title"],
-                                    "expression": "",
-                                    "trim": false,
-                                    "parser": "NONE",
-                                    "defaultValue": "",
-                                    "masked": false,
-                                    "characterCase": "NONE"
-                                }
-                            },
-                            {
-                                "fieldName": "userType",
-                                "saasFieldInfo": {
-                                    "createOnly": false,
-                                    "attributeNames": [],
-                                    "expression": "",
-                                    "trim": false,
-                                    "parser": "NONE",
-                                    "defaultValue": "",
-                                    "masked": false,
-                                    "characterCase": "NONE"
-                                }
+                                "name": "DEFAULT_AUTH_METHOD",
+                                "value": "Email 1"
                             }
                         ],
-                        "name": "PROVISION",
-                        "active": true,
-                        "maxThreads": 1,
-                        "timeout": 60,
-                        "channelSource": {
-                            "changeDetectionSettings": {
-                                "timeStampAttributeName": "modifyTimestamp",
-                                "changedUsersAlgorithm": "TIMESTAMP_NO_NEGATION",
-                                "userObjectClass": "inetOrgPerson",
-                                "groupObjectClass": "groupOfUniqueNames"
-                            },
-                            "guidBinary": false,
-                            "accountManagementSettings": {
-                                "flagComparisonValue": "true",
-                                "defaultStatus": true,
-                                "flagComparisonStatus": false,
-                                "accountStatusAlgorithm": "ACCOUNT_STATUS_ALGORITHM_FLAG",
-                                "accountStatusAttributeName": "nsaccountlock"
-                            },
-                            "groupMembershipDetection": {"groupMemberAttributeName": "uniqueMember"},
-                            "userSourceLocation": {
-                                "filter": "uid=*",
-                                "nestedSearch": false
-                            },
-                            "groupSourceLocation": {"nestedSearch": false},
-                            "baseDn": "dc=example,dc=com",
-                            "dataSource": {
-                                "location": "https://localhost:-1/pf-admin-api/v1/dataStores/LDAP-4D65BD30F2946A712E86940F0F7442EDCDC16646",
-                                "id": "LDAP-4D65BD30F2946A712E86940F0F7442EDCDC16646"
-                            },
-                            "guidAttributeName": "entryUUID"
-                        }
-                    }],
-                    "targetSettings": [
-                        {
-                            "name": "PINGONE_ENVIRONMENT",
-                            "value": "mImpgs4t0rrk7n7mfAMOcP|314177e2-5da7-433b-a5b5-9bdcc20b45a3"
-                        },
-                        {
-                            "name": "Provisioning Options",
-                            "value": ""
-                        },
-                        {
-                            "name": "CREATE_USERS_PROV_OPT",
-                            "value": "true"
-                        },
-                        {
-                            "name": "UPDATE_USERS_PROV_OPT",
-                            "value": "true"
-                        },
-                        {
-                            "name": "REMOVE_USERS_PROV_OPT",
-                            "value": "true"
-                        },
-                        {
-                            "name": "PROVISION_DISABLED_USERS_PROV_OPT",
-                            "value": "true"
-                        },
-                        {
-                            "name": "REMOVE_ACTION",
-                            "value": "Disable"
-                        },
-                        {
-                            "name": "MFA_USER_DEVICE_MANAGEMENT",
-                            "value": "Merge with devices in PingOne"
-                        },
-                        {
-                            "name": "DEFAULT_AUTH_METHOD",
-                            "value": "Email 1"
-                        }
-                    ],
-                    "type": "PingOne"
+                        "type": "PingOne"
+                    },
+                    "name": "PingOne Connector",
+                    "id": "OCtcMUGvT6x1y-Pz9QYBazyOPeY"
                 },
-                "name": "PingOne Connector",
-                "id": "OCtcMUGvT6x1y-Pz9QYBazyOPeY"
-            }],
+                {
+                    "credentials": {
+                        "certs": [],
+                        "signingSettings": {
+                            "signingKeyPairRef": {
+                                "location": "https://localhost:-1/pf-admin-api/v1/keyPairs/signing/ulwwb71v5nmhh7v56tnb42a9k",
+                                "id": "ulwwb71v5nmhh7v56tnb42a9k"
+                            },
+                            "includeRawKeyInSignature": false,
+                            "algorithm": "SHA256withRSA",
+                            "includeCertInSignature": false
+                        }
+                    },
+                    "active": true,
+                    "spBrowserSso": {
+                        "requireSignedAuthnRequests": false,
+                        "authenticationPolicyContractAssertionMappings": [],
+                        "encryptionPolicy": {
+                            "encryptSloSubjectNameId": false,
+                            "encryptAssertion": false,
+                            "encryptedAttributes": [],
+                            "sloSubjectNameIDEncrypted": false
+                        },
+                        "ssoApplicationEndpoint": "https://id.ping.darkedges.com/idp/startSSO.ping?PartnerSpId=https%3A%2F%2Fpayroll.provider.com%2Fsaml",
+                        "ssoServiceEndpoints": [{
+                            "isDefault": true,
+                            "binding": "POST",
+                            "index": 0,
+                            "url": "https://payroll.provider.com/sso/consume"
+                        }],
+                        "attributeContract": {
+                            "coreAttributes": [{
+                                "nameFormat": "urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified",
+                                "name": "SAML_SUBJECT"
+                            }],
+                            "extendedAttributes": []
+                        },
+                        "incomingBindings": ["POST"],
+                        "protocol": "SAML20",
+                        "spSamlIdentityMapping": "STANDARD",
+                        "signAssertions": false,
+                        "enabledProfiles": [
+                            "IDP_INITIATED_SSO",
+                            "SP_INITIATED_SSO"
+                        ],
+                        "signResponseAsRequired": true,
+                        "adapterMappings": [{
+                            "abortSsoTransactionAsFailSafe": false,
+                            "restrictedVirtualEntityIds": [],
+                            "attributeContractFulfillment": {"SAML_SUBJECT": {
+                                "source": {"type": "ADAPTER"},
+                                "value": "subject"
+                            }},
+                            "restrictVirtualEntityIds": false,
+                            "idpAdapterRef": {
+                                "location": "https://localhost:-1/pf-admin-api/v1/idp/adapters/IDENTIFIERFIRST",
+                                "id": "IDENTIFIERFIRST"
+                            },
+                            "attributeSources": [],
+                            "issuanceCriteria": {"conditionalCriteria": []}
+                        }],
+                        "assertionLifetime": {
+                            "minutesAfter": 5,
+                            "minutesBefore": 5
+                        }
+                    },
+                    "entityId": "https://payroll.provider.com/saml",
+                    "loggingMode": "STANDARD",
+                    "replicationStatus": "REPLICATED",
+                    "type": "SP",
+                    "creationDate": "2025-12-02T09:48:00.760Z",
+                    "connectionTargetType": "STANDARD",
+                    "baseUrl": "https://payroll.provider.com",
+                    "modificationDate": "2025-12-02T09:48:00.760Z",
+                    "virtualEntityIds": [],
+                    "name": "HR Payroll",
+                    "id": "hr-payroll"
+                }
+            ],
             "resourceType": "/idp/spConnections"
         },
         {
@@ -3094,6 +3189,62 @@
                         "secondarySecrets": [],
                         "secret": "${oauth_clients_items_clientAuth_contact_oauth_client_secret}",
                         "type": "SECRET"
+                    }
+                },
+                {
+                    "bypassApprovalPage": false,
+                    "offlineAccessRequireConsentPrompt": "SERVER_DEFAULT",
+                    "persistentGrantReuseType": "SERVER_DEFAULT",
+                    "persistentGrantIdleTimeoutType": "SERVER_DEFAULT",
+                    "requireSignedRequests": false,
+                    "persistentGrantIdleTimeout": 0,
+                    "enabled": true,
+                    "requireOfflineAccessScopeToIssueRefreshTokens": "SERVER_DEFAULT",
+                    "oidcPolicy": {
+                        "grantAccessSessionRevocationApi": false,
+                        "grantAccessSessionSessionManagementApi": false,
+                        "pingAccessLogoutCapable": false,
+                        "idTokenSigningAlgorithm": "RS256",
+                        "logoutMode": "NONE",
+                        "pairwiseIdentifierUserType": false
+                    },
+                    "persistentGrantExpirationTime": 0,
+                    "restrictedResponseTypes": [],
+                    "lockoutMaxMaliciousActionsType": "SERVER_DEFAULT",
+                    "requireProofKeyForCodeExchange": false,
+                    "enableCookielessAuthenticationApi": false,
+                    "persistentGrantIdleTimeoutTimeUnit": "DAYS",
+                    "restrictToDefaultAccessTokenManager": false,
+                    "validateUsingAllEligibleAtms": false,
+                    "restrictScopes": false,
+                    "clientId": "marketing-portal",
+                    "requireJwtSecuredAuthorizationResponseMode": false,
+                    "persistentGrantExpirationTimeUnit": "DAYS",
+                    "requireDpop": false,
+                    "allowAuthenticationApiInit": false,
+                    "refreshTokenRollingGracePeriodType": "SERVER_DEFAULT",
+                    "replicationStatus": "REPLICATED",
+                    "creationDate": "2025-12-02T09:48:00.710Z",
+                    "deviceFlowSettingType": "SERVER_DEFAULT",
+                    "redirectUris": ["https://marketing.example.com/callback"],
+                    "authorizationDetailTypes": [],
+                    "grantTypes": ["AUTHORIZATION_CODE"],
+                    "modificationDate": "2025-12-02T09:48:00.710Z",
+                    "defaultAccessTokenManagerRef": {
+                        "location": "https://localhost:-1/pf-admin-api/v1/oauth/accessTokenManagers/AccessTokenManagement",
+                        "id": "AccessTokenManagement"
+                    },
+                    "clientSecretRetentionPeriodType": "SERVER_DEFAULT",
+                    "requirePushedAuthorizationRequests": false,
+                    "name": "Marketing Portal",
+                    "refreshTokenRollingIntervalType": "SERVER_DEFAULT",
+                    "persistentGrantExpirationType": "SERVER_DEFAULT",
+                    "restrictedScopes": [],
+                    "refreshRolling": "SERVER_DEFAULT",
+                    "exclusiveScopes": [],
+                    "clientAuth": {
+                        "secondarySecrets": [],
+                        "type": "NONE"
                     }
                 },
                 {
