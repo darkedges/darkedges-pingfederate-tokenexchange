@@ -46,3 +46,16 @@ pingdirectory:
 
 pingdataconsole:
   enabled: true
+
+pingaccess-admin:
+  enabled: true
+  envs:
+      PING_IDENTITY_PASSWORD: "2FederateM0re!"
+      PF_RUN_PF_OPERATIONAL_MODE: STANDALONE
+      PING_IDENTITY_ACCEPT_EULA: "YES"
+
+pingaccess-engine:
+  enabled: true
+  envs:
+      PING_IDENTITY_PASSWORD: "2FederateM0re!"
+      PING_IDENTITY_ACCEPT_EULA: "YES"

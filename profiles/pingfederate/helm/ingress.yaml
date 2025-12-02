@@ -68,3 +68,36 @@ pingfederate-engine:
       - secretName: pingfederate-engine
         hosts:
           - id.ping.darkedges.com
+pingaccess-admin:
+  ingress:
+    hosts:
+      - host: paconsole.ping.internal.darkedges.com
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              serviceName: https
+      - host: paconsole.ping.darkedges.com
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              serviceName: https
+    tls:
+      - secretName: pingaccess-admin
+        hosts:
+          - paconsole.ping.darkedges.com
+          - paconsole.ping.internal.darkedges.com
+pingaccess-engine:
+  ingress:
+    hosts:
+      - host: gateway.ping.darkedges.com
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              serviceName: https
+    tls:
+      - secretName: pingaccess-engine
+        hosts:
+          - gateway.ping.darkedges.com
