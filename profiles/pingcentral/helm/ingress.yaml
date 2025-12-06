@@ -1,0 +1,23 @@
+global:
+  envs:
+    PING_IDENTITY_ACCEPT_EULA: "YES"
+  ingress:
+    enabled: true
+    annotations:
+      nginx.ingress.kubernetes.io/backend-protocol: "HTTPS"
+      cert-manager.io/cluster-issuer: vault-issuer
+    spec:
+      ingressClassName: nginx
+pingcentral:
+  ingress:
+    hosts:
+      - host: central.ping.darkedges.com
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              serviceName: https
+    tls:
+      - secretName: pingcentral
+        hosts:
+          - central.ping.darkedges.com

@@ -1,0 +1,43 @@
+global:
+  envs:
+    PING_IDENTITY_ACCEPT_EULA: "YES"
+  ingress:
+    enabled: true
+    annotations:
+      nginx.ingress.kubernetes.io/backend-protocol: "HTTPS"
+      cert-manager.io/cluster-issuer: vault-issuer
+    spec:
+      ingressClassName: nginx
+pingaccess-admin:
+  ingress:
+    hosts:
+      - host: paconsole.ping.internal.darkedges.com
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              serviceName: https
+      - host: paconsole.ping.darkedges.com
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              serviceName: https
+    tls:
+      - secretName: pingaccess-admin
+        hosts:
+          - paconsole.ping.darkedges.com
+          - paconsole.ping.internal.darkedges.com
+pingaccess-engine:
+  ingress:
+    hosts:
+      - host: gateway.ping.darkedges.com
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              serviceName: https
+    tls:
+      - secretName: pingaccess-engine
+        hosts:
+          - gateway.ping.darkedges.com

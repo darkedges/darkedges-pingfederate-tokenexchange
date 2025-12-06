@@ -101,3 +101,16 @@ pingaccess-engine:
       - secretName: pingaccess-engine
         hosts:
           - gateway.ping.darkedges.com
+pingcentral:
+  ingress:
+    hosts:
+      - host: central.ping.darkedges.com
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              serviceName: https
+    tls:
+      - secretName: pingcentral
+        hosts:
+          - central.ping.darkedges.com

@@ -11,3 +11,4 @@ docker/terraform-init/.terraform/
 docs/
 .github/copilot-instructions.md
 profiles/pingoneldapgateway/pingone.yaml
+profiles/pingfederate/helm/devopsconfig

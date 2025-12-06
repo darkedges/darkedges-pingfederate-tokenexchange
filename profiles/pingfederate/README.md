@@ -163,4 +163,3 @@ This configuration is built for **PingFederate version 12.3.3.1**.
 - Environment-specific values should be managed through `env_vars` files
 - JWK files contain cryptographic keys and should be protected
 - Configuration exports enable versioning and disaster recovery
-
