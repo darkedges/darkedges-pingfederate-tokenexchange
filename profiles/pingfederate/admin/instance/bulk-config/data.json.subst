@@ -6,6 +6,11 @@
             "subResource": "cert-time-tracking",
             "items": [
                 {
+                    "stringValue": "1765310095",
+                    "id": "lc6xons0ovn4erf4fh2rr3t8t",
+                    "type": "STRING"
+                },
+                {
                     "stringValue": "1764106644",
                     "id": "sqqnju571a0uyste1jhhzubc4",
                     "type": "STRING"
@@ -13,6 +18,11 @@
                 {
                     "stringValue": "1763428329",
                     "id": "w5yh0l80eojioziuvjmdakgvd",
+                    "type": "STRING"
+                },
+                {
+                    "stringValue": "1765310103",
+                    "id": "wcq2gcje6bhq10q78elzcl37r",
                     "type": "STRING"
                 }
             ],
@@ -22,7 +32,7 @@
             "operationType": "SAVE",
             "subResource": "com.pingidentity.provisioner.xml.util.ChannelUtil",
             "items": [{
-                "stringValue": "7",
+                "stringValue": "8",
                 "id": "NextChannelId",
                 "type": "STRING"
             }],
@@ -112,10 +122,20 @@
         },
         {
             "operationType": "SAVE",
-            "items": [{
-                "fileData": "${certificates_ca_items_sqqnju571a0uyste1jhhzubc4_sqqnju571a0uyste1jhhzubc4_fileData}",
-                "id": "sqqnju571a0uyste1jhhzubc4"
-            }],
+            "items": [
+                {
+                    "fileData": "${certificates_ca_items_lc6xons0ovn4erf4fh2rr3t8t_lc6xons0ovn4erf4fh2rr3t8t_fileData}",
+                    "id": "lc6xons0ovn4erf4fh2rr3t8t"
+                },
+                {
+                    "fileData": "${certificates_ca_items_sqqnju571a0uyste1jhhzubc4_sqqnju571a0uyste1jhhzubc4_fileData}",
+                    "id": "sqqnju571a0uyste1jhhzubc4"
+                },
+                {
+                    "fileData": "${certificates_ca_items_wcq2gcje6bhq10q78elzcl37r_wcq2gcje6bhq10q78elzcl37r_fileData}",
+                    "id": "wcq2gcje6bhq10q78elzcl37r"
+                }
+            ],
             "resourceType": "/certificates/ca"
         },
         {
@@ -168,7 +188,7 @@
         {
             "operationType": "SAVE",
             "items": [{
-                "encryptedCredential": "eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2Iiwia2lkIjoiUWVzOVR5eTV5WiIsInZlcnNpb24iOiIxMi4zLjMuMSJ9..muqm33S9mknGoOq-OyEWjg.RdQvTCOHamJSTmrdXTqRDN9xfwJZ0ku_art9R3BQEoD66tGqNunEd4Wzzkei4dorD5_ywIWhaNH0Gv6tGTlVZbpJ1fGAytLPpmb6_6F2kJmeHm2JSaJ2gg8jdTkt-OU0zC0pFj1uUWkpizEjdr3f89u53MzZIv6HWqpQSyENYN07yGsu488uxo_kAdiJ8WioARTaJV4WTpYVwGt4KSOG_k3jkUjdFmP354fsuKkQcMRn7nUmdNGEomLoDd5FWrAfW0qwWTgIEjtZw3OdcwGxl4yJ7WCBj6NlN5Y6auiK1jVPB4yE8zX2vzEZAAfYvrhUmXrD-UhRSSjrCOKE3qpz5_Utuxh1lUTXh-R8zlLV-CI2VmUavfatHS2kq8-BPYucyZ0KcriJKznOT_oBhrmx9E4ogUkarZruMbgOJIP-MMcO3SMeEqLaMCdd9y-4XZD-L0fqOiuEq-iQ4f0I19lrM9WNcVvDmOetuXiT4wgo0-y-VwMTmmXY8W4kdyYJXeQcyVBx-YHrLeKCXOlHsXGDbkz6tZzO6Q2OCf2P0kZZnEz7K66PChhO2PbhjQR3XnS-D9BuadW16uAquvihue6BsCkpF5UulyUaDwT-j4f9L1cyotfpIf53szrm-PE6UQatzal8O6dujK3-TQsKQZs4_pGVJUxG_0J3O5upN60NZlm2Cb3tKjsEl7EqSSkTA7jphk94yv9rEp5SsvXczoDXIOuo5dsdjNf_k6cdXuk-bUR7pBlX-rSW-QKHpNKsFusLPNF4fshyltLeR_t1WJwcw2UiWBPACu0eQoREzhZ41YtIn0xFg9ZfYlxc4H3vKm844fBA35ueO0ec-ZLt0e4ZNGAAWrIxZZtoEpGdk97QrBomN7-Smup-zxfeCw3GKzeURapblg0p5bYtc9Duc5NjsfvLpC52S78DHJt6C--RvwKHDRs2yQnRa1eYJTRB6opaTq1YIURGr-ZXN88hift7YMUWeb35hLI40S1D0CpvAwb3Txlav5esNvQhI5piiA--5zBZDs2e3iNX0wMaZWzWkoi15-Sa3DWtObRG3rXwYnvjB61R0RhBFihyCM-ocb436GZIbQ3bArYmIDeJAByCxfpHMjQLU5zcIgB7bTeFwWrhhbb8J9iuNL0LrLWyCxiZGgEgVBjPpSSVfGl_GV1Qwec8RexeqyYAOmjnfkuLvYO1xfgZnUXZeVIBJDbVMUHkJTioLNQnOMJZWdazxE5MHRSwfWtODggBSQgAGv-5Gq-jqJoJGmZXmDE-b_aj77jLc_1R_V_v4QetcHQ2-WlqOF-miNHwNa1SvZPzmw67vKPyZFzUftKdTgjswgHKiHZlLqJActfn82fIR4lffFrSKXiDxipsr2b6Y7fEfP5S9mHjdCHYEnFTTNPdGGWa09jfEOPjK3btzmhxkw6B-tiWEssLUqHn5EXQA5hSgTBQ7jx5IBEA_dUVmG37l174_csWg_QZQnmm8GUYWCbWpxnUYyM8nqZnbBooP6xheIt921gLIExHxPjG1ei5rk8Eh6pghMgwdgmfClPyQ9cJi1GkpHfJVCGU0r-5vhmxkuvhrud-_MqCfWJgGFm86N82vhkHIOFDpbprPTXv4XHijXFYWT7xYsdJ9TZxxhtpYWbRPgbDhDbbVUEl3_yFtTyikxBItgVlxuk1riOkzs_FwgAjhCjG46q6ZEaZ5aMaEHlTZGk.pQhmigzIPFr5FcL1oRcAsA",
+                "encryptedCredential": "eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2Iiwia2lkIjoiUWVzOVR5eTV5WiIsInZlcnNpb24iOiIxMi4zLjMuMSJ9..CQK2Wjol6aqxW8Vue_EKqw.tuEKbmmIWcqMAmMaBmhInTb8zownse3jTasHPzWfVvNfWIHxEHxTlX9HZAF07Zu-q-1xsV6oiKIlks2HH-q6ZrYRlYkby9EmGK2xY8x-0de1P_m2aYS7iyeP7Zktf_qz32mFXh_A2miosEDXjhldciNHViFc72ypvQHlFjJ0D40NkR6zahWJzJpbZCwHL3UXtc06_KMpVXQW1TjijIb4ggUmXi_x-nVeTLbr7jrfWvUCcfrXbSQn_KiafOmX0G8IYywx9aoBSbXa6qD3bQvCk6db47IRovXopBfUsIUWwZgaZ_08r2-FWbgfGR8FgzApam9PFdsGj9i-xDx85UZSiGGjk450NIxoV0UbTC45Ne6je8f0bs7ncvcKE_Kt2Q-FSTy6cCLrE2foThwsLmsuW6c_ePbWcMtTsZ60rkCq2iZUPHbZgRrtoJ52N5b9qzrQu2RrMHHsyLN98t2eTxUwuc_BRyLY0gC8Sq8aBQjE7jJTjZwx7TqEn-cg3TN9XhhdT6Eg87GWsAPPR_Skw6I7zZYTVWwk__hFv2TgpuCk9sUA9tFc0ixTTQsybrMf2VzB5LNIuBrwbus1Du5T4TfJqbRlR8WWbQgmQRGb-e61kNO4hNJQuoTpikWtjr8bytXofDhRb2ntoc35r1MZq0yss_3tQESIv2q8g2JM1Fo9Yqi4OHAXrjMWW7nsTNlV4nuFXGrMwt2ZsuiiEcSPE5eRBNr1N93BkjA9a9nEbJTv86ujUu-Ege6tiuses0PHDRpsjQ1i5t2YN4fKSbR3WXrxetNkevNnqrICex8nHC9qXmVbqSZMLuv-0VEjB9pG7BjiaDJ6pSEMdSVPyJtu53xtqWlX-JKw4oYFXX_AgzOoO6IhnPPsoP8rtJakuY6SPSPLujcHZEUO8XOUqfF38dnX_bPfl0LUoIKu0WIdSn4uLx-5MhzynoUNqOjpxQo7l6cdXGJv22PKxsazWM8Rs_n4u35xqhMVfWivWpYaKDa3SNF4OX_QJg0Low6Lh76IGuq8yn8EZqzKMFv5VU3yQLKc6yfMuxWBaXodeK47bEnEhUI8AURhTbKpa74hSB_M8sWx08JUS7BLvEX6GdwQOmrxCCw6SvkB6qifDCSYRyA4mg36YUABfrh1BaJKKEaLy97kUqX_QYfy_wAppOUu6CHu-ZtGoD-UeF__JWVMER15cOKzt4GligsHnBUG2QqJbTvdEkcit9Zi_PDoQQ_vjfB4_OiqHOYvLwqVhy_dUKYdPZluq8F8Z2pblNPceLA7nxkqTbTl9n1WeAl5aEFjFPsq9riiq1Y8NoEPGb_ShA6m1A-mSVd-45cEG7SrZiAwU5U6xkphEMxiM5Ts3uxL99EyPCbgNzJ6BkVJ0E20BHVjz2TCBRKDFAH5IKpG9dXCw6BKIOO0x0y7oadvzKxPFwbktjflYRr8zfcAmtZcXq65X3SZwAkSrVAWs1oNvCI2j55SXpdOWPniRzxzLjuf7GytFBdSJp_ZBz2tYzwI8vIA2iU3O0fwlhR0mqfT2hP9Nmd4s2Z83SIpi9l5FBLAIJ_yb18nw7ZBGSrwjQUxElR_jpu8lBatwuocKeWby6NC8pg0KrRBq-1Y_Fq087M4UhRQSMosUZPmu8wKbbCGOi9jkLjUur6mB9Zlp4hmZlVESwCvkGuXfmKiFakrQDP5q4dqn2zHJsYV-nd_htV-Kj_migE.xlI18HyvRhepHB27MmEALg",
                 "pingOneConnectionId": "3a0c50c2-d5de-45b1-bd2a-9aedf6f3477e",
                 "environmentId": "314177e2-5da7-433b-a5b5-9bdcc20b45a3",
                 "organizationName": "trial_cba.com_1544259280",
@@ -177,7 +197,7 @@
                 "credentialId": "e112d200-1d68-448c-91d4-1fd4da7adc69",
                 "pingOneAuthenticationApiEndpoint": "https://auth.pingone.com.au",
                 "id": "mImpgs4t0rrk7n7mfAMOcP",
-                "creationDate": "2025-12-08T23:09:58.586Z",
+                "creationDate": "2025-12-09T19:44:16.998Z",
                 "region": "Australia",
                 "pingOneManagementApiEndpoint": "https://api.pingone.com.au"
             }],
@@ -216,7 +236,7 @@
                     "readTimeout": 3000,
                     "name": "PingDirectory",
                     "useStartTLS": false,
-                    "lastModified": "2025-12-08T23:09:58.665Z",
+                    "lastModified": "2025-12-09T19:44:17.092Z",
                     "retryFailedOperations": false,
                     "userDN": "cn=administrator"
                 },
@@ -272,7 +292,7 @@
                     },
                     "name": "PINGONEDATASTORE",
                     "id": "Other-037C411BB3CBA6E452A94C62E522195AAD1DF603",
-                    "lastModified": "2025-12-08T23:09:59.632Z",
+                    "lastModified": "2025-12-09T19:44:18.147Z",
                     "type": "CUSTOM",
                     "pluginDescriptorRef": {
                         "location": "https://localhost:-1/pf-admin-api/v1/dataStores/descriptors/com.pingidentity.plugins.datastore.p14c.PingOneForCustomersDataStore",
@@ -295,7 +315,7 @@
                     "name": "ProvisionerDS (sa)",
                     "connectionUrl": "jdbc:hsqldb:${pf.server.data.dir}${/}hypersonic${/}ProvisionerDefaultDB;hsqldb.lock_file=false",
                     "id": "ProvisionerDS",
-                    "lastModified": "2025-12-08T23:09:59.651Z",
+                    "lastModified": "2025-12-09T19:44:18.168Z",
                     "maxPoolSize": 100,
                     "blockingTimeout": 5000
                 }
@@ -590,7 +610,7 @@
             "items": [{
                 "name": "POLICYCONTRACT",
                 "id": "KUzfpHBOZeqF0vVo",
-                "lastModified": "2025-12-08T23:09:59.985Z",
+                "lastModified": "2025-12-09T19:44:18.486Z",
                 "coreAttributes": [{"name": "subject"}],
                 "extendedAttributes": [
                     {"name": "uid"},
@@ -783,7 +803,7 @@
                     },
                     "name": "AccessTokenManagement",
                     "id": "AccessTokenManagement",
-                    "lastModified": "2025-12-08T23:10:00.081Z",
+                    "lastModified": "2025-12-09T19:44:18.551Z",
                     "pluginDescriptorRef": {
                         "location": "https://localhost:-1/pf-admin-api/v1/oauth/accessTokenManagers/descriptors/com.pingidentity.pf.access.token.management.plugins.JwtBearerAccessTokenManagementPlugin",
                         "id": "com.pingidentity.pf.access.token.management.plugins.JwtBearerAccessTokenManagementPlugin"
@@ -885,7 +905,7 @@
                             },
                             {
                                 "name": "Include X.509 Thumbprint Header Parameter",
-                                "value": ""
+                                "value": "false"
                             },
                             {
                                 "name": "Default JWKS URL Cache Duration",
@@ -897,7 +917,7 @@
                             },
                             {
                                 "name": "Include JWE X.509 Thumbprint Header Parameter",
-                                "value": ""
+                                "value": "false"
                             },
                             {
                                 "name": "Client ID Claim Name",
@@ -953,11 +973,11 @@
                             },
                             {
                                 "name": "Publish Key ID X.509 URL",
-                                "value": ""
+                                "value": "false"
                             },
                             {
                                 "name": "Publish Thumbprint X.509 URL",
-                                "value": ""
+                                "value": "false"
                             },
                             {
                                 "name": "Expand Scope Groups",
@@ -986,7 +1006,7 @@
                     },
                     "name": "JSON Web Tokens",
                     "id": "jwt",
-                    "lastModified": "2025-12-09T02:31:13.232Z",
+                    "lastModified": "2025-12-09T19:44:18.542Z",
                     "pluginDescriptorRef": {
                         "location": "https://localhost:-1/pf-admin-api/v1/oauth/accessTokenManagers/descriptors/com.pingidentity.pf.access.token.management.plugins.JwtBearerAccessTokenManagementPlugin",
                         "id": "com.pingidentity.pf.access.token.management.plugins.JwtBearerAccessTokenManagementPlugin"
@@ -1144,7 +1164,7 @@
                     },
                     "name": "IDENTIFIERFIRST",
                     "id": "IDENTIFIERFIRST",
-                    "lastModified": "2025-12-08T23:10:00.183Z",
+                    "lastModified": "2025-12-09T19:44:18.636Z",
                     "pluginDescriptorRef": {
                         "location": "https://localhost:-1/pf-admin-api/v1/idp/adapters/descriptors/com.pingidentity.adapters.identifierfirst.idp.IdentifierFirstAdapter",
                         "id": "com.pingidentity.adapters.identifierfirst.idp.IdentifierFirstAdapter"
@@ -1453,7 +1473,7 @@
                     },
                     "name": "PINGID",
                     "id": "PINGID",
-                    "lastModified": "2025-12-08T23:10:00.216Z",
+                    "lastModified": "2025-12-09T19:44:18.707Z",
                     "pluginDescriptorRef": {
                         "location": "https://localhost:-1/pf-admin-api/v1/idp/adapters/descriptors/com.pingidentity.adapters.pingid.PingIDAdapter",
                         "id": "com.pingidentity.adapters.pingid.PingIDAdapter"
@@ -1801,7 +1821,7 @@
                     },
                     "name": "PINGONEMFA",
                     "id": "PINGONEMFA",
-                    "lastModified": "2025-12-08T23:10:01.141Z",
+                    "lastModified": "2025-12-09T19:44:19.633Z",
                     "pluginDescriptorRef": {
                         "location": "https://localhost:-1/pf-admin-api/v1/idp/adapters/descriptors/com.pingidentity.adapters.pingone.mfa.PingOneMfaIdpAdapter",
                         "id": "com.pingidentity.adapters.pingone.mfa.PingOneMfaIdpAdapter"
@@ -1941,7 +1961,7 @@
                     },
                     "name": "MSFTTOKENPROCESSOR",
                     "id": "MSFTTOKENPROCESSOR",
-                    "lastModified": "2025-12-08T23:10:01.283Z",
+                    "lastModified": "2025-12-09T19:44:19.779Z",
                     "pluginDescriptorRef": {
                         "location": "https://localhost:-1/pf-admin-api/v1/idp/tokenProcessors/descriptors/com.pingidentity.pf.tokenprocessors.jwt.JwtTokenProcessor",
                         "id": "com.pingidentity.pf.tokenprocessors.jwt.JwtTokenProcessor"
@@ -1974,7 +1994,7 @@
                     },
                     "name": "PFTOKENPROCESSOR",
                     "id": "PFTOKENPROCESSOR",
-                    "lastModified": "2025-12-08T23:10:01.298Z",
+                    "lastModified": "2025-12-09T19:44:19.793Z",
                     "pluginDescriptorRef": {
                         "location": "https://localhost:-1/pf-admin-api/v1/idp/tokenProcessors/descriptors/org.sourceid.wstrust.processor.oauth.BearerAccessTokenTokenProcessor",
                         "id": "org.sourceid.wstrust.processor.oauth.BearerAccessTokenTokenProcessor"
@@ -2117,10 +2137,10 @@
                 "loggingMode": "STANDARD",
                 "replicationStatus": "REPLICATED",
                 "type": "SP",
-                "creationDate": "2025-12-08T23:10:02.545Z",
+                "creationDate": "2025-12-09T19:44:21.093Z",
                 "connectionTargetType": "STANDARD",
                 "baseUrl": "https://api.pingone.com/v1",
-                "modificationDate": "2025-12-08T23:10:02.546Z",
+                "modificationDate": "2025-12-09T19:44:21.094Z",
                 "virtualEntityIds": [],
                 "outboundProvision": {
                     "channels": [{
@@ -2829,7 +2849,7 @@
                 },
                 "name": "PINGONEMFACIBA",
                 "id": "PINGONEMFACIBA",
-                "lastModified": "2025-12-08T23:10:02.697Z",
+                "lastModified": "2025-12-09T19:44:21.274Z",
                 "pluginDescriptorRef": {
                     "location": "https://localhost:-1/pf-admin-api/v1/oauth/outOfBandAuthPlugins/descriptors/com.pingidentity.oobauth.pingone.mfa.PingOneMfaCibaAuthenticator",
                     "id": "com.pingidentity.oobauth.pingone.mfa.PingOneMfaCibaAuthenticator"
@@ -3088,7 +3108,7 @@
                 "allowIdTokenIntrospection": false,
                 "id": "OPENIDCONNECTPOLICYMANAGEMENT",
                 "reissueIdTokenInHybridFlow": false,
-                "lastModified": "2025-12-08T23:10:02.750Z",
+                "lastModified": "2025-12-09T19:44:21.309Z",
                 "idTokenLifetime": 5,
                 "accessTokenManagerRef": {
                     "location": "https://localhost:-1/pf-admin-api/v1/oauth/accessTokenManagers/AccessTokenManagement",
@@ -3198,7 +3218,7 @@
                     "allowAuthenticationApiInit": false,
                     "refreshTokenRollingGracePeriodType": "SERVER_DEFAULT",
                     "replicationStatus": "REPLICATED",
-                    "creationDate": "2025-12-08T23:10:02.837Z",
+                    "creationDate": "2025-12-09T19:44:21.429Z",
                     "deviceFlowSettingType": "SERVER_DEFAULT",
                     "redirectUris": [
                         "http://localhost:3000/api/auth/callback",
@@ -3209,10 +3229,10 @@
                         "AUTHORIZATION_CODE",
                         "REFRESH_TOKEN"
                     ],
-                    "modificationDate": "2025-12-08T23:10:02.837Z",
+                    "modificationDate": "2025-12-09T19:44:21.429Z",
                     "clientSecretRetentionPeriodType": "SERVER_DEFAULT",
                     "requirePushedAuthorizationRequests": false,
-                    "clientSecretChangedTime": "2025-12-08T23:10:02.000Z",
+                    "clientSecretChangedTime": "2025-12-09T19:44:21.000Z",
                     "name": "contact-hr-client",
                     "refreshTokenRollingIntervalType": "SERVER_DEFAULT",
                     "persistentGrantExpirationType": "SERVER_DEFAULT",
@@ -3262,7 +3282,7 @@
                     "allowAuthenticationApiInit": true,
                     "refreshTokenRollingGracePeriodType": "SERVER_DEFAULT",
                     "replicationStatus": "REPLICATED",
-                    "creationDate": "2025-12-08T23:10:02.863Z",
+                    "creationDate": "2025-12-09T19:44:21.474Z",
                     "deviceFlowSettingType": "SERVER_DEFAULT",
                     "redirectUris": [
                         "https://contact.ping.darkedges.com/callback",
@@ -3275,10 +3295,10 @@
                         "CLIENT_CREDENTIALS",
                         "TOKEN_EXCHANGE"
                     ],
-                    "modificationDate": "2025-12-08T23:10:02.863Z",
+                    "modificationDate": "2025-12-09T19:44:21.474Z",
                     "clientSecretRetentionPeriodType": "SERVER_DEFAULT",
                     "requirePushedAuthorizationRequests": false,
-                    "clientSecretChangedTime": "2025-12-08T23:10:02.000Z",
+                    "clientSecretChangedTime": "2025-12-09T19:44:21.000Z",
                     "name": "Contact Client",
                     "refreshTokenRollingIntervalType": "SERVER_DEFAULT",
                     "persistentGrantExpirationType": "SERVER_DEFAULT",
@@ -3328,23 +3348,22 @@
                     "allowAuthenticationApiInit": false,
                     "refreshTokenRollingGracePeriodType": "SERVER_DEFAULT",
                     "replicationStatus": "REPLICATED",
-                    "creationDate": "2025-12-09T02:37:05.209Z",
+                    "creationDate": "2025-12-09T19:44:21.482Z",
                     "deviceFlowSettingType": "SERVER_DEFAULT",
                     "redirectUris": [],
-                    "logoUrl": "",
                     "authorizationDetailTypes": [],
                     "grantTypes": [
                         "CLIENT_CREDENTIALS",
                         "ACCESS_TOKEN_VALIDATION"
                     ],
-                    "modificationDate": "2025-12-09T02:42:05.451Z",
+                    "modificationDate": "2025-12-09T19:44:21.482Z",
                     "defaultAccessTokenManagerRef": {
                         "location": "https://localhost:-1/pf-admin-api/v1/oauth/accessTokenManagers/jwt",
                         "id": "jwt"
                     },
                     "clientSecretRetentionPeriodType": "SERVER_DEFAULT",
                     "requirePushedAuthorizationRequests": false,
-                    "clientSecretChangedTime": "2025-12-09T02:37:05.000Z",
+                    "clientSecretChangedTime": "2025-12-09T19:44:21.000Z",
                     "name": "pf_api_access",
                     "refreshTokenRollingIntervalType": "SERVER_DEFAULT",
                     "persistentGrantExpirationType": "SERVER_DEFAULT",
@@ -3389,7 +3408,7 @@
                     "allowAuthenticationApiInit": false,
                     "refreshTokenRollingGracePeriodType": "SERVER_DEFAULT",
                     "replicationStatus": "REPLICATED",
-                    "creationDate": "2025-12-08T23:10:02.876Z",
+                    "creationDate": "2025-12-09T19:44:21.489Z",
                     "deviceFlowSettingType": "SERVER_DEFAULT",
                     "redirectUris": [],
                     "authorizationDetailTypes": [],
@@ -3397,7 +3416,7 @@
                         "CLIENT_CREDENTIALS",
                         "TOKEN_EXCHANGE"
                     ],
-                    "modificationDate": "2025-12-08T23:10:02.876Z",
+                    "modificationDate": "2025-12-09T19:44:21.489Z",
                     "defaultAccessTokenManagerRef": {
                         "location": "https://localhost:-1/pf-admin-api/v1/oauth/accessTokenManagers/AccessTokenManagement",
                         "id": "AccessTokenManagement"
@@ -3408,7 +3427,7 @@
                     },
                     "clientSecretRetentionPeriodType": "SERVER_DEFAULT",
                     "requirePushedAuthorizationRequests": false,
-                    "clientSecretChangedTime": "2025-12-08T23:10:02.000Z",
+                    "clientSecretChangedTime": "2025-12-09T19:44:21.000Z",
                     "name": "tokenexchangeclient",
                     "refreshTokenRollingIntervalType": "SERVER_DEFAULT",
                     "persistentGrantExpirationType": "SERVER_DEFAULT",
@@ -3470,12 +3489,12 @@
                     "context": {"type": "CLIENT_CREDENTIALS"},
                     "attributeContractFulfillment": {
                         "admin_role": {
-                            "source": {"type": "TEXT"},
-                            "value": "nirving"
-                        },
-                        "Username": {
                             "source": {"type": "EXPRESSION"},
                             "value": "new String[]{\"admin\",\"cryptoadmin\"}"
+                        },
+                        "Username": {
+                            "source": {"type": "TEXT"},
+                            "value": "nirving"
                         }
                     },
                     "id": "client_credentials|jwt",
@@ -3617,7 +3636,7 @@
                 },
                 "name": "OAUTHCLIENTSELECTOR",
                 "id": "OAUTHCLIENTSELECTOR",
-                "lastModified": "2025-12-08T23:10:02.957Z",
+                "lastModified": "2025-12-09T19:44:21.569Z",
                 "pluginDescriptorRef": {
                     "location": "https://localhost:-1/pf-admin-api/v1/authenticationSelectors/descriptors/com.pingidentity.pf.selectors.oauthclient.OAuthClientAdapterSelector",
                     "id": "com.pingidentity.pf.selectors.oauthclient.OAuthClientAdapterSelector"
