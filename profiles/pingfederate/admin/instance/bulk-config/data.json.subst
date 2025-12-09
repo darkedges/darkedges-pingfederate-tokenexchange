@@ -22,7 +22,7 @@
             "operationType": "SAVE",
             "subResource": "com.pingidentity.provisioner.xml.util.ChannelUtil",
             "items": [{
-                "stringValue": "6",
+                "stringValue": "7",
                 "id": "NextChannelId",
                 "type": "STRING"
             }],
@@ -168,7 +168,7 @@
         {
             "operationType": "SAVE",
             "items": [{
-                "encryptedCredential": "eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2Iiwia2lkIjoiUWVzOVR5eTV5WiIsInZlcnNpb24iOiIxMi4zLjMuMSJ9..c5aoM-AzqXMdmGNo2x_5ag.s__ZMBDfMkGP9gX3mXs_ljVsrIkSPk-SpKCn_HQc8RigiTdXPQFCY1_7byE0I0l0LoRC1YdTSIftkK09vNAP_i6Lo4PBrpytj-p3D6y-6EipDkojiaSt6GhMNmTtFuARpX_bGsZhCOLi1cHuJG4_17hOyyO8Bb5nag1IcXI9ojlwWK3wEskRQTQFSJYLzpXQ4JNFWRhiFsGmkIcwrb4fVyhzZcJzlcvV3pq13MPCRrgthC202fqejHJ7YLw-bQVWUgTnIfN4gXC2bTFn-wOwK5whWPPYk1efzvA5VDW-1_2OIAtS9rlBmRPdMrdvIDqlOLoMWRjfolJdsJCyvfQfV8TRY2pb2fUffdzP3_O3rfEGIAr8DLSvMtWjMiNYDKPoVwTjSxsS3XcV2sV-XI50l9Jr3eFbhLIqWCfZ2NjELLA4S2XFK0sX5i6Ki2MjKoWvnxKchk9JSqxCUQTF5BD9i7t7HpsUzctczk_Hf3mpN7L64bYII31j2xTIIu1nL2dYekS-mzDOlIJRgb29mR9rK3nUC6JC2XtsoBBM4--_92_0lQD0nUn4_1PDGVoTIS8Z6gnEXRMNYAs0E3FnhrGnR6ciQBG6fmpdbLQ80PFE49zP_WhqW_l4xq6H_8RyJnZXnXFCJrwHgbNvvCLKllZVH62mzxhNTsLhLD1r1y6IuaOo4bG6yMUrOUUfOOOu03D3IVd3zvJk3AfTBSSZ-DfJvbrH64d_4Utrz4w44BCizHUuYZr6X9l8L50ApTdGS4VCLeERWMhzZTPx_26d7NIu5VaX1VldTUxXe3Mqqzzl8yWIbds8f0EJxqGg2SIgh8iy7R0xnWE1vyHYePwCyGNvUEncyBWgJoL4mLQI-No-LodgLwS_zfq5YS2z9y6KI_jxgG85rYsHFy5D8hA-4S9vUOzMEYTWRNlNUYc4_Q2e5oURSx6SrgAWB2Y2MjplRPjqvvqlDKsQ19Z0WSPgFT19sn7G8SDopbAkHkK5nM2m34xMME9Hh-NJo-5URP_qo6c9WnxnjfNaaQX9rtm2v9XKj9ySW2H15ffbChXia6e2RlQyRt5KCS7bbn-Ynd94Zc2ZOEHIaSwGS34liNunwycRqxJhWdov_cnTQbWuDf-WhJ1Kh_8S9YdV1AIJkkf7SRA7bZ07ZaTAQ6HCo5oLkCfmQ3xpS07TVt-XZYAVNKy0SqRRevV2PBRPyU_plpQYgZLQJlL7IMaifw435Llz9uPrlJF6Gj2TbCXY1Pmz1GOCiVfjAbezTFUbXeUrzC_pEN2by_fuuNXbG0TaqCqEKd3Cmr3EUAv9d87VC1i3U01Z_hM2BnKy-P9O-Dt8c-NNtk8vZVgtF5gioXEzUF8jFa1I9mKAvq1MiaNNM6z9-x8bycbNtYmBwlbcJGcvC49NmzmiBmH_3pkwBwSOlqJd6kigZbd5Wu0r635T0jZ2VZs_fG78Kw39RsTlhfybo7Ba4jcnac1-mMga-E84dkN3vWeDe4WSu3cvr1ZIqzrhfSjD-hMpmC3Qmm8N3hHhQisnJkE13w33zjofN7JRRpxK7priIo7rPVBt7SADOBpCR628-AV2S2miTouj0iWA6M9ySXijn3Lx6lQy2-waCfruRIc7nafQVp5Cyl_xhoZDw9aLnYI7fHavAP0MdVRUNbtqBOj9au9GqjpbKxRVthgmJGcGMDXZYxoQFpAHOi2xR1rvYqA.g_iC5ijeUtLyyq8_y2gi3Q",
+                "encryptedCredential": "eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2Iiwia2lkIjoiUWVzOVR5eTV5WiIsInZlcnNpb24iOiIxMi4zLjMuMSJ9..muqm33S9mknGoOq-OyEWjg.RdQvTCOHamJSTmrdXTqRDN9xfwJZ0ku_art9R3BQEoD66tGqNunEd4Wzzkei4dorD5_ywIWhaNH0Gv6tGTlVZbpJ1fGAytLPpmb6_6F2kJmeHm2JSaJ2gg8jdTkt-OU0zC0pFj1uUWkpizEjdr3f89u53MzZIv6HWqpQSyENYN07yGsu488uxo_kAdiJ8WioARTaJV4WTpYVwGt4KSOG_k3jkUjdFmP354fsuKkQcMRn7nUmdNGEomLoDd5FWrAfW0qwWTgIEjtZw3OdcwGxl4yJ7WCBj6NlN5Y6auiK1jVPB4yE8zX2vzEZAAfYvrhUmXrD-UhRSSjrCOKE3qpz5_Utuxh1lUTXh-R8zlLV-CI2VmUavfatHS2kq8-BPYucyZ0KcriJKznOT_oBhrmx9E4ogUkarZruMbgOJIP-MMcO3SMeEqLaMCdd9y-4XZD-L0fqOiuEq-iQ4f0I19lrM9WNcVvDmOetuXiT4wgo0-y-VwMTmmXY8W4kdyYJXeQcyVBx-YHrLeKCXOlHsXGDbkz6tZzO6Q2OCf2P0kZZnEz7K66PChhO2PbhjQR3XnS-D9BuadW16uAquvihue6BsCkpF5UulyUaDwT-j4f9L1cyotfpIf53szrm-PE6UQatzal8O6dujK3-TQsKQZs4_pGVJUxG_0J3O5upN60NZlm2Cb3tKjsEl7EqSSkTA7jphk94yv9rEp5SsvXczoDXIOuo5dsdjNf_k6cdXuk-bUR7pBlX-rSW-QKHpNKsFusLPNF4fshyltLeR_t1WJwcw2UiWBPACu0eQoREzhZ41YtIn0xFg9ZfYlxc4H3vKm844fBA35ueO0ec-ZLt0e4ZNGAAWrIxZZtoEpGdk97QrBomN7-Smup-zxfeCw3GKzeURapblg0p5bYtc9Duc5NjsfvLpC52S78DHJt6C--RvwKHDRs2yQnRa1eYJTRB6opaTq1YIURGr-ZXN88hift7YMUWeb35hLI40S1D0CpvAwb3Txlav5esNvQhI5piiA--5zBZDs2e3iNX0wMaZWzWkoi15-Sa3DWtObRG3rXwYnvjB61R0RhBFihyCM-ocb436GZIbQ3bArYmIDeJAByCxfpHMjQLU5zcIgB7bTeFwWrhhbb8J9iuNL0LrLWyCxiZGgEgVBjPpSSVfGl_GV1Qwec8RexeqyYAOmjnfkuLvYO1xfgZnUXZeVIBJDbVMUHkJTioLNQnOMJZWdazxE5MHRSwfWtODggBSQgAGv-5Gq-jqJoJGmZXmDE-b_aj77jLc_1R_V_v4QetcHQ2-WlqOF-miNHwNa1SvZPzmw67vKPyZFzUftKdTgjswgHKiHZlLqJActfn82fIR4lffFrSKXiDxipsr2b6Y7fEfP5S9mHjdCHYEnFTTNPdGGWa09jfEOPjK3btzmhxkw6B-tiWEssLUqHn5EXQA5hSgTBQ7jx5IBEA_dUVmG37l174_csWg_QZQnmm8GUYWCbWpxnUYyM8nqZnbBooP6xheIt921gLIExHxPjG1ei5rk8Eh6pghMgwdgmfClPyQ9cJi1GkpHfJVCGU0r-5vhmxkuvhrud-_MqCfWJgGFm86N82vhkHIOFDpbprPTXv4XHijXFYWT7xYsdJ9TZxxhtpYWbRPgbDhDbbVUEl3_yFtTyikxBItgVlxuk1riOkzs_FwgAjhCjG46q6ZEaZ5aMaEHlTZGk.pQhmigzIPFr5FcL1oRcAsA",
                 "pingOneConnectionId": "3a0c50c2-d5de-45b1-bd2a-9aedf6f3477e",
                 "environmentId": "314177e2-5da7-433b-a5b5-9bdcc20b45a3",
                 "organizationName": "trial_cba.com_1544259280",
@@ -177,7 +177,7 @@
                 "credentialId": "e112d200-1d68-448c-91d4-1fd4da7adc69",
                 "pingOneAuthenticationApiEndpoint": "https://auth.pingone.com.au",
                 "id": "mImpgs4t0rrk7n7mfAMOcP",
-                "creationDate": "2025-12-02T21:34:26.621Z",
+                "creationDate": "2025-12-08T23:09:58.586Z",
                 "region": "Australia",
                 "pingOneManagementApiEndpoint": "https://api.pingone.com.au"
             }],
@@ -216,7 +216,7 @@
                     "readTimeout": 3000,
                     "name": "PingDirectory",
                     "useStartTLS": false,
-                    "lastModified": "2025-12-02T21:34:26.709Z",
+                    "lastModified": "2025-12-08T23:09:58.665Z",
                     "retryFailedOperations": false,
                     "userDN": "cn=administrator"
                 },
@@ -272,7 +272,7 @@
                     },
                     "name": "PINGONEDATASTORE",
                     "id": "Other-037C411BB3CBA6E452A94C62E522195AAD1DF603",
-                    "lastModified": "2025-12-02T21:34:27.530Z",
+                    "lastModified": "2025-12-08T23:09:59.632Z",
                     "type": "CUSTOM",
                     "pluginDescriptorRef": {
                         "location": "https://localhost:-1/pf-admin-api/v1/dataStores/descriptors/com.pingidentity.plugins.datastore.p14c.PingOneForCustomersDataStore",
@@ -295,7 +295,7 @@
                     "name": "ProvisionerDS (sa)",
                     "connectionUrl": "jdbc:hsqldb:${pf.server.data.dir}${/}hypersonic${/}ProvisionerDefaultDB;hsqldb.lock_file=false",
                     "id": "ProvisionerDS",
-                    "lastModified": "2025-12-02T21:34:27.550Z",
+                    "lastModified": "2025-12-08T23:09:59.651Z",
                     "maxPoolSize": 100,
                     "blockingTimeout": 5000
                 }
@@ -480,11 +480,11 @@
                 {
                     "password": "${PING_IDENTITY_PASSWORD}",
                     "roles": [
-                        "DATA_COLLECTION_ADMINISTRATOR",
-                        "ADMINISTRATOR",
-                        "USER_ADMINISTRATOR",
                         "EXPRESSION_ADMINISTRATOR",
-                        "CRYPTO_ADMINISTRATOR"
+                        "DATA_COLLECTION_ADMINISTRATOR",
+                        "CRYPTO_ADMINISTRATOR",
+                        "ADMINISTRATOR",
+                        "USER_ADMINISTRATOR"
                     ],
                     "auditor": false,
                     "description": "Initial administrator user",
@@ -494,11 +494,11 @@
                 {
                     "password": "${administrativeAccounts_items_nirving_password}",
                     "roles": [
-                        "DATA_COLLECTION_ADMINISTRATOR",
-                        "ADMINISTRATOR",
-                        "USER_ADMINISTRATOR",
                         "EXPRESSION_ADMINISTRATOR",
-                        "CRYPTO_ADMINISTRATOR"
+                        "DATA_COLLECTION_ADMINISTRATOR",
+                        "CRYPTO_ADMINISTRATOR",
+                        "ADMINISTRATOR",
+                        "USER_ADMINISTRATOR"
                     ],
                     "auditor": false,
                     "description": "description",
@@ -590,7 +590,7 @@
             "items": [{
                 "name": "POLICYCONTRACT",
                 "id": "KUzfpHBOZeqF0vVo",
-                "lastModified": "2025-12-02T21:34:28.026Z",
+                "lastModified": "2025-12-08T23:09:59.985Z",
                 "coreAttributes": [{"name": "subject"}],
                 "extendedAttributes": [
                     {"name": "uid"},
@@ -606,214 +606,411 @@
         },
         {
             "operationType": "SAVE",
-            "items": [{
-                "sequenceNumber": 205945,
-                "sessionValidationSettings": {
-                    "updateAuthnSessionActivity": false,
-                    "checkValidAuthnSession": false,
-                    "includeSessionId": false,
-                    "checkSessionRevocationStatus": false
+            "items": [
+                {
+                    "sequenceNumber": 205945,
+                    "sessionValidationSettings": {
+                        "updateAuthnSessionActivity": false,
+                        "checkValidAuthnSession": false,
+                        "includeSessionId": false,
+                        "checkSessionRevocationStatus": false
+                    },
+                    "configuration": {
+                        "tables": [
+                            {
+                                "name": "Symmetric Keys",
+                                "rows": []
+                            },
+                            {
+                                "name": "Certificates",
+                                "rows": []
+                            }
+                        ],
+                        "fields": [
+                            {
+                                "name": "Token Lifetime",
+                                "value": "120"
+                            },
+                            {
+                                "name": "Use Centralized Signing Key",
+                                "value": "true"
+                            },
+                            {
+                                "name": "JWS Algorithm",
+                                "value": "RS256"
+                            },
+                            {
+                                "name": "Active Symmetric Key ID",
+                                "value": ""
+                            },
+                            {
+                                "name": "Active Signing Certificate Key ID",
+                                "value": ""
+                            },
+                            {
+                                "name": "JWE Algorithm",
+                                "value": ""
+                            },
+                            {
+                                "name": "JWE Content Encryption Algorithm",
+                                "value": ""
+                            },
+                            {
+                                "name": "Active Symmetric Encryption Key ID",
+                                "value": ""
+                            },
+                            {
+                                "name": "Asymmetric Encryption Key",
+                                "value": ""
+                            },
+                            {
+                                "name": "Asymmetric Encryption JWKS URL",
+                                "value": ""
+                            },
+                            {
+                                "name": "Enable Token Revocation",
+                                "value": "false"
+                            },
+                            {
+                                "name": "Include Key ID Header Parameter",
+                                "value": "true"
+                            },
+                            {
+                                "name": "Include X.509 Thumbprint Header Parameter",
+                                "value": "false"
+                            },
+                            {
+                                "name": "Default JWKS URL Cache Duration",
+                                "value": "720"
+                            },
+                            {
+                                "name": "Include JWE Key ID Header Parameter",
+                                "value": "true"
+                            },
+                            {
+                                "name": "Include JWE X.509 Thumbprint Header Parameter",
+                                "value": "false"
+                            },
+                            {
+                                "name": "Client ID Claim Name",
+                                "value": "client_id"
+                            },
+                            {
+                                "name": "Scope Claim Name",
+                                "value": "scope"
+                            },
+                            {
+                                "name": "Space Delimit Scope Values",
+                                "value": "true"
+                            },
+                            {
+                                "name": "Authorization Details Claim Name",
+                                "value": "authorization_details"
+                            },
+                            {
+                                "name": "Issuer Claim Value",
+                                "value": "https://id.ping.darkedges.com"
+                            },
+                            {
+                                "name": "Audience Claim Value",
+                                "value": ""
+                            },
+                            {
+                                "name": "Not Before Claim Offset",
+                                "value": ""
+                            },
+                            {
+                                "name": "Include Issued At Claim",
+                                "value": "true"
+                            },
+                            {
+                                "name": "JWT ID Claim Length",
+                                "value": "22"
+                            },
+                            {
+                                "name": "Access Grant GUID Claim Name",
+                                "value": ""
+                            },
+                            {
+                                "name": "Publish Keys to the PingFederate JWKS Endpoint",
+                                "value": "false"
+                            },
+                            {
+                                "name": "JWKS Endpoint Path",
+                                "value": ""
+                            },
+                            {
+                                "name": "JWKS Endpoint Cache Duration",
+                                "value": "720"
+                            },
+                            {
+                                "name": "Publish Key ID X.509 URL",
+                                "value": "false"
+                            },
+                            {
+                                "name": "Publish Thumbprint X.509 URL",
+                                "value": "false"
+                            },
+                            {
+                                "name": "Expand Scope Groups",
+                                "value": "false"
+                            },
+                            {
+                                "name": "Type Header Value",
+                                "value": ""
+                            }
+                        ]
+                    },
+                    "tokenEndpointAttributeContract": {
+                        "inherited": false,
+                        "attributes": [
+                            {
+                                "name": "sub",
+                                "multiValued": false,
+                                "mappedScopes": []
+                            },
+                            {
+                                "name": "scope",
+                                "multiValued": false,
+                                "mappedScopes": []
+                            },
+                            {
+                                "name": "groups",
+                                "multiValued": false,
+                                "mappedScopes": []
+                            }
+                        ]
+                    },
+                    "name": "AccessTokenManagement",
+                    "id": "AccessTokenManagement",
+                    "lastModified": "2025-12-08T23:10:00.081Z",
+                    "pluginDescriptorRef": {
+                        "location": "https://localhost:-1/pf-admin-api/v1/oauth/accessTokenManagers/descriptors/com.pingidentity.pf.access.token.management.plugins.JwtBearerAccessTokenManagementPlugin",
+                        "id": "com.pingidentity.pf.access.token.management.plugins.JwtBearerAccessTokenManagementPlugin"
+                    },
+                    "accessControlSettings": {
+                        "restrictClients": false,
+                        "allowedClients": []
+                    },
+                    "attributeContract": {
+                        "coreAttributes": [],
+                        "extendedAttributes": [
+                            {
+                                "name": "sub",
+                                "multiValued": false
+                            },
+                            {
+                                "name": "aud",
+                                "multiValued": false
+                            },
+                            {
+                                "name": "scope",
+                                "multiValued": false
+                            },
+                            {
+                                "name": "groups",
+                                "multiValued": false
+                            }
+                        ]
+                    },
+                    "selectionSettings": {"resourceUris": []}
                 },
-                "configuration": {
-                    "tables": [
-                        {
-                            "name": "Symmetric Keys",
-                            "rows": []
-                        },
-                        {
-                            "name": "Certificates",
-                            "rows": []
-                        }
-                    ],
-                    "fields": [
-                        {
-                            "name": "Token Lifetime",
-                            "value": "120"
-                        },
-                        {
-                            "name": "Use Centralized Signing Key",
-                            "value": "true"
-                        },
-                        {
-                            "name": "JWS Algorithm",
-                            "value": "RS256"
-                        },
-                        {
-                            "name": "Active Symmetric Key ID",
-                            "value": ""
-                        },
-                        {
-                            "name": "Active Signing Certificate Key ID",
-                            "value": ""
-                        },
-                        {
-                            "name": "JWE Algorithm",
-                            "value": ""
-                        },
-                        {
-                            "name": "JWE Content Encryption Algorithm",
-                            "value": ""
-                        },
-                        {
-                            "name": "Active Symmetric Encryption Key ID",
-                            "value": ""
-                        },
-                        {
-                            "name": "Asymmetric Encryption Key",
-                            "value": ""
-                        },
-                        {
-                            "name": "Asymmetric Encryption JWKS URL",
-                            "value": ""
-                        },
-                        {
-                            "name": "Enable Token Revocation",
-                            "value": "false"
-                        },
-                        {
-                            "name": "Include Key ID Header Parameter",
-                            "value": "true"
-                        },
-                        {
-                            "name": "Include X.509 Thumbprint Header Parameter",
-                            "value": "false"
-                        },
-                        {
-                            "name": "Default JWKS URL Cache Duration",
-                            "value": "720"
-                        },
-                        {
-                            "name": "Include JWE Key ID Header Parameter",
-                            "value": "true"
-                        },
-                        {
-                            "name": "Include JWE X.509 Thumbprint Header Parameter",
-                            "value": "false"
-                        },
-                        {
-                            "name": "Client ID Claim Name",
-                            "value": "client_id"
-                        },
-                        {
-                            "name": "Scope Claim Name",
-                            "value": "scope"
-                        },
-                        {
-                            "name": "Space Delimit Scope Values",
-                            "value": "true"
-                        },
-                        {
-                            "name": "Authorization Details Claim Name",
-                            "value": "authorization_details"
-                        },
-                        {
-                            "name": "Issuer Claim Value",
-                            "value": "https://id.ping.darkedges.com"
-                        },
-                        {
-                            "name": "Audience Claim Value",
-                            "value": ""
-                        },
-                        {
-                            "name": "Not Before Claim Offset",
-                            "value": ""
-                        },
-                        {
-                            "name": "Include Issued At Claim",
-                            "value": "true"
-                        },
-                        {
-                            "name": "JWT ID Claim Length",
-                            "value": "22"
-                        },
-                        {
-                            "name": "Access Grant GUID Claim Name",
-                            "value": ""
-                        },
-                        {
-                            "name": "Publish Keys to the PingFederate JWKS Endpoint",
-                            "value": "false"
-                        },
-                        {
-                            "name": "JWKS Endpoint Path",
-                            "value": ""
-                        },
-                        {
-                            "name": "JWKS Endpoint Cache Duration",
-                            "value": "720"
-                        },
-                        {
-                            "name": "Publish Key ID X.509 URL",
-                            "value": "false"
-                        },
-                        {
-                            "name": "Publish Thumbprint X.509 URL",
-                            "value": "false"
-                        },
-                        {
-                            "name": "Expand Scope Groups",
-                            "value": "false"
-                        },
-                        {
-                            "name": "Type Header Value",
-                            "value": ""
-                        }
-                    ]
-                },
-                "tokenEndpointAttributeContract": {
-                    "inherited": false,
-                    "attributes": [
-                        {
-                            "name": "sub",
-                            "multiValued": false,
-                            "mappedScopes": []
-                        },
-                        {
-                            "name": "scope",
-                            "multiValued": false,
-                            "mappedScopes": []
-                        },
-                        {
-                            "name": "groups",
-                            "multiValued": false,
-                            "mappedScopes": []
-                        }
-                    ]
-                },
-                "name": "AccessTokenManagement",
-                "id": "AccessTokenManagement",
-                "lastModified": "2025-12-02T21:34:28.118Z",
-                "pluginDescriptorRef": {
-                    "location": "https://localhost:-1/pf-admin-api/v1/oauth/accessTokenManagers/descriptors/com.pingidentity.pf.access.token.management.plugins.JwtBearerAccessTokenManagementPlugin",
-                    "id": "com.pingidentity.pf.access.token.management.plugins.JwtBearerAccessTokenManagementPlugin"
-                },
-                "accessControlSettings": {
-                    "restrictClients": false,
-                    "allowedClients": []
-                },
-                "attributeContract": {
-                    "coreAttributes": [],
-                    "extendedAttributes": [
-                        {
-                            "name": "sub",
-                            "multiValued": false
-                        },
-                        {
-                            "name": "aud",
-                            "multiValued": false
-                        },
-                        {
-                            "name": "scope",
-                            "multiValued": false
-                        },
-                        {
-                            "name": "groups",
-                            "multiValued": false
-                        }
-                    ]
-                },
-                "selectionSettings": {"resourceUris": []}
-            }],
+                {
+                    "sequenceNumber": 5604,
+                    "sessionValidationSettings": {
+                        "updateAuthnSessionActivity": false,
+                        "checkValidAuthnSession": false,
+                        "includeSessionId": false,
+                        "checkSessionRevocationStatus": false
+                    },
+                    "configuration": {
+                        "tables": [
+                            {
+                                "name": "Symmetric Keys",
+                                "rows": []
+                            },
+                            {
+                                "name": "Certificates",
+                                "rows": []
+                            }
+                        ],
+                        "fields": [
+                            {
+                                "name": "Token Lifetime",
+                                "value": "120"
+                            },
+                            {
+                                "name": "Use Centralized Signing Key",
+                                "value": "true"
+                            },
+                            {
+                                "name": "JWS Algorithm",
+                                "value": "RS256"
+                            },
+                            {
+                                "name": "Active Symmetric Key ID",
+                                "value": ""
+                            },
+                            {
+                                "name": "Active Signing Certificate Key ID",
+                                "value": ""
+                            },
+                            {
+                                "name": "JWE Algorithm",
+                                "value": ""
+                            },
+                            {
+                                "name": "JWE Content Encryption Algorithm",
+                                "value": ""
+                            },
+                            {
+                                "name": "Active Symmetric Encryption Key ID",
+                                "value": ""
+                            },
+                            {
+                                "name": "Asymmetric Encryption Key",
+                                "value": ""
+                            },
+                            {
+                                "name": "Asymmetric Encryption JWKS URL",
+                                "value": ""
+                            },
+                            {
+                                "name": "Enable Token Revocation",
+                                "value": "false"
+                            },
+                            {
+                                "name": "Include Key ID Header Parameter",
+                                "value": "true"
+                            },
+                            {
+                                "name": "Include X.509 Thumbprint Header Parameter",
+                                "value": ""
+                            },
+                            {
+                                "name": "Default JWKS URL Cache Duration",
+                                "value": "720"
+                            },
+                            {
+                                "name": "Include JWE Key ID Header Parameter",
+                                "value": "true"
+                            },
+                            {
+                                "name": "Include JWE X.509 Thumbprint Header Parameter",
+                                "value": ""
+                            },
+                            {
+                                "name": "Client ID Claim Name",
+                                "value": "client_id"
+                            },
+                            {
+                                "name": "Scope Claim Name",
+                                "value": "scope"
+                            },
+                            {
+                                "name": "Space Delimit Scope Values",
+                                "value": "true"
+                            },
+                            {
+                                "name": "Authorization Details Claim Name",
+                                "value": "authorization_details"
+                            },
+                            {
+                                "name": "Issuer Claim Value",
+                                "value": ""
+                            },
+                            {
+                                "name": "Audience Claim Value",
+                                "value": ""
+                            },
+                            {
+                                "name": "Not Before Claim Offset",
+                                "value": ""
+                            },
+                            {
+                                "name": "Include Issued At Claim",
+                                "value": "true"
+                            },
+                            {
+                                "name": "JWT ID Claim Length",
+                                "value": "22"
+                            },
+                            {
+                                "name": "Access Grant GUID Claim Name",
+                                "value": ""
+                            },
+                            {
+                                "name": "Publish Keys to the PingFederate JWKS Endpoint",
+                                "value": "false"
+                            },
+                            {
+                                "name": "JWKS Endpoint Path",
+                                "value": ""
+                            },
+                            {
+                                "name": "JWKS Endpoint Cache Duration",
+                                "value": "720"
+                            },
+                            {
+                                "name": "Publish Key ID X.509 URL",
+                                "value": ""
+                            },
+                            {
+                                "name": "Publish Thumbprint X.509 URL",
+                                "value": ""
+                            },
+                            {
+                                "name": "Expand Scope Groups",
+                                "value": "false"
+                            },
+                            {
+                                "name": "Type Header Value",
+                                "value": ""
+                            }
+                        ]
+                    },
+                    "tokenEndpointAttributeContract": {
+                        "inherited": false,
+                        "attributes": [
+                            {
+                                "name": "admin_role",
+                                "multiValued": false,
+                                "mappedScopes": []
+                            },
+                            {
+                                "name": "Username",
+                                "multiValued": false,
+                                "mappedScopes": []
+                            }
+                        ]
+                    },
+                    "name": "JSON Web Tokens",
+                    "id": "jwt",
+                    "lastModified": "2025-12-09T02:31:13.232Z",
+                    "pluginDescriptorRef": {
+                        "location": "https://localhost:-1/pf-admin-api/v1/oauth/accessTokenManagers/descriptors/com.pingidentity.pf.access.token.management.plugins.JwtBearerAccessTokenManagementPlugin",
+                        "id": "com.pingidentity.pf.access.token.management.plugins.JwtBearerAccessTokenManagementPlugin"
+                    },
+                    "accessControlSettings": {
+                        "restrictClients": false,
+                        "allowedClients": []
+                    },
+                    "attributeContract": {
+                        "coreAttributes": [],
+                        "extendedAttributes": [
+                            {
+                                "name": "admin_role",
+                                "multiValued": false
+                            },
+                            {
+                                "name": "Username",
+                                "multiValued": false
+                            }
+                        ]
+                    },
+                    "selectionSettings": {"resourceUris": []}
+                }
+            ],
             "resourceType": "/oauth/accessTokenManagers"
         },
         {
@@ -947,7 +1144,7 @@
                     },
                     "name": "IDENTIFIERFIRST",
                     "id": "IDENTIFIERFIRST",
-                    "lastModified": "2025-12-02T21:34:28.216Z",
+                    "lastModified": "2025-12-08T23:10:00.183Z",
                     "pluginDescriptorRef": {
                         "location": "https://localhost:-1/pf-admin-api/v1/idp/adapters/descriptors/com.pingidentity.adapters.identifierfirst.idp.IdentifierFirstAdapter",
                         "id": "com.pingidentity.adapters.identifierfirst.idp.IdentifierFirstAdapter"
@@ -1256,7 +1453,7 @@
                     },
                     "name": "PINGID",
                     "id": "PINGID",
-                    "lastModified": "2025-12-02T21:34:28.259Z",
+                    "lastModified": "2025-12-08T23:10:00.216Z",
                     "pluginDescriptorRef": {
                         "location": "https://localhost:-1/pf-admin-api/v1/idp/adapters/descriptors/com.pingidentity.adapters.pingid.PingIDAdapter",
                         "id": "com.pingidentity.adapters.pingid.PingIDAdapter"
@@ -1604,7 +1801,7 @@
                     },
                     "name": "PINGONEMFA",
                     "id": "PINGONEMFA",
-                    "lastModified": "2025-12-02T21:34:29.103Z",
+                    "lastModified": "2025-12-08T23:10:01.141Z",
                     "pluginDescriptorRef": {
                         "location": "https://localhost:-1/pf-admin-api/v1/idp/adapters/descriptors/com.pingidentity.adapters.pingone.mfa.PingOneMfaIdpAdapter",
                         "id": "com.pingidentity.adapters.pingone.mfa.PingOneMfaIdpAdapter"
@@ -1744,7 +1941,7 @@
                     },
                     "name": "MSFTTOKENPROCESSOR",
                     "id": "MSFTTOKENPROCESSOR",
-                    "lastModified": "2025-12-02T21:34:29.261Z",
+                    "lastModified": "2025-12-08T23:10:01.283Z",
                     "pluginDescriptorRef": {
                         "location": "https://localhost:-1/pf-admin-api/v1/idp/tokenProcessors/descriptors/com.pingidentity.pf.tokenprocessors.jwt.JwtTokenProcessor",
                         "id": "com.pingidentity.pf.tokenprocessors.jwt.JwtTokenProcessor"
@@ -1777,7 +1974,7 @@
                     },
                     "name": "PFTOKENPROCESSOR",
                     "id": "PFTOKENPROCESSOR",
-                    "lastModified": "2025-12-02T21:34:29.279Z",
+                    "lastModified": "2025-12-08T23:10:01.298Z",
                     "pluginDescriptorRef": {
                         "location": "https://localhost:-1/pf-admin-api/v1/idp/tokenProcessors/descriptors/org.sourceid.wstrust.processor.oauth.BearerAccessTokenTokenProcessor",
                         "id": "org.sourceid.wstrust.processor.oauth.BearerAccessTokenTokenProcessor"
@@ -1920,27 +2117,14 @@
                 "loggingMode": "STANDARD",
                 "replicationStatus": "REPLICATED",
                 "type": "SP",
-                "creationDate": "2025-12-02T21:34:30.709Z",
+                "creationDate": "2025-12-08T23:10:02.545Z",
                 "connectionTargetType": "STANDARD",
                 "baseUrl": "https://api.pingone.com/v1",
-                "modificationDate": "2025-12-02T21:34:30.709Z",
+                "modificationDate": "2025-12-08T23:10:02.546Z",
                 "virtualEntityIds": [],
                 "outboundProvision": {
                     "channels": [{
                         "attributeMapping": [
-                            {
-                                "fieldName": "username",
-                                "saasFieldInfo": {
-                                    "createOnly": false,
-                                    "attributeNames": ["uid"],
-                                    "expression": "",
-                                    "trim": false,
-                                    "parser": "NONE",
-                                    "defaultValue": "",
-                                    "masked": false,
-                                    "characterCase": "NONE"
-                                }
-                            },
                             {
                                 "fieldName": "populationID",
                                 "saasFieldInfo": {
@@ -1950,6 +2134,19 @@
                                     "trim": false,
                                     "parser": "NONE",
                                     "defaultValue": "f18888ef-fbaf-42bb-b7fa-022a96facb28",
+                                    "masked": false,
+                                    "characterCase": "NONE"
+                                }
+                            },
+                            {
+                                "fieldName": "username",
+                                "saasFieldInfo": {
+                                    "createOnly": false,
+                                    "attributeNames": ["uid"],
+                                    "expression": "",
+                                    "trim": false,
+                                    "parser": "NONE",
+                                    "defaultValue": "",
                                     "masked": false,
                                     "characterCase": "NONE"
                                 }
@@ -2632,7 +2829,7 @@
                 },
                 "name": "PINGONEMFACIBA",
                 "id": "PINGONEMFACIBA",
-                "lastModified": "2025-12-02T21:34:30.961Z",
+                "lastModified": "2025-12-08T23:10:02.697Z",
                 "pluginDescriptorRef": {
                     "location": "https://localhost:-1/pf-admin-api/v1/oauth/outOfBandAuthPlugins/descriptors/com.pingidentity.oobauth.pingone.mfa.PingOneMfaCibaAuthenticator",
                     "id": "com.pingidentity.oobauth.pingone.mfa.PingOneMfaCibaAuthenticator"
@@ -2891,7 +3088,7 @@
                 "allowIdTokenIntrospection": false,
                 "id": "OPENIDCONNECTPOLICYMANAGEMENT",
                 "reissueIdTokenInHybridFlow": false,
-                "lastModified": "2025-12-02T21:34:30.997Z",
+                "lastModified": "2025-12-08T23:10:02.750Z",
                 "idTokenLifetime": 5,
                 "accessTokenManagerRef": {
                     "location": "https://localhost:-1/pf-admin-api/v1/oauth/accessTokenManagers/AccessTokenManagement",
@@ -3001,7 +3198,7 @@
                     "allowAuthenticationApiInit": false,
                     "refreshTokenRollingGracePeriodType": "SERVER_DEFAULT",
                     "replicationStatus": "REPLICATED",
-                    "creationDate": "2025-12-02T21:34:31.089Z",
+                    "creationDate": "2025-12-08T23:10:02.837Z",
                     "deviceFlowSettingType": "SERVER_DEFAULT",
                     "redirectUris": [
                         "http://localhost:3000/api/auth/callback",
@@ -3012,10 +3209,10 @@
                         "AUTHORIZATION_CODE",
                         "REFRESH_TOKEN"
                     ],
-                    "modificationDate": "2025-12-02T21:34:31.089Z",
+                    "modificationDate": "2025-12-08T23:10:02.837Z",
                     "clientSecretRetentionPeriodType": "SERVER_DEFAULT",
                     "requirePushedAuthorizationRequests": false,
-                    "clientSecretChangedTime": "2025-12-02T21:34:31.000Z",
+                    "clientSecretChangedTime": "2025-12-08T23:10:02.000Z",
                     "name": "contact-hr-client",
                     "refreshTokenRollingIntervalType": "SERVER_DEFAULT",
                     "persistentGrantExpirationType": "SERVER_DEFAULT",
@@ -3065,7 +3262,7 @@
                     "allowAuthenticationApiInit": true,
                     "refreshTokenRollingGracePeriodType": "SERVER_DEFAULT",
                     "replicationStatus": "REPLICATED",
-                    "creationDate": "2025-12-02T21:34:31.110Z",
+                    "creationDate": "2025-12-08T23:10:02.863Z",
                     "deviceFlowSettingType": "SERVER_DEFAULT",
                     "redirectUris": [
                         "https://contact.ping.darkedges.com/callback",
@@ -3078,10 +3275,10 @@
                         "CLIENT_CREDENTIALS",
                         "TOKEN_EXCHANGE"
                     ],
-                    "modificationDate": "2025-12-02T21:34:31.110Z",
+                    "modificationDate": "2025-12-08T23:10:02.863Z",
                     "clientSecretRetentionPeriodType": "SERVER_DEFAULT",
                     "requirePushedAuthorizationRequests": false,
-                    "clientSecretChangedTime": "2025-12-02T21:34:31.000Z",
+                    "clientSecretChangedTime": "2025-12-08T23:10:02.000Z",
                     "name": "Contact Client",
                     "refreshTokenRollingIntervalType": "SERVER_DEFAULT",
                     "persistentGrantExpirationType": "SERVER_DEFAULT",
@@ -3095,6 +3292,61 @@
                     "clientAuth": {
                         "secondarySecrets": [],
                         "secret": "${oauth_clients_items_clientAuth_contact_oauth_client_secret}",
+                        "type": "SECRET"
+                    }
+                },
+                {
+                    "bypassApprovalPage": false,
+                    "offlineAccessRequireConsentPrompt": "SERVER_DEFAULT",
+                    "persistentGrantReuseType": "SERVER_DEFAULT",
+                    "persistentGrantIdleTimeoutType": "SERVER_DEFAULT",
+                    "requireSignedRequests": false,
+                    "description": "pf_api_access",
+                    "persistentGrantIdleTimeout": 0,
+                    "enabled": true,
+                    "requireOfflineAccessScopeToIssueRefreshTokens": "SERVER_DEFAULT",
+                    "oidcPolicy": {
+                        "grantAccessSessionRevocationApi": false,
+                        "grantAccessSessionSessionManagementApi": false,
+                        "pingAccessLogoutCapable": false,
+                        "logoutMode": "NONE",
+                        "pairwiseIdentifierUserType": false
+                    },
+                    "persistentGrantExpirationTime": 0,
+                    "restrictedResponseTypes": [],
+                    "lockoutMaxMaliciousActionsType": "SERVER_DEFAULT",
+                    "requireProofKeyForCodeExchange": false,
+                    "enableCookielessAuthenticationApi": false,
+                    "persistentGrantIdleTimeoutTimeUnit": "DAYS",
+                    "restrictToDefaultAccessTokenManager": false,
+                    "validateUsingAllEligibleAtms": false,
+                    "restrictScopes": false,
+                    "clientId": "pf_api_access",
+                    "requireJwtSecuredAuthorizationResponseMode": false,
+                    "persistentGrantExpirationTimeUnit": "DAYS",
+                    "requireDpop": false,
+                    "allowAuthenticationApiInit": false,
+                    "refreshTokenRollingGracePeriodType": "SERVER_DEFAULT",
+                    "replicationStatus": "REPLICATED",
+                    "creationDate": "2025-12-09T02:37:05.209Z",
+                    "deviceFlowSettingType": "SERVER_DEFAULT",
+                    "redirectUris": [],
+                    "logoUrl": "",
+                    "authorizationDetailTypes": [],
+                    "grantTypes": ["ACCESS_TOKEN_VALIDATION"],
+                    "modificationDate": "2025-12-09T02:37:05.209Z",
+                    "clientSecretRetentionPeriodType": "SERVER_DEFAULT",
+                    "requirePushedAuthorizationRequests": false,
+                    "clientSecretChangedTime": "2025-12-09T02:37:05.000Z",
+                    "name": "pf_api_access",
+                    "refreshTokenRollingIntervalType": "SERVER_DEFAULT",
+                    "persistentGrantExpirationType": "SERVER_DEFAULT",
+                    "restrictedScopes": [],
+                    "refreshRolling": "SERVER_DEFAULT",
+                    "exclusiveScopes": [],
+                    "clientAuth": {
+                        "secondarySecrets": [],
+                        "secret": "${oauth_clients_items_clientAuth_pf_api_access_secret}",
                         "type": "SECRET"
                     }
                 },
@@ -3130,7 +3382,7 @@
                     "allowAuthenticationApiInit": false,
                     "refreshTokenRollingGracePeriodType": "SERVER_DEFAULT",
                     "replicationStatus": "REPLICATED",
-                    "creationDate": "2025-12-02T21:34:31.124Z",
+                    "creationDate": "2025-12-08T23:10:02.876Z",
                     "deviceFlowSettingType": "SERVER_DEFAULT",
                     "redirectUris": [],
                     "authorizationDetailTypes": [],
@@ -3138,7 +3390,7 @@
                         "CLIENT_CREDENTIALS",
                         "TOKEN_EXCHANGE"
                     ],
-                    "modificationDate": "2025-12-02T21:34:31.124Z",
+                    "modificationDate": "2025-12-08T23:10:02.876Z",
                     "defaultAccessTokenManagerRef": {
                         "location": "https://localhost:-1/pf-admin-api/v1/oauth/accessTokenManagers/AccessTokenManagement",
                         "id": "AccessTokenManagement"
@@ -3149,7 +3401,7 @@
                     },
                     "clientSecretRetentionPeriodType": "SERVER_DEFAULT",
                     "requirePushedAuthorizationRequests": false,
-                    "clientSecretChangedTime": "2025-12-02T21:34:31.000Z",
+                    "clientSecretChangedTime": "2025-12-08T23:10:02.000Z",
                     "name": "tokenexchangeclient",
                     "refreshTokenRollingIntervalType": "SERVER_DEFAULT",
                     "persistentGrantExpirationType": "SERVER_DEFAULT",
@@ -3205,6 +3457,26 @@
                     "accessTokenManagerRef": {
                         "location": "https://localhost:-1/pf-admin-api/v1/oauth/accessTokenManagers/AccessTokenManagement",
                         "id": "AccessTokenManagement"
+                    }
+                },
+                {
+                    "context": {"type": "CLIENT_CREDENTIALS"},
+                    "attributeContractFulfillment": {
+                        "admin_role": {
+                            "source": {"type": "TEXT"},
+                            "value": "nirving"
+                        },
+                        "Username": {
+                            "source": {"type": "EXPRESSION"},
+                            "value": "new String[]{\"admin\",\"cryptoadmin\"}"
+                        }
+                    },
+                    "id": "client_credentials|jwt",
+                    "attributeSources": [],
+                    "issuanceCriteria": {"conditionalCriteria": []},
+                    "accessTokenManagerRef": {
+                        "location": "https://localhost:-1/pf-admin-api/v1/oauth/accessTokenManagers/jwt",
+                        "id": "jwt"
                     }
                 },
                 {
@@ -3338,7 +3610,7 @@
                 },
                 "name": "OAUTHCLIENTSELECTOR",
                 "id": "OAUTHCLIENTSELECTOR",
-                "lastModified": "2025-12-02T21:34:31.203Z",
+                "lastModified": "2025-12-08T23:10:02.957Z",
                 "pluginDescriptorRef": {
                     "location": "https://localhost:-1/pf-admin-api/v1/authenticationSelectors/descriptors/com.pingidentity.pf.selectors.oauthclient.OAuthClientAdapterSelector",
                     "id": "com.pingidentity.pf.selectors.oauthclient.OAuthClientAdapterSelector"

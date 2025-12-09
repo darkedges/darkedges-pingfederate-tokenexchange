@@ -24,4 +24,5 @@ export PING_IDENTITY_PASSWORD=${PING_IDENTITY_PASSWORD:=2FederateM0re}
 export administrativeAccounts_items_nirving_password="Passw0rd"
 export oauth_clients_items_clientAuth_contact_oauth_client_secret=${PING_IDENTITY_PASSWORD:=2FederateM0re}
 export oauth_clients_items_clientAuth_contact_hr_client_secret=${PING_IDENTITY_PASSWORD:=2FederateM0re}
+export oauth_clients_items_clientAuth_pf_api_access_secret=${PING_IDENTITY_PASSWORD:=2FederateM0re}
 

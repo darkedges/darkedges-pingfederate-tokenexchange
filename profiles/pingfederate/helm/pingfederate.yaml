@@ -27,6 +27,8 @@ pingfederate-admin:
     PF_OIDC_ROLE_EXPRESSIONADMIN: "expressionadmin"
     PF_OIDC_ROLE_AUDITOR: "auditor"
     PF_OIDC_ROLE_DATACOLLECTIONADMIN: "datacollectionadmin"
+    #PF_RUN_PF_ADMIN_API_AUTHENTICATION: "native,OAuth2"
+    PF_RUN_PF_ADMIN_API_AUTHENTICATION: "native"
     PING_DEBUG: "true"
     VERBOSE: "true"
     PF_ADMIN_DEBUG: "true"
