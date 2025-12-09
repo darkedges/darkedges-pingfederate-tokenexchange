@@ -58,6 +58,12 @@ pingfederate-admin:
 pingfederate-engine:
   ingress:
     hosts:
+      - host: id.ping.internal.darkedges.com
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              serviceName: https
       - host: id.ping.darkedges.com
         paths:
           - path: /
@@ -68,6 +74,7 @@ pingfederate-engine:
       - secretName: pingfederate-engine
         hosts:
           - id.ping.darkedges.com
+          - id.ping.internal.darkedges.com
 pingaccess-admin:
   ingress:
     hosts:
