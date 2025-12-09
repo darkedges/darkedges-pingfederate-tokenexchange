@@ -785,6 +785,7 @@ Path: oauth_clients_items_clientAuth
 Looking for config aliase: oauth_clients_items_clientAuth_contact_oauth_client_secret, administrativeAccounts_items_Administrator_password
 Path: oauth_clients_items
 Path: oauth_clients_items_oidcPolicy
+Path: oauth_clients_items_defaultAccessTokenManagerRef_jwt
 Path: oauth_clients_items_clientAuth
 Looking for config aliase: oauth_clients_items_clientAuth_pf_api_access_secret, administrativeAccounts_items_Administrator_password
 Path: oauth_clients_items

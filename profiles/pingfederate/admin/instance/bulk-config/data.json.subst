@@ -3333,8 +3333,15 @@
                     "redirectUris": [],
                     "logoUrl": "",
                     "authorizationDetailTypes": [],
-                    "grantTypes": ["ACCESS_TOKEN_VALIDATION"],
-                    "modificationDate": "2025-12-09T02:37:05.209Z",
+                    "grantTypes": [
+                        "CLIENT_CREDENTIALS",
+                        "ACCESS_TOKEN_VALIDATION"
+                    ],
+                    "modificationDate": "2025-12-09T02:42:05.451Z",
+                    "defaultAccessTokenManagerRef": {
+                        "location": "https://localhost:-1/pf-admin-api/v1/oauth/accessTokenManagers/jwt",
+                        "id": "jwt"
+                    },
                     "clientSecretRetentionPeriodType": "SERVER_DEFAULT",
                     "requirePushedAuthorizationRequests": false,
                     "clientSecretChangedTime": "2025-12-09T02:37:05.000Z",
