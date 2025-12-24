@@ -1,0 +1,81 @@
+apiVersion: policy.cert-manager.io/v1alpha1
+kind: CertificateRequestPolicy
+metadata:
+  name: vault-issuer-policy
+  namespace: cert-manager
+spec:
+  allowed:
+    commonName: {value: "*"}
+    dnsNames: {values: ["*"]}
+    ipAddresses: {values: ["*"]}
+    uris: {values: ["*"]}
+    emailAddresses: {values: ["*"]}
+    isCA: true
+    usages:
+      - "signing"
+      - "digital signature"
+      - "content commitment"
+      - "key encipherment"
+      - "key agreement"
+      - "data encipherment"
+      - "cert sign"
+      - "crl sign"
+      - "encipher only"
+      - "decipher only"
+      - "any"
+      - "server auth"
+      - "client auth"
+      - "code signing"
+      - "email protection"
+      - "s/mime"
+      - "ipsec end system"
+      - "ipsec tunnel"
+      - "ipsec user"
+      - "timestamping"
+      - "ocsp signing"
+      - "microsoft sgc"
+      - "netscape sgc"
+    subject:
+      organizations: {values: ["*"]}
+      countries: {values: ["*"]}
+      organizationalUnits: {values: ["*"]}
+      localities: {values: ["*"]}
+      provinces: {values: ["*"]}
+      streetAddresses: {values: ["*"]}
+      postalCodes: {values: ["*"]}
+      serialNumber: {value: "*"}
+  selector:
+    issuerRef:
+      name: vault-issuer
+      kind: ClusterIssuer
+      group: cert-manager.io
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: cert-manager-policy:spiffe
+rules:
+  - apiGroups: ["policy.cert-manager.io"]
+    resources: ["certificaterequestpolicies"]
+    verbs: ["use"]
+    # Name of the CertificateRequestPolicies to be used.
+    resourceNames: ["vault-issuer-policy"]
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  name: cert-manager-policy:spiffe
+roleRef:
+# ClusterRole or Role _must_ be bound to a user for the policy to be considered.
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: cert-manager-policy:spiffe
+subjects:
+# The users who should be bound to the policies defined.
+# Note that in the case of users creating Certificate resources, cert-manager
+# is the entity that is creating the actual CertificateRequests, and so the
+# cert-manager controller's
+# Service Account should be bound instead.
+- kind: Group
+  name: system:authenticated
+  apiGroup: rbac.authorization.k8s.io

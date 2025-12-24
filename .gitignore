@@ -12,3 +12,5 @@ docs/
 .github/copilot-instructions.md
 profiles/pingoneldapgateway/pingone.yaml
 profiles/pingfederate/helm/devopsconfig
+docker/terraform-init/init/hashicorp-vault/.terraform.lock.hcl
+state/

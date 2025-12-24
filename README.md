@@ -14,7 +14,28 @@ PingFederate server profiles for OAuth2 token exchange implementation.
 ```bash
 # Add Ping Helm repo
 helm repo add pingidentity https://helm.pingidentity.com/
+helm repo add kong https://charts.konghq.com
+helm repo add hashicorp https://helm.releases.hashicorp.com
 helm repo update
+
+# Kong Ingress Controller
+helm upgrade --install kong kong/ingress --namespace kong --create-namespace -f .\values\kong.yaml
+
+# Cert Manager
+helm upgrade --install cert-manager oci://quay.io/jetstack/charts/cert-manager --namespace cert-manager --create-namespace -f .\values\cert-manager.yaml
+helm upgrade cert-manager-approver-policy oci://quay.io/jetstack/charts/cert-manager-approver-policy --install --namespace cert-manager --wait
+
+# hashicorp vault
+kubectl apply -f k8s/vault-pvc.yaml
+helm upgrade --install vault hashicorp/vault --namespace hashicorp-vault --create-namespace -f .\values\vault.yaml
+kubectl apply -f .\k8s\certificateRequestPolicy.yaml    
+
+cd docker\terraform-init
+docker build . -t darkedges/terraform:1.0.0
+$nodeport = kubectl get svc vault-ui -n hashicorp-vault -o=jsonpath='{.spec.ports[?(@.port==8200)].nodePort}'
+$env:VAULT_TOKEN=kubectl exec -ti vault-0 -c vault -n hashicorp-vault -- cat /vault/keys/keys.json | jq -r .root_token
+$env:VAULT_ADDR="http://host.docker.internal:$nodeport"
+docker run -it --rm -e VAULT_TOKEN=$env:VAULT_TOKEN -e VAULT_ADDR=$env:VAULT_ADDR -v $PWD\docker\terraform-init\init:/mnt/init -v $HOME\.kube:/root/.kube -v $PWD\state:/mnt/terraform --entrypoint sh darkedges/terraform:1.0.0
 
 # Generate credentials
 pingctl k8s generate devops-secret > devops.yaml

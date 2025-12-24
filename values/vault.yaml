@@ -1,0 +1,35 @@
+
+injector:
+  enabled: false
+csi:
+  enabled: true
+server:
+  volumes:
+  - name: vaultkeys
+    persistentVolumeClaim:
+      claimName: vaultkeys-pvc-claim
+  volumeMounts:
+  - name: vaultkeys
+    mountPath: /vault/keys
+  ingress:
+    enabled: true
+    annotations: |
+      cert-manager.io/cluster-issuer: "vault-issuer"
+    ingressClassName: kong
+    hosts:
+      - host: vault.localdev.darkedges.com
+        paths: []
+    tls: 
+      - secretName: forgerock-vault-tls
+        hosts:
+          - vault.localdev.darkedges.com
+  extraContainers:
+  - name: vault-developer-init
+    image: darkedges/vault-developer-init:0.1
+    imagePullPolicy: IfNotPresent
+    volumeMounts:
+    - name: vaultkeys
+      mountPath: /vault/keys
+ui:
+  enabled: true
+  serviceType: NodePort
