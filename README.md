@@ -37,6 +37,12 @@ $env:VAULT_TOKEN=kubectl exec -ti vault-0 -c vault -n hashicorp-vault -- cat /va
 $env:VAULT_ADDR="http://host.docker.internal:$nodeport"
 docker run -it --rm -e VAULT_TOKEN=$env:VAULT_TOKEN -e VAULT_ADDR=$env:VAULT_ADDR -v $PWD\docker\terraform-init\init:/mnt/init -v $HOME\.kube:/root/.kube -v $PWD\state:/mnt/terraform --entrypoint sh darkedges/terraform:1.0.0
 
+# Deploye spiffe csi
+kubectl apply -f .\k8s\spiffeClusterIssuer.yaml    
+ kubectl cert-manager approve -n cert-manager $(kubectl get cr -n cert-manager -ojsonpath='{.items[0].metadata.name}')
+kubectl create configmap -n cert-manager spiffe-issuer --from-literal=issuer-name=csi-driver-spiffe-ca --from-literal=issuer-kind=ClusterIssuer --from-literal=issuer-group=cert-manager.io
+helm upgrade --install -n cert-manager cert-manager-csi-driver-spiffe oci://quay.io/jetstack/charts/cert-manager-csi-driver-spiffe --wait -f values\spiffe-csi-driver.yaml
+
 # Generate credentials
 pingctl k8s generate devops-secret > devops.yaml
 kubectl apply -f devops.yaml

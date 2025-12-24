@@ -1,0 +1,8 @@
+app:
+  logLevel: 1
+  trustDomain: "localdev.darkedges.com"
+  issuer:
+    name: ""
+    kind: ""
+    group: ""
+  runtimeIssuanceConfigMap: "spiffe-issuer"

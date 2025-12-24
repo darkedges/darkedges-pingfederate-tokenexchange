@@ -9,7 +9,7 @@ spec:
   duration: 2160h
   isCA: true
   issuerRef:
-    name: vault-issuer
+    name: ca-issuer
     kind: ClusterIssuer
     group: cert-manager.io
 ---
