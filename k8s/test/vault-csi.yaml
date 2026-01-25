@@ -1,0 +1,49 @@
+apiVersion: secrets-store.csi.x-k8s.io/v1
+kind: SecretProviderClass
+metadata:
+  name: vault-database
+  namespace: sandbox
+spec:
+  provider: vault
+  parameters:
+    vaultAddress: "http://vault.hashicorp-vault:8200"
+    roleName: "secret"
+    objects: |
+      - objectName: "db-password"
+        secretPath: "secret/data/db-pass"
+        secretKey: "password"
+---
+apiVersion: v1        
+kind: ServiceAccount
+metadata:
+  name: webapp-sa
+  namespace: sandbox
+---
+kind: Pod
+apiVersion: v1
+metadata:
+  name: webapp
+  namespace: sandbox
+spec:
+  serviceAccountName: webapp-sa
+  containers:
+  - image: jweissig/app:0.0.1
+    name: webapp
+    resources:
+      requests:
+        memory: "64Mi"
+        cpu: "250m"
+      limits:
+        memory: "128Mi"
+        cpu: "500m"
+    volumeMounts:
+    - name: secrets-store-inline
+      mountPath: "/mnt/secrets-store"
+      readOnly: true
+  volumes:
+    - name: secrets-store-inline
+      csi:
+        driver: secrets-store.csi.k8s.io
+        readOnly: true
+        volumeAttributes:
+          secretProviderClass: "vault-database"

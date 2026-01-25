@@ -39,9 +39,14 @@ docker run -it --rm -e VAULT_TOKEN=$env:VAULT_TOKEN -e VAULT_ADDR=$env:VAULT_ADD
 
 # Deploye spiffe csi
 kubectl apply -f .\k8s\spiffeClusterIssuer.yaml    
- kubectl cert-manager approve -n cert-manager $(kubectl get cr -n cert-manager -ojsonpath='{.items[0].metadata.name}')
+kubectl cert-manager approve -n cert-manager $(kubectl get cr -n cert-manager -ojsonpath='{.items[0].metadata.name}')
 kubectl create configmap -n cert-manager spiffe-issuer --from-literal=issuer-name=csi-driver-spiffe-ca --from-literal=issuer-kind=ClusterIssuer --from-literal=issuer-group=cert-manager.io
 helm upgrade --install -n cert-manager cert-manager-csi-driver-spiffe oci://quay.io/jetstack/charts/cert-manager-csi-driver-spiffe --wait -f values\spiffe-csi-driver.yaml
+
+##
+
+helm repo add secrets-store-csi-driver https://kubernetes-sigs.github.io/secrets-store-csi-driver/charts
+helm upgrade --install csi secrets-store-csi-driver/secrets-store-csi-driver --namespace hashicorp-vault --create-namespace -f values/secrets-store-csi-driver.yaml
 
 # Generate credentials
 pingctl k8s generate devops-secret > devops.yaml
