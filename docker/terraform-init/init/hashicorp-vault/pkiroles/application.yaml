@@ -1,0 +1,15 @@
+name: machine-id
+backend: darkedges_idam_intermediate
+ttl: 7863400 # 3 months
+maxttl: 34214400 # 13 months
+contact: nirving@darkedges.com
+allow_any_name: false
+ou: AI
+organization: DarkEdges
+country: AU
+province: VIC
+locality: Melbourne
+street_address: 100 Main St
+postal_code: 2000
+allowed_domains:
+  - machine-id.chatbot.demo

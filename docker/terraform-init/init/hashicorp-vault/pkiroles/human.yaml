@@ -1,0 +1,15 @@
+name: human-id
+backend: darkedges_idam_intermediate
+ttl: 604800
+maxttl: 2419200
+contact: nirving@darkedges.com
+allow_any_name: false
+ou: AI
+organization: DarkEdges
+country: AU
+province: VIC
+locality: Melbourne
+street_address: 100 Main St
+postal_code: 2000
+allowed_domains:
+  - human-id.chatbot.demo

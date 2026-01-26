@@ -1,0 +1,7 @@
+appid: ChatBot
+name: ChatBot
+contact: nirving@darkedges.com
+enable_approle: true
+environments:
+  - production
+  - dev

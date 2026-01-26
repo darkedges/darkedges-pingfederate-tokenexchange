@@ -1,0 +1,9 @@
+name: ChatBot group
+contact: nirving@darkedges.com
+human_identities:
+  - Nicholas Irving
+application_identities:
+  - ChatBot
+sub_groups: []
+identity_group_policies: 
+  - chatbot-production-secret-consumer

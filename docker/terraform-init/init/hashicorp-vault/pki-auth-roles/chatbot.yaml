@@ -1,0 +1,13 @@
+name: chatbot
+backend: cert
+ttl: 1200
+maxttl: 0
+contact: nirving@darkedges.com
+policies:
+  - pki-self-renewal
+  - super-user
+  - ad-consumer
+  - server-pki
+  - client-pki
+allowed_machine_ids:
+  - chatbot.machine-id.chatbot.demo

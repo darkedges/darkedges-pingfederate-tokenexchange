@@ -32,7 +32,7 @@ variable "bound_service_account_names" {
   default = ["cert-manager"]
 }
 
-variable "vaulturl" {
+variable "vault_url" {
   type    = string
   default = "https://vault.localdev.darkedges.com"
 }

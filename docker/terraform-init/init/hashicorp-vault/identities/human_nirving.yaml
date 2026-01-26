@@ -1,0 +1,17 @@
+metadata:
+  version: "1.0.0"
+  created_date: "2025-10-01"
+  description: "Human Identity for Nicholas Irving"
+
+identity:
+  name: "Nicholas Irving"
+  email: "nirving@darkedges.com"
+  role: "ai"
+  team: "ai_engineering_anz"
+
+authentication:
+  pki: "nirving.human-id.chatbot.demo"
+
+policies:
+  identity_policies:
+    - "human-identity-token-policies"

@@ -42,8 +42,8 @@ resource "vault_pki_secret_backend_role" "role" {
 
 resource "vault_pki_secret_backend_config_urls" "idam_root_config_urls" {
   backend                 = vault_mount.pki_root.path
-  crl_distribution_points = ["${var.vaulturl}/v1/${vault_mount.pki_root.path}/crl"]
-  issuing_certificates    = ["${var.vaulturl}/v1/${vault_mount.pki_root.path}/ca"]
+  crl_distribution_points = ["${var.vault_url}/v1/${vault_mount.pki_root.path}/crl"]
+  issuing_certificates    = ["${var.vault_url}/v1/${vault_mount.pki_root.path}/ca"]
 }
 
 
@@ -82,8 +82,8 @@ resource "vault_pki_secret_backend_intermediate_set_signed" "intermediate" {
 
 resource "vault_pki_secret_backend_config_urls" "idam_intermediate_config_urls" {
   backend                 = vault_mount.pki_intermediate.path
-  crl_distribution_points = ["${var.vaulturl}/v1/${vault_mount.pki_intermediate.path}/crl"]
-  issuing_certificates    = ["${var.vaulturl}/v1/${vault_mount.pki_intermediate.path}/ca"]
+  crl_distribution_points = ["${var.vault_url}/v1/${vault_mount.pki_intermediate.path}/crl"]
+  issuing_certificates    = ["${var.vault_url}/v1/${vault_mount.pki_intermediate.path}/ca"]
 }
 
 resource "vault_pki_secret_backend_issuer" "intermediate" {

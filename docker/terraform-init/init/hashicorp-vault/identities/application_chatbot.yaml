@@ -1,0 +1,17 @@
+metadata:
+  version: "1.0.0"
+  created_date: "2025-10-01"
+  description: "ChatBot Application Identity"
+
+identity:
+  name: "ChatBot"
+  contact: "nirving@darkedges.com"
+  environment: "production"
+  business_unit: "engineering"
+
+authentication:
+  pki: "chatbot.machine-id.chatbot.demo"
+
+policies:
+  identity_policies:
+    - "application-identity-token-policies"
