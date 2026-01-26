@@ -34,7 +34,7 @@ vault write -field=token auth/approle/login role_id="ff5212b9-6f64-4f3f-a973-e5d
 returns
 
 ```console
-hvs.CAESIOdCbw_-yvU_oii8dk7Hvc1csvpzURtP64PHl3b5yBvyGh4KHGh2cy5qSjlwY2t0R21RNnk0S1hvSklGb2g1cWM
+xxx.xxxxxx
 ```
 
 ```console
@@ -50,7 +50,7 @@ returns
 ```console
 Key                     Value
 ---                     -----
-token                   xxxxxx.xxxxxx
+token                   xxx.xxxxxx
 token_accessor          28L92orI5A16s2Y0pFvO6pPU
 token_duration          59m48s
 token_renewable         true
