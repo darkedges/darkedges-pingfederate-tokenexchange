@@ -30,9 +30,9 @@ spec:
     vaultAddress: "http://vault.hashicorp-vault:8200"
     objects: |
       - objectName: "spiffe-cert"
-        secretPath: "spiffe_intermediate/issue/machine-id" # Example path for certs
+        secretPath: "spiffe_intermediate/issue/spiffe" # Example path for certs
         secretArgs:
-          common_name: "webapp.sandbox.svc"
+          common_name: "webapp.darkedges"
           ttl: "5m"
       - objectName: "spiffe-jwt"
         secretPath: "identity/oidc/token/application_identity" # Example path for JWTs

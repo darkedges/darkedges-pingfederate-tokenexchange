@@ -60,7 +60,7 @@ resource "vault_policy" "spiffe" {
   name = "spiffe"
 
   policy = <<EOT
- path "${vault_mount.pki_spiffe_intermediate.path}/issue/machine-id" {
+ path "${vault_mount.pki_spiffe_intermediate.path}/issue/spiffe" {
    capabilities = ["read", "update","list"]
  }
 
