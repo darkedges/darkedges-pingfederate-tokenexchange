@@ -18,6 +18,25 @@ spec:
         secretPath: "secret/data/db-pass"
         secretKey: "password"
 ---
+apiVersion: secrets-store.csi.x-k8s.io/v1
+kind: SecretProviderClass
+metadata:
+  name: vault-spiffe-provider
+spec:
+  provider: vault
+  parameters:
+    # The Vault role authorized to issue these SPIFFE IDs
+    roleName: "spiffe" 
+    vaultAddress: "http://vault.hashicorp-vault:8200"
+    objects: |
+      - objectName: "spiffe-cert"
+        secretPath: "spiffe_intermediate/issue/machine-id" # Example path for certs
+        secretArgs:
+          common_name: "webapp.sandbox.svc"
+          ttl: "5m"
+      - objectName: "spiffe-jwt"
+        secretPath: "identity/oidc/token/application_identity" # Example path for JWTs
+---
 apiVersion: v1        
 kind: ServiceAccount
 metadata:
@@ -50,6 +69,9 @@ spec:
     - name: secrets-store-inline
       mountPath: "/mnt/secrets-store"
       readOnly: true
+    - name: spiffe-volume
+      mountPath: "/var/run/secrets/spiffe"
+      readOnly: true
   volumes:
     - name: secrets-store-inline
       csi:
@@ -57,3 +79,9 @@ spec:
         readOnly: true
         volumeAttributes:
           secretProviderClass: "vault-database"
+    - name: spiffe-volume
+      csi:
+        driver: secrets-store.csi.k8s.io
+        readOnly: true
+        volumeAttributes:
+          secretProviderClass: "vault-spiffe-provider"

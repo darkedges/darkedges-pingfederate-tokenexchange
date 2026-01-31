@@ -8,7 +8,7 @@ resource "vault_auth_backend" "cert" {
 
 resource "vault_cert_auth_backend_role" "authrole" {
   for_each       = local.pki_auth_roles_map
-  certificate    = vault_pki_secret_backend_root_sign_intermediate.intermediate.certificate
+  certificate    = vault_pki_secret_backend_root_sign_intermediate.spiffe.certificate
   backend        = each.value.backend
   name           = each.value.name
   token_ttl      = each.value.ttl
@@ -20,7 +20,7 @@ resource "vault_cert_auth_backend_role" "authrole" {
 resource "vault_policy" "pki-self-renewal" {
   name   = "pki-self-renewal"
   policy = <<EOF
- path "darkedges_idam_intermediate/issue/machine-id" {
+ path "${vault_mount.pki_spiffe_intermediate.path}/issue/machine-id" {
    capabilities = ["update","list"]
  }
  EOF
@@ -29,7 +29,7 @@ resource "vault_policy" "pki-self-renewal" {
 resource "vault_policy" "server-pki" {
   name   = "server-pki"
   policy = <<EOF
- path "darkedges_idam_intermediate/issue/server_pki" {
+ path "${vault_mount.pki_spiffe_intermediate.path}/issue/server_pki" {
    capabilities = ["update","list"]
  }
  EOF
@@ -38,7 +38,7 @@ resource "vault_policy" "server-pki" {
 resource "vault_policy" "client-pki" {
   name   = "client-pki"
   policy = <<EOF
- path "darkedges_idam_intermediate/issue/client_pki" {
+ path "${vault_mount.pki_spiffe_intermediate.path}/issue/client_pki" {
    capabilities = ["update","list"]
  }
  EOF

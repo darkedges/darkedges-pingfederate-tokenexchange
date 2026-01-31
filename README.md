@@ -20,6 +20,8 @@ helm repo update
 
 # Kong Ingress Controller
 helm upgrade --install kong kong/ingress --namespace kong --create-namespace -f .\values\kong.yaml
+kubectl apply -f https://github.com/kubernetes-sigs/gateway-api/releases/download/v1.3.0/standard-install.yaml
+kubectl apply -f .\k8s\kongGateway.yaml   
 
 # Cert Manager
 helm upgrade --install cert-manager oci://quay.io/jetstack/charts/cert-manager --namespace cert-manager --create-namespace -f .\values\cert-manager.yaml

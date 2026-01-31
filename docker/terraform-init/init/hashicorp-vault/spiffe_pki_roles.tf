@@ -16,7 +16,7 @@ resource "vault_pki_secret_backend_role" "spiffe_pki_role" {
   allow_any_name     = each.value.allow_any_name
   allow_ip_sans      = false
   require_cn         = true
-  issuer_ref         = vault_pki_secret_backend_issuer.intermediate.issuer_ref
+  issuer_ref         = vault_pki_secret_backend_issuer.spiffe.issuer_ref
 
   # the type of below fields should be just string, instead of list(string), I will fix it later
   ou             = [each.value.ou]
