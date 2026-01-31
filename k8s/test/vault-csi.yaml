@@ -29,11 +29,18 @@ spec:
     roleName: "spiffe" 
     vaultAddress: "http://vault.hashicorp-vault:8200"
     objects: |
-      - objectName: "spiffe-cert"
-        secretPath: "spiffe_intermediate/issue/spiffe" # Example path for certs
-        secretArgs:
-          common_name: "webapp.darkedges"
-          ttl: "5m"
+      # - objectName: "spiffe-cert.tls"
+      #   secretPath: "spiffe_intermediate/issue/spiffe" # Example path for certs
+      #   secretKey: "certificate"
+      #   secretArgs:
+      #     common_name: "webapp.darkedges"
+      #     ttl: "5m"
+      # - objectName: "spiffe-cert.key"
+      #   secretPath: "spiffe_intermediate/issue/spiffe" # Example path for certs
+      #   secretKey: "private_key"
+      #   secretArgs:
+      #     common_name: "webapp.darkedges"
+      #     ttl: "5m"
       - objectName: "spiffe-jwt"
         secretPath: "identity/oidc/token/application_identity" # Example path for JWTs
 ---

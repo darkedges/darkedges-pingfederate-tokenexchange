@@ -84,4 +84,11 @@ resource "vault_kubernetes_auth_backend_role" "spiffe" {
   token_policies                   = [
     vault_policy.spiffe.name
     ]
+  alias_name_source = "serviceaccount_name"
+}
+
+resource "vault_identity_entity_alias" "spiffe" {
+  name           = "sandbox/webapp-sa"
+  mount_accessor = vault_auth_backend.kubernetes.accessor
+  canonical_id   = "d0d6f048-6710-9393-fba3-53bb4e668409"
 }
