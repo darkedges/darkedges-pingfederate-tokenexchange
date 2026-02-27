@@ -6,13 +6,13 @@
             "subResource": "cert-time-tracking",
             "items": [
                 {
-                    "stringValue": "1765310095",
-                    "id": "lc6xons0ovn4erf4fh2rr3t8t",
+                    "stringValue": "1772158875",
+                    "id": "83ekrmem82duiu6te90qd54i1",
                     "type": "STRING"
                 },
                 {
-                    "stringValue": "1764106644",
-                    "id": "sqqnju571a0uyste1jhhzubc4",
+                    "stringValue": "1765310095",
+                    "id": "lc6xons0ovn4erf4fh2rr3t8t",
                     "type": "STRING"
                 },
                 {
@@ -124,12 +124,12 @@
             "operationType": "SAVE",
             "items": [
                 {
-                    "fileData": "${certificates_ca_items_lc6xons0ovn4erf4fh2rr3t8t_lc6xons0ovn4erf4fh2rr3t8t_fileData}",
-                    "id": "lc6xons0ovn4erf4fh2rr3t8t"
+                    "fileData": "${certificates_ca_items_83ekrmem82duiu6te90qd54i1_83ekrmem82duiu6te90qd54i1_fileData}",
+                    "id": "83ekrmem82duiu6te90qd54i1"
                 },
                 {
-                    "fileData": "${certificates_ca_items_sqqnju571a0uyste1jhhzubc4_sqqnju571a0uyste1jhhzubc4_fileData}",
-                    "id": "sqqnju571a0uyste1jhhzubc4"
+                    "fileData": "${certificates_ca_items_lc6xons0ovn4erf4fh2rr3t8t_lc6xons0ovn4erf4fh2rr3t8t_fileData}",
+                    "id": "lc6xons0ovn4erf4fh2rr3t8t"
                 },
                 {
                     "fileData": "${certificates_ca_items_wcq2gcje6bhq10q78elzcl37r_wcq2gcje6bhq10q78elzcl37r_fileData}",
@@ -187,24 +187,6 @@
         },
         {
             "operationType": "SAVE",
-            "items": [{
-                "encryptedCredential": "eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2Iiwia2lkIjoiUWVzOVR5eTV5WiIsInZlcnNpb24iOiIxMi4zLjMuMSJ9..d1QIng2pADvM9bvhoJlP_A._o61McTHYeESNtttqAyLfyEWyLBbaLA6CQZ9IM6SMYZd-Egb1ZccB_Uhmy11R2Btbsnk7Bd7AWQzacWRARjcr4z8Re5jaQMHpFYrfd-Zjo6YEcY70MWrywWfezsbjTcUITkDnYYydHgMRgo4gHupMOeiQ1-sDwKwEMS4tORrTTDwfvF75IgTVbdlvdRalAtF-6sWXKW58mUTNNvMtOPnuqxZPUgUqGBHKp-p3RIL39z_UWI_UPZ2oYqcgVLZcV23mqzmXX21ILobtEPWa0Pkfnryy_Uh1YZLhybW4jW1Xoz0vdbydzbmkvojV8L9x2PDE85ju76Qw2qVag6keYxfCKSWjrfa0HTYaQg5rLNVv0884M0dKaIy8mBfZSt1fNn0HVeG-OWOOoeFRUL39lnYwP_fWGNMEWjQ-mm_uclwqg67f8gnHcUnWWpUB1o4HDpfbNYMwtPHL2jsfZSZrgdQuYX4r47QBKk_4neU2SXy_Y_xqxee105xWlnM2fG5Sc45XoYtzbZ90U5_7XPO3-IwTp17DMoHmOPKRJ7Km8w_OBQJ6FxpXtVOlkFZ9jFgHLTXbBRh86SPecpXehe_TkGVu3qseZBcC4MSjAnrO3fRNNKgODrtJgA2u6yzc8eYG3LlDPhsjD2tavYwBi08YLETBmBEMc3TI0s04OBz2euJvnrKiDgEb0ILviVdnT1ojXi7inw--unVXH32of4GUIKC8SqN_v2U80QRNqXbtsHsZVwgj_Vww5GHWq5TKSyNdSCgp2T07fuBHVH2zUWsUq5F_9D_3wTE90I1noMWzGmEsBsnBrwAW2SKK0NHJ3QVW-cOli2ZxEbuBMhacB3hLNeRqa8A3LAi0Xu3ZRzZCswlaioEG4B_Cyt44uPcqyEiR9XDKEROytcf4YFxSTp5ZwPK1IH0fSRNKO9b_BK7dfFPB9J9D9cWFJtZ6yj8OlGFpAKqKo5b4BITD8QwrNaXxqUpF_llP4uZJTHgRTfDnZg5VZAot3cqIzwWEjVIiS_jo4hZLuzrm2NHt0hju7_6-IDEs_9CWoyNxUJ1em6y9WUkq-coENOSP9YZ7F6tlLTMJxIUjKMgEGQkha7Zid4VD33R_UYOoTdJyk9i4KH6jys2wQsuRyOqXTl_uO6U3LnEXyNa5E7hhY7vLbkp_zfTbpT0V-U_9rPU1ipWvHpNdI_X5MCDWjhDzInYZQwrkVeOhTog64DeynoSZTkmllp5pGs7QAEisVqGphpA0PaJa9zeHeC17qacrZulFrDbzvEjGwAd8bz6SVbYhY-Zc_A5FNAp7zdEFMfKB5aXA2R6uYpHVm7qaF2luyqP0wY1H0UzFt0fNzOVTGIbJ4FO_k4zkgZq81h5QNxmtIO9BRJC1cFVerk5CThqLs8D99sJ9rrHG6soYNyH3eqdwISQLcRbd33gW4Ql3ygK_rZaZuiZtr50aosc73kiQlEklGKhPnkdEoWrVXvzxTor917Gxsbol6dcyj-h1d8m_bX0oYx3rqOzerYWBihmVpo8MRhizVy-mB8nUBaxjRsq92F1g-kUJRwF-I7r9CxeXy-jv-gXpi22mwPKdvcZYE2a3g6ulaeOyaV9XAwVvobVYoQCw8kavr63coUsQXyYuyN2JAVA6e_Vqjzk6zHhaBjAoxJsniXw9KqTWBk_6P9s4zdMRMkeGY1L7Ib6ExFn8b5aSVz9uNuaNSE.LLxdlHmirGl4lOYnWYzjLQ",
-                "pingOneConnectionId": "3a0c50c2-d5de-45b1-bd2a-9aedf6f3477e",
-                "environmentId": "314177e2-5da7-433b-a5b5-9bdcc20b45a3",
-                "organizationName": "trial_cba.com_1544259280",
-                "name": "trial_cba.com_1544259280",
-                "active": true,
-                "credentialId": "e112d200-1d68-448c-91d4-1fd4da7adc69",
-                "pingOneAuthenticationApiEndpoint": "https://auth.pingone.com.au",
-                "id": "mImpgs4t0rrk7n7mfAMOcP",
-                "creationDate": "2025-12-09T20:18:47.382Z",
-                "region": "Australia",
-                "pingOneManagementApiEndpoint": "https://api.pingone.com.au"
-            }],
-            "resourceType": "/pingOneConnections"
-        },
-        {
-            "operationType": "SAVE",
             "items": [
                 {
                     "hostnamesTags": [{
@@ -226,7 +208,7 @@
                     "useDnsSrvRecords": false,
                     "bindAnonymously": false,
                     "maxWait": -1,
-                    "verifyHost": true,
+                    "verifyHost": false,
                     "hostnames": ["pingfederate-pingdirectory-0.pingfederate-pingdirectory-cluster.pingfed.svc.cluster.local:1636"],
                     "dnsTtl": 60000,
                     "useSsl": true,
@@ -236,68 +218,9 @@
                     "readTimeout": 3000,
                     "name": "PingDirectory",
                     "useStartTLS": false,
-                    "lastModified": "2025-12-09T20:18:47.485Z",
+                    "lastModified": "2026-02-27T02:22:54.606Z",
                     "retryFailedOperations": false,
                     "userDN": "cn=administrator"
-                },
-                {
-                    "maskAttributeValues": false,
-                    "configuration": {
-                        "tables": [{
-                            "name": "Custom Attributes Details",
-                            "rows": []
-                        }],
-                        "fields": [
-                            {
-                                "name": "PingOne Environment",
-                                "value": "mImpgs4t0rrk7n7mfAMOcP|314177e2-5da7-433b-a5b5-9bdcc20b45a3"
-                            },
-                            {
-                                "name": "Connection Timeout",
-                                "value": "10000"
-                            },
-                            {
-                                "name": "Retry Request",
-                                "value": "true"
-                            },
-                            {
-                                "name": "Maximum Retries Limit",
-                                "value": "5"
-                            },
-                            {
-                                "name": "Retry Error Codes",
-                                "value": "429"
-                            },
-                            {
-                                "name": "Enable User Group Info Retrieval",
-                                "value": "true"
-                            },
-                            {
-                                "name": "Enable Device Info Retrieval",
-                                "value": "true"
-                            },
-                            {
-                                "name": "Proxy Settings",
-                                "value": "System Defaults"
-                            },
-                            {
-                                "name": "Custom Proxy Host",
-                                "value": ""
-                            },
-                            {
-                                "name": "Custom Proxy Port",
-                                "value": ""
-                            }
-                        ]
-                    },
-                    "name": "PINGONEDATASTORE",
-                    "id": "Other-037C411BB3CBA6E452A94C62E522195AAD1DF603",
-                    "lastModified": "2025-12-09T20:18:48.261Z",
-                    "type": "CUSTOM",
-                    "pluginDescriptorRef": {
-                        "location": "https://localhost:-1/pf-admin-api/v1/dataStores/descriptors/com.pingidentity.plugins.datastore.p14c.PingOneForCustomersDataStore",
-                        "id": "com.pingidentity.plugins.datastore.p14c.PingOneForCustomersDataStore"
-                    }
                 },
                 {
                     "connectionUrlTags": [{
@@ -315,7 +238,7 @@
                     "name": "ProvisionerDS (sa)",
                     "connectionUrl": "jdbc:hsqldb:${pf.server.data.dir}${/}hypersonic${/}ProvisionerDefaultDB;hsqldb.lock_file=false",
                     "id": "ProvisionerDS",
-                    "lastModified": "2025-12-09T20:18:48.281Z",
+                    "lastModified": "2026-02-26T23:09:38.168Z",
                     "maxPoolSize": 100,
                     "blockingTimeout": 5000
                 }
@@ -500,11 +423,11 @@
                 {
                     "password": "${PING_IDENTITY_PASSWORD}",
                     "roles": [
-                        "EXPRESSION_ADMINISTRATOR",
+                        "USER_ADMINISTRATOR",
                         "DATA_COLLECTION_ADMINISTRATOR",
                         "CRYPTO_ADMINISTRATOR",
-                        "ADMINISTRATOR",
-                        "USER_ADMINISTRATOR"
+                        "EXPRESSION_ADMINISTRATOR",
+                        "ADMINISTRATOR"
                     ],
                     "auditor": false,
                     "description": "Initial administrator user",
@@ -514,11 +437,11 @@
                 {
                     "password": "${administrativeAccounts_items_nirving_password}",
                     "roles": [
-                        "EXPRESSION_ADMINISTRATOR",
+                        "USER_ADMINISTRATOR",
                         "DATA_COLLECTION_ADMINISTRATOR",
                         "CRYPTO_ADMINISTRATOR",
-                        "ADMINISTRATOR",
-                        "USER_ADMINISTRATOR"
+                        "EXPRESSION_ADMINISTRATOR",
+                        "ADMINISTRATOR"
                     ],
                     "auditor": false,
                     "description": "description",
@@ -610,7 +533,7 @@
             "items": [{
                 "name": "POLICYCONTRACT",
                 "id": "KUzfpHBOZeqF0vVo",
-                "lastModified": "2025-12-09T20:18:48.634Z",
+                "lastModified": "2026-02-26T23:09:38.596Z",
                 "coreAttributes": [{"name": "subject"}],
                 "extendedAttributes": [
                     {"name": "uid"},
@@ -803,7 +726,7 @@
                     },
                     "name": "AccessTokenManagement",
                     "id": "AccessTokenManagement",
-                    "lastModified": "2025-12-09T20:18:48.726Z",
+                    "lastModified": "2026-02-26T23:09:38.733Z",
                     "pluginDescriptorRef": {
                         "location": "https://localhost:-1/pf-admin-api/v1/oauth/accessTokenManagers/descriptors/com.pingidentity.pf.access.token.management.plugins.JwtBearerAccessTokenManagementPlugin",
                         "id": "com.pingidentity.pf.access.token.management.plugins.JwtBearerAccessTokenManagementPlugin"
@@ -1006,7 +929,7 @@
                     },
                     "name": "JSON Web Tokens",
                     "id": "jwt",
-                    "lastModified": "2025-12-09T20:18:48.714Z",
+                    "lastModified": "2026-02-26T23:09:38.719Z",
                     "pluginDescriptorRef": {
                         "location": "https://localhost:-1/pf-admin-api/v1/oauth/accessTokenManagers/descriptors/com.pingidentity.pf.access.token.management.plugins.JwtBearerAccessTokenManagementPlugin",
                         "id": "com.pingidentity.pf.access.token.management.plugins.JwtBearerAccessTokenManagementPlugin"
@@ -1164,7 +1087,7 @@
                     },
                     "name": "IDENTIFIERFIRST",
                     "id": "IDENTIFIERFIRST",
-                    "lastModified": "2025-12-09T20:18:48.840Z",
+                    "lastModified": "2026-02-26T23:09:38.865Z",
                     "pluginDescriptorRef": {
                         "location": "https://localhost:-1/pf-admin-api/v1/idp/adapters/descriptors/com.pingidentity.adapters.identifierfirst.idp.IdentifierFirstAdapter",
                         "id": "com.pingidentity.adapters.identifierfirst.idp.IdentifierFirstAdapter"
@@ -1473,7 +1396,7 @@
                     },
                     "name": "PINGID",
                     "id": "PINGID",
-                    "lastModified": "2025-12-09T20:18:48.887Z",
+                    "lastModified": "2026-02-26T23:09:38.909Z",
                     "pluginDescriptorRef": {
                         "location": "https://localhost:-1/pf-admin-api/v1/idp/adapters/descriptors/com.pingidentity.adapters.pingid.PingIDAdapter",
                         "id": "com.pingidentity.adapters.pingid.PingIDAdapter"
@@ -1594,299 +1517,6 @@
                         ],
                         "extendedAttributes": []
                     }
-                },
-                {
-                    "attributeMapping": {
-                        "attributeContractFulfillment": {
-                            "access_token": {
-                                "source": {"type": "ADAPTER"},
-                                "value": "access_token"
-                            },
-                            "pingid.sdk.status": {
-                                "source": {"type": "ADAPTER"},
-                                "value": "pingid.sdk.status"
-                            },
-                            "authentication.code.flow.userid": {
-                                "source": {"type": "ADAPTER"},
-                                "value": "authentication.code.flow.userid"
-                            },
-                            "pingone.mfa.status": {
-                                "source": {"type": "ADAPTER"},
-                                "value": "pingone.mfa.status"
-                            },
-                            "policy.action": {
-                                "source": {"type": "ADAPTER"},
-                                "value": "policy.action"
-                            },
-                            "usernameless.flow.platform": {
-                                "source": {"type": "ADAPTER"},
-                                "value": "usernameless.flow.platform"
-                            },
-                            "id_token": {
-                                "source": {"type": "ADAPTER"},
-                                "value": "id_token"
-                            },
-                            "pingid.sdk.status.reason": {
-                                "source": {"type": "ADAPTER"},
-                                "value": "pingid.sdk.status.reason"
-                            },
-                            "pingone.mfa.status.reason": {
-                                "source": {"type": "ADAPTER"},
-                                "value": "pingone.mfa.status.reason"
-                            },
-                            "usernameless.flow.userid": {
-                                "source": {"type": "ADAPTER"},
-                                "value": "usernameless.flow.userid"
-                            },
-                            "username": {
-                                "source": {"type": "ADAPTER"},
-                                "value": "username"
-                            }
-                        },
-                        "attributeSources": [],
-                        "issuanceCriteria": {"conditionalCriteria": []}
-                    },
-                    "configuration": {
-                        "tables": [],
-                        "fields": [
-                            {
-                                "name": "PingOne Environment",
-                                "value": "mImpgs4t0rrk7n7mfAMOcP|314177e2-5da7-433b-a5b5-9bdcc20b45a3"
-                            },
-                            {
-                                "name": "PingOne Population",
-                                "value": "f18888ef-fbaf-42bb-b7fa-022a96facb28"
-                            },
-                            {
-                                "name": "Application",
-                                "value": "b23307a6-f5ee-4c05-93f5-8aeb83beaf12"
-                            },
-                            {
-                                "name": "PingOne Authentication Policy",
-                                "value": ""
-                            },
-                            {
-                                "name": "MFA policy for registration",
-                                "value": "Default MFA Policy"
-                            },
-                            {
-                                "name": "PingOne Management API",
-                                "value": "https://api.pingone.com"
-                            },
-                            {
-                                "name": "PingOne Authentication API",
-                                "value": "https://auth.pingone.com"
-                            },
-                            {
-                                "name": "Notification Template Variant Override",
-                                "value": ""
-                            },
-                            {
-                                "name": "Test Username",
-                                "value": "nirving"
-                            },
-                            {
-                                "name": "HTML Template Prefix",
-                                "value": "pingone-mfa"
-                            },
-                            {
-                                "name": "Messages Files",
-                                "value": "pingone-mfa-messages"
-                            },
-                            {
-                                "name": "Prompt Users to Set Up MFA",
-                                "value": "false"
-                            },
-                            {
-                                "name": "Allow Users to Skip MFA Setup",
-                                "value": "false"
-                            },
-                            {
-                                "name": "Allow Users to Add Additional Authentication Methods",
-                                "value": "false"
-                            },
-                            {
-                                "name": "Allow users to perform multiple device management operations consecutively",
-                                "value": "false"
-                            },
-                            {
-                                "name": "Provision Users and Authentication Methods",
-                                "value": "true"
-                            },
-                            {
-                                "name": "Provision Authentication Methods",
-                                "value": "false"
-                            },
-                            {
-                                "name": "Update Authentication Methods",
-                                "value": "false"
-                            },
-                            {
-                                "name": "Overwrite Authentication Methods",
-                                "value": "false"
-                            },
-                            {
-                                "name": "Allow only predefine values for phone or email devices",
-                                "value": "false"
-                            },
-                            {
-                                "name": "Enable Cookie Based Tracking",
-                                "value": "false"
-                            },
-                            {
-                                "name": "Use Password Config Attribute",
-                                "value": ""
-                            },
-                            {
-                                "name": "Bypass MFA for device management attribute",
-                                "value": ""
-                            },
-                            {
-                                "name": "Username Attribute",
-                                "value": ""
-                            },
-                            {
-                                "name": "SMS Attribute",
-                                "value": "sms"
-                            },
-                            {
-                                "name": "Voice Attribute",
-                                "value": "voice"
-                            },
-                            {
-                                "name": "Email Attribute",
-                                "value": "email"
-                            },
-                            {
-                                "name": "WhatsApp Attribute",
-                                "value": "whatsapp"
-                            },
-                            {
-                                "name": "Application ID For Authentication Code Flow",
-                                "value": ""
-                            },
-                            {
-                                "name": "DEFAULT AUTHENTICATION METHOD FOR PROVISIONED USERS",
-                                "value": "SMS"
-                            },
-                            {
-                                "name": "User Not Found Failure Mode",
-                                "value": "Block user"
-                            },
-                            {
-                                "name": "Service Unavailable Failure Mode",
-                                "value": "Bypass authentication"
-                            },
-                            {
-                                "name": "Change Device",
-                                "value": "Allow"
-                            },
-                            {
-                                "name": "Show Success Screens",
-                                "value": "true"
-                            },
-                            {
-                                "name": "Show Error Screens",
-                                "value": "true"
-                            },
-                            {
-                                "name": "Show Timeout Screens",
-                                "value": "true"
-                            },
-                            {
-                                "name": "Enable Audit Log",
-                                "value": "false"
-                            },
-                            {
-                                "name": "API Request Timeout",
-                                "value": "12000"
-                            },
-                            {
-                                "name": "Proxy Settings",
-                                "value": "System Defaults"
-                            },
-                            {
-                                "name": "Custom Proxy Host",
-                                "value": ""
-                            },
-                            {
-                                "name": "Custom Proxy Port",
-                                "value": ""
-                            },
-                            {
-                                "name": "Custom Proxy Connection Type",
-                                "value": "HTTP"
-                            }
-                        ]
-                    },
-                    "name": "PINGONEMFA",
-                    "id": "PINGONEMFA",
-                    "lastModified": "2025-12-09T20:18:50.972Z",
-                    "pluginDescriptorRef": {
-                        "location": "https://localhost:-1/pf-admin-api/v1/idp/adapters/descriptors/com.pingidentity.adapters.pingone.mfa.PingOneMfaIdpAdapter",
-                        "id": "com.pingidentity.adapters.pingone.mfa.PingOneMfaIdpAdapter"
-                    },
-                    "attributeContract": {
-                        "maskOgnlValues": false,
-                        "coreAttributes": [
-                            {
-                                "masked": false,
-                                "name": "access_token",
-                                "pseudonym": false
-                            },
-                            {
-                                "masked": false,
-                                "name": "pingid.sdk.status",
-                                "pseudonym": false
-                            },
-                            {
-                                "masked": false,
-                                "name": "pingone.mfa.status",
-                                "pseudonym": false
-                            },
-                            {
-                                "masked": false,
-                                "name": "authentication.code.flow.userid",
-                                "pseudonym": false
-                            },
-                            {
-                                "masked": false,
-                                "name": "policy.action",
-                                "pseudonym": false
-                            },
-                            {
-                                "masked": false,
-                                "name": "usernameless.flow.platform",
-                                "pseudonym": false
-                            },
-                            {
-                                "masked": false,
-                                "name": "id_token",
-                                "pseudonym": false
-                            },
-                            {
-                                "masked": false,
-                                "name": "pingid.sdk.status.reason",
-                                "pseudonym": false
-                            },
-                            {
-                                "masked": false,
-                                "name": "pingone.mfa.status.reason",
-                                "pseudonym": false
-                            },
-                            {
-                                "masked": false,
-                                "name": "usernameless.flow.userid",
-                                "pseudonym": false
-                            },
-                            {
-                                "masked": false,
-                                "name": "username",
-                                "pseudonym": true
-                            }
-                        ],
-                        "extendedAttributes": []
-                    }
                 }
             ],
             "resourceType": "/idp/adapters"
@@ -1899,33 +1529,61 @@
                         "tables": [
                             {
                                 "name": "Allowed Issuers",
-                                "rows": [{
-                                    "defaultRow": false,
-                                    "fields": [
-                                        {
-                                            "name": "Issuer",
-                                            "value": "https://sts.windows.net/4161be3f-bf2b-41d4-a02b-e6f82b529d53/"
-                                        },
-                                        {
-                                            "name": "JWKS URL",
-                                            "value": "https://login.microsoftonline.com/common/discovery/keys"
-                                        },
-                                        {
-                                            "name": "JWKS",
-                                            "value": ""
-                                        }
-                                    ]
-                                }]
+                                "rows": [
+                                    {
+                                        "defaultRow": false,
+                                        "fields": [
+                                            {
+                                                "name": "Issuer",
+                                                "value": "https://sts.windows.net/4161be3f-bf2b-41d4-a02b-e6f82b529d53/"
+                                            },
+                                            {
+                                                "name": "JWKS URL",
+                                                "value": "https://login.microsoftonline.com/common/discovery/keys"
+                                            },
+                                            {
+                                                "name": "JWKS",
+                                                "value": ""
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "defaultRow": false,
+                                        "fields": [
+                                            {
+                                                "name": "Issuer",
+                                                "value": "https://login.microsoftonline.com/4161be3f-bf2b-41d4-a02b-e6f82b529d53/v2.0"
+                                            },
+                                            {
+                                                "name": "JWKS URL",
+                                                "value": "https://login.microsoftonline.com/4161be3f-bf2b-41d4-a02b-e6f82b529d53/discovery/v2.0/keys"
+                                            },
+                                            {
+                                                "name": "JWKS",
+                                                "value": ""
+                                            }
+                                        ]
+                                    }
+                                ]
                             },
                             {
                                 "name": "Allowed Audiences",
-                                "rows": [{
-                                    "defaultRow": false,
-                                    "fields": [{
-                                        "name": "Audience",
-                                        "value": "https://fram.connectid.darkedges.com/openam/oauth2"
-                                    }]
-                                }]
+                                "rows": [
+                                    {
+                                        "defaultRow": false,
+                                        "fields": [{
+                                            "name": "Audience",
+                                            "value": "https://fram.connectid.darkedges.com/openam/oauth2"
+                                        }]
+                                    },
+                                    {
+                                        "defaultRow": false,
+                                        "fields": [{
+                                            "name": "Audience",
+                                            "value": "e83c2af3-43d1-4f62-8bff-e619c29b5026"
+                                        }]
+                                    }
+                                ]
                             }
                         ],
                         "fields": [
@@ -1961,7 +1619,7 @@
                     },
                     "name": "MSFTTOKENPROCESSOR",
                     "id": "MSFTTOKENPROCESSOR",
-                    "lastModified": "2025-12-09T20:18:51.131Z",
+                    "lastModified": "2026-02-27T21:07:12.975Z",
                     "pluginDescriptorRef": {
                         "location": "https://localhost:-1/pf-admin-api/v1/idp/tokenProcessors/descriptors/com.pingidentity.pf.tokenprocessors.jwt.JwtTokenProcessor",
                         "id": "com.pingidentity.pf.tokenprocessors.jwt.JwtTokenProcessor"
@@ -1994,7 +1652,7 @@
                     },
                     "name": "PFTOKENPROCESSOR",
                     "id": "PFTOKENPROCESSOR",
-                    "lastModified": "2025-12-09T20:18:51.152Z",
+                    "lastModified": "2026-02-26T23:09:39.170Z",
                     "pluginDescriptorRef": {
                         "location": "https://localhost:-1/pf-admin-api/v1/idp/tokenProcessors/descriptors/org.sourceid.wstrust.processor.oauth.BearerAccessTokenTokenProcessor",
                         "id": "org.sourceid.wstrust.processor.oauth.BearerAccessTokenTokenProcessor"
@@ -2130,597 +1788,6 @@
         {
             "operationType": "SAVE",
             "items": [{
-                "contactInfo": {},
-                "credentials": {"certs": []},
-                "active": true,
-                "entityId": "PingOne Connector",
-                "loggingMode": "STANDARD",
-                "replicationStatus": "REPLICATED",
-                "type": "SP",
-                "creationDate": "2025-12-09T20:18:53.019Z",
-                "connectionTargetType": "STANDARD",
-                "baseUrl": "https://api.pingone.com/v1",
-                "modificationDate": "2025-12-09T20:18:53.019Z",
-                "virtualEntityIds": [],
-                "outboundProvision": {
-                    "channels": [{
-                        "attributeMapping": [
-                            {
-                                "fieldName": "populationID",
-                                "saasFieldInfo": {
-                                    "createOnly": false,
-                                    "attributeNames": ["businessCategory"],
-                                    "expression": "",
-                                    "trim": false,
-                                    "parser": "NONE",
-                                    "defaultValue": "f18888ef-fbaf-42bb-b7fa-022a96facb28",
-                                    "masked": false,
-                                    "characterCase": "NONE"
-                                }
-                            },
-                            {
-                                "fieldName": "username",
-                                "saasFieldInfo": {
-                                    "createOnly": false,
-                                    "attributeNames": ["uid"],
-                                    "expression": "",
-                                    "trim": false,
-                                    "parser": "NONE",
-                                    "defaultValue": "",
-                                    "masked": false,
-                                    "characterCase": "NONE"
-                                }
-                            },
-                            {
-                                "fieldName": "accountID",
-                                "saasFieldInfo": {
-                                    "createOnly": false,
-                                    "attributeNames": [],
-                                    "expression": "",
-                                    "trim": false,
-                                    "parser": "NONE",
-                                    "defaultValue": "",
-                                    "masked": false,
-                                    "characterCase": "NONE"
-                                }
-                            },
-                            {
-                                "fieldName": "authoritativeIdp",
-                                "saasFieldInfo": {
-                                    "createOnly": false,
-                                    "attributeNames": [],
-                                    "expression": "",
-                                    "trim": false,
-                                    "parser": "NONE",
-                                    "defaultValue": "",
-                                    "masked": false,
-                                    "characterCase": "NONE"
-                                }
-                            },
-                            {
-                                "fieldName": "country",
-                                "saasFieldInfo": {
-                                    "createOnly": false,
-                                    "attributeNames": [],
-                                    "expression": "",
-                                    "trim": false,
-                                    "parser": "NONE",
-                                    "defaultValue": "",
-                                    "masked": false,
-                                    "characterCase": "NONE"
-                                }
-                            },
-                            {
-                                "fieldName": "email",
-                                "saasFieldInfo": {
-                                    "createOnly": false,
-                                    "attributeNames": ["mail"],
-                                    "expression": "",
-                                    "trim": false,
-                                    "parser": "NONE",
-                                    "defaultValue": "",
-                                    "masked": false,
-                                    "characterCase": "NONE"
-                                }
-                            },
-                            {
-                                "fieldName": "externalID",
-                                "saasFieldInfo": {
-                                    "createOnly": false,
-                                    "attributeNames": [],
-                                    "expression": "",
-                                    "trim": false,
-                                    "parser": "NONE",
-                                    "defaultValue": "",
-                                    "masked": false,
-                                    "characterCase": "NONE"
-                                }
-                            },
-                            {
-                                "fieldName": "lastName",
-                                "saasFieldInfo": {
-                                    "createOnly": false,
-                                    "attributeNames": ["sn"],
-                                    "expression": "",
-                                    "trim": false,
-                                    "parser": "NONE",
-                                    "defaultValue": "",
-                                    "masked": false,
-                                    "characterCase": "NONE"
-                                }
-                            },
-                            {
-                                "fieldName": "forceChangePassword",
-                                "saasFieldInfo": {
-                                    "createOnly": false,
-                                    "attributeNames": [],
-                                    "expression": "",
-                                    "trim": false,
-                                    "parser": "NONE",
-                                    "defaultValue": "",
-                                    "masked": false,
-                                    "characterCase": "NONE"
-                                }
-                            },
-                            {
-                                "fieldName": "fullName",
-                                "saasFieldInfo": {
-                                    "createOnly": false,
-                                    "attributeNames": [],
-                                    "expression": "",
-                                    "trim": false,
-                                    "parser": "NONE",
-                                    "defaultValue": "",
-                                    "masked": false,
-                                    "characterCase": "NONE"
-                                }
-                            },
-                            {
-                                "fieldName": "firstName",
-                                "saasFieldInfo": {
-                                    "createOnly": false,
-                                    "attributeNames": ["givenName"],
-                                    "expression": "",
-                                    "trim": false,
-                                    "parser": "NONE",
-                                    "defaultValue": "",
-                                    "masked": false,
-                                    "characterCase": "NONE"
-                                }
-                            },
-                            {
-                                "fieldName": "honorificPrefix",
-                                "saasFieldInfo": {
-                                    "createOnly": false,
-                                    "attributeNames": [],
-                                    "expression": "",
-                                    "trim": false,
-                                    "parser": "NONE",
-                                    "defaultValue": "",
-                                    "masked": false,
-                                    "characterCase": "NONE"
-                                }
-                            },
-                            {
-                                "fieldName": "honorificSuffix",
-                                "saasFieldInfo": {
-                                    "createOnly": false,
-                                    "attributeNames": [],
-                                    "expression": "",
-                                    "trim": false,
-                                    "parser": "NONE",
-                                    "defaultValue": "",
-                                    "masked": false,
-                                    "characterCase": "NONE"
-                                }
-                            },
-                            {
-                                "fieldName": "locale",
-                                "saasFieldInfo": {
-                                    "createOnly": false,
-                                    "attributeNames": [],
-                                    "expression": "",
-                                    "trim": false,
-                                    "parser": "NONE",
-                                    "defaultValue": "en-US",
-                                    "masked": false,
-                                    "characterCase": "NONE"
-                                }
-                            },
-                            {
-                                "fieldName": "city",
-                                "saasFieldInfo": {
-                                    "createOnly": false,
-                                    "attributeNames": ["l"],
-                                    "expression": "",
-                                    "trim": false,
-                                    "parser": "NONE",
-                                    "defaultValue": "",
-                                    "masked": false,
-                                    "characterCase": "NONE"
-                                }
-                            },
-                            {
-                                "fieldName": "mfaDeviceEmail1",
-                                "saasFieldInfo": {
-                                    "createOnly": false,
-                                    "attributeNames": ["mail"],
-                                    "expression": "",
-                                    "trim": false,
-                                    "parser": "NONE",
-                                    "defaultValue": "",
-                                    "masked": false,
-                                    "characterCase": "NONE"
-                                }
-                            },
-                            {
-                                "fieldName": "mfaDeviceEmail2",
-                                "saasFieldInfo": {
-                                    "createOnly": false,
-                                    "attributeNames": [],
-                                    "expression": "",
-                                    "trim": false,
-                                    "parser": "NONE",
-                                    "defaultValue": "",
-                                    "masked": false,
-                                    "characterCase": "NONE"
-                                }
-                            },
-                            {
-                                "fieldName": "mfaDeviceEmail3",
-                                "saasFieldInfo": {
-                                    "createOnly": false,
-                                    "attributeNames": [],
-                                    "expression": "",
-                                    "trim": false,
-                                    "parser": "NONE",
-                                    "defaultValue": "",
-                                    "masked": false,
-                                    "characterCase": "NONE"
-                                }
-                            },
-                            {
-                                "fieldName": "mfaDeviceSms1",
-                                "saasFieldInfo": {
-                                    "createOnly": false,
-                                    "attributeNames": ["mobile"],
-                                    "expression": "",
-                                    "trim": false,
-                                    "parser": "NONE",
-                                    "defaultValue": "",
-                                    "masked": false,
-                                    "characterCase": "NONE"
-                                }
-                            },
-                            {
-                                "fieldName": "mfaDeviceSms2",
-                                "saasFieldInfo": {
-                                    "createOnly": false,
-                                    "attributeNames": [],
-                                    "expression": "",
-                                    "trim": false,
-                                    "parser": "NONE",
-                                    "defaultValue": "",
-                                    "masked": false,
-                                    "characterCase": "NONE"
-                                }
-                            },
-                            {
-                                "fieldName": "mfaDeviceSms3",
-                                "saasFieldInfo": {
-                                    "createOnly": false,
-                                    "attributeNames": [],
-                                    "expression": "",
-                                    "trim": false,
-                                    "parser": "NONE",
-                                    "defaultValue": "",
-                                    "masked": false,
-                                    "characterCase": "NONE"
-                                }
-                            },
-                            {
-                                "fieldName": "mfaDeviceVoice1",
-                                "saasFieldInfo": {
-                                    "createOnly": false,
-                                    "attributeNames": ["mobile"],
-                                    "expression": "",
-                                    "trim": false,
-                                    "parser": "NONE",
-                                    "defaultValue": "",
-                                    "masked": false,
-                                    "characterCase": "NONE"
-                                }
-                            },
-                            {
-                                "fieldName": "mfaDeviceVoice2",
-                                "saasFieldInfo": {
-                                    "createOnly": false,
-                                    "attributeNames": [],
-                                    "expression": "",
-                                    "trim": false,
-                                    "parser": "NONE",
-                                    "defaultValue": "",
-                                    "masked": false,
-                                    "characterCase": "NONE"
-                                }
-                            },
-                            {
-                                "fieldName": "mfaDeviceVoice3",
-                                "saasFieldInfo": {
-                                    "createOnly": false,
-                                    "attributeNames": [],
-                                    "expression": "",
-                                    "trim": false,
-                                    "parser": "NONE",
-                                    "defaultValue": "",
-                                    "masked": false,
-                                    "characterCase": "NONE"
-                                }
-                            },
-                            {
-                                "fieldName": "middleName",
-                                "saasFieldInfo": {
-                                    "createOnly": false,
-                                    "attributeNames": [],
-                                    "expression": "",
-                                    "trim": false,
-                                    "parser": "NONE",
-                                    "defaultValue": "",
-                                    "masked": false,
-                                    "characterCase": "NONE"
-                                }
-                            },
-                            {
-                                "fieldName": "mobilePhone",
-                                "saasFieldInfo": {
-                                    "createOnly": false,
-                                    "attributeNames": ["mobile"],
-                                    "expression": "",
-                                    "trim": false,
-                                    "parser": "NONE",
-                                    "defaultValue": "",
-                                    "masked": false,
-                                    "characterCase": "NONE"
-                                }
-                            },
-                            {
-                                "fieldName": "mfaEnabled",
-                                "saasFieldInfo": {
-                                    "createOnly": false,
-                                    "attributeNames": [],
-                                    "expression": "",
-                                    "trim": false,
-                                    "parser": "NONE",
-                                    "defaultValue": "",
-                                    "masked": false,
-                                    "characterCase": "NONE"
-                                }
-                            },
-                            {
-                                "fieldName": "nickname",
-                                "saasFieldInfo": {
-                                    "createOnly": false,
-                                    "attributeNames": [],
-                                    "expression": "",
-                                    "trim": false,
-                                    "parser": "NONE",
-                                    "defaultValue": "",
-                                    "masked": false,
-                                    "characterCase": "NONE"
-                                }
-                            },
-                            {
-                                "fieldName": "password",
-                                "saasFieldInfo": {
-                                    "createOnly": false,
-                                    "attributeNames": [],
-                                    "expression": "",
-                                    "trim": false,
-                                    "parser": "NONE",
-                                    "defaultValue": "",
-                                    "masked": false,
-                                    "characterCase": "NONE"
-                                }
-                            },
-                            {
-                                "fieldName": "profileImage",
-                                "saasFieldInfo": {
-                                    "createOnly": false,
-                                    "attributeNames": [],
-                                    "expression": "",
-                                    "trim": false,
-                                    "parser": "NONE",
-                                    "defaultValue": "",
-                                    "masked": false,
-                                    "characterCase": "NONE"
-                                }
-                            },
-                            {
-                                "fieldName": "ZIPCode",
-                                "saasFieldInfo": {
-                                    "createOnly": false,
-                                    "attributeNames": ["postalCode"],
-                                    "expression": "",
-                                    "trim": false,
-                                    "parser": "NONE",
-                                    "defaultValue": "",
-                                    "masked": false,
-                                    "characterCase": "NONE"
-                                }
-                            },
-                            {
-                                "fieldName": "preferredLanguage",
-                                "saasFieldInfo": {
-                                    "createOnly": false,
-                                    "attributeNames": [],
-                                    "expression": "",
-                                    "trim": false,
-                                    "parser": "NONE",
-                                    "defaultValue": "en-us",
-                                    "masked": false,
-                                    "characterCase": "NONE"
-                                }
-                            },
-                            {
-                                "fieldName": "primaryPhone",
-                                "saasFieldInfo": {
-                                    "createOnly": false,
-                                    "attributeNames": ["telephoneNumber"],
-                                    "expression": "",
-                                    "trim": false,
-                                    "parser": "NONE",
-                                    "defaultValue": "",
-                                    "masked": false,
-                                    "characterCase": "NONE"
-                                }
-                            },
-                            {
-                                "fieldName": "stateRegion",
-                                "saasFieldInfo": {
-                                    "createOnly": false,
-                                    "attributeNames": ["st"],
-                                    "expression": "",
-                                    "trim": false,
-                                    "parser": "NONE",
-                                    "defaultValue": "",
-                                    "masked": false,
-                                    "characterCase": "NONE"
-                                }
-                            },
-                            {
-                                "fieldName": "streetAddress",
-                                "saasFieldInfo": {
-                                    "createOnly": false,
-                                    "attributeNames": ["streetAddress"],
-                                    "expression": "",
-                                    "trim": false,
-                                    "parser": "NONE",
-                                    "defaultValue": "",
-                                    "masked": false,
-                                    "characterCase": "NONE"
-                                }
-                            },
-                            {
-                                "fieldName": "timezone",
-                                "saasFieldInfo": {
-                                    "createOnly": false,
-                                    "attributeNames": [],
-                                    "expression": "",
-                                    "trim": false,
-                                    "parser": "NONE",
-                                    "defaultValue": "",
-                                    "masked": false,
-                                    "characterCase": "NONE"
-                                }
-                            },
-                            {
-                                "fieldName": "jobTitle",
-                                "saasFieldInfo": {
-                                    "createOnly": false,
-                                    "attributeNames": ["title"],
-                                    "expression": "",
-                                    "trim": false,
-                                    "parser": "NONE",
-                                    "defaultValue": "",
-                                    "masked": false,
-                                    "characterCase": "NONE"
-                                }
-                            },
-                            {
-                                "fieldName": "userType",
-                                "saasFieldInfo": {
-                                    "createOnly": false,
-                                    "attributeNames": [],
-                                    "expression": "",
-                                    "trim": false,
-                                    "parser": "NONE",
-                                    "defaultValue": "",
-                                    "masked": false,
-                                    "characterCase": "NONE"
-                                }
-                            }
-                        ],
-                        "name": "PROVISION",
-                        "active": true,
-                        "maxThreads": 1,
-                        "timeout": 60,
-                        "channelSource": {
-                            "changeDetectionSettings": {
-                                "timeStampAttributeName": "modifyTimestamp",
-                                "changedUsersAlgorithm": "TIMESTAMP_NO_NEGATION",
-                                "userObjectClass": "inetOrgPerson",
-                                "groupObjectClass": "groupOfUniqueNames"
-                            },
-                            "guidBinary": false,
-                            "accountManagementSettings": {
-                                "flagComparisonValue": "true",
-                                "defaultStatus": true,
-                                "flagComparisonStatus": false,
-                                "accountStatusAlgorithm": "ACCOUNT_STATUS_ALGORITHM_FLAG",
-                                "accountStatusAttributeName": "nsaccountlock"
-                            },
-                            "groupMembershipDetection": {"groupMemberAttributeName": "uniqueMember"},
-                            "userSourceLocation": {
-                                "filter": "uid=*",
-                                "nestedSearch": false
-                            },
-                            "groupSourceLocation": {"nestedSearch": false},
-                            "baseDn": "dc=example,dc=com",
-                            "dataSource": {
-                                "location": "https://localhost:-1/pf-admin-api/v1/dataStores/LDAP-4D65BD30F2946A712E86940F0F7442EDCDC16646",
-                                "id": "LDAP-4D65BD30F2946A712E86940F0F7442EDCDC16646"
-                            },
-                            "guidAttributeName": "entryUUID"
-                        }
-                    }],
-                    "targetSettings": [
-                        {
-                            "name": "PINGONE_ENVIRONMENT",
-                            "value": "mImpgs4t0rrk7n7mfAMOcP|314177e2-5da7-433b-a5b5-9bdcc20b45a3"
-                        },
-                        {
-                            "name": "Provisioning Options",
-                            "value": ""
-                        },
-                        {
-                            "name": "CREATE_USERS_PROV_OPT",
-                            "value": "true"
-                        },
-                        {
-                            "name": "UPDATE_USERS_PROV_OPT",
-                            "value": "true"
-                        },
-                        {
-                            "name": "REMOVE_USERS_PROV_OPT",
-                            "value": "true"
-                        },
-                        {
-                            "name": "PROVISION_DISABLED_USERS_PROV_OPT",
-                            "value": "true"
-                        },
-                        {
-                            "name": "REMOVE_ACTION",
-                            "value": "Disable"
-                        },
-                        {
-                            "name": "MFA_USER_DEVICE_MANAGEMENT",
-                            "value": "Merge with devices in PingOne"
-                        },
-                        {
-                            "name": "DEFAULT_AUTH_METHOD",
-                            "value": "Email 1"
-                        }
-                    ],
-                    "type": "PingOne"
-                },
-                "name": "PingOne Connector",
-                "id": "OCtcMUGvT6x1y-Pz9QYBazyOPeY"
-            }],
-            "resourceType": "/idp/spConnections"
-        },
-        {
-            "operationType": "SAVE",
-            "items": [{
                 "subjectDNMapList": [],
                 "issuerDNMapList": []
             }],
@@ -2783,83 +1850,6 @@
                 "issuanceCriteria": {"conditionalCriteria": []}
             }],
             "resourceType": "/oauth/authenticationPolicyContractMappings"
-        },
-        {
-            "operationType": "SAVE",
-            "items": [{
-                "configuration": {
-                    "tables": [{
-                        "name": "PingOne Template Variables",
-                        "rows": []
-                    }],
-                    "fields": [
-                        {
-                            "name": "PingOne Environment",
-                            "value": "mImpgs4t0rrk7n7mfAMOcP|314177e2-5da7-433b-a5b5-9bdcc20b45a3"
-                        },
-                        {
-                            "name": "Application",
-                            "value": "b23307a6-f5ee-4c05-93f5-8aeb83beaf12"
-                        },
-                        {
-                            "name": "PingOne Authentication Policy",
-                            "value": ""
-                        },
-                        {
-                            "name": "Test Username",
-                            "value": "nirving"
-                        },
-                        {
-                            "name": "PingOne Template Name",
-                            "value": "transaction"
-                        },
-                        {
-                            "name": "PingOne Template Variant",
-                            "value": ""
-                        },
-                        {
-                            "name": "Client Context",
-                            "value": "#*\nDefine additional key/value pairs to be received at the mobile application.\nThe following variables are available by default:\n\n$oobAuthRequestContext - Context for the out-of-band authentication/authorization request\n$languagePackMessages - The language-pack file configured for this authenticator\n$subject - The user's PingOne username or user ID.\n$JSONValue - A JSON utility class that can be used to escape text and convert objects to JSON.\n   Methods:\n       escape(String s) - Escape quotes, \\, /, \\r, \\n, \\b, \\f, \\t and other control characters (U+0000 through U+001F).\n       toJSONString(Object value) - Convert an object to JSON text.\n\nAdditionally, any Extended Contract attributes are also available using the $name syntax.\n\nExample:\n\n{\n   \"requestingApplicationName\": \"$JSONValue.escape($oobAuthRequestContext.requestingApplication.name)\",\n   \"requestedScope\": $JSONValue.toJSONString($oobAuthRequestContext.requestedScope.values()),\n   \"amount\": \"$JSONValue.escape($amount)\",\n   \"alert.color\": \"red\"\n}\n*#"
-                        },
-                        {
-                            "name": "Messages Files",
-                            "value": "pingone-mfa-messages"
-                        },
-                        {
-                            "name": "API Request Timeout",
-                            "value": "12000"
-                        },
-                        {
-                            "name": "Proxy Settings",
-                            "value": "System Defaults"
-                        },
-                        {
-                            "name": "Custom Proxy Host",
-                            "value": ""
-                        },
-                        {
-                            "name": "Custom Proxy Port",
-                            "value": ""
-                        },
-                        {
-                            "name": "Custom Proxy Connection Type",
-                            "value": "HTTP"
-                        }
-                    ]
-                },
-                "name": "PINGONEMFACIBA",
-                "id": "PINGONEMFACIBA",
-                "lastModified": "2025-12-09T20:18:53.338Z",
-                "pluginDescriptorRef": {
-                    "location": "https://localhost:-1/pf-admin-api/v1/oauth/outOfBandAuthPlugins/descriptors/com.pingidentity.oobauth.pingone.mfa.PingOneMfaCibaAuthenticator",
-                    "id": "com.pingidentity.oobauth.pingone.mfa.PingOneMfaCibaAuthenticator"
-                },
-                "attributeContract": {
-                    "coreAttributes": [{"name": "subject"}],
-                    "extendedAttributes": []
-                }
-            }],
-            "resourceType": "/oauth/outOfBandAuthPlugins"
         },
         {
             "operationType": "SAVE",
@@ -3108,7 +2098,7 @@
                 "allowIdTokenIntrospection": false,
                 "id": "OPENIDCONNECTPOLICYMANAGEMENT",
                 "reissueIdTokenInHybridFlow": false,
-                "lastModified": "2025-12-09T20:18:53.406Z",
+                "lastModified": "2026-02-26T23:09:39.392Z",
                 "idTokenLifetime": 5,
                 "accessTokenManagerRef": {
                     "location": "https://localhost:-1/pf-admin-api/v1/oauth/accessTokenManagers/AccessTokenManagement",
@@ -3218,7 +2208,7 @@
                     "allowAuthenticationApiInit": false,
                     "refreshTokenRollingGracePeriodType": "SERVER_DEFAULT",
                     "replicationStatus": "REPLICATED",
-                    "creationDate": "2025-12-09T20:18:53.525Z",
+                    "creationDate": "2026-02-26T23:09:39.493Z",
                     "deviceFlowSettingType": "SERVER_DEFAULT",
                     "redirectUris": [
                         "http://localhost:3000/api/auth/callback",
@@ -3229,10 +2219,10 @@
                         "AUTHORIZATION_CODE",
                         "REFRESH_TOKEN"
                     ],
-                    "modificationDate": "2025-12-09T20:18:53.525Z",
+                    "modificationDate": "2026-02-26T23:09:39.493Z",
                     "clientSecretRetentionPeriodType": "SERVER_DEFAULT",
                     "requirePushedAuthorizationRequests": false,
-                    "clientSecretChangedTime": "2025-12-09T20:18:53.000Z",
+                    "clientSecretChangedTime": "2026-02-26T23:09:39.000Z",
                     "name": "contact-hr-client",
                     "refreshTokenRollingIntervalType": "SERVER_DEFAULT",
                     "persistentGrantExpirationType": "SERVER_DEFAULT",
@@ -3282,7 +2272,7 @@
                     "allowAuthenticationApiInit": true,
                     "refreshTokenRollingGracePeriodType": "SERVER_DEFAULT",
                     "replicationStatus": "REPLICATED",
-                    "creationDate": "2025-12-09T20:18:53.550Z",
+                    "creationDate": "2026-02-26T23:09:39.523Z",
                     "deviceFlowSettingType": "SERVER_DEFAULT",
                     "redirectUris": [
                         "https://contact.ping.darkedges.com/callback",
@@ -3295,10 +2285,10 @@
                         "CLIENT_CREDENTIALS",
                         "TOKEN_EXCHANGE"
                     ],
-                    "modificationDate": "2025-12-09T20:18:53.550Z",
+                    "modificationDate": "2026-02-26T23:09:39.523Z",
                     "clientSecretRetentionPeriodType": "SERVER_DEFAULT",
                     "requirePushedAuthorizationRequests": false,
-                    "clientSecretChangedTime": "2025-12-09T20:18:53.000Z",
+                    "clientSecretChangedTime": "2026-02-26T23:09:39.000Z",
                     "name": "Contact Client",
                     "refreshTokenRollingIntervalType": "SERVER_DEFAULT",
                     "persistentGrantExpirationType": "SERVER_DEFAULT",
@@ -3321,7 +2311,6 @@
                     "persistentGrantReuseType": "SERVER_DEFAULT",
                     "persistentGrantIdleTimeoutType": "SERVER_DEFAULT",
                     "requireSignedRequests": false,
-                    "description": "",
                     "persistentGrantIdleTimeout": 0,
                     "enabled": true,
                     "requireOfflineAccessScopeToIssueRefreshTokens": "SERVER_DEFAULT",
@@ -3348,16 +2337,15 @@
                     "allowAuthenticationApiInit": false,
                     "refreshTokenRollingGracePeriodType": "SERVER_DEFAULT",
                     "replicationStatus": "REPLICATED",
-                    "creationDate": "2025-12-09T20:34:04.065Z",
+                    "creationDate": "2026-02-26T23:09:39.534Z",
                     "deviceFlowSettingType": "SERVER_DEFAULT",
                     "redirectUris": [],
-                    "logoUrl": "",
                     "authorizationDetailTypes": [],
                     "grantTypes": ["CLIENT_CREDENTIALS"],
-                    "modificationDate": "2025-12-09T20:34:04.065Z",
+                    "modificationDate": "2026-02-26T23:09:39.534Z",
                     "clientSecretRetentionPeriodType": "SERVER_DEFAULT",
                     "requirePushedAuthorizationRequests": false,
-                    "clientSecretChangedTime": "2025-12-09T20:34:04.000Z",
+                    "clientSecretChangedTime": "2026-02-26T23:09:39.000Z",
                     "name": "pa_rs_client",
                     "refreshTokenRollingIntervalType": "SERVER_DEFAULT",
                     "persistentGrantExpirationType": "SERVER_DEFAULT",
@@ -3403,7 +2391,7 @@
                     "allowAuthenticationApiInit": false,
                     "refreshTokenRollingGracePeriodType": "SERVER_DEFAULT",
                     "replicationStatus": "REPLICATED",
-                    "creationDate": "2025-12-09T20:18:53.562Z",
+                    "creationDate": "2026-02-26T23:09:39.555Z",
                     "deviceFlowSettingType": "SERVER_DEFAULT",
                     "redirectUris": [],
                     "authorizationDetailTypes": [],
@@ -3411,14 +2399,14 @@
                         "CLIENT_CREDENTIALS",
                         "ACCESS_TOKEN_VALIDATION"
                     ],
-                    "modificationDate": "2025-12-09T20:18:53.562Z",
+                    "modificationDate": "2026-02-26T23:09:39.555Z",
                     "defaultAccessTokenManagerRef": {
                         "location": "https://localhost:-1/pf-admin-api/v1/oauth/accessTokenManagers/jwt",
                         "id": "jwt"
                     },
                     "clientSecretRetentionPeriodType": "SERVER_DEFAULT",
                     "requirePushedAuthorizationRequests": false,
-                    "clientSecretChangedTime": "2025-12-09T20:18:53.000Z",
+                    "clientSecretChangedTime": "2026-02-26T23:09:39.000Z",
                     "name": "pf_api_access",
                     "refreshTokenRollingIntervalType": "SERVER_DEFAULT",
                     "persistentGrantExpirationType": "SERVER_DEFAULT",
@@ -3463,7 +2451,7 @@
                     "allowAuthenticationApiInit": false,
                     "refreshTokenRollingGracePeriodType": "SERVER_DEFAULT",
                     "replicationStatus": "REPLICATED",
-                    "creationDate": "2025-12-09T20:18:53.581Z",
+                    "creationDate": "2026-02-26T23:09:39.566Z",
                     "deviceFlowSettingType": "SERVER_DEFAULT",
                     "redirectUris": [],
                     "authorizationDetailTypes": [],
@@ -3471,7 +2459,7 @@
                         "CLIENT_CREDENTIALS",
                         "TOKEN_EXCHANGE"
                     ],
-                    "modificationDate": "2025-12-09T20:18:53.581Z",
+                    "modificationDate": "2026-02-26T23:09:39.566Z",
                     "defaultAccessTokenManagerRef": {
                         "location": "https://localhost:-1/pf-admin-api/v1/oauth/accessTokenManagers/AccessTokenManagement",
                         "id": "AccessTokenManagement"
@@ -3482,7 +2470,7 @@
                     },
                     "clientSecretRetentionPeriodType": "SERVER_DEFAULT",
                     "requirePushedAuthorizationRequests": false,
-                    "clientSecretChangedTime": "2025-12-09T20:18:53.000Z",
+                    "clientSecretChangedTime": "2026-02-26T23:09:39.000Z",
                     "name": "tokenexchangeclient",
                     "refreshTokenRollingIntervalType": "SERVER_DEFAULT",
                     "persistentGrantExpirationType": "SERVER_DEFAULT",
@@ -3493,117 +2481,6 @@
                         "secondarySecrets": [],
                         "secret": "${oauth_clients_items_clientAuth_tokenexchangeclient_secret}",
                         "type": "SECRET"
-                    }
-                },
-                {
-                    "bypassApprovalPage": false,
-                    "offlineAccessRequireConsentPrompt": "SERVER_DEFAULT",
-                    "persistentGrantReuseType": "SERVER_DEFAULT",
-                    "persistentGrantIdleTimeoutType": "SERVER_DEFAULT",
-                    "requireSignedRequests": false,
-                    "description": "",
-                    "persistentGrantIdleTimeout": 0,
-                    "enabled": true,
-                    "requireOfflineAccessScopeToIssueRefreshTokens": "SERVER_DEFAULT",
-                    "oidcPolicy": {
-                        "grantAccessSessionRevocationApi": false,
-                        "grantAccessSessionSessionManagementApi": false,
-                        "pingAccessLogoutCapable": false,
-                        "logoutMode": "NONE",
-                        "pairwiseIdentifierUserType": false
-                    },
-                    "persistentGrantExpirationTime": 0,
-                    "restrictedResponseTypes": [],
-                    "lockoutMaxMaliciousActionsType": "SERVER_DEFAULT",
-                    "requireProofKeyForCodeExchange": false,
-                    "enableCookielessAuthenticationApi": false,
-                    "persistentGrantIdleTimeoutTimeUnit": "DAYS",
-                    "restrictToDefaultAccessTokenManager": false,
-                    "validateUsingAllEligibleAtms": false,
-                    "restrictScopes": false,
-                    "clientId": "tp_cs_api",
-                    "requireJwtSecuredAuthorizationResponseMode": false,
-                    "persistentGrantExpirationTimeUnit": "DAYS",
-                    "requireDpop": false,
-                    "allowAuthenticationApiInit": false,
-                    "refreshTokenRollingGracePeriodType": "SERVER_DEFAULT",
-                    "replicationStatus": "REPLICATED",
-                    "creationDate": "2025-12-09T22:05:08.931Z",
-                    "deviceFlowSettingType": "SERVER_DEFAULT",
-                    "redirectUris": [],
-                    "logoUrl": "",
-                    "authorizationDetailTypes": [],
-                    "grantTypes": ["CLIENT_CREDENTIALS"],
-                    "modificationDate": "2025-12-09T22:05:08.931Z",
-                    "clientSecretRetentionPeriodType": "SERVER_DEFAULT",
-                    "requirePushedAuthorizationRequests": false,
-                    "clientSecretChangedTime": "2025-12-09T22:05:08.000Z",
-                    "name": "tp_cs_api",
-                    "refreshTokenRollingIntervalType": "SERVER_DEFAULT",
-                    "persistentGrantExpirationType": "SERVER_DEFAULT",
-                    "restrictedScopes": [],
-                    "refreshRolling": "SERVER_DEFAULT",
-                    "exclusiveScopes": [],
-                    "clientAuth": {
-                        "secondarySecrets": [],
-                        "secret": "${oauth_clients_items_clientAuth_tp_cs_api_secret}",
-                        "type": "SECRET"
-                    }
-                },
-                {
-                    "bypassApprovalPage": false,
-                    "offlineAccessRequireConsentPrompt": "SERVER_DEFAULT",
-                    "persistentGrantReuseType": "SERVER_DEFAULT",
-                    "persistentGrantIdleTimeoutType": "SERVER_DEFAULT",
-                    "requireSignedRequests": false,
-                    "description": "",
-                    "persistentGrantIdleTimeout": 0,
-                    "enabled": true,
-                    "requireOfflineAccessScopeToIssueRefreshTokens": "SERVER_DEFAULT",
-                    "oidcPolicy": {
-                        "grantAccessSessionRevocationApi": false,
-                        "grantAccessSessionSessionManagementApi": false,
-                        "pingAccessLogoutCapable": false,
-                        "logoutMode": "NONE",
-                        "pairwiseIdentifierUserType": false
-                    },
-                    "jwksSettings": {"jwks": "{     \"keys\": [         {             \"p\": \"5GPkNFAkRSLTvIlzXPa0tLohgK2HMSgvpBpIPyVd4pLcP8q7n7E__2p_c3aj5-GW8u6kTv2PcNkrIj6T7dJ56Hficj-Z2kq6PkKPQbvBul2OzY4HfGLZhafO6CRsI2Y0OqDQVYd_GivdsCdzvXvtWpTZ8fjWoTGfxrZGKNUCPLc\",             \"kty\": \"RSA\",             \"q\": \"pI1k4ChpfzoQHK2I_zv0fhyef_UG6Gs7RN7Gv_-kg5ED62s8kQ1ZavF0WpXV4IcWxIExiMeLwNUTf3aP0eKtlJm2YoWRA7uVYBaoeRFzeT-6R7yYJMK6wwAzOb_j676CaT9sONcJY4Lk7aUb7AuN4xlhDaXFFRjczVLWGeUNTTc\",             \"d\": \"Jyx6mKgLJxLOfg4JPWnNC-GZFu6gaLh2o5fk8Dm3NFINZC2gpwrK3wUSP_JsSB-NzF24dg6hzb6FpCEJ5Pax__BlKnoBumnSs6qpE9ByGnMOrUKYQYHe5S0a7X94ZNrlIyPQ8axOgIGEYDi2Zcj-xOeVhyypR9z4BwKMov6CH8BhqntRWcDBmjK__d4_jzlkJFrY5-xSItzbuj6z3v79L5y7FFGjwtejZpgHSFInyhJH-TNHbWq3Hu0oXK7Alq7E24D_aiquRyc8NA6NKjSdIXmEe4ykOAU4gsPjNtxQMW_dgh2LJ1q8A16mVAQNJNr_Qkx3BiDzoAe87N-YOAVvQQ\",             \"e\": \"AQAB\",             \"use\": \"sig\",             \"kid\": \"123456\",             \"qi\": \"d8dCLaw_fH8Pzy5jtd6c1TnN795QBvZG4mINInax4zxVtMXig69ewiLsflbe6OLieT0h8te-BviynAp6GMFPl4gvBae_eSkLeANMsM_cuzyDPU6TgzXo7sYh9gJ9j93VDrNUEJ9B8VhPAhClBp13RCeVTe30E1HTouP9Htr5fu4\",             \"dp\": \"ijKHm8ACsnLofGUPkWkW32ThcOOPsocGjN36aXtK3BbRfyhFb9PpTbw7crqPY3h1xnnwont7mGVQXGBRUs7RRYGFXGxvxE8DczkDRls-Vm7WQjt2_CU0SlPIN2ASrzjg0bkNVzOuDUAN3NGCj121ueHoHyrbdJ56d9tDiOGbgPE\",             \"alg\": \"RS256\",             \"dq\": \"XEAcjoJ5amcdw0YSaKyvC8h1n1y5y7DaIGkYWWkzTMMOxHtxEAzA1XCZ_3LC3cY-IFohcAIWujt6W9oXFN6U25s1IZSp0MLoIl9xgbYj25S7lR4I2YsF8u54yWZnm7FJIUH6JP-A9vXZ69TFi5aKrAd9Xo5Rp9sxZjaLayb7Rw8\",             \"n\": \"ks4jNTTBN3rPw4VgblxvViwbD1ZMsl6dViuwfB2exVjLKHJedUbDA0c4hRqlRyQn_dORvR4YTjvGa9aDt96b2hd_GuxFKLBS4FeMvhcKOxkx5J15nnq8agrGiaNWBW9mUwtNX0lQDkmdp2xONOygaI3avb-YxrVIbnis7xC0UnzBFF-88pywYWdk0U88TqnzVTZ6ABWgAUBDBDgw_8-EkWaINevlKGX6nIeQsFUDJG812Snvq5ucoAUe7IToxnoaJR9ulJkSwCBbDyDLUzTXMADMDjY6ZLjUXfFbMsTNh43e7YO35cNUMsfpQZZ4tUXmRxyvyg4nMsNEeBQjOAkWUQ\"         }     ] }"},
-                    "persistentGrantExpirationTime": 0,
-                    "restrictedResponseTypes": [],
-                    "lockoutMaxMaliciousActionsType": "SERVER_DEFAULT",
-                    "requireProofKeyForCodeExchange": false,
-                    "enableCookielessAuthenticationApi": false,
-                    "persistentGrantIdleTimeoutTimeUnit": "DAYS",
-                    "restrictToDefaultAccessTokenManager": false,
-                    "validateUsingAllEligibleAtms": false,
-                    "restrictScopes": false,
-                    "clientId": "tp_pkjwt_api",
-                    "requireJwtSecuredAuthorizationResponseMode": false,
-                    "persistentGrantExpirationTimeUnit": "DAYS",
-                    "requireDpop": false,
-                    "allowAuthenticationApiInit": false,
-                    "refreshTokenRollingGracePeriodType": "SERVER_DEFAULT",
-                    "replicationStatus": "REPLICATED",
-                    "creationDate": "2025-12-09T22:06:39.617Z",
-                    "deviceFlowSettingType": "SERVER_DEFAULT",
-                    "redirectUris": [],
-                    "logoUrl": "",
-                    "authorizationDetailTypes": [],
-                    "grantTypes": ["CLIENT_CREDENTIALS"],
-                    "modificationDate": "2025-12-09T22:06:39.617Z",
-                    "clientSecretRetentionPeriodType": "SERVER_DEFAULT",
-                    "requirePushedAuthorizationRequests": false,
-                    "name": "tp_pkjwt_api",
-                    "refreshTokenRollingIntervalType": "SERVER_DEFAULT",
-                    "persistentGrantExpirationType": "SERVER_DEFAULT",
-                    "restrictedScopes": [],
-                    "refreshRolling": "SERVER_DEFAULT",
-                    "exclusiveScopes": [],
-                    "clientAuth": {
-                        "secondarySecrets": [],
-                        "type": "PRIVATE_KEY_JWT",
-                        "enforceReplayPrevention": false,
-                        "tokenEndpointAuthSigningAlgorithm": "RS256"
                     }
                 }
             ],
@@ -3802,7 +2679,7 @@
                 },
                 "name": "OAUTHCLIENTSELECTOR",
                 "id": "OAUTHCLIENTSELECTOR",
-                "lastModified": "2025-12-09T20:18:53.674Z",
+                "lastModified": "2026-02-26T23:09:39.681Z",
                 "pluginDescriptorRef": {
                     "location": "https://localhost:-1/pf-admin-api/v1/authenticationSelectors/descriptors/com.pingidentity.pf.selectors.oauthclient.OAuthClientAdapterSelector",
                     "id": "com.pingidentity.pf.selectors.oauthclient.OAuthClientAdapterSelector"
