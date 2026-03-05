@@ -6,6 +6,11 @@
             "subResource": "cert-time-tracking",
             "items": [
                 {
+                    "stringValue": "1772442207",
+                    "id": "5jqt7j8mxbwl2awtpc465yzx1",
+                    "type": "STRING"
+                },
+                {
                     "stringValue": "1772158875",
                     "id": "83ekrmem82duiu6te90qd54i1",
                     "type": "STRING"
@@ -173,6 +178,16 @@
         {
             "operationType": "SAVE",
             "items": [{
+                "password": "${keyPairs_signing_items_5jqt7j8mxbwl2awtpc465yzx1_5jqt7j8mxbwl2awtpc465yzx1_password}",
+                "fileData": "${keyPairs_signing_items_5jqt7j8mxbwl2awtpc465yzx1_5jqt7j8mxbwl2awtpc465yzx1_fileData}",
+                "format": "PKCS12",
+                "id": "5jqt7j8mxbwl2awtpc465yzx1"
+            }],
+            "resourceType": "/keyPairs/signing"
+        },
+        {
+            "operationType": "SAVE",
+            "items": [{
                 "dynamicKeyCertificateInformation": {
                     "country": null,
                     "city": null,
@@ -184,6 +199,24 @@
                 "staticJwksEnabled": false
             }],
             "resourceType": "/keyPairs/oauthOpenIdConnect"
+        },
+        {
+            "operationType": "SAVE",
+            "subResource": "FHcmXQDabpO8MvYePIfMowMcN",
+            "items": [{
+                "fileData": "${certificates_groups_items_ye4bmv9lep7yq0muekwr3k4xp_ye4bmv9lep7yq0muekwr3k4xp_fileData}",
+                "id": "ye4bmv9lep7yq0muekwr3k4xp"
+            }],
+            "resourceType": "/certificates/groups"
+        },
+        {
+            "operationType": "SAVE",
+            "subResource": "lhUwqUjy14Fs7B6zXU2VC9KvH",
+            "items": [{
+                "fileData": "${certificates_groups_items_7xzi9fl8yjv282w8t537thjv2_7xzi9fl8yjv282w8t537thjv2_fileData}",
+                "id": "7xzi9fl8yjv282w8t537thjv2"
+            }],
+            "resourceType": "/certificates/groups"
         },
         {
             "operationType": "SAVE",
@@ -218,7 +251,7 @@
                     "readTimeout": 3000,
                     "name": "PingDirectory",
                     "useStartTLS": false,
-                    "lastModified": "2026-02-27T02:22:54.606Z",
+                    "lastModified": "2026-03-02T00:56:05.243Z",
                     "retryFailedOperations": false,
                     "userDN": "cn=administrator"
                 },
@@ -238,7 +271,7 @@
                     "name": "ProvisionerDS (sa)",
                     "connectionUrl": "jdbc:hsqldb:${pf.server.data.dir}${/}hypersonic${/}ProvisionerDefaultDB;hsqldb.lock_file=false",
                     "id": "ProvisionerDS",
-                    "lastModified": "2026-02-26T23:09:38.168Z",
+                    "lastModified": "2026-03-02T00:56:05.254Z",
                     "maxPoolSize": 100,
                     "blockingTimeout": 5000
                 }
@@ -259,9 +292,9 @@
             "operationType": "SAVE",
             "items": [{
                 "federationInfo": {
-                    "saml2EntityId": "",
+                    "saml2EntityId": "https://id.ping.darkedges.com",
                     "saml1xIssuerId": "",
-                    "wsfedRealm": "",
+                    "wsfedRealm": "https://id.ping.darkedges.com",
                     "baseUrl": "https://id.ping.darkedges.com",
                     "saml1xSourceId": ""
                 },
@@ -423,11 +456,11 @@
                 {
                     "password": "${PING_IDENTITY_PASSWORD}",
                     "roles": [
-                        "USER_ADMINISTRATOR",
-                        "DATA_COLLECTION_ADMINISTRATOR",
-                        "CRYPTO_ADMINISTRATOR",
+                        "ADMINISTRATOR",
                         "EXPRESSION_ADMINISTRATOR",
-                        "ADMINISTRATOR"
+                        "USER_ADMINISTRATOR",
+                        "CRYPTO_ADMINISTRATOR",
+                        "DATA_COLLECTION_ADMINISTRATOR"
                     ],
                     "auditor": false,
                     "description": "Initial administrator user",
@@ -437,11 +470,11 @@
                 {
                     "password": "${administrativeAccounts_items_nirving_password}",
                     "roles": [
-                        "USER_ADMINISTRATOR",
-                        "DATA_COLLECTION_ADMINISTRATOR",
-                        "CRYPTO_ADMINISTRATOR",
+                        "ADMINISTRATOR",
                         "EXPRESSION_ADMINISTRATOR",
-                        "ADMINISTRATOR"
+                        "USER_ADMINISTRATOR",
+                        "CRYPTO_ADMINISTRATOR",
+                        "DATA_COLLECTION_ADMINISTRATOR"
                     ],
                     "auditor": false,
                     "description": "description",
@@ -467,7 +500,7 @@
         },
         {
             "operationType": "SAVE",
-            "items": [{"virtualHostNames": []}],
+            "items": [{"virtualHostNames": ["id.ping.darkedges.com"]}],
             "resourceType": "/virtualHostNames"
         },
         {
@@ -504,7 +537,13 @@
         },
         {
             "operationType": "SAVE",
-            "items": [{}],
+            "items": [{
+                "signingKeyRef": {
+                    "location": "https://localhost:-1/pf-admin-api/v1/keyPairs/signing/5jqt7j8mxbwl2awtpc465yzx1",
+                    "id": "5jqt7j8mxbwl2awtpc465yzx1"
+                },
+                "signatureAlgorithm": "SHA256withRSA"
+            }],
             "resourceType": "/protocolMetadata/signingSettings"
         },
         {
@@ -533,7 +572,7 @@
             "items": [{
                 "name": "POLICYCONTRACT",
                 "id": "KUzfpHBOZeqF0vVo",
-                "lastModified": "2026-02-26T23:09:38.596Z",
+                "lastModified": "2026-03-02T00:56:05.596Z",
                 "coreAttributes": [{"name": "subject"}],
                 "extendedAttributes": [
                     {"name": "uid"},
@@ -726,7 +765,7 @@
                     },
                     "name": "AccessTokenManagement",
                     "id": "AccessTokenManagement",
-                    "lastModified": "2026-02-26T23:09:38.733Z",
+                    "lastModified": "2026-03-02T00:56:05.693Z",
                     "pluginDescriptorRef": {
                         "location": "https://localhost:-1/pf-admin-api/v1/oauth/accessTokenManagers/descriptors/com.pingidentity.pf.access.token.management.plugins.JwtBearerAccessTokenManagementPlugin",
                         "id": "com.pingidentity.pf.access.token.management.plugins.JwtBearerAccessTokenManagementPlugin"
@@ -929,7 +968,7 @@
                     },
                     "name": "JSON Web Tokens",
                     "id": "jwt",
-                    "lastModified": "2026-02-26T23:09:38.719Z",
+                    "lastModified": "2026-03-02T00:56:05.677Z",
                     "pluginDescriptorRef": {
                         "location": "https://localhost:-1/pf-admin-api/v1/oauth/accessTokenManagers/descriptors/com.pingidentity.pf.access.token.management.plugins.JwtBearerAccessTokenManagementPlugin",
                         "id": "com.pingidentity.pf.access.token.management.plugins.JwtBearerAccessTokenManagementPlugin"
@@ -1087,7 +1126,7 @@
                     },
                     "name": "IDENTIFIERFIRST",
                     "id": "IDENTIFIERFIRST",
-                    "lastModified": "2026-02-26T23:09:38.865Z",
+                    "lastModified": "2026-03-02T00:56:05.788Z",
                     "pluginDescriptorRef": {
                         "location": "https://localhost:-1/pf-admin-api/v1/idp/adapters/descriptors/com.pingidentity.adapters.identifierfirst.idp.IdentifierFirstAdapter",
                         "id": "com.pingidentity.adapters.identifierfirst.idp.IdentifierFirstAdapter"
@@ -1396,7 +1435,7 @@
                     },
                     "name": "PINGID",
                     "id": "PINGID",
-                    "lastModified": "2026-02-26T23:09:38.909Z",
+                    "lastModified": "2026-03-02T00:56:05.827Z",
                     "pluginDescriptorRef": {
                         "location": "https://localhost:-1/pf-admin-api/v1/idp/adapters/descriptors/com.pingidentity.adapters.pingid.PingIDAdapter",
                         "id": "com.pingidentity.adapters.pingid.PingIDAdapter"
@@ -1523,6 +1562,134 @@
         },
         {
             "operationType": "SAVE",
+            "items": [{
+                "configuration": {
+                    "tables": [],
+                    "fields": [
+                        {
+                            "name": "Password",
+                            "value": "${sp_adapters_items_OPENTOKEN_configuration_fields_Password_value}"
+                        },
+                        {
+                            "name": "Confirm Password",
+                            "value": "${sp_adapters_items_OPENTOKEN_configuration_fields_Confirm_Password_value}"
+                        },
+                        {
+                            "name": "Transport Mode",
+                            "value": "2"
+                        },
+                        {
+                            "name": "Token Name",
+                            "value": "opentoken"
+                        },
+                        {
+                            "name": "Cipher Suite",
+                            "value": "2"
+                        },
+                        {
+                            "name": "Authentication Service",
+                            "value": ""
+                        },
+                        {
+                            "name": "Account Link Service",
+                            "value": ""
+                        },
+                        {
+                            "name": "Logout Service",
+                            "value": ""
+                        },
+                        {
+                            "name": "SameSite Cookie",
+                            "value": "3"
+                        },
+                        {
+                            "name": "Cookie Domain",
+                            "value": ""
+                        },
+                        {
+                            "name": "Cookie Path",
+                            "value": "/"
+                        },
+                        {
+                            "name": "Token Lifetime",
+                            "value": "300"
+                        },
+                        {
+                            "name": "Session Lifetime",
+                            "value": "43200"
+                        },
+                        {
+                            "name": "Not Before Tolerance",
+                            "value": "0"
+                        },
+                        {
+                            "name": "Force SunJCE Provider",
+                            "value": "false"
+                        },
+                        {
+                            "name": "Use Verbose Error Messages",
+                            "value": "false"
+                        },
+                        {
+                            "name": "Obfuscate Password",
+                            "value": "true"
+                        },
+                        {
+                            "name": "Session Cookie",
+                            "value": "false"
+                        },
+                        {
+                            "name": "Secure Cookie",
+                            "value": "true"
+                        },
+                        {
+                            "name": "HTTP Only Flag",
+                            "value": "true"
+                        },
+                        {
+                            "name": "Send Subject as Query Parameter",
+                            "value": ""
+                        },
+                        {
+                            "name": "Subject Query Parameter                 ",
+                            "value": ""
+                        },
+                        {
+                            "name": "Send Extended Attributes",
+                            "value": ""
+                        },
+                        {
+                            "name": "Skip Trimming of Trailing Backslashes",
+                            "value": "false"
+                        },
+                        {
+                            "name": "URL Encode Cookie Values",
+                            "value": "true"
+                        }
+                    ]
+                },
+                "name": "OPENTOKEN",
+                "id": "OPENTOKEN",
+                "lastModified": "2026-03-05T04:13:53.811Z",
+                "targetApplicationInfo": {},
+                "pluginDescriptorRef": {
+                    "location": "https://localhost:-1/pf-admin-api/v1/sp/adapters/descriptors/com.pingidentity.adapters.opentoken.SpAuthnAdapter",
+                    "id": "com.pingidentity.adapters.opentoken.SpAuthnAdapter"
+                },
+                "attributeContract": {
+                    "coreAttributes": [{"name": "subject"}],
+                    "extendedAttributes": [
+                        {"name": "telephoneNumber"},
+                        {"name": "mail"},
+                        {"name": "givenName"},
+                        {"name": "sn"}
+                    ]
+                }
+            }],
+            "resourceType": "/sp/adapters"
+        },
+        {
+            "operationType": "SAVE",
             "items": [
                 {
                     "configuration": {
@@ -1619,7 +1786,7 @@
                     },
                     "name": "MSFTTOKENPROCESSOR",
                     "id": "MSFTTOKENPROCESSOR",
-                    "lastModified": "2026-02-27T21:07:12.975Z",
+                    "lastModified": "2026-03-02T00:56:06.103Z",
                     "pluginDescriptorRef": {
                         "location": "https://localhost:-1/pf-admin-api/v1/idp/tokenProcessors/descriptors/com.pingidentity.pf.tokenprocessors.jwt.JwtTokenProcessor",
                         "id": "com.pingidentity.pf.tokenprocessors.jwt.JwtTokenProcessor"
@@ -1652,7 +1819,7 @@
                     },
                     "name": "PFTOKENPROCESSOR",
                     "id": "PFTOKENPROCESSOR",
-                    "lastModified": "2026-02-26T23:09:39.170Z",
+                    "lastModified": "2026-03-02T00:56:06.116Z",
                     "pluginDescriptorRef": {
                         "location": "https://localhost:-1/pf-admin-api/v1/idp/tokenProcessors/descriptors/org.sourceid.wstrust.processor.oauth.BearerAccessTokenTokenProcessor",
                         "id": "org.sourceid.wstrust.processor.oauth.BearerAccessTokenTokenProcessor"
@@ -1710,8 +1877,63 @@
         },
         {
             "operationType": "SAVE",
-            "items": [{"confirmSlo": false}],
+            "items": [{
+                "ssoSuccessUrl": "http://localhost/app",
+                "confirmSlo": false
+            }],
             "resourceType": "/sp/defaultUrls"
+        },
+        {
+            "operationType": "SAVE",
+            "items": [
+                {
+                    "validateSignature": true,
+                    "certView": {
+                        "expires": "2031-01-25T21:03:48.000Z",
+                        "serialNumber": "12244971978322141498",
+                        "keyAlgorithm": "RSA",
+                        "keySize": 2048,
+                        "subjectAlternativeNames": [],
+                        "issuerDN": "CN=accounts.accesscontrol.windows.net",
+                        "sha1Fingerprint": "B0CD7FC80C55F06578C8DF81EA3DB1CE68A4E40A",
+                        "validFrom": "2026-01-25T21:03:48.000Z",
+                        "version": 3,
+                        "signatureAlgorithm": "SHA256withRSA",
+                        "sha256Fingerprint": "6E298BA7374F21636E6F9F5AB0EC6C4E7B1EED36C2EABBF0A1F23D3DE5AECB27",
+                        "id": "ye4bmv9lep7yq0muekwr3k4xp",
+                        "subjectDN": "CN=accounts.accesscontrol.windows.net",
+                        "status": "VALID"
+                    },
+                    "x509File": {"fileData": "${metadataUrls_items_FHcmXQDabpO8MvYePIfMowMcN_x509File_FHcmXQDabpO8MvYePIfMowMcN_fileData}"},
+                    "name": "MSFT",
+                    "id": "FHcmXQDabpO8MvYePIfMowMcN",
+                    "url": "https://login.microsoftonline.com/4161be3f-bf2b-41d4-a02b-e6f82b529d53/federationmetadata/2007-06/federationmetadata.xml"
+                },
+                {
+                    "validateSignature": true,
+                    "certView": {
+                        "expires": "2029-03-05T02:32:25.000Z",
+                        "serialNumber": "33855788788702137918146674874113455929",
+                        "keyAlgorithm": "RSA",
+                        "keySize": 2048,
+                        "subjectAlternativeNames": [],
+                        "issuerDN": "CN=Microsoft Azure Federated SSO Certificate",
+                        "sha1Fingerprint": "7A56C4A808BF21B02C4702FD2E958B1ECFE95634",
+                        "validFrom": "2026-03-05T02:32:26.000Z",
+                        "version": 3,
+                        "signatureAlgorithm": "SHA256withRSA",
+                        "sha256Fingerprint": "5CD76CC5DB1B1689A6EED6F4AB96CCBA909B5F60EEF7A0177BA0EA9BCA2FF489",
+                        "id": "7xzi9fl8yjv282w8t537thjv2",
+                        "subjectDN": "CN=Microsoft Azure Federated SSO Certificate",
+                        "status": "VALID"
+                    },
+                    "x509File": {"fileData": "${metadataUrls_items_lhUwqUjy14Fs7B6zXU2VC9KvH_x509File_lhUwqUjy14Fs7B6zXU2VC9KvH_fileData}"},
+                    "name": "MSFT App",
+                    "id": "lhUwqUjy14Fs7B6zXU2VC9KvH",
+                    "url": "https://login.microsoftonline.com/4161be3f-bf2b-41d4-a02b-e6f82b529d53/federationmetadata/2007-06/federationmetadata.xml?appid=fff6af1e-8af0-4614-8841-94d3725ab2d9"
+                }
+            ],
+            "resourceType": "/metadataUrls"
         },
         {
             "operationType": "SAVE",
@@ -1784,6 +2006,334 @@
                 "bypassAuthorizationForApprovedGrants": false
             }],
             "resourceType": "/oauth/authServerSettings"
+        },
+        {
+            "operationType": "SAVE",
+            "items": [{
+                "contactInfo": {},
+                "credentials": {
+                    "inboundBackChannelAuth": {
+                        "requireSsl": true,
+                        "digitalSignature": true,
+                        "type": "INBOUND"
+                    },
+                    "certs": [
+                        {
+                            "primaryVerificationCert": true,
+                            "certView": {
+                                "expires": "2029-03-05T02:32:25.000Z",
+                                "serialNumber": "33855788788702137918146674874113455929",
+                                "keyAlgorithm": "RSA",
+                                "keySize": 2048,
+                                "subjectAlternativeNames": [],
+                                "issuerDN": "CN=Microsoft Azure Federated SSO Certificate",
+                                "sha1Fingerprint": "7A56C4A808BF21B02C4702FD2E958B1ECFE95634",
+                                "validFrom": "2026-03-05T02:32:26.000Z",
+                                "version": 3,
+                                "signatureAlgorithm": "SHA256withRSA",
+                                "sha256Fingerprint": "5CD76CC5DB1B1689A6EED6F4AB96CCBA909B5F60EEF7A0177BA0EA9BCA2FF489",
+                                "id": "6eqc13nnhlk95xot20dk2qx1x",
+                                "subjectDN": "CN=Microsoft Azure Federated SSO Certificate",
+                                "status": "VALID"
+                            },
+                            "secondaryVerificationCert": false,
+                            "x509File": {
+                                "fileData": "${sp_idpConnections_items_uxXlcpG9H1CGfh11FJHAT6PF_EM_credentials_certs_x509File_6eqc13nnhlk95xot20dk2qx1x_6eqc13nnhlk95xot20dk2qx1x_fileData}",
+                                "id": "6eqc13nnhlk95xot20dk2qx1x"
+                            },
+                            "encryptionCert": false,
+                            "activeVerificationCert": true
+                        },
+                        {
+                            "primaryVerificationCert": false,
+                            "certView": {
+                                "expires": "2031-01-25T21:03:48.000Z",
+                                "serialNumber": "12244971978322141498",
+                                "keyAlgorithm": "RSA",
+                                "keySize": 2048,
+                                "subjectAlternativeNames": [],
+                                "issuerDN": "CN=accounts.accesscontrol.windows.net",
+                                "sha1Fingerprint": "B0CD7FC80C55F06578C8DF81EA3DB1CE68A4E40A",
+                                "validFrom": "2026-01-25T21:03:48.000Z",
+                                "version": 3,
+                                "signatureAlgorithm": "SHA256withRSA",
+                                "sha256Fingerprint": "6E298BA7374F21636E6F9F5AB0EC6C4E7B1EED36C2EABBF0A1F23D3DE5AECB27",
+                                "id": "tqypcm6y6n6147uw6duoa4y9j",
+                                "subjectDN": "CN=accounts.accesscontrol.windows.net",
+                                "status": "VALID"
+                            },
+                            "secondaryVerificationCert": true,
+                            "x509File": {
+                                "fileData": "${sp_idpConnections_items_uxXlcpG9H1CGfh11FJHAT6PF_EM_credentials_certs_x509File_tqypcm6y6n6147uw6duoa4y9j_tqypcm6y6n6147uw6duoa4y9j_fileData}",
+                                "id": "tqypcm6y6n6147uw6duoa4y9j"
+                            },
+                            "encryptionCert": false,
+                            "activeVerificationCert": true
+                        }
+                    ],
+                    "signingSettings": {
+                        "signingKeyPairRef": {
+                            "location": "https://localhost:-1/pf-admin-api/v1/keyPairs/signing/5jqt7j8mxbwl2awtpc465yzx1",
+                            "id": "5jqt7j8mxbwl2awtpc465yzx1"
+                        },
+                        "includeRawKeyInSignature": false,
+                        "algorithm": "SHA256withRSA",
+                        "includeCertInSignature": false
+                    }
+                },
+                "active": true,
+                "entityId": "https://sts.windows.net/4161be3f-bf2b-41d4-a02b-e6f82b529d53/",
+                "loggingMode": "STANDARD",
+                "replicationStatus": "REPLICATED",
+                "type": "IDP",
+                "creationDate": "2026-03-04T23:37:07.484Z",
+                "metadataReloadSettings": {
+                    "metadataUrlRef": {
+                        "location": "https://localhost:-1/pf-admin-api/v1/metadataUrls/lhUwqUjy14Fs7B6zXU2VC9KvH",
+                        "id": "lhUwqUjy14Fs7B6zXU2VC9KvH"
+                    },
+                    "enableAutoMetadataUpdate": true
+                },
+                "errorPageMsgId": "",
+                "baseUrl": "https://login.microsoftonline.com",
+                "modificationDate": "2026-03-05T08:22:51.978Z",
+                "virtualEntityIds": [],
+                "name": "https://sts.windows.net/4161be3f-bf2b-41d4-a02b-e6f82b529d53/",
+                "id": "uxXlcpG9H1CGfh11FJHAT6PF-EM",
+                "idpBrowserSso": {
+                    "authenticationPolicyContractMappings": [{
+                        "restrictedVirtualServerIds": [],
+                        "authenticationPolicyContractRef": {
+                            "location": "https://localhost:-1/pf-admin-api/v1/authenticationPolicyContracts/KUzfpHBOZeqF0vVo",
+                            "id": "KUzfpHBOZeqF0vVo"
+                        },
+                        "restrictVirtualServerIds": false,
+                        "attributeContractFulfillment": {
+                            "uid": {
+                                "source": {"type": "ASSERTION"},
+                                "value": "SAML_SUBJECT"
+                            },
+                            "telephoneNumber": {
+                                "source": {"type": "ASSERTION"},
+                                "value": "SAML_SUBJECT"
+                            },
+                            "mail": {
+                                "source": {"type": "ASSERTION"},
+                                "value": "SAML_SUBJECT"
+                            },
+                            "subject": {
+                                "source": {"type": "ASSERTION"},
+                                "value": "SAML_SUBJECT"
+                            },
+                            "givenName": {
+                                "source": {"type": "ASSERTION"},
+                                "value": "SAML_SUBJECT"
+                            },
+                            "groups": {
+                                "source": {"type": "ASSERTION"},
+                                "value": "SAML_SUBJECT"
+                            },
+                            "cn": {
+                                "source": {"type": "ASSERTION"},
+                                "value": "SAML_SUBJECT"
+                            },
+                            "sn": {
+                                "source": {"type": "ASSERTION"},
+                                "value": "SAML_SUBJECT"
+                            }
+                        },
+                        "attributeSources": [],
+                        "issuanceCriteria": {"conditionalCriteria": []}
+                    }],
+                    "decryptionPolicy": {
+                        "subjectNameIdEncrypted": false,
+                        "assertionEncrypted": false,
+                        "attributesEncrypted": false,
+                        "sloEncryptSubjectNameID": false,
+                        "sloSubjectNameIDEncrypted": false
+                    },
+                    "sloServiceEndpoints": [{
+                        "binding": "REDIRECT",
+                        "url": "/4161be3f-bf2b-41d4-a02b-e6f82b529d53/saml2"
+                    }],
+                    "defaultTargetUrl": "https://localhost/app/default",
+                    "ssoApplicationEndpoint": "https://id.ping.darkedges.com/sp/startSSO.ping?PartnerIdpId=https%3A%2F%2Fsts.windows.net%2F4161be3f-bf2b-41d4-a02b-e6f82b529d53%2F",
+                    "idpIdentityMapping": "ACCOUNT_MAPPING",
+                    "ssoServiceEndpoints": [
+                        {
+                            "binding": "REDIRECT",
+                            "url": "/4161be3f-bf2b-41d4-a02b-e6f82b529d53/saml2"
+                        },
+                        {
+                            "binding": "POST",
+                            "url": "/4161be3f-bf2b-41d4-a02b-e6f82b529d53/saml2"
+                        }
+                    ],
+                    "attributeContract": {
+                        "coreAttributes": [{
+                            "masked": false,
+                            "name": "SAML_SUBJECT"
+                        }],
+                        "extendedAttributes": []
+                    },
+                    "incomingBindings": [
+                        "SOAP",
+                        "POST",
+                        "REDIRECT"
+                    ],
+                    "protocol": "SAML20",
+                    "assertionsSigned": false,
+                    "signAuthnRequests": false,
+                    "enabledProfiles": [
+                        "SP_INITIATED_SSO",
+                        "SP_INITIATED_SLO",
+                        "IDP_INITIATED_SLO",
+                        "IDP_INITIATED_SSO"
+                    ],
+                    "adapterMappings": [{
+                        "restrictedVirtualEntityIds": [],
+                        "attributeContractFulfillment": {
+                            "telephoneNumber": {
+                                "source": {"type": "LDAP_DATA_STORE"},
+                                "value": "telephoneNumber"
+                            },
+                            "mail": {
+                                "source": {"type": "LDAP_DATA_STORE"},
+                                "value": "mail"
+                            },
+                            "subject": {
+                                "source": {"type": "ASSERTION"},
+                                "value": "SAML_SUBJECT"
+                            },
+                            "givenName": {
+                                "source": {"type": "LDAP_DATA_STORE"},
+                                "value": "givenName"
+                            },
+                            "sn": {
+                                "source": {"type": "LDAP_DATA_STORE"},
+                                "value": "sn"
+                            }
+                        },
+                        "restrictVirtualEntityIds": false,
+                        "attributeSources": [{
+                            "memberOfNestedGroup": false,
+                            "binaryAttributeSettings": {},
+                            "searchScope": "SUBTREE",
+                            "dataStoreRef": {
+                                "location": "https://localhost:-1/pf-admin-api/v1/dataStores/LDAP-4D65BD30F2946A712E86940F0F7442EDCDC16646",
+                                "id": "LDAP-4D65BD30F2946A712E86940F0F7442EDCDC16646"
+                            },
+                            "description": "LDAP",
+                            "searchAttributes": [
+                                "Subject DN",
+                                "givenName",
+                                "mail",
+                                "sn",
+                                "telephoneNumber",
+                                "uid"
+                            ],
+                            "type": "LDAP",
+                            "baseDn": "",
+                            "searchFilter": "(uid=${SAML_SUBJECT})"
+                        }],
+                        "issuanceCriteria": {"conditionalCriteria": []},
+                        "spAdapterRef": {
+                            "location": "https://localhost:-1/pf-admin-api/v1/sp/adapters/OPENTOKEN",
+                            "id": "OPENTOKEN"
+                        }
+                    }]
+                },
+                "licenseConnectionGroup": ""
+            }],
+            "resourceType": "/sp/idpConnections"
+        },
+        {
+            "operationType": "SAVE",
+            "items": [{
+                "contactInfo": {},
+                "credentials": {
+                    "certs": [],
+                    "signingSettings": {
+                        "signingKeyPairRef": {
+                            "location": "https://localhost:-1/pf-admin-api/v1/keyPairs/signing/5jqt7j8mxbwl2awtpc465yzx1",
+                            "id": "5jqt7j8mxbwl2awtpc465yzx1"
+                        },
+                        "includeRawKeyInSignature": false,
+                        "algorithm": "SHA256withRSA"
+                    }
+                },
+                "active": true,
+                "spBrowserSso": {
+                    "protocol": "WSFED",
+                    "authenticationPolicyContractAssertionMappings": [{
+                        "abortSsoTransactionAsFailSafe": false,
+                        "authenticationPolicyContractRef": {
+                            "location": "https://localhost:-1/pf-admin-api/v1/authenticationPolicyContracts/KUzfpHBOZeqF0vVo",
+                            "id": "KUzfpHBOZeqF0vVo"
+                        },
+                        "restrictedVirtualEntityIds": [],
+                        "attributeContractFulfillment": {"SAML_SUBJECT": {
+                            "source": {"type": "AUTHENTICATION_POLICY_CONTRACT"},
+                            "value": "mail"
+                        }},
+                        "restrictVirtualEntityIds": false,
+                        "attributeSources": [],
+                        "issuanceCriteria": {"conditionalCriteria": []}
+                    }],
+                    "alwaysSignArtifactResponse": false,
+                    "wsTrustVersion": "WSTRUST12",
+                    "wsFedTokenType": "SAML11",
+                    "ssoServiceEndpoints": [{"url": "https://login.microsoftonline.com/login.srf"}],
+                    "adapterMappings": [{
+                        "abortSsoTransactionAsFailSafe": false,
+                        "restrictedVirtualEntityIds": [],
+                        "attributeContractFulfillment": {"SAML_SUBJECT": {
+                            "source": {"type": "ADAPTER"},
+                            "value": "mail"
+                        }},
+                        "restrictVirtualEntityIds": false,
+                        "idpAdapterRef": {
+                            "location": "https://localhost:-1/pf-admin-api/v1/idp/adapters/IDENTIFIERFIRST",
+                            "id": "IDENTIFIERFIRST"
+                        },
+                        "attributeSources": [],
+                        "issuanceCriteria": {"conditionalCriteria": []}
+                    }],
+                    "assertionLifetime": {
+                        "minutesAfter": 5,
+                        "minutesBefore": 5
+                    },
+                    "attributeContract": {
+                        "coreAttributes": [{"name": "SAML_SUBJECT"}],
+                        "extendedAttributes": []
+                    },
+                    "spWsFedIdentityMapping": "EMAIL_ADDRESS"
+                },
+                "entityId": "urn:federation:MicrosoftOnline",
+                "loggingMode": "STANDARD",
+                "replicationStatus": "REPLICATED",
+                "type": "SP",
+                "creationDate": "2026-03-02T09:18:35.164Z",
+                "connectionTargetType": "STANDARD",
+                "modificationDate": "2026-03-02T10:19:05.293Z",
+                "virtualEntityIds": [],
+                "name": "MSFT",
+                "id": "ke55e7wQcY25OkXcutuYmfYASFV",
+                "licenseConnectionGroup": ""
+            }],
+            "resourceType": "/idp/spConnections"
+        },
+        {
+            "operationType": "SAVE",
+            "items": [{
+                "ref": {
+                    "location": "https://localhost:-1/pf-admin-api/v1/idp/spConnections/OPENTOKEN",
+                    "id": "OPENTOKEN"
+                },
+                "type": "SP_ADAPTER",
+                "url": "https://localhost/*"
+            }],
+            "resourceType": "/sp/targetUrlMappings"
         },
         {
             "operationType": "SAVE",
@@ -2098,7 +2648,7 @@
                 "allowIdTokenIntrospection": false,
                 "id": "OPENIDCONNECTPOLICYMANAGEMENT",
                 "reissueIdTokenInHybridFlow": false,
-                "lastModified": "2026-02-26T23:09:39.392Z",
+                "lastModified": "2026-03-02T00:56:06.294Z",
                 "idTokenLifetime": 5,
                 "accessTokenManagerRef": {
                     "location": "https://localhost:-1/pf-admin-api/v1/oauth/accessTokenManagers/AccessTokenManagement",
@@ -2208,7 +2758,7 @@
                     "allowAuthenticationApiInit": false,
                     "refreshTokenRollingGracePeriodType": "SERVER_DEFAULT",
                     "replicationStatus": "REPLICATED",
-                    "creationDate": "2026-02-26T23:09:39.493Z",
+                    "creationDate": "2026-03-02T00:56:06.363Z",
                     "deviceFlowSettingType": "SERVER_DEFAULT",
                     "redirectUris": [
                         "http://localhost:3000/api/auth/callback",
@@ -2219,10 +2769,10 @@
                         "AUTHORIZATION_CODE",
                         "REFRESH_TOKEN"
                     ],
-                    "modificationDate": "2026-02-26T23:09:39.493Z",
+                    "modificationDate": "2026-03-02T00:56:06.363Z",
                     "clientSecretRetentionPeriodType": "SERVER_DEFAULT",
                     "requirePushedAuthorizationRequests": false,
-                    "clientSecretChangedTime": "2026-02-26T23:09:39.000Z",
+                    "clientSecretChangedTime": "2026-03-02T00:56:06.000Z",
                     "name": "contact-hr-client",
                     "refreshTokenRollingIntervalType": "SERVER_DEFAULT",
                     "persistentGrantExpirationType": "SERVER_DEFAULT",
@@ -2272,7 +2822,7 @@
                     "allowAuthenticationApiInit": true,
                     "refreshTokenRollingGracePeriodType": "SERVER_DEFAULT",
                     "replicationStatus": "REPLICATED",
-                    "creationDate": "2026-02-26T23:09:39.523Z",
+                    "creationDate": "2026-03-02T00:56:06.384Z",
                     "deviceFlowSettingType": "SERVER_DEFAULT",
                     "redirectUris": [
                         "https://contact.ping.darkedges.com/callback",
@@ -2285,10 +2835,10 @@
                         "CLIENT_CREDENTIALS",
                         "TOKEN_EXCHANGE"
                     ],
-                    "modificationDate": "2026-02-26T23:09:39.523Z",
+                    "modificationDate": "2026-03-02T00:56:06.384Z",
                     "clientSecretRetentionPeriodType": "SERVER_DEFAULT",
                     "requirePushedAuthorizationRequests": false,
-                    "clientSecretChangedTime": "2026-02-26T23:09:39.000Z",
+                    "clientSecretChangedTime": "2026-03-02T00:56:06.000Z",
                     "name": "Contact Client",
                     "refreshTokenRollingIntervalType": "SERVER_DEFAULT",
                     "persistentGrantExpirationType": "SERVER_DEFAULT",
@@ -2337,15 +2887,15 @@
                     "allowAuthenticationApiInit": false,
                     "refreshTokenRollingGracePeriodType": "SERVER_DEFAULT",
                     "replicationStatus": "REPLICATED",
-                    "creationDate": "2026-02-26T23:09:39.534Z",
+                    "creationDate": "2026-03-02T00:56:06.397Z",
                     "deviceFlowSettingType": "SERVER_DEFAULT",
                     "redirectUris": [],
                     "authorizationDetailTypes": [],
                     "grantTypes": ["CLIENT_CREDENTIALS"],
-                    "modificationDate": "2026-02-26T23:09:39.534Z",
+                    "modificationDate": "2026-03-02T00:56:06.397Z",
                     "clientSecretRetentionPeriodType": "SERVER_DEFAULT",
                     "requirePushedAuthorizationRequests": false,
-                    "clientSecretChangedTime": "2026-02-26T23:09:39.000Z",
+                    "clientSecretChangedTime": "2026-03-02T00:56:06.000Z",
                     "name": "pa_rs_client",
                     "refreshTokenRollingIntervalType": "SERVER_DEFAULT",
                     "persistentGrantExpirationType": "SERVER_DEFAULT",
@@ -2391,7 +2941,7 @@
                     "allowAuthenticationApiInit": false,
                     "refreshTokenRollingGracePeriodType": "SERVER_DEFAULT",
                     "replicationStatus": "REPLICATED",
-                    "creationDate": "2026-02-26T23:09:39.555Z",
+                    "creationDate": "2026-03-02T00:56:06.404Z",
                     "deviceFlowSettingType": "SERVER_DEFAULT",
                     "redirectUris": [],
                     "authorizationDetailTypes": [],
@@ -2399,14 +2949,14 @@
                         "CLIENT_CREDENTIALS",
                         "ACCESS_TOKEN_VALIDATION"
                     ],
-                    "modificationDate": "2026-02-26T23:09:39.555Z",
+                    "modificationDate": "2026-03-02T00:56:06.404Z",
                     "defaultAccessTokenManagerRef": {
                         "location": "https://localhost:-1/pf-admin-api/v1/oauth/accessTokenManagers/jwt",
                         "id": "jwt"
                     },
                     "clientSecretRetentionPeriodType": "SERVER_DEFAULT",
                     "requirePushedAuthorizationRequests": false,
-                    "clientSecretChangedTime": "2026-02-26T23:09:39.000Z",
+                    "clientSecretChangedTime": "2026-03-02T00:56:06.000Z",
                     "name": "pf_api_access",
                     "refreshTokenRollingIntervalType": "SERVER_DEFAULT",
                     "persistentGrantExpirationType": "SERVER_DEFAULT",
@@ -2451,7 +3001,7 @@
                     "allowAuthenticationApiInit": false,
                     "refreshTokenRollingGracePeriodType": "SERVER_DEFAULT",
                     "replicationStatus": "REPLICATED",
-                    "creationDate": "2026-02-26T23:09:39.566Z",
+                    "creationDate": "2026-03-02T00:56:06.420Z",
                     "deviceFlowSettingType": "SERVER_DEFAULT",
                     "redirectUris": [],
                     "authorizationDetailTypes": [],
@@ -2459,7 +3009,7 @@
                         "CLIENT_CREDENTIALS",
                         "TOKEN_EXCHANGE"
                     ],
-                    "modificationDate": "2026-02-26T23:09:39.566Z",
+                    "modificationDate": "2026-03-02T00:56:06.420Z",
                     "defaultAccessTokenManagerRef": {
                         "location": "https://localhost:-1/pf-admin-api/v1/oauth/accessTokenManagers/AccessTokenManagement",
                         "id": "AccessTokenManagement"
@@ -2470,7 +3020,7 @@
                     },
                     "clientSecretRetentionPeriodType": "SERVER_DEFAULT",
                     "requirePushedAuthorizationRequests": false,
-                    "clientSecretChangedTime": "2026-02-26T23:09:39.000Z",
+                    "clientSecretChangedTime": "2026-03-02T00:56:06.000Z",
                     "name": "tokenexchangeclient",
                     "refreshTokenRollingIntervalType": "SERVER_DEFAULT",
                     "persistentGrantExpirationType": "SERVER_DEFAULT",
@@ -2679,7 +3229,7 @@
                 },
                 "name": "OAUTHCLIENTSELECTOR",
                 "id": "OAUTHCLIENTSELECTOR",
-                "lastModified": "2026-02-26T23:09:39.681Z",
+                "lastModified": "2026-03-02T00:56:06.508Z",
                 "pluginDescriptorRef": {
                     "location": "https://localhost:-1/pf-admin-api/v1/authenticationSelectors/descriptors/com.pingidentity.pf.selectors.oauthclient.OAuthClientAdapterSelector",
                     "id": "com.pingidentity.pf.selectors.oauthclient.OAuthClientAdapterSelector"
