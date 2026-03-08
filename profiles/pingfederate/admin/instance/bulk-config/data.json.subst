@@ -202,6 +202,15 @@
         },
         {
             "operationType": "SAVE",
+            "subResource": "XciSpKuYmLfuFxH73Kjhyk6KV",
+            "items": [{
+                "fileData": "${certificates_groups_items_z4vt1hw27wizku1vc7ovnqgpa_z4vt1hw27wizku1vc7ovnqgpa_fileData}",
+                "id": "z4vt1hw27wizku1vc7ovnqgpa"
+            }],
+            "resourceType": "/certificates/groups"
+        },
+        {
+            "operationType": "SAVE",
             "subResource": "FHcmXQDabpO8MvYePIfMowMcN",
             "items": [{
                 "fileData": "${certificates_groups_items_ye4bmv9lep7yq0muekwr3k4xp_ye4bmv9lep7yq0muekwr3k4xp_fileData}",
@@ -1912,6 +1921,29 @@
                 {
                     "validateSignature": true,
                     "certView": {
+                        "expires": "2031-01-25T21:03:48.000Z",
+                        "serialNumber": "12244971978322141498",
+                        "keyAlgorithm": "RSA",
+                        "keySize": 2048,
+                        "subjectAlternativeNames": [],
+                        "issuerDN": "CN=accounts.accesscontrol.windows.net",
+                        "sha1Fingerprint": "B0CD7FC80C55F06578C8DF81EA3DB1CE68A4E40A",
+                        "validFrom": "2026-01-25T21:03:48.000Z",
+                        "version": 3,
+                        "signatureAlgorithm": "SHA256withRSA",
+                        "sha256Fingerprint": "6E298BA7374F21636E6F9F5AB0EC6C4E7B1EED36C2EABBF0A1F23D3DE5AECB27",
+                        "id": "z4vt1hw27wizku1vc7ovnqgpa",
+                        "subjectDN": "CN=accounts.accesscontrol.windows.net",
+                        "status": "VALID"
+                    },
+                    "x509File": {"fileData": "${metadataUrls_items_XciSpKuYmLfuFxH73Kjhyk6KV_x509File_XciSpKuYmLfuFxH73Kjhyk6KV_fileData}"},
+                    "name": "PingFedExt",
+                    "id": "XciSpKuYmLfuFxH73Kjhyk6KV",
+                    "url": "https://pingdarkedges.ciamlogin.com/287d8069-6760-4536-be30-e0557a5bf7a4/federationmetadata/2007-06/federationmetadata.xml"
+                },
+                {
+                    "validateSignature": true,
+                    "certView": {
                         "expires": "2029-03-05T02:32:25.000Z",
                         "serialNumber": "33855788788702137918146674874113455929",
                         "keyAlgorithm": "RSA",
@@ -2309,13 +2341,13 @@
                     },
                     "spWsFedIdentityMapping": "EMAIL_ADDRESS"
                 },
-                "entityId": "urn:federation:MicrosoftOnline",
+                "entityId": "https://login.microsoftonline.com/287d8069-6760-4536-be30-e0557a5bf7a4/",
                 "loggingMode": "STANDARD",
                 "replicationStatus": "REPLICATED",
                 "type": "SP",
                 "creationDate": "2026-03-02T09:18:35.164Z",
                 "connectionTargetType": "STANDARD",
-                "modificationDate": "2026-03-02T10:19:05.293Z",
+                "modificationDate": "2026-03-08T03:22:24.019Z",
                 "virtualEntityIds": [],
                 "name": "MSFT",
                 "id": "ke55e7wQcY25OkXcutuYmfYASFV",
