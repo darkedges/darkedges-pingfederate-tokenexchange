@@ -578,21 +578,30 @@
         },
         {
             "operationType": "SAVE",
-            "items": [{
-                "name": "POLICYCONTRACT",
-                "id": "KUzfpHBOZeqF0vVo",
-                "lastModified": "2026-03-02T00:56:05.596Z",
-                "coreAttributes": [{"name": "subject"}],
-                "extendedAttributes": [
-                    {"name": "uid"},
-                    {"name": "telephoneNumber"},
-                    {"name": "mail"},
-                    {"name": "givenName"},
-                    {"name": "groups"},
-                    {"name": "sn"},
-                    {"name": "cn"}
-                ]
-            }],
+            "items": [
+                {
+                    "name": "POLICYCONTRACT",
+                    "id": "KUzfpHBOZeqF0vVo",
+                    "lastModified": "2026-03-02T00:56:05.596Z",
+                    "coreAttributes": [{"name": "subject"}],
+                    "extendedAttributes": [
+                        {"name": "uid"},
+                        {"name": "telephoneNumber"},
+                        {"name": "mail"},
+                        {"name": "givenName"},
+                        {"name": "groups"},
+                        {"name": "sn"},
+                        {"name": "cn"}
+                    ]
+                },
+                {
+                    "name": "WSFED",
+                    "id": "atadCwboug6WtQml",
+                    "lastModified": "2026-03-08T23:32:47.330Z",
+                    "coreAttributes": [{"name": "subject"}],
+                    "extendedAttributes": []
+                }
+            ],
             "resourceType": "/authenticationPolicyContracts"
         },
         {
@@ -2304,10 +2313,28 @@
                             "id": "KUzfpHBOZeqF0vVo"
                         },
                         "restrictedVirtualEntityIds": [],
-                        "attributeContractFulfillment": {"SAML_SUBJECT": {
-                            "source": {"type": "AUTHENTICATION_POLICY_CONTRACT"},
-                            "value": "mail"
-                        }},
+                        "attributeContractFulfillment": {
+                            "telephoneNumber": {
+                                "source": {"type": "AUTHENTICATION_POLICY_CONTRACT"},
+                                "value": "telephoneNumber"
+                            },
+                            "givenName": {
+                                "source": {"type": "AUTHENTICATION_POLICY_CONTRACT"},
+                                "value": "givenName"
+                            },
+                            "groups": {
+                                "source": {"type": "AUTHENTICATION_POLICY_CONTRACT"},
+                                "value": "groups"
+                            },
+                            "sn": {
+                                "source": {"type": "AUTHENTICATION_POLICY_CONTRACT"},
+                                "value": "sn"
+                            },
+                            "SAML_SUBJECT": {
+                                "source": {"type": "AUTHENTICATION_POLICY_CONTRACT"},
+                                "value": "mail"
+                            }
+                        },
                         "restrictVirtualEntityIds": false,
                         "attributeSources": [],
                         "issuanceCriteria": {"conditionalCriteria": []}
@@ -2319,10 +2346,28 @@
                     "adapterMappings": [{
                         "abortSsoTransactionAsFailSafe": false,
                         "restrictedVirtualEntityIds": [],
-                        "attributeContractFulfillment": {"SAML_SUBJECT": {
-                            "source": {"type": "ADAPTER"},
-                            "value": "mail"
-                        }},
+                        "attributeContractFulfillment": {
+                            "telephoneNumber": {
+                                "source": {"type": "ADAPTER"},
+                                "value": "telephoneNumber"
+                            },
+                            "givenName": {
+                                "source": {"type": "ADAPTER"},
+                                "value": "givenName"
+                            },
+                            "groups": {
+                                "source": {"type": "ADAPTER"},
+                                "value": "groups"
+                            },
+                            "sn": {
+                                "source": {"type": "ADAPTER"},
+                                "value": "sn"
+                            },
+                            "SAML_SUBJECT": {
+                                "source": {"type": "ADAPTER"},
+                                "value": "mail"
+                            }
+                        },
                         "restrictVirtualEntityIds": false,
                         "idpAdapterRef": {
                             "location": "https://localhost:-1/pf-admin-api/v1/idp/adapters/IDENTIFIERFIRST",
@@ -2337,7 +2382,24 @@
                     },
                     "attributeContract": {
                         "coreAttributes": [{"name": "SAML_SUBJECT"}],
-                        "extendedAttributes": []
+                        "extendedAttributes": [
+                            {
+                                "nameFormat": "http://schemas.microsoft.com/identity/claims",
+                                "name": "groups"
+                            },
+                            {
+                                "nameFormat": "http://schemas.microsoft.com/identity/claims",
+                                "name": "telephoneNumber"
+                            },
+                            {
+                                "nameFormat": "http://schemas.microsoft.com/identity/claims",
+                                "name": "sn"
+                            },
+                            {
+                                "nameFormat": "http://schemas.microsoft.com/identity/claims",
+                                "name": "givenName"
+                            }
+                        ]
                     },
                     "spWsFedIdentityMapping": "EMAIL_ADDRESS"
                 },
@@ -2347,7 +2409,7 @@
                 "type": "SP",
                 "creationDate": "2026-03-02T09:18:35.164Z",
                 "connectionTargetType": "STANDARD",
-                "modificationDate": "2026-03-08T03:22:24.019Z",
+                "modificationDate": "2026-03-08T23:55:05.778Z",
                 "virtualEntityIds": [],
                 "name": "MSFT",
                 "id": "ke55e7wQcY25OkXcutuYmfYASFV",
@@ -3302,149 +3364,185 @@
         {
             "operationType": "SAVE",
             "items": [{
-                "defaultAuthenticationSources": [],
-                "failIfNoSelection": false,
-                "authnSelectionTrees": [{
-                    "name": "IDENTIFIERFIRSTPOLICY",
-                    "id": "IDENTIFIERFIRSTPOLICY",
-                    "authenticationApiApplicationRef": {
-                        "location": "https://localhost:-1/pf-admin-api/v1/authenticationApi/applications/t8CAiKyUYjMFmbWWuD92AL3Oc",
-                        "id": "t8CAiKyUYjMFmbWWuD92AL3Oc"
-                    },
-                    "handleFailuresLocally": false,
-                    "enabled": true,
-                    "rootNode": {
-                        "children": [
-                            {"action": {
-                                "context": "No",
-                                "type": "CONTINUE"
-                            }},
-                            {
-                                "children": [
-                                    {"action": {
-                                        "context": "Fail",
-                                        "type": "RESTART"
-                                    }},
-                                    {
-                                        "children": [
-                                            {"action": {
-                                                "context": "Fail",
-                                                "type": "RESTART"
-                                            }},
-                                            {"action": {
-                                                "attributeMapping": {
-                                                    "attributeContractFulfillment": {
-                                                        "uid": {
-                                                            "source": {
-                                                                "id": "IDENTIFIERFIRST",
-                                                                "type": "ADAPTER"
-                                                            },
-                                                            "value": "subject"
-                                                        },
-                                                        "telephoneNumber": {
-                                                            "source": {
-                                                                "id": "IDENTIFIERFIRST",
-                                                                "type": "ADAPTER"
-                                                            },
-                                                            "value": "telephoneNumber"
-                                                        },
-                                                        "mail": {
-                                                            "source": {
-                                                                "id": "IDENTIFIERFIRST",
-                                                                "type": "ADAPTER"
-                                                            },
-                                                            "value": "mail"
-                                                        },
-                                                        "subject": {
-                                                            "source": {
-                                                                "id": "IDENTIFIERFIRST",
-                                                                "type": "ADAPTER"
-                                                            },
-                                                            "value": "subject"
-                                                        },
-                                                        "givenName": {
-                                                            "source": {
-                                                                "id": "IDENTIFIERFIRST",
-                                                                "type": "ADAPTER"
-                                                            },
-                                                            "value": "givenName"
-                                                        },
-                                                        "groups": {
-                                                            "source": {
-                                                                "id": "IDENTIFIERFIRST",
-                                                                "type": "ADAPTER"
-                                                            },
-                                                            "value": "groups"
-                                                        },
-                                                        "cn": {
-                                                            "source": {
-                                                                "id": "IDENTIFIERFIRST",
-                                                                "type": "ADAPTER"
-                                                            },
-                                                            "value": "cn"
-                                                        },
-                                                        "sn": {
-                                                            "source": {
-                                                                "id": "IDENTIFIERFIRST",
-                                                                "type": "ADAPTER"
-                                                            },
-                                                            "value": "sn"
-                                                        }
-                                                    },
-                                                    "attributeSources": [],
-                                                    "issuanceCriteria": {"conditionalCriteria": []}
-                                                },
-                                                "authenticationPolicyContractRef": {
-                                                    "location": "https://localhost:-1/pf-admin-api/v1/authenticationPolicyContracts/KUzfpHBOZeqF0vVo",
-                                                    "id": "KUzfpHBOZeqF0vVo"
-                                                },
-                                                "context": "Success",
-                                                "type": "APC_MAPPING"
-                                            }}
-                                        ],
-                                        "action": {
-                                            "authenticationSource": {
-                                                "type": "IDP_ADAPTER",
-                                                "sourceRef": {
-                                                    "location": "https://localhost:-1/pf-admin-api/v1/idp/adapters/PINGID",
-                                                    "id": "PINGID"
-                                                }
-                                            },
-                                            "context": "Success",
-                                            "inputUserIdMapping": {
-                                                "source": {
-                                                    "id": "IDENTIFIERFIRST",
-                                                    "type": "ADAPTER"
-                                                },
-                                                "value": "subject"
-                                            },
-                                            "userIdAuthenticated": true,
-                                            "type": "AUTHN_SOURCE"
-                                        }
-                                    }
-                                ],
-                                "action": {
-                                    "authenticationSource": {
-                                        "type": "IDP_ADAPTER",
-                                        "sourceRef": {
-                                            "location": "https://localhost:-1/pf-admin-api/v1/idp/adapters/IDENTIFIERFIRST",
-                                            "id": "IDENTIFIERFIRST"
-                                        }
-                                    },
-                                    "context": "Yes",
-                                    "type": "AUTHN_SOURCE"
-                                }
-                            }
-                        ],
-                        "action": {
-                            "authenticationSelectorRef": {
-                                "location": "https://localhost:-1/pf-admin-api/v1/authenticationSelectors/OAUTHCLIENTSELECTOR",
-                                "id": "OAUTHCLIENTSELECTOR"
-                            },
-                            "type": "AUTHN_SELECTOR"
-                        }
+                "defaultAuthenticationSources": [{
+                    "type": "IDP_ADAPTER",
+                    "sourceRef": {
+                        "location": "https://localhost:-1/pf-admin-api/v1/idp/adapters/IDENTIFIERFIRST",
+                        "id": "IDENTIFIERFIRST"
                     }
                 }],
+                "failIfNoSelection": false,
+                "authnSelectionTrees": [
+                    {
+                        "name": "IDENTIFIERFIRSTPOLICY",
+                        "id": "IDENTIFIERFIRSTPOLICY",
+                        "authenticationApiApplicationRef": {
+                            "location": "https://localhost:-1/pf-admin-api/v1/authenticationApi/applications/t8CAiKyUYjMFmbWWuD92AL3Oc",
+                            "id": "t8CAiKyUYjMFmbWWuD92AL3Oc"
+                        },
+                        "handleFailuresLocally": false,
+                        "enabled": true,
+                        "rootNode": {
+                            "children": [
+                                {"action": {
+                                    "context": "No",
+                                    "type": "CONTINUE"
+                                }},
+                                {
+                                    "children": [
+                                        {"action": {
+                                            "context": "Fail",
+                                            "type": "RESTART"
+                                        }},
+                                        {
+                                            "children": [
+                                                {"action": {
+                                                    "context": "Fail",
+                                                    "type": "RESTART"
+                                                }},
+                                                {"action": {
+                                                    "attributeMapping": {
+                                                        "attributeContractFulfillment": {
+                                                            "uid": {
+                                                                "source": {
+                                                                    "id": "IDENTIFIERFIRST",
+                                                                    "type": "ADAPTER"
+                                                                },
+                                                                "value": "subject"
+                                                            },
+                                                            "telephoneNumber": {
+                                                                "source": {
+                                                                    "id": "IDENTIFIERFIRST",
+                                                                    "type": "ADAPTER"
+                                                                },
+                                                                "value": "telephoneNumber"
+                                                            },
+                                                            "mail": {
+                                                                "source": {
+                                                                    "id": "IDENTIFIERFIRST",
+                                                                    "type": "ADAPTER"
+                                                                },
+                                                                "value": "mail"
+                                                            },
+                                                            "subject": {
+                                                                "source": {
+                                                                    "id": "IDENTIFIERFIRST",
+                                                                    "type": "ADAPTER"
+                                                                },
+                                                                "value": "subject"
+                                                            },
+                                                            "givenName": {
+                                                                "source": {
+                                                                    "id": "IDENTIFIERFIRST",
+                                                                    "type": "ADAPTER"
+                                                                },
+                                                                "value": "givenName"
+                                                            },
+                                                            "groups": {
+                                                                "source": {
+                                                                    "id": "IDENTIFIERFIRST",
+                                                                    "type": "ADAPTER"
+                                                                },
+                                                                "value": "groups"
+                                                            },
+                                                            "cn": {
+                                                                "source": {
+                                                                    "id": "IDENTIFIERFIRST",
+                                                                    "type": "ADAPTER"
+                                                                },
+                                                                "value": "cn"
+                                                            },
+                                                            "sn": {
+                                                                "source": {
+                                                                    "id": "IDENTIFIERFIRST",
+                                                                    "type": "ADAPTER"
+                                                                },
+                                                                "value": "sn"
+                                                            }
+                                                        },
+                                                        "attributeSources": [],
+                                                        "issuanceCriteria": {"conditionalCriteria": []}
+                                                    },
+                                                    "authenticationPolicyContractRef": {
+                                                        "location": "https://localhost:-1/pf-admin-api/v1/authenticationPolicyContracts/KUzfpHBOZeqF0vVo",
+                                                        "id": "KUzfpHBOZeqF0vVo"
+                                                    },
+                                                    "context": "Success",
+                                                    "type": "APC_MAPPING"
+                                                }}
+                                            ],
+                                            "action": {
+                                                "authenticationSource": {
+                                                    "type": "IDP_ADAPTER",
+                                                    "sourceRef": {
+                                                        "location": "https://localhost:-1/pf-admin-api/v1/idp/adapters/PINGID",
+                                                        "id": "PINGID"
+                                                    }
+                                                },
+                                                "context": "Success",
+                                                "inputUserIdMapping": {
+                                                    "source": {
+                                                        "id": "IDENTIFIERFIRST",
+                                                        "type": "ADAPTER"
+                                                    },
+                                                    "value": "subject"
+                                                },
+                                                "userIdAuthenticated": true,
+                                                "type": "AUTHN_SOURCE"
+                                            }
+                                        }
+                                    ],
+                                    "action": {
+                                        "authenticationSource": {
+                                            "type": "IDP_ADAPTER",
+                                            "sourceRef": {
+                                                "location": "https://localhost:-1/pf-admin-api/v1/idp/adapters/IDENTIFIERFIRST",
+                                                "id": "IDENTIFIERFIRST"
+                                            }
+                                        },
+                                        "context": "Yes",
+                                        "type": "AUTHN_SOURCE"
+                                    }
+                                }
+                            ],
+                            "action": {
+                                "authenticationSelectorRef": {
+                                    "location": "https://localhost:-1/pf-admin-api/v1/authenticationSelectors/OAUTHCLIENTSELECTOR",
+                                    "id": "OAUTHCLIENTSELECTOR"
+                                },
+                                "type": "AUTHN_SELECTOR"
+                            }
+                        }
+                    },
+                    {
+                        "name": "Generic",
+                        "id": "EdKQEuNtO7sRTJElCyJtooK3A",
+                        "handleFailuresLocally": false,
+                        "enabled": true,
+                        "rootNode": {
+                            "children": [
+                                {"action": {
+                                    "context": "Fail",
+                                    "type": "RESTART"
+                                }},
+                                {"action": {
+                                    "context": "Success",
+                                    "type": "DONE"
+                                }}
+                            ],
+                            "action": {
+                                "authenticationSource": {
+                                    "type": "IDP_ADAPTER",
+                                    "sourceRef": {
+                                        "location": "https://localhost:-1/pf-admin-api/v1/idp/adapters/IDENTIFIERFIRST",
+                                        "id": "IDENTIFIERFIRST"
+                                    }
+                                },
+                                "type": "AUTHN_SOURCE"
+                            }
+                        }
+                    }
+                ],
                 "trackedHttpParameters": []
             }],
             "resourceType": "/authenticationPolicies/default"
