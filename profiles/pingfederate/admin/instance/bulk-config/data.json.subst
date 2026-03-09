@@ -582,9 +582,10 @@
                 {
                     "name": "POLICYCONTRACT",
                     "id": "KUzfpHBOZeqF0vVo",
-                    "lastModified": "2026-03-02T00:56:05.596Z",
+                    "lastModified": "2026-03-09T00:31:04.936Z",
                     "coreAttributes": [{"name": "subject"}],
                     "extendedAttributes": [
+                        {"name": "entryUUID"},
                         {"name": "uid"},
                         {"name": "telephoneNumber"},
                         {"name": "mail"},
@@ -1036,6 +1037,13 @@
                 {
                     "attributeMapping": {
                         "attributeContractFulfillment": {
+                            "entryUUID": {
+                                "source": {
+                                    "id": "PINGDIRECTORY",
+                                    "type": "LDAP_DATA_STORE"
+                                },
+                                "value": "entryUUID"
+                            },
                             "telephoneNumber": {
                                 "source": {
                                     "id": "PINGDIRECTORY",
@@ -1098,12 +1106,13 @@
                             "description": "PINGDIRECTORY",
                             "id": "PINGDIRECTORY",
                             "searchAttributes": [
+                                "Subject DN",
                                 "cn",
+                                "entryUUID",
                                 "givenName",
                                 "isMemberOf",
                                 "mail",
                                 "sn",
-                                "Subject DN",
                                 "telephoneNumber",
                                 "uid"
                             ],
@@ -1144,7 +1153,7 @@
                     },
                     "name": "IDENTIFIERFIRST",
                     "id": "IDENTIFIERFIRST",
-                    "lastModified": "2026-03-02T00:56:05.788Z",
+                    "lastModified": "2026-03-09T00:27:01.985Z",
                     "pluginDescriptorRef": {
                         "location": "https://localhost:-1/pf-admin-api/v1/idp/adapters/descriptors/com.pingidentity.adapters.identifierfirst.idp.IdentifierFirstAdapter",
                         "id": "com.pingidentity.adapters.identifierfirst.idp.IdentifierFirstAdapter"
@@ -1164,6 +1173,11 @@
                             }
                         ],
                         "extendedAttributes": [
+                            {
+                                "masked": false,
+                                "name": "entryUUID",
+                                "pseudonym": false
+                            },
                             {
                                 "masked": false,
                                 "name": "telephoneNumber",
@@ -2318,6 +2332,10 @@
                                 "source": {"type": "AUTHENTICATION_POLICY_CONTRACT"},
                                 "value": "telephoneNumber"
                             },
+                            "ImmutableID": {
+                                "source": {"type": "AUTHENTICATION_POLICY_CONTRACT"},
+                                "value": "entryUUID"
+                            },
                             "givenName": {
                                 "source": {"type": "AUTHENTICATION_POLICY_CONTRACT"},
                                 "value": "givenName"
@@ -2343,39 +2361,7 @@
                     "wsTrustVersion": "WSTRUST12",
                     "wsFedTokenType": "SAML11",
                     "ssoServiceEndpoints": [{"url": "https://login.microsoftonline.com/login.srf"}],
-                    "adapterMappings": [{
-                        "abortSsoTransactionAsFailSafe": false,
-                        "restrictedVirtualEntityIds": [],
-                        "attributeContractFulfillment": {
-                            "telephoneNumber": {
-                                "source": {"type": "ADAPTER"},
-                                "value": "telephoneNumber"
-                            },
-                            "givenName": {
-                                "source": {"type": "ADAPTER"},
-                                "value": "givenName"
-                            },
-                            "groups": {
-                                "source": {"type": "ADAPTER"},
-                                "value": "groups"
-                            },
-                            "sn": {
-                                "source": {"type": "ADAPTER"},
-                                "value": "sn"
-                            },
-                            "SAML_SUBJECT": {
-                                "source": {"type": "ADAPTER"},
-                                "value": "mail"
-                            }
-                        },
-                        "restrictVirtualEntityIds": false,
-                        "idpAdapterRef": {
-                            "location": "https://localhost:-1/pf-admin-api/v1/idp/adapters/IDENTIFIERFIRST",
-                            "id": "IDENTIFIERFIRST"
-                        },
-                        "attributeSources": [],
-                        "issuanceCriteria": {"conditionalCriteria": []}
-                    }],
+                    "adapterMappings": [],
                     "assertionLifetime": {
                         "minutesAfter": 5,
                         "minutesBefore": 5
@@ -2396,12 +2382,16 @@
                                 "name": "sn"
                             },
                             {
+                                "nameFormat": "http://schemas.microsoft.com/claims",
+                                "name": "ImmutableID"
+                            },
+                            {
                                 "nameFormat": "http://schemas.microsoft.com/identity/claims",
                                 "name": "givenName"
                             }
                         ]
                     },
-                    "spWsFedIdentityMapping": "EMAIL_ADDRESS"
+                    "spWsFedIdentityMapping": "USER_PRINCIPLE_NAME"
                 },
                 "entityId": "https://login.microsoftonline.com/287d8069-6760-4536-be30-e0557a5bf7a4/",
                 "loggingMode": "STANDARD",
@@ -2409,7 +2399,7 @@
                 "type": "SP",
                 "creationDate": "2026-03-02T09:18:35.164Z",
                 "connectionTargetType": "STANDARD",
-                "modificationDate": "2026-03-08T23:55:05.778Z",
+                "modificationDate": "2026-03-09T00:49:30.484Z",
                 "virtualEntityIds": [],
                 "name": "MSFT",
                 "id": "ke55e7wQcY25OkXcutuYmfYASFV",
@@ -3403,6 +3393,13 @@
                                                 {"action": {
                                                     "attributeMapping": {
                                                         "attributeContractFulfillment": {
+                                                            "entryUUID": {
+                                                                "source": {
+                                                                    "id": "IDENTIFIERFIRST",
+                                                                    "type": "ADAPTER"
+                                                                },
+                                                                "value": "entryUUID"
+                                                            },
                                                             "uid": {
                                                                 "source": {
                                                                     "id": "IDENTIFIERFIRST",
@@ -3526,8 +3523,103 @@
                                     "type": "RESTART"
                                 }},
                                 {"action": {
+                                    "attributeMapping": {
+                                        "attributeContractFulfillment": {
+                                            "entryUUID": {
+                                                "source": {
+                                                    "id": "IDENTIFIERFIRST",
+                                                    "type": "ADAPTER"
+                                                },
+                                                "value": "entryUUID"
+                                            },
+                                            "uid": {
+                                                "source": {
+                                                    "id": "IDENTIFIERFIRST",
+                                                    "type": "ADAPTER"
+                                                },
+                                                "value": "subject"
+                                            },
+                                            "telephoneNumber": {
+                                                "source": {
+                                                    "id": "IDENTIFIERFIRST",
+                                                    "type": "ADAPTER"
+                                                },
+                                                "value": "telephoneNumber"
+                                            },
+                                            "mail": {
+                                                "source": {
+                                                    "id": "IDENTIFIERFIRST",
+                                                    "type": "ADAPTER"
+                                                },
+                                                "value": "mail"
+                                            },
+                                            "subject": {
+                                                "source": {
+                                                    "id": "IDENTIFIERFIRST",
+                                                    "type": "ADAPTER"
+                                                },
+                                                "value": "subject"
+                                            },
+                                            "givenName": {
+                                                "source": {
+                                                    "id": "IDENTIFIERFIRST",
+                                                    "type": "ADAPTER"
+                                                },
+                                                "value": "givenName"
+                                            },
+                                            "groups": {
+                                                "source": {
+                                                    "id": "IDENTIFIERFIRST",
+                                                    "type": "ADAPTER"
+                                                },
+                                                "value": "groups"
+                                            },
+                                            "cn": {
+                                                "source": {
+                                                    "id": "IDENTIFIERFIRST",
+                                                    "type": "ADAPTER"
+                                                },
+                                                "value": "cn"
+                                            },
+                                            "sn": {
+                                                "source": {
+                                                    "id": "IDENTIFIERFIRST",
+                                                    "type": "ADAPTER"
+                                                },
+                                                "value": "sn"
+                                            }
+                                        },
+                                        "attributeSources": [{
+                                            "memberOfNestedGroup": false,
+                                            "binaryAttributeSettings": {},
+                                            "searchScope": "SUBTREE",
+                                            "dataStoreRef": {
+                                                "location": "https://localhost:-1/pf-admin-api/v1/dataStores/LDAP-4D65BD30F2946A712E86940F0F7442EDCDC16646",
+                                                "id": "LDAP-4D65BD30F2946A712E86940F0F7442EDCDC16646"
+                                            },
+                                            "description": "PINDIRECTORY",
+                                            "id": "PINDIRECTORY",
+                                            "searchAttributes": [
+                                                "Subject DN",
+                                                "entryUUID",
+                                                "givenName",
+                                                "mail",
+                                                "sn",
+                                                "telephoneNumber",
+                                                "uid"
+                                            ],
+                                            "type": "LDAP",
+                                            "baseDn": "",
+                                            "searchFilter": "(uid=user.0)"
+                                        }],
+                                        "issuanceCriteria": {"conditionalCriteria": []}
+                                    },
+                                    "authenticationPolicyContractRef": {
+                                        "location": "https://localhost:-1/pf-admin-api/v1/authenticationPolicyContracts/KUzfpHBOZeqF0vVo",
+                                        "id": "KUzfpHBOZeqF0vVo"
+                                    },
                                     "context": "Success",
-                                    "type": "DONE"
+                                    "type": "APC_MAPPING"
                                 }}
                             ],
                             "action": {
