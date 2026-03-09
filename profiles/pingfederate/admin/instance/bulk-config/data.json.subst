@@ -2328,6 +2328,14 @@
                         },
                         "restrictedVirtualEntityIds": [],
                         "attributeContractFulfillment": {
+                            "UPN": {
+                                "source": {"type": "AUTHENTICATION_POLICY_CONTRACT"},
+                                "value": "mail"
+                            },
+                            "emailAddress": {
+                                "source": {"type": "AUTHENTICATION_POLICY_CONTRACT"},
+                                "value": "mail"
+                            },
                             "telephoneNumber": {
                                 "source": {"type": "AUTHENTICATION_POLICY_CONTRACT"},
                                 "value": "telephoneNumber"
@@ -2370,24 +2378,32 @@
                         "coreAttributes": [{"name": "SAML_SUBJECT"}],
                         "extendedAttributes": [
                             {
-                                "nameFormat": "http://schemas.microsoft.com/identity/claims",
-                                "name": "groups"
+                                "nameFormat": "http://schemas.xmlsoap.org/claims",
+                                "name": "emailAddress"
+                            },
+                            {
+                                "nameFormat": "http://schemas.xmlsoap.org/claims",
+                                "name": "UPN"
                             },
                             {
                                 "nameFormat": "http://schemas.microsoft.com/identity/claims",
                                 "name": "telephoneNumber"
                             },
                             {
-                                "nameFormat": "http://schemas.microsoft.com/identity/claims",
-                                "name": "sn"
-                            },
-                            {
-                                "nameFormat": "http://schemas.microsoft.com/claims",
+                                "nameFormat": "http://schemas.microsoft.com/LiveID/Federation/2008/05",
                                 "name": "ImmutableID"
                             },
                             {
                                 "nameFormat": "http://schemas.microsoft.com/identity/claims",
                                 "name": "givenName"
+                            },
+                            {
+                                "nameFormat": "http://schemas.microsoft.com/identity/claims",
+                                "name": "groups"
+                            },
+                            {
+                                "nameFormat": "http://schemas.microsoft.com/identity/claims",
+                                "name": "sn"
                             }
                         ]
                     },
@@ -2399,7 +2415,7 @@
                 "type": "SP",
                 "creationDate": "2026-03-02T09:18:35.164Z",
                 "connectionTargetType": "STANDARD",
-                "modificationDate": "2026-03-09T00:49:30.484Z",
+                "modificationDate": "2026-03-09T01:48:39.486Z",
                 "virtualEntityIds": [],
                 "name": "MSFT",
                 "id": "ke55e7wQcY25OkXcutuYmfYASFV",
