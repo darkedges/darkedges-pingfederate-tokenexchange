@@ -779,12 +779,27 @@
                                 "name": "groups",
                                 "multiValued": false,
                                 "mappedScopes": []
+                            },
+                            {
+                                "name": "given_name",
+                                "multiValued": false,
+                                "mappedScopes": []
+                            },
+                            {
+                                "name": "family_name",
+                                "multiValued": false,
+                                "mappedScopes": []
+                            },
+                            {
+                                "name": "email",
+                                "multiValued": false,
+                                "mappedScopes": []
                             }
                         ]
                     },
                     "name": "AccessTokenManagement",
                     "id": "AccessTokenManagement",
-                    "lastModified": "2026-03-02T00:56:05.693Z",
+                    "lastModified": "2026-03-09T04:11:24.889Z",
                     "pluginDescriptorRef": {
                         "location": "https://localhost:-1/pf-admin-api/v1/oauth/accessTokenManagers/descriptors/com.pingidentity.pf.access.token.management.plugins.JwtBearerAccessTokenManagementPlugin",
                         "id": "com.pingidentity.pf.access.token.management.plugins.JwtBearerAccessTokenManagementPlugin"
@@ -810,6 +825,18 @@
                             },
                             {
                                 "name": "groups",
+                                "multiValued": false
+                            },
+                            {
+                                "name": "given_name",
+                                "multiValued": false
+                            },
+                            {
+                                "name": "family_name",
+                                "multiValued": false
+                            },
+                            {
+                                "name": "email",
                                 "multiValued": false
                             }
                         ]
@@ -2415,7 +2442,7 @@
                 "type": "SP",
                 "creationDate": "2026-03-02T09:18:35.164Z",
                 "connectionTargetType": "STANDARD",
-                "modificationDate": "2026-03-09T01:48:39.486Z",
+                "modificationDate": "2026-03-09T02:13:09.151Z",
                 "virtualEntityIds": [],
                 "name": "MSFT",
                 "id": "ke55e7wQcY25OkXcutuYmfYASFV",
@@ -2961,6 +2988,65 @@
                     "persistentGrantReuseType": "SERVER_DEFAULT",
                     "persistentGrantIdleTimeoutType": "SERVER_DEFAULT",
                     "requireSignedRequests": false,
+                    "description": "",
+                    "persistentGrantIdleTimeout": 0,
+                    "enabled": true,
+                    "requireOfflineAccessScopeToIssueRefreshTokens": "SERVER_DEFAULT",
+                    "oidcPolicy": {
+                        "grantAccessSessionRevocationApi": false,
+                        "grantAccessSessionSessionManagementApi": false,
+                        "pingAccessLogoutCapable": false,
+                        "logoutMode": "NONE",
+                        "pairwiseIdentifierUserType": false
+                    },
+                    "persistentGrantExpirationTime": 0,
+                    "restrictedResponseTypes": [],
+                    "lockoutMaxMaliciousActionsType": "SERVER_DEFAULT",
+                    "requireProofKeyForCodeExchange": false,
+                    "enableCookielessAuthenticationApi": false,
+                    "persistentGrantIdleTimeoutTimeUnit": "DAYS",
+                    "restrictToDefaultAccessTokenManager": false,
+                    "validateUsingAllEligibleAtms": false,
+                    "restrictScopes": false,
+                    "clientId": "external_identity",
+                    "requireJwtSecuredAuthorizationResponseMode": false,
+                    "persistentGrantExpirationTimeUnit": "DAYS",
+                    "requireDpop": false,
+                    "allowAuthenticationApiInit": false,
+                    "refreshTokenRollingGracePeriodType": "SERVER_DEFAULT",
+                    "replicationStatus": "REPLICATED",
+                    "creationDate": "2026-03-09T03:44:35.949Z",
+                    "deviceFlowSettingType": "SERVER_DEFAULT",
+                    "redirectUris": ["https://pingdarkedges.ciamlogin.com/287d8069-6760-4536-be30-e0557a5bf7a4/federation/oauth2"],
+                    "logoUrl": "",
+                    "authorizationDetailTypes": [],
+                    "grantTypes": ["AUTHORIZATION_CODE"],
+                    "modificationDate": "2026-03-09T03:50:48.502Z",
+                    "defaultAccessTokenManagerRef": {
+                        "location": "https://localhost:-1/pf-admin-api/v1/oauth/accessTokenManagers/AccessTokenManagement",
+                        "id": "AccessTokenManagement"
+                    },
+                    "clientSecretRetentionPeriodType": "SERVER_DEFAULT",
+                    "requirePushedAuthorizationRequests": false,
+                    "clientSecretChangedTime": "2026-03-09T03:44:35.000Z",
+                    "name": "EXT_IDENTITY",
+                    "refreshTokenRollingIntervalType": "SERVER_DEFAULT",
+                    "persistentGrantExpirationType": "SERVER_DEFAULT",
+                    "restrictedScopes": [],
+                    "refreshRolling": "SERVER_DEFAULT",
+                    "exclusiveScopes": [],
+                    "clientAuth": {
+                        "secondarySecrets": [],
+                        "secret": "${oauth_clients_items_clientAuth_external_identity_secret}",
+                        "type": "SECRET"
+                    }
+                },
+                {
+                    "bypassApprovalPage": false,
+                    "offlineAccessRequireConsentPrompt": "SERVER_DEFAULT",
+                    "persistentGrantReuseType": "SERVER_DEFAULT",
+                    "persistentGrantIdleTimeoutType": "SERVER_DEFAULT",
+                    "requireSignedRequests": false,
                     "persistentGrantIdleTimeout": 0,
                     "enabled": true,
                     "requireOfflineAccessScopeToIssueRefreshTokens": "SERVER_DEFAULT",
@@ -3168,6 +3254,18 @@
                         "groups": {
                             "source": {"type": "AUTHENTICATION_POLICY_CONTRACT"},
                             "value": "groups"
+                        },
+                        "given_name": {
+                            "source": {"type": "AUTHENTICATION_POLICY_CONTRACT"},
+                            "value": "givenName"
+                        },
+                        "family_name": {
+                            "source": {"type": "AUTHENTICATION_POLICY_CONTRACT"},
+                            "value": "sn"
+                        },
+                        "email": {
+                            "source": {"type": "AUTHENTICATION_POLICY_CONTRACT"},
+                            "value": "mail"
                         }
                     },
                     "id": "authz_req|apc.KUzfpHBOZeqF0vVo|AccessTokenManagement",
@@ -3219,6 +3317,27 @@
                         "groups": {
                             "source": {"type": "EXPRESSION"},
                             "value": "#log = @org.apache.commons.logging.LogFactory@getLog(\"com.pingidentity.ognl.logger\"),\n#groupList = new java.util.ArrayList(),\n#groups = #this.get(\"ds.PINGDIRECTORY.isMemberOf\")!=null?#this.get(\"ds.PINGDIRECTORY.isMemberOf\").getValues():{},\n#groups.{\n    #group = #this, #group = new javax.naming.ldap.LdapName(#group),\n    #cn = #group.getRdn(#group.size() - 1).getValue().toString(),\n    #group = #cn.toLowerCase(),\n    #groupList.add(#cn)\n},\n#log.debug(\"groups: \"+#groupList),\n#groupList"
+                        },
+                        "given_name": {
+                            "source": {
+                                "id": "PINGDIRECTORY",
+                                "type": "LDAP_DATA_STORE"
+                            },
+                            "value": "givenName"
+                        },
+                        "family_name": {
+                            "source": {
+                                "id": "PINGDIRECTORY",
+                                "type": "LDAP_DATA_STORE"
+                            },
+                            "value": "sn"
+                        },
+                        "email": {
+                            "source": {
+                                "id": "PINGDIRECTORY",
+                                "type": "LDAP_DATA_STORE"
+                            },
+                            "value": "mail"
                         }
                     },
                     "id": "default|AccessTokenManagement",
@@ -3233,9 +3352,11 @@
                         "description": "PINGDIRECTORY",
                         "id": "PINGDIRECTORY",
                         "searchAttributes": [
+                            "Subject DN",
+                            "givenName",
                             "isMemberOf",
                             "mail",
-                            "Subject DN",
+                            "sn",
                             "uid"
                         ],
                         "type": "LDAP",
@@ -3272,6 +3393,24 @@
                         "groups": {
                             "source": {"type": "EXPRESSION"},
                             "value": "#log = @org.apache.commons.logging.LogFactory@getLog(\"com.pingidentity.ognl.logger\"),\n#groupList = new java.util.ArrayList(),\n#groups = #this.get(\"ds.PINGDIRECTORY.isMemberOf\")!=null?#this.get(\"ds.PINGDIRECTORY.isMemberOf\").getValues():{},\n#groups.{\n    #group = #this, #group = new javax.naming.ldap.LdapName(#group),\n    #cn = #group.getRdn(#group.size() - 1).getValue().toString(),\n    #group = #cn.toLowerCase(),\n    #groupList.add(#cn)\n},\n#log.debug(\"groups: \"+#groupList),\n#groupList"
+                        },
+                        "given_name": {
+                            "source": {
+                                "id": "PINGDIRECTORY",
+                                "type": "LDAP_DATA_STORE"
+                            },
+                            "value": "givenName"
+                        },
+                        "family_name": {
+                            "source": {
+                                "id": "PINGDIRECTORY",
+                                "type": "LDAP_DATA_STORE"
+                            },
+                            "value": "sn"
+                        },
+                        "email": {
+                            "source": {"type": "TEXT"},
+                            "value": "email"
                         }
                     },
                     "id": "urn:ietf:params:oauth:grant-type:token-exchange|PROCESSORPOLICIES|AccessTokenManagement",
@@ -3286,8 +3425,10 @@
                         "description": "PINGDIRECTORY",
                         "id": "PINGDIRECTORY",
                         "searchAttributes": [
-                            "Subject DN",
-                            "isMemberOf"
+                            "givenName",
+                            "isMemberOf",
+                            "sn",
+                            "Subject DN"
                         ],
                         "type": "LDAP",
                         "baseDn": "ou=People,dc=example,dc=com",
