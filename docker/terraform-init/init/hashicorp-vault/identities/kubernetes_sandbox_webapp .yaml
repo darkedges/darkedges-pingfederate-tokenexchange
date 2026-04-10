@@ -10,7 +10,6 @@ identity:
   business_unit: "engineering"
 
 authentication:
-  pki: "webapp-sa.machine-id.webapp.demo"
   serviceaccount: "sandbox/webapp-sa"
 
 policies:
