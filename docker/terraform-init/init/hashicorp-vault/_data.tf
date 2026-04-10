@@ -41,6 +41,12 @@ locals {
   identity_groups_map = {
     for filename, config in local.configs_by_type.identity_groups :
     config.name => config
+    if startswith(filename, "identity_group_")
+  }
+  kubernetes_groups_map = {
+    for filename, config in local.configs_by_type.identity_groups :
+    config.name => config
+    if startswith(filename, "kubernetes_group_")
   }
   human_identities_map = {
     for filename, config in local.configs_by_type.identities :
@@ -51,6 +57,11 @@ locals {
     for filename, config in local.configs_by_type.identities :
     config.identity.name => config
     if startswith(filename, "application_")
+  }
+  kubernetes_identities_map = {
+    for filename, config in local.configs_by_type.identities :
+    config.identity.name => config
+    if startswith(filename, "kubernetes_")
   }
   human_with_pki = {
     for k, v in local.human_identities_map :

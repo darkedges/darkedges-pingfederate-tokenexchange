@@ -1,0 +1,7 @@
+appid: webapp
+name: webapp
+contact: nirving@darkedges.com
+enable_approle: false
+environments:
+  - production
+  - dev

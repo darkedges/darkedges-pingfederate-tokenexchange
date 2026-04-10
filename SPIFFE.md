@@ -1,5 +1,9 @@
 # SPIFFE 
 
+kubectl exec -it vault-0 -n hashicorp-vault -- sh   
+vault login 
+
+
 ```console
 vault read auth/approle/role/chatbot/role-id
 ```

@@ -20,6 +20,24 @@ resource "vault_identity_entity" "application" {
   }
 }
 
+resource "vault_identity_entity" "kubernetes" {
+  for_each = local.kubernetes_identities_map
+  name     = each.key
+  policies = [for i in each.value.policies.identity_policies : i]
+  metadata = {
+    environment   = each.value.identity.environment
+    business_unit = each.value.identity.business_unit
+    spiffe_id     = "spiffe://vault/kubernetes/${each.value.identity.environment}/${each.value.identity.business_unit}/${each.value.identity.name}"
+  }
+}
+
+resource "vault_identity_entity_alias" "kubernetes" {
+  for_each       = local.kubernetes_identities_map
+  mount_accessor = vault_auth_backend.kubernetes.accessor
+  canonical_id   = vault_identity_entity.kubernetes[each.key].id
+  name           = each.value.authentication.serviceaccount
+}
+
 resource "vault_identity_entity_alias" "app_pki" {
   for_each       = local.app_with_pki
   mount_accessor = vault_auth_backend.cert.accessor

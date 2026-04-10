@@ -1,0 +1,9 @@
+name: WebApp group
+contact: nirving@darkedges.com
+human_identities:
+  - Nicholas Irving
+application_identities:
+  - webapp
+sub_groups: []
+identity_group_policies: 
+  - webapp-production-secret-consumer

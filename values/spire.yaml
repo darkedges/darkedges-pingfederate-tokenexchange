@@ -1,0 +1,24 @@
+global:
+  openshift: false # If running on openshift, set to true
+  spire:
+    recommendations:
+      enabled: true
+    namespaces:
+      create: true
+    ingressControllerType: "kong" # If not openshift, and want to expose services, set to a supported option [ingress-nginx]
+    # Update these
+    clusterName: production
+    trustDomain: production.other
+    caSubject:
+      country: US
+      organization: Production
+      commonName: production.other
+  spire-server:
+    ingress:
+      enabled: true
+    federation:
+      ingress:
+        enabled: true
+        host: example-fed
+  spire-agent:
+    enabled: true

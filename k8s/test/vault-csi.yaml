@@ -18,6 +18,23 @@ spec:
         secretPath: "secret/data/db-pass"
         secretKey: "password"
 ---
+apiVersion: secrets.hashicorp.com/v1beta1
+kind: VaultPKISecret
+metadata:
+  name: vault-pki
+spec:
+  vaultAuthRef: vault-auth
+  mount: pki
+  role: default
+  commonName: example.com
+  format: pem
+  expiryOffset: 1s
+  ttl: 60s
+  namespace: tenant-1
+  destination:
+    create: true
+    name: pki1
+---
 apiVersion: secrets-store.csi.x-k8s.io/v1
 kind: SecretProviderClass
 metadata:

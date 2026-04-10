@@ -1,0 +1,18 @@
+metadata:
+  version: "1.0.0"
+  created_date: "2025-10-01"
+  description: "WebApp Service Account Identity"
+
+identity:
+  name: "webapp"
+  contact: "nirving@darkedges.com"
+  environment: "production"
+  business_unit: "engineering"
+
+authentication:
+  pki: "webapp-sa.machine-id.webapp.demo"
+  serviceaccount: "sandbox/webapp-sa"
+
+policies:
+  identity_policies:
+    - "application-identity-token-policies"

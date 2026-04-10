@@ -46,12 +46,14 @@ kubectl create configmap -n cert-manager spiffe-issuer --from-literal=issuer-nam
 helm upgrade --install -n cert-manager cert-manager-csi-driver-spiffe oci://quay.io/jetstack/charts/cert-manager-csi-driver-spiffe --wait -f values\spiffe-csi-driver.yaml
 
 ##
-
+helm repo add hashicorp https://helm.releases.hashicorp.com
+helm install --version 0.10.0 --create-namespace --namespace vault-secrets-operator  --set "csi.enabled=true" vault-secrets-operator hashicorp/vault-secrets-operator
 helm repo add secrets-store-csi-driver https://kubernetes-sigs.github.io/secrets-store-csi-driver/charts
 helm upgrade --install csi secrets-store-csi-driver/secrets-store-csi-driver --namespace hashicorp-vault --create-namespace -f values/secrets-store-csi-driver.yaml
 kubectl apply -f .\k8s\test\vault-csi.yaml 
 kubectl exec webapp -- cat /mnt/secrets-store/db-password
 kubectl exec webapp -- env | grep DB_PASSWORD
+kubectl exec webapp -- cat /var/run/secrets/spiffe/spiffe-jwt | jq .data.token  -r | jq -R 'split(".") | .[0:2] | map(@base64d) | map(fromjson)'
 
 # Generate credentials
 pingctl k8s generate devops-secret > devops.yaml
@@ -62,6 +64,13 @@ helm upgrade --install pingfederate pingidentity/ping-devops \
   --create-namespace --namespace pingfed \
   -f pingfederate/helm/pingfederate.yaml \
   -f pingfederate/helm/ingress.yaml
+```
+
+## Spire
+
+```console
+helm upgrade --install --create-namespace -n spire spire-crds spire-crds --repo https://spiffe.github.io/helm-charts-hardened/ -f values/spire.yaml
+helm upgrade --install -n spire spire spire --repo https://spiffe.github.io/helm-charts-hardened/ -f values/spire.yaml
 ```
 
 ## Component Documentation
