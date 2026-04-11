@@ -3058,6 +3058,63 @@
                         "logoutMode": "NONE",
                         "pairwiseIdentifierUserType": false
                     },
+                    "jwksSettings": {"jwks": "{   \"keys\": [     {       \"kty\": \"RSA\",       \"e\": \"AQAB\",       \"use\": \"sig\",       \"kid\": \"mnY2TyYWpqzSiVFTv4ZCd6NlyIaoBqDduhuypc7oN60\",       \"alg\": \"RS256\",       \"n\": \"zPnJsWBhEG_NXTRWMnqg3i3-pSVn-cGJheHvkixYjD2bq0aLAsfKM_GAAANtprn9wzyQgtHaz9z_kTtYr5XgvUbxlh0AG2MIwlr_fzl63q-7kw9wQAgVWQQT4Wp_QIzy_YZPZquJZcLyxwjRcjxSeAa1V1sxD6CZIDta_qmmI2Eo90_K_BJu3qnN8BCW1M5Bx-HKWGpn95m3tjbF91pN0RfWQoMxkouMLuekrawgvBNpoq3gamomn4kCyy5NTnhqGeQKQ0lKEJEWPVGCmk97ZzUoJPuKdvIk5APrmbAeLC37HiYFztk_Arnws3a-T_kC_wRWskwxNHFQn3s2t0XFHQ\"     }   ] }"},
+                    "persistentGrantExpirationTime": 0,
+                    "restrictedResponseTypes": [],
+                    "lockoutMaxMaliciousActionsType": "SERVER_DEFAULT",
+                    "requireProofKeyForCodeExchange": false,
+                    "enableCookielessAuthenticationApi": false,
+                    "persistentGrantIdleTimeoutTimeUnit": "DAYS",
+                    "restrictToDefaultAccessTokenManager": false,
+                    "validateUsingAllEligibleAtms": false,
+                    "restrictScopes": false,
+                    "clientId": "https://www.certification.openid.net/test/a/DarkEdges",
+                    "requireJwtSecuredAuthorizationResponseMode": false,
+                    "persistentGrantExpirationTimeUnit": "DAYS",
+                    "requireDpop": false,
+                    "allowAuthenticationApiInit": false,
+                    "refreshTokenRollingGracePeriodType": "SERVER_DEFAULT",
+                    "replicationStatus": "REPLICATED",
+                    "creationDate": "2026-04-11T04:38:53.710Z",
+                    "deviceFlowSettingType": "SERVER_DEFAULT",
+                    "redirectUris": ["https://www.certification.openid.net/test/a/DarkEdges/callback"],
+                    "logoUrl": "",
+                    "authorizationDetailTypes": [],
+                    "grantTypes": ["AUTHORIZATION_CODE"],
+                    "modificationDate": "2026-04-11T04:48:43.474Z",
+                    "clientSecretRetentionPeriodType": "SERVER_DEFAULT",
+                    "requirePushedAuthorizationRequests": false,
+                    "clientSecretChangedTime": "2026-04-11T04:38:53.000Z",
+                    "name": "https://www.certification.openid.net/test/a/DarkEdges",
+                    "refreshTokenRollingIntervalType": "SERVER_DEFAULT",
+                    "persistentGrantExpirationType": "SERVER_DEFAULT",
+                    "restrictedScopes": [],
+                    "refreshRolling": "SERVER_DEFAULT",
+                    "exclusiveScopes": [],
+                    "clientAuth": {
+                        "secondarySecrets": [],
+                        "secret": "${oauth_clients_items_clientAuth_https_//www.certification.openid.net/test/a/DarkEdges_secret}",
+                        "type": "PRIVATE_KEY_JWT",
+                        "enforceReplayPrevention": false
+                    }
+                },
+                {
+                    "bypassApprovalPage": true,
+                    "offlineAccessRequireConsentPrompt": "SERVER_DEFAULT",
+                    "persistentGrantReuseType": "SERVER_DEFAULT",
+                    "persistentGrantIdleTimeoutType": "SERVER_DEFAULT",
+                    "requireSignedRequests": false,
+                    "description": "",
+                    "persistentGrantIdleTimeout": 0,
+                    "enabled": true,
+                    "requireOfflineAccessScopeToIssueRefreshTokens": "SERVER_DEFAULT",
+                    "oidcPolicy": {
+                        "grantAccessSessionRevocationApi": false,
+                        "grantAccessSessionSessionManagementApi": false,
+                        "pingAccessLogoutCapable": false,
+                        "logoutMode": "NONE",
+                        "pairwiseIdentifierUserType": false
+                    },
                     "persistentGrantExpirationTime": 0,
                     "restrictedResponseTypes": [],
                     "lockoutMaxMaliciousActionsType": "SERVER_DEFAULT",
@@ -3285,7 +3342,88 @@
         },
         {
             "operationType": "SAVE",
-            "items": [{"clientMetadata": []}],
+            "items": [{
+                "configuration": {
+                    "tables": [],
+                    "fields": [
+                        {
+                            "name": "code",
+                            "value": "true"
+                        },
+                        {
+                            "name": "code id_token",
+                            "value": "true"
+                        },
+                        {
+                            "name": "code id_token token",
+                            "value": "true"
+                        },
+                        {
+                            "name": "code token",
+                            "value": "true"
+                        },
+                        {
+                            "name": "id_token",
+                            "value": "true"
+                        },
+                        {
+                            "name": "id_token token",
+                            "value": "true"
+                        },
+                        {
+                            "name": "token",
+                            "value": "true"
+                        }
+                    ]
+                },
+                "name": "ClientRegistrationPolicy",
+                "id": "ClientRegistrationPolicy",
+                "lastModified": "2026-04-11T04:54:11.277Z",
+                "pluginDescriptorRef": {
+                    "location": "https://localhost:-1/pf-admin-api/v1/oauth/clientRegistrationPolicies/descriptors/com.pingidentity.pf.client.registration.ResponseTypesConstraintsPlugin",
+                    "id": "com.pingidentity.pf.client.registration.ResponseTypesConstraintsPlugin"
+                }
+            }],
+            "resourceType": "/oauth/clientRegistrationPolicies"
+        },
+        {
+            "operationType": "SAVE",
+            "items": [{
+                "dynamicClientRegistration": {
+                    "initialAccessTokenScope": "openid",
+                    "rotateClientSecret": false,
+                    "offlineAccessRequireConsentPrompt": "SERVER_DEFAULT",
+                    "requireSignedRequests": false,
+                    "persistentGrantIdleTimeoutType": "SERVER_DEFAULT",
+                    "cibaRequireSignedRequests": false,
+                    "retainClientSecret": false,
+                    "restrictCommonScopes": false,
+                    "allowedExclusiveScopes": [],
+                    "allowedAuthorizationDetailTypes": [],
+                    "enforceReplayPrevention": false,
+                    "requireOfflineAccessScopeToIssueRefreshTokens": "SERVER_DEFAULT",
+                    "lockoutMaxMaliciousActionsType": "SERVER_DEFAULT",
+                    "requireProofKeyForCodeExchange": false,
+                    "rotateRegistrationAccessToken": false,
+                    "restrictToDefaultAccessTokenManager": false,
+                    "requireJwtSecuredAuthorizationResponseMode": false,
+                    "policyRefs": [{
+                        "location": "https://localhost:-1/pf-admin-api/v1/oauth/clientRegistrationPolicies/ClientRegistrationPolicy",
+                        "id": "ClientRegistrationPolicy"
+                    }],
+                    "refreshTokenRollingGracePeriodType": "SERVER_DEFAULT",
+                    "deviceFlowSettingType": "SERVER_DEFAULT",
+                    "clientSecretRetentionPeriodType": "SERVER_DEFAULT",
+                    "restrictedCommonScopes": [],
+                    "refreshTokenRollingIntervalType": "SERVER_DEFAULT",
+                    "cibaPollingInterval": 3,
+                    "persistentGrantExpirationType": "SERVER_DEFAULT",
+                    "allowClientDelete": false,
+                    "clientCertIssuerType": "NONE",
+                    "refreshRolling": "SERVER_DEFAULT"
+                },
+                "clientMetadata": []
+            }],
             "resourceType": "/oauth/clientSettings"
         },
         {
