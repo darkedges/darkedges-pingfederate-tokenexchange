@@ -120,5 +120,9 @@ Keys available for use with the $info variable: "issuer""authorization_endpoint"
     "backchannel_user_code_parameter_supported": $info.get('backchannel_user_code_parameter_supported'),
     "code_challenge_methods_supported": $utils.toJsonArray($info.get('code_challenge_methods_supported')),
     "dpop_signing_alg_values_supported": $utils.toJsonArray($info.get('dpop_signing_alg_values_supported')),
-    "prompt_values_supported": $utils.toJsonArray($info.get('prompt_values_supported'))
+    "prompt_values_supported": $utils.toJsonArray($info.get('prompt_values_supported')),
+    "client_registration_types_supported": [
+        "automatic",
+        "explicit"
+    ]
 }
