@@ -3079,8 +3079,11 @@
                     "redirectUris": ["http://localhost:28080/login/oauth2/code/admin-oidc"],
                     "logoUrl": "",
                     "authorizationDetailTypes": [],
-                    "grantTypes": ["CLIENT_CREDENTIALS"],
-                    "modificationDate": "2026-04-11T01:13:18.869Z",
+                    "grantTypes": [
+                        "AUTHORIZATION_CODE",
+                        "CLIENT_CREDENTIALS"
+                    ],
+                    "modificationDate": "2026-04-11T01:17:15.278Z",
                     "clientSecretRetentionPeriodType": "SERVER_DEFAULT",
                     "requirePushedAuthorizationRequests": false,
                     "clientSecretChangedTime": "2026-04-11T00:53:53.000Z",
