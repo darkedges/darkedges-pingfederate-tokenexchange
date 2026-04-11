@@ -3093,7 +3093,7 @@
                     "exclusiveScopes": [],
                     "clientAuth": {
                         "secondarySecrets": [],
-                        "secret": "${oauth_clients_items_clientAuth_https_//www.certification.openid.net/test/a/DarkEdges_secret}",
+                        "secret": "${oauth_clients_items_clientAuth_https_www_certification_openid_net_test_a_DarkEdges_secret}",
                         "type": "PRIVATE_KEY_JWT",
                         "enforceReplayPrevention": false
                     }
