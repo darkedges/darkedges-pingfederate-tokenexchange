@@ -3042,7 +3042,7 @@
                     }
                 },
                 {
-                    "bypassApprovalPage": false,
+                    "bypassApprovalPage": true,
                     "offlineAccessRequireConsentPrompt": "SERVER_DEFAULT",
                     "persistentGrantReuseType": "SERVER_DEFAULT",
                     "persistentGrantIdleTimeoutType": "SERVER_DEFAULT",
@@ -3076,14 +3076,17 @@
                     "replicationStatus": "REPLICATED",
                     "creationDate": "2026-04-11T00:53:53.960Z",
                     "deviceFlowSettingType": "SERVER_DEFAULT",
-                    "redirectUris": ["http://localhost:28080/login/oauth2/code/admin-oidc"],
+                    "redirectUris": [
+                        "http://localhost:28080/login/oauth2/code/admin-oidc",
+                        "http://openidfederation.ping.darkedges.com/login/oauth2/code/admin-oidc"
+                    ],
                     "logoUrl": "",
                     "authorizationDetailTypes": [],
                     "grantTypes": [
                         "AUTHORIZATION_CODE",
                         "CLIENT_CREDENTIALS"
                     ],
-                    "modificationDate": "2026-04-11T01:17:15.278Z",
+                    "modificationDate": "2026-04-11T01:46:55.907Z",
                     "clientSecretRetentionPeriodType": "SERVER_DEFAULT",
                     "requirePushedAuthorizationRequests": false,
                     "clientSecretChangedTime": "2026-04-11T00:53:53.000Z",
