@@ -124,5 +124,6 @@ Keys available for use with the $info variable: "issuer""authorization_endpoint"
   "client_registration_types_supported": [
     "automatic",
     "explicit"
-  ]
+  ],
+  "federation_registration_endpoint": "$info.get('registration_endpoint')"
 }
