@@ -538,14 +538,24 @@
                 "redirectValidationLocalSettings": {
                     "enableTargetResourceValidationForSLO": true,
                     "enableInErrorResourceValidation": true,
-                    "uriAllowList": [{
-                        "allowQueryAndFragment": false,
-                        "inErrorResource": true,
-                        "idpDiscovery": false,
-                        "validUri": "https://openidfederation.ping.darkedges.com",
-                        "targetResourceSLO": true,
-                        "targetResourceSSO": true
-                    }],
+                    "uriAllowList": [
+                        {
+                            "allowQueryAndFragment": false,
+                            "inErrorResource": true,
+                            "idpDiscovery": false,
+                            "validUri": "https://openidfederation.ping.darkedges.com",
+                            "targetResourceSLO": true,
+                            "targetResourceSSO": true
+                        },
+                        {
+                            "allowQueryAndFragment": false,
+                            "inErrorResource": true,
+                            "idpDiscovery": false,
+                            "validUri": "https://www.certification.openid.net/test/a/DarkEdges/",
+                            "targetResourceSLO": true,
+                            "targetResourceSSO": true
+                        }
+                    ],
                     "whiteList": [{
                         "validDomain": "openidfederation.ping.darkedges.com",
                         "validPath": "",
