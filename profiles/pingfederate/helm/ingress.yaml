@@ -57,6 +57,12 @@ pingfederate-admin:
           - pfconsole.ping.internal.darkedges.com
 pingfederate-engine:
   ingress:
+    annotations:
+        nginx.ingress.kubernetes.io/server-snippet: |
+          client_header_buffer_size 64k;
+          large_client_header_buffers 4 64k;
+          http2_max_field_size 64k;
+          http2_max_header_size 256k;
     hosts:
       - host: id.ping.internal.darkedges.com
         paths:
