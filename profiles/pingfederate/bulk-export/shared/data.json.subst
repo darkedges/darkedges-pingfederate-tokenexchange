@@ -45,6 +45,23 @@
         },
         {
             "operationType": "SAVE",
+            "subResource": "org.sourceid.oauth20.domain.ClientManagerLdapImpl",
+            "items": [
+                {
+                    "stringValue": "LDAP-4D65BD30F2946A712E86940F0F7442EDCDC16646",
+                    "id": "PingFederateDSJNDIName",
+                    "type": "STRING"
+                },
+                {
+                    "stringValue": "ou=oauthClients,dc=example,dc=com",
+                    "id": "SearchBase",
+                    "type": "STRING"
+                }
+            ],
+            "resourceType": "/configStore"
+        },
+        {
+            "operationType": "SAVE",
             "subResource": "org.sourceid.oauth20.domain.ClientManagerXmlFileImpl",
             "items": [{
                 "stringValue": "true",
@@ -260,7 +277,7 @@
                     "readTimeout": 3000,
                     "name": "PingDirectory",
                     "useStartTLS": false,
-                    "lastModified": "2026-04-11T05:37:16.403Z",
+                    "lastModified": "2026-04-11T07:43:38.095Z",
                     "retryFailedOperations": false,
                     "userDN": "cn=administrator"
                 },
@@ -280,7 +297,7 @@
                     "name": "ProvisionerDS (sa)",
                     "connectionUrl": "jdbc:hsqldb:${pf.server.data.dir}${/}hypersonic${/}ProvisionerDefaultDB;hsqldb.lock_file=false",
                     "id": "ProvisionerDS",
-                    "lastModified": "2026-04-11T05:37:16.412Z",
+                    "lastModified": "2026-04-11T07:43:38.110Z",
                     "maxPoolSize": 100,
                     "blockingTimeout": 5000
                 }
@@ -465,11 +482,11 @@
                 {
                     "password": "${PING_IDENTITY_PASSWORD}",
                     "roles": [
-                        "EXPRESSION_ADMINISTRATOR",
                         "DATA_COLLECTION_ADMINISTRATOR",
-                        "USER_ADMINISTRATOR",
                         "ADMINISTRATOR",
-                        "CRYPTO_ADMINISTRATOR"
+                        "USER_ADMINISTRATOR",
+                        "CRYPTO_ADMINISTRATOR",
+                        "EXPRESSION_ADMINISTRATOR"
                     ],
                     "auditor": false,
                     "description": "Initial administrator user",
@@ -479,11 +496,11 @@
                 {
                     "password": "${administrativeAccounts_items_nirving_password}",
                     "roles": [
-                        "EXPRESSION_ADMINISTRATOR",
                         "DATA_COLLECTION_ADMINISTRATOR",
-                        "USER_ADMINISTRATOR",
                         "ADMINISTRATOR",
-                        "CRYPTO_ADMINISTRATOR"
+                        "USER_ADMINISTRATOR",
+                        "CRYPTO_ADMINISTRATOR",
+                        "EXPRESSION_ADMINISTRATOR"
                     ],
                     "auditor": false,
                     "description": "description",
@@ -582,7 +599,7 @@
                 {
                     "name": "POLICYCONTRACT",
                     "id": "KUzfpHBOZeqF0vVo",
-                    "lastModified": "2026-04-11T05:37:16.751Z",
+                    "lastModified": "2026-04-11T07:43:38.457Z",
                     "coreAttributes": [{"name": "subject"}],
                     "extendedAttributes": [
                         {"name": "entryUUID"},
@@ -598,7 +615,7 @@
                 {
                     "name": "WSFED",
                     "id": "atadCwboug6WtQml",
-                    "lastModified": "2026-04-11T05:37:16.756Z",
+                    "lastModified": "2026-04-11T07:43:38.462Z",
                     "coreAttributes": [{"name": "subject"}],
                     "extendedAttributes": []
                 }
@@ -799,7 +816,7 @@
                     },
                     "name": "AccessTokenManagement",
                     "id": "AccessTokenManagement",
-                    "lastModified": "2026-04-11T05:37:16.845Z",
+                    "lastModified": "2026-04-11T07:43:38.556Z",
                     "pluginDescriptorRef": {
                         "location": "https://localhost:-1/pf-admin-api/v1/oauth/accessTokenManagers/descriptors/com.pingidentity.pf.access.token.management.plugins.JwtBearerAccessTokenManagementPlugin",
                         "id": "com.pingidentity.pf.access.token.management.plugins.JwtBearerAccessTokenManagementPlugin"
@@ -1014,7 +1031,7 @@
                     },
                     "name": "JSON Web Tokens",
                     "id": "jwt",
-                    "lastModified": "2026-04-11T05:37:16.830Z",
+                    "lastModified": "2026-04-11T07:43:38.546Z",
                     "pluginDescriptorRef": {
                         "location": "https://localhost:-1/pf-admin-api/v1/oauth/accessTokenManagers/descriptors/com.pingidentity.pf.access.token.management.plugins.JwtBearerAccessTokenManagementPlugin",
                         "id": "com.pingidentity.pf.access.token.management.plugins.JwtBearerAccessTokenManagementPlugin"
@@ -1180,7 +1197,7 @@
                     },
                     "name": "IDENTIFIERFIRST",
                     "id": "IDENTIFIERFIRST",
-                    "lastModified": "2026-04-11T05:37:16.944Z",
+                    "lastModified": "2026-04-11T07:43:38.657Z",
                     "pluginDescriptorRef": {
                         "location": "https://localhost:-1/pf-admin-api/v1/idp/adapters/descriptors/com.pingidentity.adapters.identifierfirst.idp.IdentifierFirstAdapter",
                         "id": "com.pingidentity.adapters.identifierfirst.idp.IdentifierFirstAdapter"
@@ -1494,7 +1511,7 @@
                     },
                     "name": "PINGID",
                     "id": "PINGID",
-                    "lastModified": "2026-04-11T05:37:16.979Z",
+                    "lastModified": "2026-04-11T07:43:38.697Z",
                     "pluginDescriptorRef": {
                         "location": "https://localhost:-1/pf-admin-api/v1/idp/adapters/descriptors/com.pingidentity.adapters.pingid.PingIDAdapter",
                         "id": "com.pingidentity.adapters.pingid.PingIDAdapter"
@@ -1729,7 +1746,7 @@
                 },
                 "name": "OPENTOKEN",
                 "id": "OPENTOKEN",
-                "lastModified": "2026-04-11T05:37:17.176Z",
+                "lastModified": "2026-04-11T07:43:38.901Z",
                 "targetApplicationInfo": {},
                 "pluginDescriptorRef": {
                     "location": "https://localhost:-1/pf-admin-api/v1/sp/adapters/descriptors/com.pingidentity.adapters.opentoken.SpAuthnAdapter",
@@ -1845,7 +1862,7 @@
                     },
                     "name": "MSFTTOKENPROCESSOR",
                     "id": "MSFTTOKENPROCESSOR",
-                    "lastModified": "2026-04-11T05:37:17.198Z",
+                    "lastModified": "2026-04-11T07:43:38.939Z",
                     "pluginDescriptorRef": {
                         "location": "https://localhost:-1/pf-admin-api/v1/idp/tokenProcessors/descriptors/com.pingidentity.pf.tokenprocessors.jwt.JwtTokenProcessor",
                         "id": "com.pingidentity.pf.tokenprocessors.jwt.JwtTokenProcessor"
@@ -1878,7 +1895,7 @@
                     },
                     "name": "PFTOKENPROCESSOR",
                     "id": "PFTOKENPROCESSOR",
-                    "lastModified": "2026-04-11T05:37:17.215Z",
+                    "lastModified": "2026-04-11T07:43:38.958Z",
                     "pluginDescriptorRef": {
                         "location": "https://localhost:-1/pf-admin-api/v1/idp/tokenProcessors/descriptors/org.sourceid.wstrust.processor.oauth.BearerAccessTokenTokenProcessor",
                         "id": "org.sourceid.wstrust.processor.oauth.BearerAccessTokenTokenProcessor"
@@ -2168,7 +2185,7 @@
                 "loggingMode": "STANDARD",
                 "replicationStatus": "REPLICATED",
                 "type": "IDP",
-                "creationDate": "2026-04-11T05:37:17.460Z",
+                "creationDate": "2026-04-11T07:43:39.197Z",
                 "metadataReloadSettings": {
                     "metadataUrlRef": {
                         "location": "https://localhost:-1/pf-admin-api/v1/metadataUrls/lhUwqUjy14Fs7B6zXU2VC9KvH",
@@ -2178,7 +2195,7 @@
                 },
                 "errorPageMsgId": "errorDetail.spSsoFailure",
                 "baseUrl": "https://login.microsoftonline.com",
-                "modificationDate": "2026-04-11T05:37:17.460Z",
+                "modificationDate": "2026-04-11T07:43:39.197Z",
                 "virtualEntityIds": [],
                 "name": "https://sts.windows.net/4161be3f-bf2b-41d4-a02b-e6f82b529d53/",
                 "id": "uxXlcpG9H1CGfh11FJHAT6PF-EM",
@@ -2272,8 +2289,8 @@
                     "signAuthnRequests": false,
                     "enabledProfiles": [
                         "IDP_INITIATED_SLO",
-                        "SP_INITIATED_SSO",
                         "IDP_INITIATED_SSO",
+                        "SP_INITIATED_SSO",
                         "SP_INITIATED_SLO"
                     ],
                     "adapterMappings": [{
@@ -2443,9 +2460,9 @@
                 "loggingMode": "STANDARD",
                 "replicationStatus": "REPLICATED",
                 "type": "SP",
-                "creationDate": "2026-04-11T05:37:18.032Z",
+                "creationDate": "2026-04-11T07:43:39.764Z",
                 "connectionTargetType": "STANDARD",
-                "modificationDate": "2026-04-11T05:37:18.032Z",
+                "modificationDate": "2026-04-11T07:43:39.764Z",
                 "virtualEntityIds": [],
                 "name": "MSFT",
                 "id": "ke55e7wQcY25OkXcutuYmfYASFV"
@@ -2777,7 +2794,7 @@
                 "allowIdTokenIntrospection": false,
                 "id": "OPENIDCONNECTPOLICYMANAGEMENT",
                 "reissueIdTokenInHybridFlow": false,
-                "lastModified": "2026-04-11T05:37:18.220Z",
+                "lastModified": "2026-04-11T07:43:39.896Z",
                 "idTokenLifetime": 5,
                 "accessTokenManagerRef": {
                     "location": "https://localhost:-1/pf-admin-api/v1/oauth/accessTokenManagers/AccessTokenManagement",
@@ -2853,493 +2870,6 @@
         },
         {
             "operationType": "SAVE",
-            "items": [
-                {
-                    "bypassApprovalPage": true,
-                    "offlineAccessRequireConsentPrompt": "NO",
-                    "persistentGrantReuseType": "SERVER_DEFAULT",
-                    "persistentGrantIdleTimeoutType": "SERVER_DEFAULT",
-                    "requireSignedRequests": false,
-                    "persistentGrantIdleTimeout": 0,
-                    "enabled": true,
-                    "requireOfflineAccessScopeToIssueRefreshTokens": "YES",
-                    "oidcPolicy": {
-                        "grantAccessSessionRevocationApi": false,
-                        "postLogoutRedirectUris": ["https://hr.ping.darkedges.com/"],
-                        "grantAccessSessionSessionManagementApi": false,
-                        "pingAccessLogoutCapable": false,
-                        "logoutMode": "NONE",
-                        "pairwiseIdentifierUserType": false
-                    },
-                    "persistentGrantExpirationTime": 0,
-                    "restrictedResponseTypes": [],
-                    "lockoutMaxMaliciousActionsType": "SERVER_DEFAULT",
-                    "requireProofKeyForCodeExchange": true,
-                    "enableCookielessAuthenticationApi": false,
-                    "persistentGrantIdleTimeoutTimeUnit": "DAYS",
-                    "restrictToDefaultAccessTokenManager": false,
-                    "validateUsingAllEligibleAtms": false,
-                    "restrictScopes": true,
-                    "clientId": "contact-hr-client",
-                    "requireJwtSecuredAuthorizationResponseMode": false,
-                    "persistentGrantExpirationTimeUnit": "DAYS",
-                    "requireDpop": false,
-                    "allowAuthenticationApiInit": false,
-                    "refreshTokenRollingGracePeriodType": "SERVER_DEFAULT",
-                    "replicationStatus": "REPLICATED",
-                    "creationDate": "2026-04-11T05:37:18.350Z",
-                    "deviceFlowSettingType": "SERVER_DEFAULT",
-                    "redirectUris": [
-                        "http://localhost:3000/api/auth/callback",
-                        "https://hr.ping.darkedges.com/api/auth/callback"
-                    ],
-                    "authorizationDetailTypes": [],
-                    "grantTypes": [
-                        "AUTHORIZATION_CODE",
-                        "REFRESH_TOKEN"
-                    ],
-                    "modificationDate": "2026-04-11T05:37:18.350Z",
-                    "clientSecretRetentionPeriodType": "SERVER_DEFAULT",
-                    "requirePushedAuthorizationRequests": false,
-                    "clientSecretChangedTime": "2026-04-11T05:37:18.000Z",
-                    "name": "contact-hr-client",
-                    "refreshTokenRollingIntervalType": "SERVER_DEFAULT",
-                    "persistentGrantExpirationType": "SERVER_DEFAULT",
-                    "restrictedScopes": [
-                        "email",
-                        "openid",
-                        "profile"
-                    ],
-                    "refreshRolling": "SERVER_DEFAULT",
-                    "exclusiveScopes": [],
-                    "clientAuth": {
-                        "secondarySecrets": [],
-                        "secret": "${oauth_clients_items_clientAuth_contact_hr_client_secret}",
-                        "type": "SECRET"
-                    }
-                },
-                {
-                    "bypassApprovalPage": true,
-                    "offlineAccessRequireConsentPrompt": "SERVER_DEFAULT",
-                    "persistentGrantReuseType": "SERVER_DEFAULT",
-                    "persistentGrantIdleTimeoutType": "SERVER_DEFAULT",
-                    "requireSignedRequests": false,
-                    "description": "Contact Client for testing purposes",
-                    "persistentGrantIdleTimeout": 0,
-                    "enabled": true,
-                    "requireOfflineAccessScopeToIssueRefreshTokens": "SERVER_DEFAULT",
-                    "oidcPolicy": {
-                        "grantAccessSessionRevocationApi": false,
-                        "grantAccessSessionSessionManagementApi": false,
-                        "pingAccessLogoutCapable": false,
-                        "logoutMode": "NONE",
-                        "pairwiseIdentifierUserType": false
-                    },
-                    "persistentGrantExpirationTime": 0,
-                    "restrictedResponseTypes": [],
-                    "lockoutMaxMaliciousActionsType": "SERVER_DEFAULT",
-                    "requireProofKeyForCodeExchange": false,
-                    "enableCookielessAuthenticationApi": true,
-                    "persistentGrantIdleTimeoutTimeUnit": "DAYS",
-                    "restrictToDefaultAccessTokenManager": false,
-                    "validateUsingAllEligibleAtms": false,
-                    "restrictScopes": true,
-                    "clientId": "contact-oauth-client",
-                    "requireJwtSecuredAuthorizationResponseMode": false,
-                    "persistentGrantExpirationTimeUnit": "DAYS",
-                    "requireDpop": false,
-                    "allowAuthenticationApiInit": true,
-                    "refreshTokenRollingGracePeriodType": "SERVER_DEFAULT",
-                    "replicationStatus": "REPLICATED",
-                    "creationDate": "2026-04-11T05:37:18.378Z",
-                    "deviceFlowSettingType": "SERVER_DEFAULT",
-                    "redirectUris": [
-                        "https://contact.ping.darkedges.com/callback",
-                        "http://localhost:8000/auth/oauth/pingfederate/callback",
-                        "https://chatbot.ping.darkedges.com/auth/oauth/pingfederate/callback"
-                    ],
-                    "authorizationDetailTypes": [],
-                    "grantTypes": [
-                        "AUTHORIZATION_CODE",
-                        "CLIENT_CREDENTIALS",
-                        "TOKEN_EXCHANGE"
-                    ],
-                    "modificationDate": "2026-04-11T05:37:18.378Z",
-                    "clientSecretRetentionPeriodType": "SERVER_DEFAULT",
-                    "requirePushedAuthorizationRequests": false,
-                    "clientSecretChangedTime": "2026-04-11T05:37:18.000Z",
-                    "name": "Contact Client",
-                    "refreshTokenRollingIntervalType": "SERVER_DEFAULT",
-                    "persistentGrantExpirationType": "SERVER_DEFAULT",
-                    "restrictedScopes": [
-                        "email",
-                        "openid",
-                        "profile"
-                    ],
-                    "refreshRolling": "SERVER_DEFAULT",
-                    "exclusiveScopes": [],
-                    "clientAuth": {
-                        "secondarySecrets": [],
-                        "secret": "${oauth_clients_items_clientAuth_contact_oauth_client_secret}",
-                        "type": "SECRET"
-                    }
-                },
-                {
-                    "bypassApprovalPage": false,
-                    "offlineAccessRequireConsentPrompt": "SERVER_DEFAULT",
-                    "persistentGrantReuseType": "SERVER_DEFAULT",
-                    "persistentGrantIdleTimeoutType": "SERVER_DEFAULT",
-                    "requireSignedRequests": false,
-                    "persistentGrantIdleTimeout": 0,
-                    "enabled": true,
-                    "requireOfflineAccessScopeToIssueRefreshTokens": "SERVER_DEFAULT",
-                    "oidcPolicy": {
-                        "grantAccessSessionRevocationApi": false,
-                        "grantAccessSessionSessionManagementApi": false,
-                        "pingAccessLogoutCapable": false,
-                        "logoutMode": "NONE",
-                        "pairwiseIdentifierUserType": false
-                    },
-                    "persistentGrantExpirationTime": 0,
-                    "restrictedResponseTypes": [],
-                    "lockoutMaxMaliciousActionsType": "SERVER_DEFAULT",
-                    "requireProofKeyForCodeExchange": false,
-                    "enableCookielessAuthenticationApi": false,
-                    "persistentGrantIdleTimeoutTimeUnit": "DAYS",
-                    "restrictToDefaultAccessTokenManager": false,
-                    "validateUsingAllEligibleAtms": false,
-                    "restrictScopes": false,
-                    "clientId": "external_identity",
-                    "requireJwtSecuredAuthorizationResponseMode": false,
-                    "persistentGrantExpirationTimeUnit": "DAYS",
-                    "requireDpop": false,
-                    "allowAuthenticationApiInit": false,
-                    "refreshTokenRollingGracePeriodType": "SERVER_DEFAULT",
-                    "replicationStatus": "REPLICATED",
-                    "creationDate": "2026-04-11T05:37:18.386Z",
-                    "deviceFlowSettingType": "SERVER_DEFAULT",
-                    "redirectUris": ["https://pingdarkedges.ciamlogin.com/287d8069-6760-4536-be30-e0557a5bf7a4/federation/oauth2"],
-                    "authorizationDetailTypes": [],
-                    "grantTypes": ["AUTHORIZATION_CODE"],
-                    "modificationDate": "2026-04-11T05:37:18.386Z",
-                    "defaultAccessTokenManagerRef": {
-                        "location": "https://localhost:-1/pf-admin-api/v1/oauth/accessTokenManagers/AccessTokenManagement",
-                        "id": "AccessTokenManagement"
-                    },
-                    "clientSecretRetentionPeriodType": "SERVER_DEFAULT",
-                    "requirePushedAuthorizationRequests": false,
-                    "clientSecretChangedTime": "2026-04-11T05:37:18.000Z",
-                    "name": "EXT_IDENTITY",
-                    "refreshTokenRollingIntervalType": "SERVER_DEFAULT",
-                    "persistentGrantExpirationType": "SERVER_DEFAULT",
-                    "restrictedScopes": [],
-                    "refreshRolling": "SERVER_DEFAULT",
-                    "exclusiveScopes": [],
-                    "clientAuth": {
-                        "secondarySecrets": [],
-                        "secret": "${oauth_clients_items_clientAuth_external_identity_secret}",
-                        "type": "SECRET"
-                    }
-                },
-                {
-                    "bypassApprovalPage": true,
-                    "offlineAccessRequireConsentPrompt": "SERVER_DEFAULT",
-                    "persistentGrantReuseType": "SERVER_DEFAULT",
-                    "persistentGrantIdleTimeoutType": "SERVER_DEFAULT",
-                    "requireSignedRequests": false,
-                    "description": "",
-                    "persistentGrantIdleTimeout": 0,
-                    "enabled": true,
-                    "requireOfflineAccessScopeToIssueRefreshTokens": "SERVER_DEFAULT",
-                    "oidcPolicy": {
-                        "grantAccessSessionRevocationApi": false,
-                        "grantAccessSessionSessionManagementApi": false,
-                        "pingAccessLogoutCapable": false,
-                        "logoutMode": "NONE",
-                        "pairwiseIdentifierUserType": false
-                    },
-                    "jwksSettings": {"jwks": "{   \"keys\": [     {       \"kty\": \"RSA\",       \"e\": \"AQAB\",       \"use\": \"sig\",       \"kid\": \"mnY2TyYWpqzSiVFTv4ZCd6NlyIaoBqDduhuypc7oN60\",       \"alg\": \"RS256\",       \"n\": \"zPnJsWBhEG_NXTRWMnqg3i3-pSVn-cGJheHvkixYjD2bq0aLAsfKM_GAAANtprn9wzyQgtHaz9z_kTtYr5XgvUbxlh0AG2MIwlr_fzl63q-7kw9wQAgVWQQT4Wp_QIzy_YZPZquJZcLyxwjRcjxSeAa1V1sxD6CZIDta_qmmI2Eo90_K_BJu3qnN8BCW1M5Bx-HKWGpn95m3tjbF91pN0RfWQoMxkouMLuekrawgvBNpoq3gamomn4kCyy5NTnhqGeQKQ0lKEJEWPVGCmk97ZzUoJPuKdvIk5APrmbAeLC37HiYFztk_Arnws3a-T_kC_wRWskwxNHFQn3s2t0XFHQ\"     }   ] }"},
-                    "persistentGrantExpirationTime": 0,
-                    "restrictedResponseTypes": [],
-                    "lockoutMaxMaliciousActionsType": "SERVER_DEFAULT",
-                    "requireProofKeyForCodeExchange": false,
-                    "enableCookielessAuthenticationApi": false,
-                    "persistentGrantIdleTimeoutTimeUnit": "DAYS",
-                    "restrictToDefaultAccessTokenManager": false,
-                    "validateUsingAllEligibleAtms": false,
-                    "restrictScopes": false,
-                    "clientId": "https://www.certification.openid.net/test/a/DarkEdges",
-                    "requireJwtSecuredAuthorizationResponseMode": false,
-                    "persistentGrantExpirationTimeUnit": "DAYS",
-                    "requireDpop": false,
-                    "allowAuthenticationApiInit": false,
-                    "refreshTokenRollingGracePeriodType": "SERVER_DEFAULT",
-                    "replicationStatus": "REPLICATED",
-                    "creationDate": "2026-04-11T05:37:18.394Z",
-                    "deviceFlowSettingType": "SERVER_DEFAULT",
-                    "redirectUris": ["https://www.certification.openid.net/test/a/DarkEdges/callback"],
-                    "logoUrl": "",
-                    "authorizationDetailTypes": [],
-                    "grantTypes": ["AUTHORIZATION_CODE"],
-                    "modificationDate": "2026-04-11T05:38:48.773Z",
-                    "clientSecretRetentionPeriodType": "SERVER_DEFAULT",
-                    "requirePushedAuthorizationRequests": false,
-                    "clientSecretChangedTime": "2026-04-11T05:37:18.000Z",
-                    "name": "openidCertification",
-                    "refreshTokenRollingIntervalType": "SERVER_DEFAULT",
-                    "persistentGrantExpirationType": "SERVER_DEFAULT",
-                    "restrictedScopes": [],
-                    "refreshRolling": "SERVER_DEFAULT",
-                    "exclusiveScopes": [],
-                    "clientAuth": {
-                        "secondarySecrets": [],
-                        "secret": "${oauth_clients_items_clientAuth_https_//www.certification.openid.net/test/a/DarkEdges_secret}",
-                        "type": "PRIVATE_KEY_JWT",
-                        "enforceReplayPrevention": false
-                    }
-                },
-                {
-                    "bypassApprovalPage": true,
-                    "offlineAccessRequireConsentPrompt": "SERVER_DEFAULT",
-                    "persistentGrantReuseType": "SERVER_DEFAULT",
-                    "persistentGrantIdleTimeoutType": "SERVER_DEFAULT",
-                    "requireSignedRequests": false,
-                    "persistentGrantIdleTimeout": 0,
-                    "enabled": true,
-                    "requireOfflineAccessScopeToIssueRefreshTokens": "SERVER_DEFAULT",
-                    "oidcPolicy": {
-                        "grantAccessSessionRevocationApi": false,
-                        "grantAccessSessionSessionManagementApi": false,
-                        "pingAccessLogoutCapable": false,
-                        "logoutMode": "NONE",
-                        "pairwiseIdentifierUserType": false
-                    },
-                    "persistentGrantExpirationTime": 0,
-                    "restrictedResponseTypes": [],
-                    "lockoutMaxMaliciousActionsType": "SERVER_DEFAULT",
-                    "requireProofKeyForCodeExchange": false,
-                    "enableCookielessAuthenticationApi": false,
-                    "persistentGrantIdleTimeoutTimeUnit": "DAYS",
-                    "restrictToDefaultAccessTokenManager": false,
-                    "validateUsingAllEligibleAtms": false,
-                    "restrictScopes": false,
-                    "clientId": "openidfederation",
-                    "requireJwtSecuredAuthorizationResponseMode": false,
-                    "persistentGrantExpirationTimeUnit": "DAYS",
-                    "requireDpop": false,
-                    "allowAuthenticationApiInit": false,
-                    "refreshTokenRollingGracePeriodType": "SERVER_DEFAULT",
-                    "replicationStatus": "REPLICATED",
-                    "creationDate": "2026-04-11T05:37:18.401Z",
-                    "deviceFlowSettingType": "SERVER_DEFAULT",
-                    "redirectUris": [
-                        "http://localhost:28080/login/oauth2/code/admin-oidc",
-                        "http://openidfederation.ping.darkedges.com/login/oauth2/code/admin-oidc"
-                    ],
-                    "authorizationDetailTypes": [],
-                    "grantTypes": [
-                        "AUTHORIZATION_CODE",
-                        "CLIENT_CREDENTIALS"
-                    ],
-                    "modificationDate": "2026-04-11T05:37:18.401Z",
-                    "clientSecretRetentionPeriodType": "SERVER_DEFAULT",
-                    "requirePushedAuthorizationRequests": false,
-                    "clientSecretChangedTime": "2026-04-11T05:37:18.000Z",
-                    "name": "openidfederation",
-                    "refreshTokenRollingIntervalType": "SERVER_DEFAULT",
-                    "persistentGrantExpirationType": "SERVER_DEFAULT",
-                    "restrictedScopes": [],
-                    "refreshRolling": "SERVER_DEFAULT",
-                    "exclusiveScopes": [],
-                    "clientAuth": {
-                        "secondarySecrets": [],
-                        "secret": "${oauth_clients_items_clientAuth_openidfederation_secret}",
-                        "type": "SECRET"
-                    }
-                },
-                {
-                    "bypassApprovalPage": false,
-                    "offlineAccessRequireConsentPrompt": "SERVER_DEFAULT",
-                    "persistentGrantReuseType": "SERVER_DEFAULT",
-                    "persistentGrantIdleTimeoutType": "SERVER_DEFAULT",
-                    "requireSignedRequests": false,
-                    "persistentGrantIdleTimeout": 0,
-                    "enabled": true,
-                    "requireOfflineAccessScopeToIssueRefreshTokens": "SERVER_DEFAULT",
-                    "oidcPolicy": {
-                        "grantAccessSessionRevocationApi": false,
-                        "grantAccessSessionSessionManagementApi": false,
-                        "pingAccessLogoutCapable": false,
-                        "logoutMode": "NONE",
-                        "pairwiseIdentifierUserType": false
-                    },
-                    "persistentGrantExpirationTime": 0,
-                    "restrictedResponseTypes": [],
-                    "lockoutMaxMaliciousActionsType": "SERVER_DEFAULT",
-                    "requireProofKeyForCodeExchange": false,
-                    "enableCookielessAuthenticationApi": false,
-                    "persistentGrantIdleTimeoutTimeUnit": "DAYS",
-                    "restrictToDefaultAccessTokenManager": false,
-                    "validateUsingAllEligibleAtms": false,
-                    "restrictScopes": false,
-                    "clientId": "pa_rs_client",
-                    "requireJwtSecuredAuthorizationResponseMode": false,
-                    "persistentGrantExpirationTimeUnit": "DAYS",
-                    "requireDpop": false,
-                    "allowAuthenticationApiInit": false,
-                    "refreshTokenRollingGracePeriodType": "SERVER_DEFAULT",
-                    "replicationStatus": "REPLICATED",
-                    "creationDate": "2026-04-11T05:37:18.409Z",
-                    "deviceFlowSettingType": "SERVER_DEFAULT",
-                    "redirectUris": [],
-                    "authorizationDetailTypes": [],
-                    "grantTypes": ["CLIENT_CREDENTIALS"],
-                    "modificationDate": "2026-04-11T05:37:18.409Z",
-                    "clientSecretRetentionPeriodType": "SERVER_DEFAULT",
-                    "requirePushedAuthorizationRequests": false,
-                    "clientSecretChangedTime": "2026-04-11T05:37:18.000Z",
-                    "name": "pa_rs_client",
-                    "refreshTokenRollingIntervalType": "SERVER_DEFAULT",
-                    "persistentGrantExpirationType": "SERVER_DEFAULT",
-                    "restrictedScopes": [],
-                    "refreshRolling": "SERVER_DEFAULT",
-                    "exclusiveScopes": [],
-                    "clientAuth": {
-                        "secondarySecrets": [],
-                        "secret": "${oauth_clients_items_clientAuth_pa_rs_client_secret}",
-                        "type": "SECRET"
-                    }
-                },
-                {
-                    "bypassApprovalPage": false,
-                    "offlineAccessRequireConsentPrompt": "SERVER_DEFAULT",
-                    "persistentGrantReuseType": "SERVER_DEFAULT",
-                    "persistentGrantIdleTimeoutType": "SERVER_DEFAULT",
-                    "requireSignedRequests": false,
-                    "description": "pf_api_access",
-                    "persistentGrantIdleTimeout": 0,
-                    "enabled": true,
-                    "requireOfflineAccessScopeToIssueRefreshTokens": "SERVER_DEFAULT",
-                    "oidcPolicy": {
-                        "grantAccessSessionRevocationApi": false,
-                        "grantAccessSessionSessionManagementApi": false,
-                        "pingAccessLogoutCapable": false,
-                        "logoutMode": "NONE",
-                        "pairwiseIdentifierUserType": false
-                    },
-                    "persistentGrantExpirationTime": 0,
-                    "restrictedResponseTypes": [],
-                    "lockoutMaxMaliciousActionsType": "SERVER_DEFAULT",
-                    "requireProofKeyForCodeExchange": false,
-                    "enableCookielessAuthenticationApi": false,
-                    "persistentGrantIdleTimeoutTimeUnit": "DAYS",
-                    "restrictToDefaultAccessTokenManager": false,
-                    "validateUsingAllEligibleAtms": false,
-                    "restrictScopes": false,
-                    "clientId": "pf_api_access",
-                    "requireJwtSecuredAuthorizationResponseMode": false,
-                    "persistentGrantExpirationTimeUnit": "DAYS",
-                    "requireDpop": false,
-                    "allowAuthenticationApiInit": false,
-                    "refreshTokenRollingGracePeriodType": "SERVER_DEFAULT",
-                    "replicationStatus": "REPLICATED",
-                    "creationDate": "2026-04-11T05:37:18.416Z",
-                    "deviceFlowSettingType": "SERVER_DEFAULT",
-                    "redirectUris": [],
-                    "authorizationDetailTypes": [],
-                    "grantTypes": [
-                        "CLIENT_CREDENTIALS",
-                        "ACCESS_TOKEN_VALIDATION"
-                    ],
-                    "modificationDate": "2026-04-11T05:37:18.416Z",
-                    "defaultAccessTokenManagerRef": {
-                        "location": "https://localhost:-1/pf-admin-api/v1/oauth/accessTokenManagers/jwt",
-                        "id": "jwt"
-                    },
-                    "clientSecretRetentionPeriodType": "SERVER_DEFAULT",
-                    "requirePushedAuthorizationRequests": false,
-                    "clientSecretChangedTime": "2026-04-11T05:37:18.000Z",
-                    "name": "pf_api_access",
-                    "refreshTokenRollingIntervalType": "SERVER_DEFAULT",
-                    "persistentGrantExpirationType": "SERVER_DEFAULT",
-                    "restrictedScopes": [],
-                    "refreshRolling": "SERVER_DEFAULT",
-                    "exclusiveScopes": [],
-                    "clientAuth": {
-                        "secondarySecrets": [],
-                        "secret": "${oauth_clients_items_clientAuth_pf_api_access_secret}",
-                        "type": "SECRET"
-                    }
-                },
-                {
-                    "bypassApprovalPage": false,
-                    "offlineAccessRequireConsentPrompt": "SERVER_DEFAULT",
-                    "persistentGrantReuseType": "SERVER_DEFAULT",
-                    "persistentGrantIdleTimeoutType": "SERVER_DEFAULT",
-                    "requireSignedRequests": false,
-                    "persistentGrantIdleTimeout": 0,
-                    "enabled": true,
-                    "requireOfflineAccessScopeToIssueRefreshTokens": "SERVER_DEFAULT",
-                    "oidcPolicy": {
-                        "grantAccessSessionRevocationApi": false,
-                        "grantAccessSessionSessionManagementApi": false,
-                        "pingAccessLogoutCapable": false,
-                        "logoutMode": "NONE",
-                        "pairwiseIdentifierUserType": false
-                    },
-                    "persistentGrantExpirationTime": 0,
-                    "restrictedResponseTypes": [],
-                    "lockoutMaxMaliciousActionsType": "SERVER_DEFAULT",
-                    "requireProofKeyForCodeExchange": false,
-                    "enableCookielessAuthenticationApi": false,
-                    "persistentGrantIdleTimeoutTimeUnit": "DAYS",
-                    "restrictToDefaultAccessTokenManager": false,
-                    "validateUsingAllEligibleAtms": false,
-                    "restrictScopes": false,
-                    "clientId": "tokenexchangeclient",
-                    "requireJwtSecuredAuthorizationResponseMode": false,
-                    "persistentGrantExpirationTimeUnit": "DAYS",
-                    "requireDpop": false,
-                    "allowAuthenticationApiInit": false,
-                    "refreshTokenRollingGracePeriodType": "SERVER_DEFAULT",
-                    "replicationStatus": "REPLICATED",
-                    "creationDate": "2026-04-11T05:37:18.450Z",
-                    "deviceFlowSettingType": "SERVER_DEFAULT",
-                    "redirectUris": [],
-                    "authorizationDetailTypes": [],
-                    "grantTypes": [
-                        "CLIENT_CREDENTIALS",
-                        "TOKEN_EXCHANGE"
-                    ],
-                    "modificationDate": "2026-04-11T05:37:18.450Z",
-                    "defaultAccessTokenManagerRef": {
-                        "location": "https://localhost:-1/pf-admin-api/v1/oauth/accessTokenManagers/AccessTokenManagement",
-                        "id": "AccessTokenManagement"
-                    },
-                    "tokenExchangeProcessorPolicyRef": {
-                        "location": "https://localhost:-1/pf-admin-api/v1/oauth/tokenExchange/processor/policies/PROCESSORPOLICIES",
-                        "id": "PROCESSORPOLICIES"
-                    },
-                    "clientSecretRetentionPeriodType": "SERVER_DEFAULT",
-                    "requirePushedAuthorizationRequests": false,
-                    "clientSecretChangedTime": "2026-04-11T05:37:18.000Z",
-                    "name": "tokenexchangeclient",
-                    "refreshTokenRollingIntervalType": "SERVER_DEFAULT",
-                    "persistentGrantExpirationType": "SERVER_DEFAULT",
-                    "restrictedScopes": [],
-                    "refreshRolling": "SERVER_DEFAULT",
-                    "exclusiveScopes": [],
-                    "clientAuth": {
-                        "secondarySecrets": [],
-                        "secret": "${oauth_clients_items_clientAuth_tokenexchangeclient_secret}",
-                        "type": "SECRET"
-                    }
-                }
-            ],
-            "resourceType": "/oauth/clients"
-        },
-        {
-            "operationType": "SAVE",
             "items": [{
                 "configuration": {
                     "tables": [],
@@ -3376,7 +2906,7 @@
                 },
                 "name": "ClientRegistrationPolicy",
                 "id": "ClientRegistrationPolicy",
-                "lastModified": "2026-04-11T05:37:18.487Z",
+                "lastModified": "2026-04-11T07:43:39.962Z",
                 "pluginDescriptorRef": {
                     "location": "https://localhost:-1/pf-admin-api/v1/oauth/clientRegistrationPolicies/descriptors/com.pingidentity.pf.client.registration.ResponseTypesConstraintsPlugin",
                     "id": "com.pingidentity.pf.client.registration.ResponseTypesConstraintsPlugin"
@@ -3388,35 +2918,30 @@
             "operationType": "SAVE",
             "items": [{
                 "dynamicClientRegistration": {
-                    "initialAccessTokenScope": "openid",
-                    "rotateClientSecret": false,
+                    "requireJwtSecuredAuthorizationResponseMode": false,
                     "offlineAccessRequireConsentPrompt": "SERVER_DEFAULT",
                     "requireSignedRequests": false,
                     "persistentGrantIdleTimeoutType": "SERVER_DEFAULT",
-                    "cibaRequireSignedRequests": false,
-                    "retainClientSecret": false,
-                    "restrictCommonScopes": false,
-                    "allowedExclusiveScopes": [],
-                    "allowedAuthorizationDetailTypes": [],
-                    "enforceReplayPrevention": false,
-                    "requireOfflineAccessScopeToIssueRefreshTokens": "SERVER_DEFAULT",
-                    "lockoutMaxMaliciousActionsType": "SERVER_DEFAULT",
-                    "requireProofKeyForCodeExchange": false,
-                    "rotateRegistrationAccessToken": false,
-                    "restrictToDefaultAccessTokenManager": false,
-                    "requireJwtSecuredAuthorizationResponseMode": false,
                     "policyRefs": [{
                         "location": "https://localhost:-1/pf-admin-api/v1/oauth/clientRegistrationPolicies/ClientRegistrationPolicy",
                         "id": "ClientRegistrationPolicy"
                     }],
+                    "cibaRequireSignedRequests": false,
                     "refreshTokenRollingGracePeriodType": "SERVER_DEFAULT",
+                    "restrictCommonScopes": false,
+                    "allowedExclusiveScopes": [],
+                    "allowedAuthorizationDetailTypes": [],
+                    "enforceReplayPrevention": false,
                     "deviceFlowSettingType": "SERVER_DEFAULT",
+                    "requireOfflineAccessScopeToIssueRefreshTokens": "SERVER_DEFAULT",
+                    "lockoutMaxMaliciousActionsType": "SERVER_DEFAULT",
+                    "requireProofKeyForCodeExchange": false,
                     "clientSecretRetentionPeriodType": "SERVER_DEFAULT",
                     "restrictedCommonScopes": [],
                     "refreshTokenRollingIntervalType": "SERVER_DEFAULT",
                     "cibaPollingInterval": 3,
                     "persistentGrantExpirationType": "SERVER_DEFAULT",
-                    "allowClientDelete": false,
+                    "restrictToDefaultAccessTokenManager": false,
                     "clientCertIssuerType": "NONE",
                     "refreshRolling": "SERVER_DEFAULT"
                 },
@@ -3643,65 +3168,10 @@
         {
             "operationType": "SAVE",
             "items": [{
-                "configuration": {
-                    "tables": [{
-                        "name": "Clients",
-                        "rows": [
-                            {
-                                "defaultRow": false,
-                                "fields": [{
-                                    "name": "Client ID",
-                                    "value": "contact-oauth-client"
-                                }]
-                            },
-                            {
-                                "defaultRow": false,
-                                "fields": [{
-                                    "name": "Client ID",
-                                    "value": "contact-hr-client"
-                                }]
-                            }
-                        ]
-                    }],
-                    "fields": []
-                },
-                "name": "OAUTHCLIENTSELECTOR",
-                "id": "OAUTHCLIENTSELECTOR",
-                "lastModified": "2026-04-11T05:37:18.615Z",
-                "pluginDescriptorRef": {
-                    "location": "https://localhost:-1/pf-admin-api/v1/authenticationSelectors/descriptors/com.pingidentity.pf.selectors.oauthclient.OAuthClientAdapterSelector",
-                    "id": "com.pingidentity.pf.selectors.oauthclient.OAuthClientAdapterSelector"
-                },
-                "attributeContract": {}
-            }],
-            "resourceType": "/authenticationSelectors"
-        },
-        {
-            "operationType": "SAVE",
-            "items": [{
-                "clientForRedirectlessModeRef": {
-                    "location": "https://localhost:-1/pf-admin-api/v1/oauth/clients/contact-oauth-client",
-                    "id": "contact-oauth-client"
-                },
-                "additionalAllowedOrigins": [],
-                "name": "My Sample Application",
-                "description": "My Sample application",
-                "id": "t8CAiKyUYjMFmbWWuD92AL3Oc",
-                "url": "https://contact.ping.darkedges.com"
-            }],
-            "resourceType": "/authenticationApi"
-        },
-        {
-            "operationType": "SAVE",
-            "items": [{
                 "apiEnabled": false,
                 "restrictAccessToRedirectlessMode": true,
-                "includeRequestContext": true,
-                "enableApiDescriptions": true,
-                "defaultApplicationRef": {
-                    "location": "https://localhost:-1/pf-admin-api/v1/authenticationApi/applications/t8CAiKyUYjMFmbWWuD92AL3Oc",
-                    "id": "t8CAiKyUYjMFmbWWuD92AL3Oc"
-                }
+                "includeRequestContext": false,
+                "enableApiDescriptions": true
             }],
             "resourceType": "/authenticationApi/settings"
         },
@@ -3716,278 +3186,128 @@
                     }
                 }],
                 "failIfNoSelection": false,
-                "authnSelectionTrees": [
-                    {
-                        "name": "IDENTIFIERFIRSTPOLICY",
-                        "id": "IDENTIFIERFIRSTPOLICY",
-                        "authenticationApiApplicationRef": {
-                            "location": "https://localhost:-1/pf-admin-api/v1/authenticationApi/applications/t8CAiKyUYjMFmbWWuD92AL3Oc",
-                            "id": "t8CAiKyUYjMFmbWWuD92AL3Oc"
-                        },
-                        "handleFailuresLocally": false,
-                        "enabled": true,
-                        "rootNode": {
-                            "children": [
-                                {"action": {
-                                    "context": "No",
-                                    "type": "CONTINUE"
-                                }},
-                                {
-                                    "children": [
-                                        {"action": {
-                                            "context": "Fail",
-                                            "type": "RESTART"
-                                        }},
-                                        {
-                                            "children": [
-                                                {"action": {
-                                                    "context": "Fail",
-                                                    "type": "RESTART"
-                                                }},
-                                                {"action": {
-                                                    "attributeMapping": {
-                                                        "attributeContractFulfillment": {
-                                                            "entryUUID": {
-                                                                "source": {
-                                                                    "id": "IDENTIFIERFIRST",
-                                                                    "type": "ADAPTER"
-                                                                },
-                                                                "value": "entryUUID"
-                                                            },
-                                                            "uid": {
-                                                                "source": {
-                                                                    "id": "IDENTIFIERFIRST",
-                                                                    "type": "ADAPTER"
-                                                                },
-                                                                "value": "subject"
-                                                            },
-                                                            "telephoneNumber": {
-                                                                "source": {
-                                                                    "id": "IDENTIFIERFIRST",
-                                                                    "type": "ADAPTER"
-                                                                },
-                                                                "value": "telephoneNumber"
-                                                            },
-                                                            "mail": {
-                                                                "source": {
-                                                                    "id": "IDENTIFIERFIRST",
-                                                                    "type": "ADAPTER"
-                                                                },
-                                                                "value": "mail"
-                                                            },
-                                                            "subject": {
-                                                                "source": {
-                                                                    "id": "IDENTIFIERFIRST",
-                                                                    "type": "ADAPTER"
-                                                                },
-                                                                "value": "subject"
-                                                            },
-                                                            "givenName": {
-                                                                "source": {
-                                                                    "id": "IDENTIFIERFIRST",
-                                                                    "type": "ADAPTER"
-                                                                },
-                                                                "value": "givenName"
-                                                            },
-                                                            "groups": {
-                                                                "source": {
-                                                                    "id": "IDENTIFIERFIRST",
-                                                                    "type": "ADAPTER"
-                                                                },
-                                                                "value": "groups"
-                                                            },
-                                                            "cn": {
-                                                                "source": {
-                                                                    "id": "IDENTIFIERFIRST",
-                                                                    "type": "ADAPTER"
-                                                                },
-                                                                "value": "cn"
-                                                            },
-                                                            "sn": {
-                                                                "source": {
-                                                                    "id": "IDENTIFIERFIRST",
-                                                                    "type": "ADAPTER"
-                                                                },
-                                                                "value": "sn"
-                                                            }
-                                                        },
-                                                        "attributeSources": [],
-                                                        "issuanceCriteria": {"conditionalCriteria": []}
-                                                    },
-                                                    "authenticationPolicyContractRef": {
-                                                        "location": "https://localhost:-1/pf-admin-api/v1/authenticationPolicyContracts/KUzfpHBOZeqF0vVo",
-                                                        "id": "KUzfpHBOZeqF0vVo"
-                                                    },
-                                                    "context": "Success",
-                                                    "type": "APC_MAPPING"
-                                                }}
-                                            ],
-                                            "action": {
-                                                "authenticationSource": {
-                                                    "type": "IDP_ADAPTER",
-                                                    "sourceRef": {
-                                                        "location": "https://localhost:-1/pf-admin-api/v1/idp/adapters/PINGID",
-                                                        "id": "PINGID"
-                                                    }
-                                                },
-                                                "context": "Success",
-                                                "inputUserIdMapping": {
-                                                    "source": {
-                                                        "id": "IDENTIFIERFIRST",
-                                                        "type": "ADAPTER"
-                                                    },
-                                                    "value": "subject"
-                                                },
-                                                "userIdAuthenticated": true,
-                                                "type": "AUTHN_SOURCE"
-                                            }
+                "authnSelectionTrees": [{
+                    "name": "Generic",
+                    "id": "EdKQEuNtO7sRTJElCyJtooK3A",
+                    "handleFailuresLocally": false,
+                    "enabled": true,
+                    "rootNode": {
+                        "children": [
+                            {"action": {
+                                "context": "Fail",
+                                "type": "RESTART"
+                            }},
+                            {"action": {
+                                "attributeMapping": {
+                                    "attributeContractFulfillment": {
+                                        "entryUUID": {
+                                            "source": {
+                                                "id": "IDENTIFIERFIRST",
+                                                "type": "ADAPTER"
+                                            },
+                                            "value": "entryUUID"
+                                        },
+                                        "uid": {
+                                            "source": {
+                                                "id": "IDENTIFIERFIRST",
+                                                "type": "ADAPTER"
+                                            },
+                                            "value": "subject"
+                                        },
+                                        "telephoneNumber": {
+                                            "source": {
+                                                "id": "IDENTIFIERFIRST",
+                                                "type": "ADAPTER"
+                                            },
+                                            "value": "telephoneNumber"
+                                        },
+                                        "mail": {
+                                            "source": {
+                                                "id": "IDENTIFIERFIRST",
+                                                "type": "ADAPTER"
+                                            },
+                                            "value": "mail"
+                                        },
+                                        "subject": {
+                                            "source": {
+                                                "id": "IDENTIFIERFIRST",
+                                                "type": "ADAPTER"
+                                            },
+                                            "value": "subject"
+                                        },
+                                        "givenName": {
+                                            "source": {
+                                                "id": "IDENTIFIERFIRST",
+                                                "type": "ADAPTER"
+                                            },
+                                            "value": "givenName"
+                                        },
+                                        "groups": {
+                                            "source": {
+                                                "id": "IDENTIFIERFIRST",
+                                                "type": "ADAPTER"
+                                            },
+                                            "value": "groups"
+                                        },
+                                        "cn": {
+                                            "source": {
+                                                "id": "IDENTIFIERFIRST",
+                                                "type": "ADAPTER"
+                                            },
+                                            "value": "cn"
+                                        },
+                                        "sn": {
+                                            "source": {
+                                                "id": "IDENTIFIERFIRST",
+                                                "type": "ADAPTER"
+                                            },
+                                            "value": "sn"
                                         }
-                                    ],
-                                    "action": {
-                                        "authenticationSource": {
-                                            "type": "IDP_ADAPTER",
-                                            "sourceRef": {
-                                                "location": "https://localhost:-1/pf-admin-api/v1/idp/adapters/IDENTIFIERFIRST",
-                                                "id": "IDENTIFIERFIRST"
-                                            }
+                                    },
+                                    "attributeSources": [{
+                                        "memberOfNestedGroup": false,
+                                        "binaryAttributeSettings": {},
+                                        "searchScope": "SUBTREE",
+                                        "dataStoreRef": {
+                                            "location": "https://localhost:-1/pf-admin-api/v1/dataStores/LDAP-4D65BD30F2946A712E86940F0F7442EDCDC16646",
+                                            "id": "LDAP-4D65BD30F2946A712E86940F0F7442EDCDC16646"
                                         },
-                                        "context": "Yes",
-                                        "type": "AUTHN_SOURCE"
-                                    }
+                                        "description": "PINDIRECTORY",
+                                        "id": "PINDIRECTORY",
+                                        "searchAttributes": [
+                                            "Subject DN",
+                                            "entryUUID",
+                                            "givenName",
+                                            "mail",
+                                            "sn",
+                                            "telephoneNumber",
+                                            "uid"
+                                        ],
+                                        "type": "LDAP",
+                                        "searchFilter": "(uid=user.0)"
+                                    }],
+                                    "issuanceCriteria": {"conditionalCriteria": []}
+                                },
+                                "authenticationPolicyContractRef": {
+                                    "location": "https://localhost:-1/pf-admin-api/v1/authenticationPolicyContracts/KUzfpHBOZeqF0vVo",
+                                    "id": "KUzfpHBOZeqF0vVo"
+                                },
+                                "context": "Success",
+                                "type": "APC_MAPPING"
+                            }}
+                        ],
+                        "action": {
+                            "authenticationSource": {
+                                "type": "IDP_ADAPTER",
+                                "sourceRef": {
+                                    "location": "https://localhost:-1/pf-admin-api/v1/idp/adapters/IDENTIFIERFIRST",
+                                    "id": "IDENTIFIERFIRST"
                                 }
-                            ],
-                            "action": {
-                                "authenticationSelectorRef": {
-                                    "location": "https://localhost:-1/pf-admin-api/v1/authenticationSelectors/OAUTHCLIENTSELECTOR",
-                                    "id": "OAUTHCLIENTSELECTOR"
-                                },
-                                "type": "AUTHN_SELECTOR"
-                            }
-                        }
-                    },
-                    {
-                        "name": "Generic",
-                        "id": "EdKQEuNtO7sRTJElCyJtooK3A",
-                        "handleFailuresLocally": false,
-                        "enabled": true,
-                        "rootNode": {
-                            "children": [
-                                {"action": {
-                                    "context": "Fail",
-                                    "type": "RESTART"
-                                }},
-                                {"action": {
-                                    "attributeMapping": {
-                                        "attributeContractFulfillment": {
-                                            "entryUUID": {
-                                                "source": {
-                                                    "id": "IDENTIFIERFIRST",
-                                                    "type": "ADAPTER"
-                                                },
-                                                "value": "entryUUID"
-                                            },
-                                            "uid": {
-                                                "source": {
-                                                    "id": "IDENTIFIERFIRST",
-                                                    "type": "ADAPTER"
-                                                },
-                                                "value": "subject"
-                                            },
-                                            "telephoneNumber": {
-                                                "source": {
-                                                    "id": "IDENTIFIERFIRST",
-                                                    "type": "ADAPTER"
-                                                },
-                                                "value": "telephoneNumber"
-                                            },
-                                            "mail": {
-                                                "source": {
-                                                    "id": "IDENTIFIERFIRST",
-                                                    "type": "ADAPTER"
-                                                },
-                                                "value": "mail"
-                                            },
-                                            "subject": {
-                                                "source": {
-                                                    "id": "IDENTIFIERFIRST",
-                                                    "type": "ADAPTER"
-                                                },
-                                                "value": "subject"
-                                            },
-                                            "givenName": {
-                                                "source": {
-                                                    "id": "IDENTIFIERFIRST",
-                                                    "type": "ADAPTER"
-                                                },
-                                                "value": "givenName"
-                                            },
-                                            "groups": {
-                                                "source": {
-                                                    "id": "IDENTIFIERFIRST",
-                                                    "type": "ADAPTER"
-                                                },
-                                                "value": "groups"
-                                            },
-                                            "cn": {
-                                                "source": {
-                                                    "id": "IDENTIFIERFIRST",
-                                                    "type": "ADAPTER"
-                                                },
-                                                "value": "cn"
-                                            },
-                                            "sn": {
-                                                "source": {
-                                                    "id": "IDENTIFIERFIRST",
-                                                    "type": "ADAPTER"
-                                                },
-                                                "value": "sn"
-                                            }
-                                        },
-                                        "attributeSources": [{
-                                            "memberOfNestedGroup": false,
-                                            "binaryAttributeSettings": {},
-                                            "searchScope": "SUBTREE",
-                                            "dataStoreRef": {
-                                                "location": "https://localhost:-1/pf-admin-api/v1/dataStores/LDAP-4D65BD30F2946A712E86940F0F7442EDCDC16646",
-                                                "id": "LDAP-4D65BD30F2946A712E86940F0F7442EDCDC16646"
-                                            },
-                                            "description": "PINDIRECTORY",
-                                            "id": "PINDIRECTORY",
-                                            "searchAttributes": [
-                                                "Subject DN",
-                                                "entryUUID",
-                                                "givenName",
-                                                "mail",
-                                                "sn",
-                                                "telephoneNumber",
-                                                "uid"
-                                            ],
-                                            "type": "LDAP",
-                                            "searchFilter": "(uid=user.0)"
-                                        }],
-                                        "issuanceCriteria": {"conditionalCriteria": []}
-                                    },
-                                    "authenticationPolicyContractRef": {
-                                        "location": "https://localhost:-1/pf-admin-api/v1/authenticationPolicyContracts/KUzfpHBOZeqF0vVo",
-                                        "id": "KUzfpHBOZeqF0vVo"
-                                    },
-                                    "context": "Success",
-                                    "type": "APC_MAPPING"
-                                }}
-                            ],
-                            "action": {
-                                "authenticationSource": {
-                                    "type": "IDP_ADAPTER",
-                                    "sourceRef": {
-                                        "location": "https://localhost:-1/pf-admin-api/v1/idp/adapters/IDENTIFIERFIRST",
-                                        "id": "IDENTIFIERFIRST"
-                                    }
-                                },
-                                "type": "AUTHN_SOURCE"
-                            }
+                            },
+                            "type": "AUTHN_SOURCE"
                         }
                     }
-                ],
+                }],
                 "trackedHttpParameters": []
             }],
             "resourceType": "/authenticationPolicies/default"
