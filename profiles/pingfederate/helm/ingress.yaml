@@ -70,11 +70,18 @@ pingfederate-engine:
             pathType: Prefix
             backend:
               serviceName: https
+      - host: openidfederation.ping.darkedges.com
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              serviceName: https             
     tls:
       - secretName: pingfederate-engine
         hosts:
           - id.ping.darkedges.com
           - id.ping.internal.darkedges.com
+          - openidfederation.ping.darkedges.com
 pingaccess-admin:
   ingress:
     hosts:
