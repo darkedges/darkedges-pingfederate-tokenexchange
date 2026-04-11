@@ -3173,20 +3173,6 @@
         {
             "operationType": "SAVE",
             "items": [{
-                "apiEnabled": false,
-                "restrictAccessToRedirectlessMode": true,
-                "includeRequestContext": true,
-                "enableApiDescriptions": true,
-                "defaultApplicationRef": {
-                    "location": "https://localhost:-1/pf-admin-api/v1/authenticationApi/applications/t8CAiKyUYjMFmbWWuD92AL3Oc",
-                    "id": "t8CAiKyUYjMFmbWWuD92AL3Oc"
-                }
-            }],
-            "resourceType": "/authenticationApi/settings"
-        },
-        {
-            "operationType": "SAVE",
-            "items": [{
                 "defaultAuthenticationSources": [{
                     "type": "IDP_ADAPTER",
                     "sourceRef": {
