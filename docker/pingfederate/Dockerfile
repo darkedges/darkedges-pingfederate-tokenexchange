@@ -37,6 +37,7 @@ RUN mkdir -p /opt/server/server/default/deploy /opt/server/server/default/conf/l
 #     chown -R ping:root /opt/server/server/default && \
 #     find /opt/server/server/default -type d -exec chmod 0770 {} \; && \
 #     find /opt/server/server/default -type f -exec chmod 0660 {} \;
+COPY pf.plugins.openidfederation.jar /opt/server/server/default/deploy/
 
 FROM pingidentity/pingfederate:edge
 ARG PINGID_ADAPTER_VERSION

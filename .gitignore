@@ -12,3 +12,4 @@ docs/
 .github/copilot-instructions.md
 profiles/pingoneldapgateway/pingone.yaml
 profiles/pingfederate/helm/devopsconfig
+docker/pingfederate/pf.plugins.openidfederation.jar
