@@ -647,6 +647,13 @@
                     "lastModified": "2026-04-13T10:46:08.835Z",
                     "coreAttributes": [{"name": "subject"}],
                     "extendedAttributes": []
+                },
+                {
+                    "name": "ReferenceID",
+                    "id": "i5wEJiSkm5d2CtHI",
+                    "lastModified": "2026-04-15T09:27:57.258Z",
+                    "coreAttributes": [{"name": "subject"}],
+                    "extendedAttributes": [{"name": "vaultlocation"}]
                 }
             ],
             "resourceType": "/authenticationPolicyContracts"
@@ -1682,7 +1689,7 @@
                         "fields": [
                             {
                                 "name": "Authentication Endpoint",
-                                "value": "https://referenceid.ping.darkedges.com"
+                                "value": "https://broker.ping.darkedges.com/referenceid"
                             },
                             {
                                 "name": "User Name",
@@ -1726,7 +1733,7 @@
                             },
                             {
                                 "name": "Preserve JSON",
-                                "value": "false"
+                                "value": "true"
                             },
                             {
                                 "name": "Ignore Untracked HTTP Parameters",
@@ -1738,7 +1745,7 @@
                             },
                             {
                                 "name": "Include Null Attributes",
-                                "value": ""
+                                "value": "false"
                             },
                             {
                                 "name": "Transport Mode",
@@ -1776,7 +1783,7 @@
                     },
                     "name": "ReferenceID",
                     "id": "ReferenceID",
-                    "lastModified": "2026-04-15T04:33:01.433Z",
+                    "lastModified": "2026-04-15T13:02:18.692Z",
                     "pluginDescriptorRef": {
                         "location": "https://localhost:-1/pf-admin-api/v1/idp/adapters/descriptors/com.pingidentity.pf.adapters.referenceid.IdpBackchannelReferenceAuthnAdapter",
                         "id": "com.pingidentity.pf.adapters.referenceid.IdpBackchannelReferenceAuthnAdapter"
@@ -2699,25 +2706,46 @@
         },
         {
             "operationType": "SAVE",
-            "items": [{
-                "authenticationPolicyContractRef": {
-                    "location": "https://localhost:-1/pf-admin-api/v1/authenticationPolicyContracts/KUzfpHBOZeqF0vVo",
-                    "id": "KUzfpHBOZeqF0vVo"
-                },
-                "attributeContractFulfillment": {
-                    "USER_NAME": {
-                        "source": {"type": "AUTHENTICATION_POLICY_CONTRACT"},
-                        "value": "subject"
+            "items": [
+                {
+                    "authenticationPolicyContractRef": {
+                        "location": "https://localhost:-1/pf-admin-api/v1/authenticationPolicyContracts/KUzfpHBOZeqF0vVo",
+                        "id": "KUzfpHBOZeqF0vVo"
                     },
-                    "USER_KEY": {
-                        "source": {"type": "AUTHENTICATION_POLICY_CONTRACT"},
-                        "value": "subject"
-                    }
+                    "attributeContractFulfillment": {
+                        "USER_NAME": {
+                            "source": {"type": "AUTHENTICATION_POLICY_CONTRACT"},
+                            "value": "subject"
+                        },
+                        "USER_KEY": {
+                            "source": {"type": "AUTHENTICATION_POLICY_CONTRACT"},
+                            "value": "subject"
+                        }
+                    },
+                    "id": "KUzfpHBOZeqF0vVo",
+                    "attributeSources": [],
+                    "issuanceCriteria": {"conditionalCriteria": []}
                 },
-                "id": "KUzfpHBOZeqF0vVo",
-                "attributeSources": [],
-                "issuanceCriteria": {"conditionalCriteria": []}
-            }],
+                {
+                    "authenticationPolicyContractRef": {
+                        "location": "https://localhost:-1/pf-admin-api/v1/authenticationPolicyContracts/i5wEJiSkm5d2CtHI",
+                        "id": "i5wEJiSkm5d2CtHI"
+                    },
+                    "attributeContractFulfillment": {
+                        "USER_NAME": {
+                            "source": {"type": "AUTHENTICATION_POLICY_CONTRACT"},
+                            "value": "subject"
+                        },
+                        "USER_KEY": {
+                            "source": {"type": "AUTHENTICATION_POLICY_CONTRACT"},
+                            "value": "subject"
+                        }
+                    },
+                    "id": "i5wEJiSkm5d2CtHI",
+                    "attributeSources": [],
+                    "issuanceCriteria": {"conditionalCriteria": []}
+                }
+            ],
             "resourceType": "/oauth/authenticationPolicyContractMappings"
         },
         {
@@ -3172,6 +3200,91 @@
                     }
                 },
                 {
+                    "context": {
+                        "contextRef": {
+                            "location": "https://localhost:-1/pf-admin-api/v1/authenticationPolicyContracts/i5wEJiSkm5d2CtHI",
+                            "id": "i5wEJiSkm5d2CtHI"
+                        },
+                        "type": "AUTHENTICATION_POLICY_CONTRACT"
+                    },
+                    "attributeContractFulfillment": {
+                        "aud": {
+                            "source": {"type": "CONTEXT"},
+                            "value": "ClientId"
+                        },
+                        "sub": {
+                            "source": {
+                                "id": "PingDirectory",
+                                "type": "LDAP_DATA_STORE"
+                            },
+                            "value": "uid"
+                        },
+                        "scope": {
+                            "source": {"type": "CONTEXT"},
+                            "value": "OAuthScopes"
+                        },
+                        "groups": {
+                            "source": {
+                                "id": "PingDirectory",
+                                "type": "LDAP_DATA_STORE"
+                            },
+                            "value": "isMemberOf"
+                        },
+                        "given_name": {
+                            "source": {
+                                "id": "PingDirectory",
+                                "type": "LDAP_DATA_STORE"
+                            },
+                            "value": "givenName"
+                        },
+                        "family_name": {
+                            "source": {
+                                "id": "PingDirectory",
+                                "type": "LDAP_DATA_STORE"
+                            },
+                            "value": "sn"
+                        },
+                        "email": {
+                            "source": {
+                                "id": "PingDirectory",
+                                "type": "LDAP_DATA_STORE"
+                            },
+                            "value": "mail"
+                        }
+                    },
+                    "id": "authz_req|apc.i5wEJiSkm5d2CtHI|AccessTokenManagement",
+                    "attributeSources": [{
+                        "memberOfNestedGroup": false,
+                        "binaryAttributeSettings": {},
+                        "searchScope": "SUBTREE",
+                        "dataStoreRef": {
+                            "location": "https://localhost:-1/pf-admin-api/v1/dataStores/LDAP-4D65BD30F2946A712E86940F0F7442EDCDC16646",
+                            "id": "LDAP-4D65BD30F2946A712E86940F0F7442EDCDC16646"
+                        },
+                        "description": "PingDirectory",
+                        "id": "PingDirectory",
+                        "searchAttributes": [
+                            "Subject DN",
+                            "cn",
+                            "entryUUID",
+                            "givenName",
+                            "isMemberOf",
+                            "mail",
+                            "sn",
+                            "telephoneNumber",
+                            "uid"
+                        ],
+                        "type": "LDAP",
+                        "baseDn": "ou=people,dc=example,dc=com",
+                        "searchFilter": "telephoneNumber=${apc.subject}"
+                    }],
+                    "issuanceCriteria": {"conditionalCriteria": []},
+                    "accessTokenManagerRef": {
+                        "location": "https://localhost:-1/pf-admin-api/v1/oauth/accessTokenManagers/AccessTokenManagement",
+                        "id": "AccessTokenManagement"
+                    }
+                },
+                {
                     "context": {"type": "CLIENT_CREDENTIALS"},
                     "attributeContractFulfillment": {
                         "admin_role": {
@@ -3341,7 +3454,43 @@
         {
             "operationType": "SAVE",
             "items": [{
-                "apiEnabled": false,
+                "configuration": {
+                    "tables": [{
+                        "name": "Clients",
+                        "rows": [
+                            {
+                                "defaultRow": false,
+                                "fields": [{
+                                    "name": "Client ID",
+                                    "value": "contact-oauth-client"
+                                }]
+                            },
+                            {
+                                "defaultRow": false,
+                                "fields": [{
+                                    "name": "Client ID",
+                                    "value": "contact-hr-client"
+                                }]
+                            }
+                        ]
+                    }],
+                    "fields": []
+                },
+                "name": "OAUTHCLIENTSELECTOR",
+                "id": "OAUTHCLIENTSELECTOR",
+                "lastModified": "2026-04-15T09:21:31.362Z",
+                "pluginDescriptorRef": {
+                    "location": "https://localhost:-1/pf-admin-api/v1/authenticationSelectors/descriptors/com.pingidentity.pf.selectors.oauthclient.OAuthClientAdapterSelector",
+                    "id": "com.pingidentity.pf.selectors.oauthclient.OAuthClientAdapterSelector"
+                },
+                "attributeContract": {}
+            }],
+            "resourceType": "/authenticationSelectors"
+        },
+        {
+            "operationType": "SAVE",
+            "items": [{
+                "apiEnabled": true,
                 "restrictAccessToRedirectlessMode": true,
                 "includeRequestContext": false,
                 "enableApiDescriptions": true
@@ -3354,133 +3503,182 @@
                 "defaultAuthenticationSources": [{
                     "type": "IDP_ADAPTER",
                     "sourceRef": {
-                        "location": "https://localhost:-1/pf-admin-api/v1/idp/adapters/IDENTIFIERFIRST",
-                        "id": "IDENTIFIERFIRST"
+                        "location": "https://localhost:-1/pf-admin-api/v1/idp/adapters/ReferenceID",
+                        "id": "ReferenceID"
                     }
                 }],
                 "failIfNoSelection": false,
-                "authnSelectionTrees": [{
-                    "name": "Generic",
-                    "id": "EdKQEuNtO7sRTJElCyJtooK3A",
-                    "handleFailuresLocally": true,
-                    "enabled": true,
-                    "rootNode": {
-                        "children": [
-                            {"action": {
-                                "context": "Fail",
-                                "type": "RESTART"
-                            }},
-                            {"action": {
-                                "attributeMapping": {
-                                    "attributeContractFulfillment": {
-                                        "entryUUID": {
-                                            "source": {
-                                                "id": "IDENTIFIERFIRST",
-                                                "type": "ADAPTER"
+                "authnSelectionTrees": [
+                    {
+                        "name": "ReferenceID",
+                        "id": "K8pmeXX7ZA0dPr36zzpfHp1TP",
+                        "handleFailuresLocally": false,
+                        "enabled": true,
+                        "rootNode": {
+                            "children": [
+                                {"action": {
+                                    "context": "No",
+                                    "type": "CONTINUE"
+                                }},
+                                {
+                                    "children": [
+                                        {"action": {
+                                            "context": "Fail",
+                                            "type": "RESTART"
+                                        }},
+                                        {"action": {
+                                            "attributeMapping": {
+                                                "attributeContractFulfillment": {
+                                                    "vaultlocation": {
+                                                        "source": {
+                                                            "id": "ReferenceID",
+                                                            "type": "ADAPTER"
+                                                        },
+                                                        "value": "vaultlocation"
+                                                    },
+                                                    "subject": {
+                                                        "source": {
+                                                            "id": "ReferenceID",
+                                                            "type": "ADAPTER"
+                                                        },
+                                                        "value": "subject"
+                                                    }
+                                                },
+                                                "attributeSources": [],
+                                                "issuanceCriteria": {"conditionalCriteria": []}
                                             },
-                                            "value": "entryUUID"
-                                        },
-                                        "uid": {
-                                            "source": {
-                                                "id": "IDENTIFIERFIRST",
-                                                "type": "ADAPTER"
+                                            "authenticationPolicyContractRef": {
+                                                "location": "https://localhost:-1/pf-admin-api/v1/authenticationPolicyContracts/i5wEJiSkm5d2CtHI",
+                                                "id": "i5wEJiSkm5d2CtHI"
                                             },
-                                            "value": "subject"
+                                            "context": "Success",
+                                            "type": "APC_MAPPING"
+                                        }}
+                                    ],
+                                    "action": {
+                                        "authenticationSource": {
+                                            "type": "IDP_ADAPTER",
+                                            "sourceRef": {
+                                                "location": "https://localhost:-1/pf-admin-api/v1/idp/adapters/ReferenceID",
+                                                "id": "ReferenceID"
+                                            }
                                         },
-                                        "telephoneNumber": {
-                                            "source": {
-                                                "id": "IDENTIFIERFIRST",
-                                                "type": "ADAPTER"
-                                            },
-                                            "value": "telephoneNumber"
-                                        },
-                                        "mail": {
-                                            "source": {
-                                                "id": "IDENTIFIERFIRST",
-                                                "type": "ADAPTER"
-                                            },
-                                            "value": "mail"
-                                        },
-                                        "subject": {
-                                            "source": {
-                                                "id": "IDENTIFIERFIRST",
-                                                "type": "ADAPTER"
-                                            },
-                                            "value": "subject"
-                                        },
-                                        "givenName": {
-                                            "source": {
-                                                "id": "IDENTIFIERFIRST",
-                                                "type": "ADAPTER"
-                                            },
-                                            "value": "givenName"
-                                        },
-                                        "groups": {
-                                            "source": {
-                                                "id": "IDENTIFIERFIRST",
-                                                "type": "ADAPTER"
-                                            },
-                                            "value": "groups"
-                                        },
-                                        "cn": {
-                                            "source": {
-                                                "id": "IDENTIFIERFIRST",
-                                                "type": "ADAPTER"
-                                            },
-                                            "value": "cn"
-                                        },
-                                        "sn": {
-                                            "source": {
-                                                "id": "IDENTIFIERFIRST",
-                                                "type": "ADAPTER"
-                                            },
-                                            "value": "sn"
-                                        }
-                                    },
-                                    "attributeSources": [{
-                                        "memberOfNestedGroup": false,
-                                        "binaryAttributeSettings": {},
-                                        "searchScope": "SUBTREE",
-                                        "dataStoreRef": {
-                                            "location": "https://localhost:-1/pf-admin-api/v1/dataStores/LDAP-4D65BD30F2946A712E86940F0F7442EDCDC16646",
-                                            "id": "LDAP-4D65BD30F2946A712E86940F0F7442EDCDC16646"
-                                        },
-                                        "description": "PINDIRECTORY",
-                                        "id": "PINDIRECTORY",
-                                        "searchAttributes": [
-                                            "Subject DN",
-                                            "entryUUID",
-                                            "givenName",
-                                            "mail",
-                                            "sn",
-                                            "telephoneNumber",
-                                            "uid"
-                                        ],
-                                        "type": "LDAP",
-                                        "searchFilter": "(uid=user.0)"
-                                    }],
-                                    "issuanceCriteria": {"conditionalCriteria": []}
-                                },
-                                "authenticationPolicyContractRef": {
-                                    "location": "https://localhost:-1/pf-admin-api/v1/authenticationPolicyContracts/KUzfpHBOZeqF0vVo",
-                                    "id": "KUzfpHBOZeqF0vVo"
-                                },
-                                "context": "Success",
-                                "type": "APC_MAPPING"
-                            }}
-                        ],
-                        "action": {
-                            "authenticationSource": {
-                                "type": "IDP_ADAPTER",
-                                "sourceRef": {
-                                    "location": "https://localhost:-1/pf-admin-api/v1/idp/adapters/IDENTIFIERFIRST",
-                                    "id": "IDENTIFIERFIRST"
+                                        "context": "Yes",
+                                        "type": "AUTHN_SOURCE"
+                                    }
                                 }
-                            },
-                            "type": "AUTHN_SOURCE"
+                            ],
+                            "action": {
+                                "authenticationSelectorRef": {
+                                    "location": "https://localhost:-1/pf-admin-api/v1/authenticationSelectors/OAUTHCLIENTSELECTOR",
+                                    "id": "OAUTHCLIENTSELECTOR"
+                                },
+                                "type": "AUTHN_SELECTOR"
+                            }
+                        }
+                    },
+                    {
+                        "name": "Generic",
+                        "id": "EdKQEuNtO7sRTJElCyJtooK3A",
+                        "handleFailuresLocally": true,
+                        "enabled": true,
+                        "rootNode": {
+                            "children": [
+                                {"action": {
+                                    "context": "Fail",
+                                    "type": "RESTART"
+                                }},
+                                {"action": {
+                                    "attributeMapping": {
+                                        "attributeContractFulfillment": {
+                                            "entryUUID": {
+                                                "source": {
+                                                    "id": "IDENTIFIERFIRST",
+                                                    "type": "ADAPTER"
+                                                },
+                                                "value": "entryUUID"
+                                            },
+                                            "uid": {
+                                                "source": {
+                                                    "id": "IDENTIFIERFIRST",
+                                                    "type": "ADAPTER"
+                                                },
+                                                "value": "subject"
+                                            },
+                                            "telephoneNumber": {
+                                                "source": {
+                                                    "id": "IDENTIFIERFIRST",
+                                                    "type": "ADAPTER"
+                                                },
+                                                "value": "telephoneNumber"
+                                            },
+                                            "mail": {
+                                                "source": {
+                                                    "id": "IDENTIFIERFIRST",
+                                                    "type": "ADAPTER"
+                                                },
+                                                "value": "mail"
+                                            },
+                                            "subject": {
+                                                "source": {
+                                                    "id": "IDENTIFIERFIRST",
+                                                    "type": "ADAPTER"
+                                                },
+                                                "value": "subject"
+                                            },
+                                            "givenName": {
+                                                "source": {
+                                                    "id": "IDENTIFIERFIRST",
+                                                    "type": "ADAPTER"
+                                                },
+                                                "value": "givenName"
+                                            },
+                                            "groups": {
+                                                "source": {
+                                                    "id": "IDENTIFIERFIRST",
+                                                    "type": "ADAPTER"
+                                                },
+                                                "value": "groups"
+                                            },
+                                            "cn": {
+                                                "source": {
+                                                    "id": "IDENTIFIERFIRST",
+                                                    "type": "ADAPTER"
+                                                },
+                                                "value": "cn"
+                                            },
+                                            "sn": {
+                                                "source": {
+                                                    "id": "IDENTIFIERFIRST",
+                                                    "type": "ADAPTER"
+                                                },
+                                                "value": "sn"
+                                            }
+                                        },
+                                        "attributeSources": [],
+                                        "issuanceCriteria": {"conditionalCriteria": []}
+                                    },
+                                    "authenticationPolicyContractRef": {
+                                        "location": "https://localhost:-1/pf-admin-api/v1/authenticationPolicyContracts/KUzfpHBOZeqF0vVo",
+                                        "id": "KUzfpHBOZeqF0vVo"
+                                    },
+                                    "context": "Success",
+                                    "type": "APC_MAPPING"
+                                }}
+                            ],
+                            "action": {
+                                "authenticationSource": {
+                                    "type": "IDP_ADAPTER",
+                                    "sourceRef": {
+                                        "location": "https://localhost:-1/pf-admin-api/v1/idp/adapters/IDENTIFIERFIRST",
+                                        "id": "IDENTIFIERFIRST"
+                                    }
+                                },
+                                "type": "AUTHN_SOURCE"
+                            }
                         }
                     }
-                }],
+                ],
                 "trackedHttpParameters": []
             }],
             "resourceType": "/authenticationPolicies/default"
