@@ -277,7 +277,7 @@
                     "readTimeout": 3000,
                     "name": "PingDirectory",
                     "useStartTLS": false,
-                    "lastModified": "2026-04-11T23:45:23.483Z",
+                    "lastModified": "2026-04-13T10:46:08.307Z",
                     "retryFailedOperations": false,
                     "userDN": "cn=administrator"
                 },
@@ -297,7 +297,7 @@
                     "name": "ProvisionerDS (sa)",
                     "connectionUrl": "jdbc:hsqldb:${pf.server.data.dir}${/}hypersonic${/}ProvisionerDefaultDB;hsqldb.lock_file=false",
                     "id": "ProvisionerDS",
-                    "lastModified": "2026-04-11T23:45:23.495Z",
+                    "lastModified": "2026-04-13T10:46:08.326Z",
                     "maxPoolSize": 100,
                     "blockingTimeout": 5000
                 }
@@ -482,11 +482,11 @@
                 {
                     "password": "${PING_IDENTITY_PASSWORD}",
                     "roles": [
-                        "DATA_COLLECTION_ADMINISTRATOR",
                         "ADMINISTRATOR",
                         "USER_ADMINISTRATOR",
+                        "CRYPTO_ADMINISTRATOR",
                         "EXPRESSION_ADMINISTRATOR",
-                        "CRYPTO_ADMINISTRATOR"
+                        "DATA_COLLECTION_ADMINISTRATOR"
                     ],
                     "auditor": false,
                     "description": "Initial administrator user",
@@ -496,11 +496,11 @@
                 {
                     "password": "${administrativeAccounts_items_nirving_password}",
                     "roles": [
-                        "DATA_COLLECTION_ADMINISTRATOR",
                         "ADMINISTRATOR",
                         "USER_ADMINISTRATOR",
+                        "CRYPTO_ADMINISTRATOR",
                         "EXPRESSION_ADMINISTRATOR",
-                        "CRYPTO_ADMINISTRATOR"
+                        "DATA_COLLECTION_ADMINISTRATOR"
                     ],
                     "auditor": false,
                     "description": "description",
@@ -541,16 +541,16 @@
                     "uriAllowList": [
                         {
                             "allowQueryAndFragment": false,
-                            "idpDiscovery": false,
                             "inErrorResource": true,
+                            "idpDiscovery": false,
                             "validUri": "https://openidfederation.ping.darkedges.com",
                             "targetResourceSLO": true,
                             "targetResourceSSO": true
                         },
                         {
                             "allowQueryAndFragment": false,
-                            "idpDiscovery": false,
                             "inErrorResource": true,
+                            "idpDiscovery": false,
                             "validUri": "https://www.certification.openid.net/test/a/DarkEdges/",
                             "targetResourceSLO": true,
                             "targetResourceSSO": true
@@ -561,8 +561,8 @@
                         "validPath": "",
                         "allowQueryAndFragment": false,
                         "requireHttps": true,
-                        "idpDiscovery": false,
                         "inErrorResource": true,
+                        "idpDiscovery": false,
                         "targetResourceSLO": true,
                         "targetResourceSSO": true
                     }],
@@ -628,7 +628,7 @@
                 {
                     "name": "POLICYCONTRACT",
                     "id": "KUzfpHBOZeqF0vVo",
-                    "lastModified": "2026-04-11T23:45:23.857Z",
+                    "lastModified": "2026-04-13T10:46:08.815Z",
                     "coreAttributes": [{"name": "subject"}],
                     "extendedAttributes": [
                         {"name": "entryUUID"},
@@ -644,7 +644,7 @@
                 {
                     "name": "WSFED",
                     "id": "atadCwboug6WtQml",
-                    "lastModified": "2026-04-11T23:45:23.862Z",
+                    "lastModified": "2026-04-13T10:46:08.835Z",
                     "coreAttributes": [{"name": "subject"}],
                     "extendedAttributes": []
                 }
@@ -845,7 +845,7 @@
                     },
                     "name": "AccessTokenManagement",
                     "id": "AccessTokenManagement",
-                    "lastModified": "2026-04-11T23:45:23.962Z",
+                    "lastModified": "2026-04-13T10:46:08.992Z",
                     "pluginDescriptorRef": {
                         "location": "https://localhost:-1/pf-admin-api/v1/oauth/accessTokenManagers/descriptors/com.pingidentity.pf.access.token.management.plugins.JwtBearerAccessTokenManagementPlugin",
                         "id": "com.pingidentity.pf.access.token.management.plugins.JwtBearerAccessTokenManagementPlugin"
@@ -1060,7 +1060,7 @@
                     },
                     "name": "JSON Web Tokens",
                     "id": "jwt",
-                    "lastModified": "2026-04-11T23:45:23.947Z",
+                    "lastModified": "2026-04-13T10:46:08.976Z",
                     "pluginDescriptorRef": {
                         "location": "https://localhost:-1/pf-admin-api/v1/oauth/accessTokenManagers/descriptors/com.pingidentity.pf.access.token.management.plugins.JwtBearerAccessTokenManagementPlugin",
                         "id": "com.pingidentity.pf.access.token.management.plugins.JwtBearerAccessTokenManagementPlugin"
@@ -1226,7 +1226,7 @@
                     },
                     "name": "IDENTIFIERFIRST",
                     "id": "IDENTIFIERFIRST",
-                    "lastModified": "2026-04-11T23:45:24.092Z",
+                    "lastModified": "2026-04-13T10:46:09.173Z",
                     "pluginDescriptorRef": {
                         "location": "https://localhost:-1/pf-admin-api/v1/idp/adapters/descriptors/com.pingidentity.adapters.identifierfirst.idp.IdentifierFirstAdapter",
                         "id": "com.pingidentity.adapters.identifierfirst.idp.IdentifierFirstAdapter"
@@ -1540,7 +1540,7 @@
                     },
                     "name": "PINGID",
                     "id": "PINGID",
-                    "lastModified": "2026-04-11T23:45:24.136Z",
+                    "lastModified": "2026-04-13T10:46:09.235Z",
                     "pluginDescriptorRef": {
                         "location": "https://localhost:-1/pf-admin-api/v1/idp/adapters/descriptors/com.pingidentity.adapters.pingid.PingIDAdapter",
                         "id": "com.pingidentity.adapters.pingid.PingIDAdapter"
@@ -1775,7 +1775,7 @@
                 },
                 "name": "OPENTOKEN",
                 "id": "OPENTOKEN",
-                "lastModified": "2026-04-11T23:45:24.363Z",
+                "lastModified": "2026-04-13T10:46:09.550Z",
                 "targetApplicationInfo": {},
                 "pluginDescriptorRef": {
                     "location": "https://localhost:-1/pf-admin-api/v1/sp/adapters/descriptors/com.pingidentity.adapters.opentoken.SpAuthnAdapter",
@@ -1891,7 +1891,7 @@
                     },
                     "name": "MSFTTOKENPROCESSOR",
                     "id": "MSFTTOKENPROCESSOR",
-                    "lastModified": "2026-04-11T23:45:24.389Z",
+                    "lastModified": "2026-04-13T10:46:09.583Z",
                     "pluginDescriptorRef": {
                         "location": "https://localhost:-1/pf-admin-api/v1/idp/tokenProcessors/descriptors/com.pingidentity.pf.tokenprocessors.jwt.JwtTokenProcessor",
                         "id": "com.pingidentity.pf.tokenprocessors.jwt.JwtTokenProcessor"
@@ -1924,7 +1924,7 @@
                     },
                     "name": "PFTOKENPROCESSOR",
                     "id": "PFTOKENPROCESSOR",
-                    "lastModified": "2026-04-11T23:45:24.419Z",
+                    "lastModified": "2026-04-13T10:46:09.609Z",
                     "pluginDescriptorRef": {
                         "location": "https://localhost:-1/pf-admin-api/v1/idp/tokenProcessors/descriptors/org.sourceid.wstrust.processor.oauth.BearerAccessTokenTokenProcessor",
                         "id": "org.sourceid.wstrust.processor.oauth.BearerAccessTokenTokenProcessor"
@@ -2214,7 +2214,7 @@
                 "loggingMode": "STANDARD",
                 "replicationStatus": "REPLICATED",
                 "type": "IDP",
-                "creationDate": "2026-04-11T23:45:24.662Z",
+                "creationDate": "2026-04-13T10:46:09.896Z",
                 "metadataReloadSettings": {
                     "metadataUrlRef": {
                         "location": "https://localhost:-1/pf-admin-api/v1/metadataUrls/lhUwqUjy14Fs7B6zXU2VC9KvH",
@@ -2224,7 +2224,7 @@
                 },
                 "errorPageMsgId": "errorDetail.spSsoFailure",
                 "baseUrl": "https://login.microsoftonline.com",
-                "modificationDate": "2026-04-11T23:45:24.662Z",
+                "modificationDate": "2026-04-13T10:46:09.896Z",
                 "virtualEntityIds": [],
                 "name": "https://sts.windows.net/4161be3f-bf2b-41d4-a02b-e6f82b529d53/",
                 "id": "uxXlcpG9H1CGfh11FJHAT6PF-EM",
@@ -2310,16 +2310,16 @@
                     },
                     "incomingBindings": [
                         "REDIRECT",
-                        "POST",
-                        "SOAP"
+                        "SOAP",
+                        "POST"
                     ],
                     "protocol": "SAML20",
                     "assertionsSigned": false,
                     "signAuthnRequests": false,
                     "enabledProfiles": [
+                        "SP_INITIATED_SLO",
                         "SP_INITIATED_SSO",
                         "IDP_INITIATED_SSO",
-                        "SP_INITIATED_SLO",
                         "IDP_INITIATED_SLO"
                     ],
                     "adapterMappings": [{
@@ -2489,9 +2489,9 @@
                 "loggingMode": "STANDARD",
                 "replicationStatus": "REPLICATED",
                 "type": "SP",
-                "creationDate": "2026-04-11T23:45:25.274Z",
+                "creationDate": "2026-04-13T10:46:10.834Z",
                 "connectionTargetType": "STANDARD",
-                "modificationDate": "2026-04-11T23:45:25.274Z",
+                "modificationDate": "2026-04-13T10:46:10.834Z",
                 "virtualEntityIds": [],
                 "name": "MSFT",
                 "id": "ke55e7wQcY25OkXcutuYmfYASFV"
@@ -2834,7 +2834,7 @@
                 "allowIdTokenIntrospection": false,
                 "id": "OPENIDCONNECTPOLICYMANAGEMENT",
                 "reissueIdTokenInHybridFlow": false,
-                "lastModified": "2026-04-11T23:45:25.539Z",
+                "lastModified": "2026-04-13T10:46:11.017Z",
                 "idTokenLifetime": 5,
                 "accessTokenManagerRef": {
                     "location": "https://localhost:-1/pf-admin-api/v1/oauth/accessTokenManagers/AccessTokenManagement",
@@ -2946,7 +2946,7 @@
                 },
                 "name": "OpenID",
                 "id": "OpenID",
-                "lastModified": "2026-04-11T23:54:27.888Z",
+                "lastModified": "2026-04-13T10:46:11.151Z",
                 "pluginDescriptorRef": {
                     "location": "https://localhost:-1/pf-admin-api/v1/oauth/clientRegistrationPolicies/descriptors/com.pingidentity.clientregistration.OpenIDFederationPlugin",
                     "id": "com.pingidentity.clientregistration.OpenIDFederationPlugin"
