@@ -1661,6 +1661,139 @@
                         ],
                         "extendedAttributes": []
                     }
+                },
+                {
+                    "attributeMapping": {
+                        "attributeContractFulfillment": {
+                            "vaultlocation": {
+                                "source": {"type": "ADAPTER"},
+                                "value": "vaultlocation"
+                            },
+                            "subject": {
+                                "source": {"type": "ADAPTER"},
+                                "value": "subject"
+                            }
+                        },
+                        "attributeSources": [],
+                        "issuanceCriteria": {"conditionalCriteria": []}
+                    },
+                    "configuration": {
+                        "tables": [],
+                        "fields": [
+                            {
+                                "name": "Authentication Endpoint",
+                                "value": "https://referenceid.ping.darkedges.com"
+                            },
+                            {
+                                "name": "User Name",
+                                "value": "referenceid"
+                            },
+                            {
+                                "name": "Pass Phrase",
+                                "value": "${idp_adapters_items_ReferenceID_configuration_fields_Pass_Phrase_value}"
+                            },
+                            {
+                                "name": "Allowed Subject DN",
+                                "value": ""
+                            },
+                            {
+                                "name": "Allowed Issuer DN",
+                                "value": ""
+                            },
+                            {
+                                "name": "Access Token Manager",
+                                "value": "AccessTokenManagement"
+                            },
+                            {
+                                "name": "Allowed Bearer Access Token Client IDs",
+                                "value": ""
+                            },
+                            {
+                                "name": "Required Bearer Access Token Scopes",
+                                "value": ""
+                            },
+                            {
+                                "name": "Logout Service Endpoint",
+                                "value": ""
+                            },
+                            {
+                                "name": "Logout Service Mode",
+                                "value": "NONE"
+                            },
+                            {
+                                "name": "Prefix Referenced Attributes",
+                                "value": "true"
+                            },
+                            {
+                                "name": "Preserve JSON",
+                                "value": "false"
+                            },
+                            {
+                                "name": "Ignore Untracked HTTP Parameters",
+                                "value": "true"
+                            },
+                            {
+                                "name": "Send Request Parameters",
+                                "value": "NONE"
+                            },
+                            {
+                                "name": "Include Null Attributes",
+                                "value": ""
+                            },
+                            {
+                                "name": "Transport Mode",
+                                "value": "2"
+                            },
+                            {
+                                "name": "Reference Duration",
+                                "value": "3"
+                            },
+                            {
+                                "name": "Reference Length",
+                                "value": "30"
+                            },
+                            {
+                                "name": "Require SSL/TLS",
+                                "value": "true"
+                            },
+                            {
+                                "name": "Outgoing Attribute Format",
+                                "value": "JSON"
+                            },
+                            {
+                                "name": "Incoming Attribute Format",
+                                "value": "JSON"
+                            },
+                            {
+                                "name": "Skip Host Name Validation ",
+                                "value": "false"
+                            },
+                            {
+                                "name": "Relax Password Requirements",
+                                "value": "false"
+                            }
+                        ]
+                    },
+                    "name": "ReferenceID",
+                    "id": "ReferenceID",
+                    "lastModified": "2026-04-15T04:33:01.433Z",
+                    "pluginDescriptorRef": {
+                        "location": "https://localhost:-1/pf-admin-api/v1/idp/adapters/descriptors/com.pingidentity.pf.adapters.referenceid.IdpBackchannelReferenceAuthnAdapter",
+                        "id": "com.pingidentity.pf.adapters.referenceid.IdpBackchannelReferenceAuthnAdapter"
+                    },
+                    "attributeContract": {
+                        "maskOgnlValues": false,
+                        "coreAttributes": [{
+                            "masked": false,
+                            "name": "subject",
+                            "pseudonym": true
+                        }],
+                        "extendedAttributes": [{
+                            "masked": false,
+                            "name": "vaultlocation",
+                            "pseudonym": false
+                        }]
+                    }
                 }
             ],
             "resourceType": "/idp/adapters"
