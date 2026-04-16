@@ -628,10 +628,11 @@
                 {
                     "name": "POLICYCONTRACT",
                     "id": "KUzfpHBOZeqF0vVo",
-                    "lastModified": "2026-04-15T22:02:56.883Z",
+                    "lastModified": "2026-04-16T03:00:29.373Z",
                     "coreAttributes": [{"name": "subject"}],
                     "extendedAttributes": [
                         {"name": "entryUUID"},
+                        {"name": "vaultlocation"},
                         {"name": "uid"},
                         {"name": "telephoneNumber"},
                         {"name": "mail"},
@@ -812,6 +813,11 @@
                         "inherited": false,
                         "attributes": [
                             {
+                                "name": "vaultlocation",
+                                "multiValued": false,
+                                "mappedScopes": []
+                            },
+                            {
                                 "name": "sub",
                                 "multiValued": false,
                                 "mappedScopes": []
@@ -845,7 +851,7 @@
                     },
                     "name": "AccessTokenManagement",
                     "id": "AccessTokenManagement",
-                    "lastModified": "2026-04-15T22:02:56.985Z",
+                    "lastModified": "2026-04-16T03:02:48.165Z",
                     "pluginDescriptorRef": {
                         "location": "https://localhost:-1/pf-admin-api/v1/oauth/accessTokenManagers/descriptors/com.pingidentity.pf.access.token.management.plugins.JwtBearerAccessTokenManagementPlugin",
                         "id": "com.pingidentity.pf.access.token.management.plugins.JwtBearerAccessTokenManagementPlugin"
@@ -857,6 +863,10 @@
                     "attributeContract": {
                         "coreAttributes": [],
                         "extendedAttributes": [
+                            {
+                                "name": "vaultlocation",
+                                "multiValued": false
+                            },
                             {
                                 "name": "sub",
                                 "multiValued": false
@@ -1672,6 +1682,10 @@
                                 },
                                 "value": "entryUUID"
                             },
+                            "vaultlocation": {
+                                "source": {"type": "ADAPTER"},
+                                "value": "vaultlocation"
+                            },
                             "telephoneNumber": {
                                 "source": {
                                     "id": "PINGDIRECTORY",
@@ -1746,7 +1760,7 @@
                             ],
                             "type": "LDAP",
                             "baseDn": "ou=people,dc=example,dc=com",
-                            "searchFilter": "(&(telephoneNumber=${subject}))"
+                            "searchFilter": "(&(mail=${subject}))"
                         }],
                         "issuanceCriteria": {"conditionalCriteria": []}
                     },
@@ -1849,7 +1863,7 @@
                     },
                     "name": "ReferenceID",
                     "id": "ReferenceID",
-                    "lastModified": "2026-04-15T23:52:16.322Z",
+                    "lastModified": "2026-04-16T02:54:16.377Z",
                     "pluginDescriptorRef": {
                         "location": "https://localhost:-1/pf-admin-api/v1/idp/adapters/descriptors/com.pingidentity.pf.adapters.referenceid.IdpBackchannelReferenceAuthnAdapter",
                         "id": "com.pingidentity.pf.adapters.referenceid.IdpBackchannelReferenceAuthnAdapter"
@@ -1865,6 +1879,11 @@
                             {
                                 "masked": false,
                                 "name": "entryUUID",
+                                "pseudonym": false
+                            },
+                            {
+                                "masked": false,
+                                "name": "vaultlocation",
                                 "pseudonym": false
                             },
                             {
@@ -2879,6 +2898,7 @@
                     "preferred_username",
                     "profile",
                     "updated_at",
+                    "vaultlocation",
                     "website",
                     "zoneinfo"
                 ]}},
@@ -2893,7 +2913,9 @@
                     }],
                     "extendedAttributes": [
                         {
+                            "includeInUserInfo": true,
                             "name": "zoneinfo",
+                            "includeInIdToken": true,
                             "multiValued": false
                         },
                         {
@@ -2939,6 +2961,12 @@
                         {
                             "includeInUserInfo": true,
                             "name": "email",
+                            "includeInIdToken": true,
+                            "multiValued": false
+                        },
+                        {
+                            "includeInUserInfo": true,
+                            "name": "vaultlocation",
                             "includeInIdToken": true,
                             "multiValued": false
                         },
@@ -3030,6 +3058,10 @@
                             },
                             "value": "mail"
                         },
+                        "vaultlocation": {
+                            "source": {"type": "TOKEN"},
+                            "value": "vaultlocation"
+                        },
                         "website": {"source": {"type": "NO_MAPPING"}},
                         "email_verified": {"source": {"type": "NO_MAPPING"}},
                         "profile": {"source": {"type": "NO_MAPPING"}},
@@ -3100,7 +3132,7 @@
                 "allowIdTokenIntrospection": false,
                 "id": "OPENIDCONNECTPOLICYMANAGEMENT",
                 "reissueIdTokenInHybridFlow": false,
-                "lastModified": "2026-04-15T22:02:58.313Z",
+                "lastModified": "2026-04-16T03:34:43.800Z",
                 "idTokenLifetime": 5,
                 "accessTokenManagerRef": {
                     "location": "https://localhost:-1/pf-admin-api/v1/oauth/accessTokenManagers/AccessTokenManagement",
@@ -3267,6 +3299,10 @@
                         "type": "AUTHENTICATION_POLICY_CONTRACT"
                     },
                     "attributeContractFulfillment": {
+                        "vaultlocation": {
+                            "source": {"type": "AUTHENTICATION_POLICY_CONTRACT"},
+                            "value": "vaultlocation"
+                        },
                         "aud": {
                             "source": {"type": "CONTEXT"},
                             "value": "ClientId"
@@ -3556,6 +3592,13 @@
                                                         },
                                                         "value": "entryUUID"
                                                     },
+                                                    "vaultlocation": {
+                                                        "source": {
+                                                            "id": "ReferenceID",
+                                                            "type": "ADAPTER"
+                                                        },
+                                                        "value": "vaultlocation"
+                                                    },
                                                     "uid": {
                                                         "source": {
                                                             "id": "ReferenceID",
@@ -3667,6 +3710,7 @@
                                                 },
                                                 "value": "entryUUID"
                                             },
+                                            "vaultlocation": {"source": {"type": "NO_MAPPING"}},
                                             "uid": {
                                                 "source": {
                                                     "id": "IDENTIFIERFIRST",
