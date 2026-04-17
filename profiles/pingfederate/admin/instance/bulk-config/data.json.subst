@@ -2534,6 +2534,10 @@
                             "sn": {
                                 "source": {"type": "ASSERTION"},
                                 "value": "SAML_SUBJECT"
+                            },
+                            "vaultlocation": {
+                                "source": {"type": "ASSERTION"},
+                                "value": "SAML_SUBJECT"
                             }
                         },
                         "attributeSources": [],
@@ -3402,6 +3406,13 @@
                                 "type": "LDAP_DATA_STORE"
                             },
                             "value": "mail"
+                        },
+                        "vaultlocation": {
+                            "source": {
+                                "id": "PINGDIRECTORY",
+                                "type": "LDAP_DATA_STORE"
+                            },
+                            "value": "mail"
                         }
                     },
                     "id": "default|AccessTokenManagement",
@@ -3473,6 +3484,10 @@
                             "value": "sn"
                         },
                         "email": {
+                            "source": {"type": "TEXT"},
+                            "value": "email"
+                        },
+                        "vaultlocation": {
                             "source": {"type": "TEXT"},
                             "value": "email"
                         }
