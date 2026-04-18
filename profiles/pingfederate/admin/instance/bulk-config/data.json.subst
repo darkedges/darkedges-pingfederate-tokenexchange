@@ -3719,8 +3719,8 @@
                     },
                     "attributeContractFulfillment": {
                         "actor": {
-                            "source": {"type": "TOKEN_EXCHANGE_PROCESSOR_POLICY"},
-                            "value": "actor"
+                            "source": {"type": "EXPRESSION"},
+                            "value": "#jsonObj = new org.json.simple.JSONObject(), \n#jsonObj.put(\"sub\", #this.get(\"tepp.actor\")), \n#jsonObj"
                         },
                         "vaultlocation": {
                             "source": {"type": "TOKEN_EXCHANGE_PROCESSOR_POLICY"},
@@ -3742,18 +3742,9 @@
                             "source": {"type": "TOKEN_EXCHANGE_PROCESSOR_POLICY"},
                             "value": "given_name"
                         },
-                        "given_name": {
-                            "source": {"type": "TOKEN_EXCHANGE_PROCESSOR_POLICY"},
-                            "value": "given_name"
-                        },
-                        "family_name": {
-                            "source": {"type": "TOKEN_EXCHANGE_PROCESSOR_POLICY"},
-                            "value": "family_name"
-                        },
-                        "email": {
-                            "source": {"type": "TOKEN_EXCHANGE_PROCESSOR_POLICY"},
-                            "value": "email"
-                        }
+                        "given_name": {"source": {"type": "NO_MAPPING"}},
+                        "family_name": {"source": {"type": "NO_MAPPING"}},
+                        "email": {"source": {"type": "NO_MAPPING"}}
                     },
                     "id": "urn:ietf:params:oauth:grant-type:token-exchange|PROCESSORPOLICIES|AccessTokenManagement",
                     "attributeSources": [],
