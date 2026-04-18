@@ -818,6 +818,11 @@
                                 "mappedScopes": []
                             },
                             {
+                                "name": "actor",
+                                "multiValued": false,
+                                "mappedScopes": []
+                            },
+                            {
                                 "name": "sub",
                                 "multiValued": false,
                                 "mappedScopes": []
@@ -851,7 +856,7 @@
                     },
                     "name": "AccessTokenManagement",
                     "id": "AccessTokenManagement",
-                    "lastModified": "2026-04-17T07:20:32.010Z",
+                    "lastModified": "2026-04-18T12:15:54.514Z",
                     "pluginDescriptorRef": {
                         "location": "https://localhost:-1/pf-admin-api/v1/oauth/accessTokenManagers/descriptors/com.pingidentity.pf.access.token.management.plugins.JwtBearerAccessTokenManagementPlugin",
                         "id": "com.pingidentity.pf.access.token.management.plugins.JwtBearerAccessTokenManagementPlugin"
@@ -868,6 +873,10 @@
                                 "multiValued": false
                             },
                             {
+                                "name": "actor",
+                                "multiValued": false
+                            },
+                            {
                                 "name": "sub",
                                 "multiValued": false
                             },
@@ -881,7 +890,7 @@
                             },
                             {
                                 "name": "groups",
-                                "multiValued": false
+                                "multiValued": true
                             },
                             {
                                 "name": "given_name",
@@ -2172,6 +2181,202 @@
                 },
                 {
                     "configuration": {
+                        "tables": [
+                            {
+                                "name": "Allowed Issuers",
+                                "rows": [{
+                                    "defaultRow": false,
+                                    "fields": [
+                                        {
+                                            "name": "Issuer",
+                                            "value": "https://id.ping.darkedges.com"
+                                        },
+                                        {
+                                            "name": "JWKS URL",
+                                            "value": "https://id.ping.darkedges.com/pf/JWKS"
+                                        },
+                                        {
+                                            "name": "JWKS",
+                                            "value": ""
+                                        }
+                                    ]
+                                }]
+                            },
+                            {
+                                "name": "Allowed Audiences",
+                                "rows": [{
+                                    "defaultRow": false,
+                                    "fields": [{
+                                        "name": "Audience",
+                                        "value": "contact-oauth-client"
+                                    }]
+                                }]
+                            }
+                        ],
+                        "fields": [
+                            {
+                                "name": "Require Audience",
+                                "value": "false"
+                            },
+                            {
+                                "name": "Require Expiration Time",
+                                "value": "true"
+                            },
+                            {
+                                "name": "Require Issued At Time",
+                                "value": "true"
+                            },
+                            {
+                                "name": "Require Not Before Time",
+                                "value": "false"
+                            },
+                            {
+                                "name": "Default Cache Duration",
+                                "value": "720"
+                            },
+                            {
+                                "name": "Allowed Clock Skew",
+                                "value": "0"
+                            },
+                            {
+                                "name": "Max Future Validity",
+                                "value": ""
+                            }
+                        ]
+                    },
+                    "name": "PFActorSubject",
+                    "id": "PFActorSubject",
+                    "lastModified": "2026-04-18T12:19:24.579Z",
+                    "pluginDescriptorRef": {
+                        "location": "https://localhost:-1/pf-admin-api/v1/idp/tokenProcessors/descriptors/com.pingidentity.pf.tokenprocessors.jwt.JwtTokenProcessor",
+                        "id": "com.pingidentity.pf.tokenprocessors.jwt.JwtTokenProcessor"
+                    },
+                    "attributeContract": {
+                        "maskOgnlValues": false,
+                        "coreAttributes": [{
+                            "masked": false,
+                            "name": "sub"
+                        }],
+                        "extendedAttributes": [
+                            {
+                                "masked": false,
+                                "name": "scope"
+                            },
+                            {
+                                "masked": false,
+                                "name": "client_id"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "configuration": {
+                        "tables": [
+                            {
+                                "name": "Allowed Issuers",
+                                "rows": [{
+                                    "defaultRow": false,
+                                    "fields": [
+                                        {
+                                            "name": "Issuer",
+                                            "value": "https://id.ping.darkedges.com"
+                                        },
+                                        {
+                                            "name": "JWKS URL",
+                                            "value": "https://id.ping.darkedges.com/pf/JWKS"
+                                        },
+                                        {
+                                            "name": "JWKS",
+                                            "value": ""
+                                        }
+                                    ]
+                                }]
+                            },
+                            {
+                                "name": "Allowed Audiences",
+                                "rows": [{
+                                    "defaultRow": false,
+                                    "fields": [{
+                                        "name": "Audience",
+                                        "value": "contact-hr-client"
+                                    }]
+                                }]
+                            }
+                        ],
+                        "fields": [
+                            {
+                                "name": "Require Audience",
+                                "value": "true"
+                            },
+                            {
+                                "name": "Require Expiration Time",
+                                "value": "true"
+                            },
+                            {
+                                "name": "Require Issued At Time",
+                                "value": "true"
+                            },
+                            {
+                                "name": "Require Not Before Time",
+                                "value": "false"
+                            },
+                            {
+                                "name": "Default Cache Duration",
+                                "value": "720"
+                            },
+                            {
+                                "name": "Allowed Clock Skew",
+                                "value": "0"
+                            },
+                            {
+                                "name": "Max Future Validity",
+                                "value": ""
+                            }
+                        ]
+                    },
+                    "name": "PFSubjectProcessor",
+                    "id": "PFSubjectProcessor",
+                    "lastModified": "2026-04-18T12:12:51.885Z",
+                    "pluginDescriptorRef": {
+                        "location": "https://localhost:-1/pf-admin-api/v1/idp/tokenProcessors/descriptors/com.pingidentity.pf.tokenprocessors.jwt.JwtTokenProcessor",
+                        "id": "com.pingidentity.pf.tokenprocessors.jwt.JwtTokenProcessor"
+                    },
+                    "attributeContract": {
+                        "maskOgnlValues": false,
+                        "coreAttributes": [{
+                            "masked": false,
+                            "name": "sub"
+                        }],
+                        "extendedAttributes": [
+                            {
+                                "masked": false,
+                                "name": "vaultlocation"
+                            },
+                            {
+                                "masked": false,
+                                "name": "scope"
+                            },
+                            {
+                                "masked": false,
+                                "name": "groups"
+                            },
+                            {
+                                "masked": false,
+                                "name": "given_name"
+                            },
+                            {
+                                "masked": false,
+                                "name": "family_name"
+                            },
+                            {
+                                "masked": false,
+                                "name": "email"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "configuration": {
                         "tables": [],
                         "fields": [
                             {
@@ -3165,34 +3370,98 @@
             "items": [{
                 "name": "PROCESSORPOLICIES",
                 "id": "PROCESSORPOLICIES",
-                "processorMappings": [{
-                    "subjectTokenType": "urn:ietf:params:oauth:token-type:access_token",
-                    "attributeContractFulfillment": {
-                        "subject": {
-                            "source": {"type": "SUBJECT_TOKEN"},
-                            "value": "sub"
+                "processorMappings": [
+                    {
+                        "subjectTokenType": "urn:ietf:params:oauth:token-type:access_token",
+                        "attributeContractFulfillment": {
+                            "actor": {
+                                "source": {"type": "ACTOR_TOKEN"},
+                                "value": "client_id"
+                            },
+                            "vaultlocation": {
+                                "source": {"type": "SUBJECT_TOKEN"},
+                                "value": "vaultlocation"
+                            },
+                            "subject": {
+                                "source": {"type": "SUBJECT_TOKEN"},
+                                "value": "sub"
+                            },
+                            "scope": {
+                                "source": {"type": "SUBJECT_TOKEN"},
+                                "value": "scope"
+                            },
+                            "groups": {
+                                "source": {"type": "SUBJECT_TOKEN"},
+                                "value": "groups"
+                            },
+                            "given_name": {
+                                "source": {"type": "SUBJECT_TOKEN"},
+                                "value": "given_name"
+                            },
+                            "family_name": {
+                                "source": {"type": "SUBJECT_TOKEN"},
+                                "value": "family_name"
+                            },
+                            "email": {
+                                "source": {"type": "SUBJECT_TOKEN"},
+                                "value": "sub"
+                            }
                         },
-                        "email": {
-                            "source": {"type": "SUBJECT_TOKEN"},
-                            "value": "email"
+                        "actorTokenProcessor": {
+                            "location": "https://localhost:-1/pf-admin-api/v1/idp/tokenProcessors/PFActorSubject",
+                            "id": "PFActorSubject"
+                        },
+                        "actorTokenType": "urn:ietf:params:oauth:token-type:access_token",
+                        "attributeSources": [],
+                        "issuanceCriteria": {"conditionalCriteria": []},
+                        "subjectTokenProcessor": {
+                            "location": "https://localhost:-1/pf-admin-api/v1/idp/tokenProcessors/PFSubjectProcessor",
+                            "id": "PFSubjectProcessor"
                         }
                     },
-                    "actorTokenProcessor": {
-                        "location": "https://localhost:-1/pf-admin-api/v1/idp/tokenProcessors/PFTOKENPROCESSOR",
-                        "id": "PFTOKENPROCESSOR"
-                    },
-                    "actorTokenType": "urn:ietf:params:oauth:token-type:access_token",
-                    "attributeSources": [],
-                    "issuanceCriteria": {"conditionalCriteria": []},
-                    "subjectTokenProcessor": {
-                        "location": "https://localhost:-1/pf-admin-api/v1/idp/tokenProcessors/MSFTTOKENPROCESSOR",
-                        "id": "MSFTTOKENPROCESSOR"
+                    {
+                        "subjectTokenType": "urn:ietf:params:oauth:token-type:access_token:msft",
+                        "attributeContractFulfillment": {
+                            "actor": {"source": {"type": "NO_MAPPING"}},
+                            "vaultlocation": {"source": {"type": "NO_MAPPING"}},
+                            "subject": {
+                                "source": {"type": "SUBJECT_TOKEN"},
+                                "value": "sub"
+                            },
+                            "scope": {"source": {"type": "NO_MAPPING"}},
+                            "groups": {"source": {"type": "NO_MAPPING"}},
+                            "given_name": {"source": {"type": "NO_MAPPING"}},
+                            "family_name": {"source": {"type": "NO_MAPPING"}},
+                            "email": {
+                                "source": {"type": "SUBJECT_TOKEN"},
+                                "value": "email"
+                            }
+                        },
+                        "actorTokenProcessor": {
+                            "location": "https://localhost:-1/pf-admin-api/v1/idp/tokenProcessors/PFTOKENPROCESSOR",
+                            "id": "PFTOKENPROCESSOR"
+                        },
+                        "actorTokenType": "urn:ietf:params:oauth:token-type:access_token",
+                        "attributeSources": [],
+                        "issuanceCriteria": {"conditionalCriteria": []},
+                        "subjectTokenProcessor": {
+                            "location": "https://localhost:-1/pf-admin-api/v1/idp/tokenProcessors/MSFTTOKENPROCESSOR",
+                            "id": "MSFTTOKENPROCESSOR"
+                        }
                     }
-                }],
-                "actorTokenRequired": false,
+                ],
+                "actorTokenRequired": true,
                 "attributeContract": {
                     "coreAttributes": [{"name": "subject"}],
-                    "extendedAttributes": [{"name": "email"}]
+                    "extendedAttributes": [
+                        {"name": "actor"},
+                        {"name": "vaultlocation"},
+                        {"name": "scope"},
+                        {"name": "groups"},
+                        {"name": "given_name"},
+                        {"name": "family_name"},
+                        {"name": "email"}
+                    ]
                 }
             }],
             "resourceType": "/oauth/tokenExchange/processor/policies"
@@ -3303,6 +3572,7 @@
                         "type": "AUTHENTICATION_POLICY_CONTRACT"
                     },
                     "attributeContractFulfillment": {
+                        "actor": {"source": {"type": "NO_MAPPING"}},
                         "vaultlocation": {
                             "source": {"type": "AUTHENTICATION_POLICY_CONTRACT"},
                             "value": "vaultlocation"
@@ -3367,6 +3637,7 @@
                 {
                     "context": {"type": "DEFAULT"},
                     "attributeContractFulfillment": {
+                        "actor": {"source": {"type": "NO_MAPPING"}},
                         "vaultlocation": {"source": {"type": "NO_MAPPING"}},
                         "aud": {
                             "source": {"type": "CONTEXT"},
@@ -3447,7 +3718,14 @@
                         "type": "TOKEN_EXCHANGE_PROCESSOR_POLICY"
                     },
                     "attributeContractFulfillment": {
-                        "vaultlocation": {"source": {"type": "NO_MAPPING"}},
+                        "actor": {
+                            "source": {"type": "TOKEN_EXCHANGE_PROCESSOR_POLICY"},
+                            "value": "actor"
+                        },
+                        "vaultlocation": {
+                            "source": {"type": "TOKEN_EXCHANGE_PROCESSOR_POLICY"},
+                            "value": "vaultlocation"
+                        },
                         "aud": {
                             "source": {"type": "CONTEXT"},
                             "value": "ClientId"
@@ -3457,53 +3735,28 @@
                             "value": "subject"
                         },
                         "scope": {
-                            "source": {"type": "CONTEXT"},
-                            "value": "OAuthScopes"
+                            "source": {"type": "TOKEN_EXCHANGE_PROCESSOR_POLICY"},
+                            "value": "scope"
                         },
                         "groups": {
-                            "source": {"type": "EXPRESSION"},
-                            "value": "#log = @org.apache.commons.logging.LogFactory@getLog(\"com.pingidentity.ognl.logger\"),\n#groupList = new java.util.ArrayList(),\n#groups = #this.get(\"ds.PINGDIRECTORY.isMemberOf\")!=null?#this.get(\"ds.PINGDIRECTORY.isMemberOf\").getValues():{},\n#groups.{\n    #group = #this, #group = new javax.naming.ldap.LdapName(#group),\n    #cn = #group.getRdn(#group.size() - 1).getValue().toString(),\n    #group = #cn.toLowerCase(),\n    #groupList.add(#cn)\n},\n#log.debug(\"groups: \"+#groupList),\n#groupList"
+                            "source": {"type": "TOKEN_EXCHANGE_PROCESSOR_POLICY"},
+                            "value": "given_name"
                         },
                         "given_name": {
-                            "source": {
-                                "id": "PINGDIRECTORY",
-                                "type": "LDAP_DATA_STORE"
-                            },
-                            "value": "givenName"
+                            "source": {"type": "TOKEN_EXCHANGE_PROCESSOR_POLICY"},
+                            "value": "given_name"
                         },
                         "family_name": {
-                            "source": {
-                                "id": "PINGDIRECTORY",
-                                "type": "LDAP_DATA_STORE"
-                            },
-                            "value": "sn"
+                            "source": {"type": "TOKEN_EXCHANGE_PROCESSOR_POLICY"},
+                            "value": "family_name"
                         },
                         "email": {
-                            "source": {"type": "TEXT"},
+                            "source": {"type": "TOKEN_EXCHANGE_PROCESSOR_POLICY"},
                             "value": "email"
                         }
                     },
                     "id": "urn:ietf:params:oauth:grant-type:token-exchange|PROCESSORPOLICIES|AccessTokenManagement",
-                    "attributeSources": [{
-                        "memberOfNestedGroup": false,
-                        "binaryAttributeSettings": {},
-                        "searchScope": "SUBTREE",
-                        "dataStoreRef": {
-                            "location": "https://localhost:-1/pf-admin-api/v1/dataStores/LDAP-4D65BD30F2946A712E86940F0F7442EDCDC16646",
-                            "id": "LDAP-4D65BD30F2946A712E86940F0F7442EDCDC16646"
-                        },
-                        "description": "PINGDIRECTORY",
-                        "id": "PINGDIRECTORY",
-                        "searchAttributes": [
-                            "Subject DN",
-                            "givenName",
-                            "isMemberOf",
-                            "sn"
-                        ],
-                        "type": "LDAP",
-                        "baseDn": "ou=People,dc=example,dc=com",
-                        "searchFilter": "uid=${tepp.subject}"
-                    }],
+                    "attributeSources": [],
                     "issuanceCriteria": {"conditionalCriteria": []},
                     "accessTokenManagerRef": {
                         "location": "https://localhost:-1/pf-admin-api/v1/oauth/accessTokenManagers/AccessTokenManagement",
