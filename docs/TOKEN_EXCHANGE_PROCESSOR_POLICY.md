@@ -1,30 +1,66 @@
-# PingFederate Token Exchange Processor Policy — PROCESSORPOLICIES
+# PingFederate Token Exchange Processor Policy - PROCESSORPOLICIES
 
 **Document Version**: 1.0  
 **Last Updated**: 2026-04-20  
 **PingFederate Version**: 12.3.3.1  
 **Configuration Source**: `profiles/pingfederate/bulk-export/shared/data.json`  
-**RFC Reference**: [RFC 8693 — OAuth 2.0 Token Exchange](https://datatracker.ietf.org/doc/html/rfc8693)
+**RFC Reference**: [RFC 8693 - OAuth 2.0 Token Exchange](https://datatracker.ietf.org/doc/html/rfc8693)
 
 ---
 
 ## Table of Contents
 
-1. [Overview](#overview)
-2. [Complete Configuration Dependency Map](#complete-configuration-dependency-map)
-3. [PROCESSORPOLICIES Policy](#processorpolicies-policy)
-4. [Processor Mapping 1 — PingFederate ↔ PingFederate](#processor-mapping-1--pingfederate--pingfederate)
-5. [Processor Mapping 2 — Microsoft Entra ID ↔ PingFederate](#processor-mapping-2--microsoft-entra-id--pingfederate)
-6. [Token Processor Comparison Matrix](#token-processor-comparison-matrix)
-7. [Access Token Mapping — Token Exchange Context](#access-token-mapping--token-exchange-context)
-8. [OGNL Expression — Actor Claim Transformation](#ognl-expression--actor-claim-transformation)
-9. [AccessTokenManagement Configuration](#accesstokenmanagement-configuration)
-10. [Real-World Example — HR Chatbot Token Exchange](#real-world-example--hr-chatbot-token-exchange)
-11. [Token Lifecycle Sequence](#token-lifecycle-sequence)
-12. [Configuration File Locations](#configuration-file-locations)
-13. [Validation Checklist](#validation-checklist)
-14. [Troubleshooting](#troubleshooting)
-15. [References](#references)
+- [PingFederate Token Exchange Processor Policy - PROCESSORPOLICIES](#pingfederate-token-exchange-processor-policy---processorpolicies)
+  - [Table of Contents](#table-of-contents)
+  - [Overview](#overview)
+  - [Complete Configuration Dependency Map](#complete-configuration-dependency-map)
+  - [PROCESSORPOLICIES Policy](#processorpolicies-policy)
+    - [Core Configuration](#core-configuration)
+    - [Attribute Contract](#attribute-contract)
+    - [Processor Mapping Selection Logic](#processor-mapping-selection-logic)
+    - [Issuance Criteria](#issuance-criteria)
+  - [Processor Mapping 1 - PingFederate ↔ PingFederate](#processor-mapping-1---pingfederate--pingfederate)
+    - [Overview](#overview-1)
+    - [PFSubjectProcessor](#pfsubjectprocessor)
+    - [PFActorSubject](#pfactorsubject)
+    - [Attribute Fulfillment - Mapping 1](#attribute-fulfillment---mapping-1)
+  - [Processor Mapping 2 - Microsoft Entra ID ↔ PingFederate](#processor-mapping-2---microsoft-entra-id--pingfederate)
+    - [Overview](#overview-2)
+    - [MSFTTOKENPROCESSOR](#msfttokenprocessor)
+    - [PFTOKENPROCESSOR](#pftokenprocessor)
+    - [Attribute Fulfillment - Mapping 2](#attribute-fulfillment---mapping-2)
+  - [Token Processor Comparison Matrix](#token-processor-comparison-matrix)
+  - [Access Token Mapping - Token Exchange Context](#access-token-mapping---token-exchange-context)
+    - [Mapping Identity](#mapping-identity)
+    - [Attribute Sources](#attribute-sources)
+  - [OGNL Expression - Actor Claim Transformation](#ognl-expression---actor-claim-transformation)
+    - [The Expression](#the-expression)
+    - [Step-by-Step Breakdown](#step-by-step-breakdown)
+    - [Input → Output](#input--output)
+    - [Why a JSON Object?](#why-a-json-object)
+  - [AccessTokenManagement Configuration](#accesstokenmanagement-configuration)
+    - [Overview](#overview-3)
+    - [Settings](#settings)
+    - [Signing Key](#signing-key)
+    - [Attribute Contract](#attribute-contract-1)
+    - [Always-Added Standard Claims](#always-added-standard-claims)
+    - [Default Access Token Manager](#default-access-token-manager)
+  - [Real-World Example - HR Chatbot Token Exchange](#real-world-example---hr-chatbot-token-exchange)
+    - [Context](#context)
+    - [Token Exchange Request](#token-exchange-request)
+    - [Actor Token Claims (Chatbot - Client Credentials)](#actor-token-claims-chatbot---client-credentials)
+    - [Subject Token Claims (User - Authorization Code)](#subject-token-claims-user---authorization-code)
+    - [Exchanged Token Claims (Issued by PingFederate)](#exchanged-token-claims-issued-by-pingfederate)
+    - [What Changed Between Input and Output](#what-changed-between-input-and-output)
+    - [Chatbot Log Output](#chatbot-log-output)
+  - [Token Lifecycle Sequence](#token-lifecycle-sequence)
+  - [Configuration File Locations](#configuration-file-locations)
+  - [Validation Checklist](#validation-checklist)
+    - [Pre-Exchange](#pre-exchange)
+    - [Per-Request](#per-request)
+    - [Issued Token](#issued-token)
+  - [Troubleshooting](#troubleshooting)
+  - [References](#references)
 
 ---
 
@@ -39,12 +75,12 @@
 
 **Supported exchange patterns:**
 
-| Pattern | Subject Token Type | Actor Token Type |
-|---|---|---|
-| PingFederate ↔ PingFederate | `urn:ietf:params:oauth:token-type:access_token` | `urn:ietf:params:oauth:token-type:access_token` |
+| Pattern                           | Subject Token Type                                   | Actor Token Type                                |
+| --------------------------------- | ---------------------------------------------------- | ----------------------------------------------- |
+| PingFederate ↔ PingFederate       | `urn:ietf:params:oauth:token-type:access_token`      | `urn:ietf:params:oauth:token-type:access_token` |
 | Microsoft Entra ID ↔ PingFederate | `urn:ietf:params:oauth:token-type:access_token:msft` | `urn:ietf:params:oauth:token-type:access_token` |
 
-**Semantic**: RFC 8693 **delegation** — the actor (`contact-hr-client`) acts on behalf of the subject (`user.1`). The issued token contains an `actor` claim (RFC 8693 §4.1) recording this explicitly.
+**Semantic**: RFC 8693 **delegation** - the actor (`contact-hr-client`) acts on behalf of the subject (`user.1`). The issued token contains an `actor` claim (RFC 8693 §4.1) recording this explicitly.
 
 ---
 
@@ -144,27 +180,27 @@ grant_type=urn:ietf:params:oauth:grant-type:token-exchange
 
 ### Core Configuration
 
-| Property | Value |
-|---|---|
-| `id` | `PROCESSORPOLICIES` |
-| `name` | `PROCESSORPOLICIES` |
-| `actorTokenRequired` | `true` — actor token is **mandatory** in all requests |
-| Default Policy | Yes — set as `defaultProcessorPolicyRef` |
+| Property             | Value                                                 |
+| -------------------- | ----------------------------------------------------- |
+| `id`                 | `PROCESSORPOLICIES`                                   |
+| `name`               | `PROCESSORPOLICIES`                                   |
+| `actorTokenRequired` | `true` - actor token is **mandatory** in all requests |
+| Default Policy       | Yes - set as `defaultProcessorPolicyRef`              |
 
 ### Attribute Contract
 
 The policy defines the attributes available for downstream mapping:
 
-| Attribute | Type | Source (Mapping 1) | Required |
-|---|---|---|---|
-| `subject` | Core | SUBJECT_TOKEN → `sub` | Yes |
-| `actor` | Extended | ACTOR_TOKEN → `client_id` | No |
-| `vaultlocation` | Extended | SUBJECT_TOKEN → `vaultlocation` | No |
-| `scope` | Extended | SUBJECT_TOKEN → `scope` | No |
-| `groups` | Extended | SUBJECT_TOKEN → `groups` | No |
-| `given_name` | Extended | SUBJECT_TOKEN → `given_name` | No |
-| `family_name` | Extended | SUBJECT_TOKEN → `family_name` | No |
-| `email` | Extended | SUBJECT_TOKEN → `email` | No |
+| Attribute       | Type     | Source (Mapping 1)              | Required |
+| --------------- | -------- | ------------------------------- | -------- |
+| `subject`       | Core     | SUBJECT_TOKEN → `sub`           | Yes      |
+| `actor`         | Extended | ACTOR_TOKEN → `client_id`       | No       |
+| `vaultlocation` | Extended | SUBJECT_TOKEN → `vaultlocation` | No       |
+| `scope`         | Extended | SUBJECT_TOKEN → `scope`         | No       |
+| `groups`        | Extended | SUBJECT_TOKEN → `groups`        | No       |
+| `given_name`    | Extended | SUBJECT_TOKEN → `given_name`    | No       |
+| `family_name`   | Extended | SUBJECT_TOKEN → `family_name`   | No       |
+| `email`         | Extended | SUBJECT_TOKEN → `email`         | No       |
 
 ### Processor Mapping Selection Logic
 
@@ -173,11 +209,11 @@ Request arrives with subject_token_type and actor_token_type
          │
          ├─ subject_token_type = urn:...:access_token   AND
          │  actor_token_type   = urn:...:access_token
-         │        └─► Mapping 1 — PFSubjectProcessor + PFActorSubject
+         │        └─► Mapping 1 - PFSubjectProcessor + PFActorSubject
          │
          ├─ subject_token_type = urn:...:access_token:msft   AND
          │  actor_token_type   = urn:...:access_token
-         │        └─► Mapping 2 — MSFTTOKENPROCESSOR + PFTOKENPROCESSOR
+         │        └─► Mapping 2 - MSFTTOKENPROCESSOR + PFTOKENPROCESSOR
          │
          └─ No match
                   └─► HTTP 400 invalid_request
@@ -191,11 +227,11 @@ Both mappings have **empty** `conditionalCriteria`:
 "issuanceCriteria": { "conditionalCriteria": [] }
 ```
 
-All token exchanges that pass processor validation are approved — no additional OGNL conditions are applied.
+All token exchanges that pass processor validation are approved - no additional OGNL conditions are applied.
 
 ---
 
-## Processor Mapping 1 — PingFederate ↔ PingFederate
+## Processor Mapping 1 - PingFederate ↔ PingFederate
 
 ### Overview
 
@@ -210,30 +246,30 @@ actor_token    ──► PFActorSubject      (validates chatbot's client credent
 
 Validates the **user's access token** (subject token).
 
-| Property | Value |
-|---|---|
-| ID | `PFSubjectProcessor` |
-| Plugin Type | `com.pingidentity.pf.tokenprocessors.jwt.JwtTokenProcessor` |
-| Allowed Issuer | `https://id.ping.darkedges.com` |
-| JWKS URL | `https://id.ping.darkedges.com/pf/JWKS` |
-| Require Audience | `true` |
-| Required Audience | `contact-hr-client` |
-| Require Expiration | `true` |
-| Require Issued At | `true` |
-| Clock Skew | 0 seconds |
-| JWKS Cache Duration | 720 minutes |
+| Property            | Value                                                       |
+| ------------------- | ----------------------------------------------------------- |
+| ID                  | `PFSubjectProcessor`                                        |
+| Plugin Type         | `com.pingidentity.pf.tokenprocessors.jwt.JwtTokenProcessor` |
+| Allowed Issuer      | `https://id.ping.darkedges.com`                             |
+| JWKS URL            | `https://id.ping.darkedges.com/pf/JWKS`                     |
+| Require Audience    | `true`                                                      |
+| Required Audience   | `contact-hr-client`                                         |
+| Require Expiration  | `true`                                                      |
+| Require Issued At   | `true`                                                      |
+| Clock Skew          | 0 seconds                                                   |
+| JWKS Cache Duration | 720 minutes                                                 |
 
 **Attribute Contract Produced:**
 
-| Claim | Type | Source |
-|---|---|---|
-| `sub` | Core | JWT `sub` claim |
+| Claim           | Type     | Source                    |
+| --------------- | -------- | ------------------------- |
+| `sub`           | Core     | JWT `sub` claim           |
 | `vaultlocation` | Extended | JWT `vaultlocation` claim |
-| `scope` | Extended | JWT `scope` claim |
-| `groups` | Extended | JWT `groups` claim |
-| `given_name` | Extended | JWT `given_name` claim |
-| `family_name` | Extended | JWT `family_name` claim |
-| `email` | Extended | JWT `email` claim |
+| `scope`         | Extended | JWT `scope` claim         |
+| `groups`        | Extended | JWT `groups` claim        |
+| `given_name`    | Extended | JWT `given_name` claim    |
+| `family_name`   | Extended | JWT `family_name` claim   |
+| `email`         | Extended | JWT `email` claim         |
 
 **Example subject token claims validated by this processor:**
 
@@ -259,25 +295,25 @@ Validates the **user's access token** (subject token).
 
 Validates the **chatbot's client credentials token** (actor token).
 
-| Property | Value |
-|---|---|
-| ID | `PFActorSubject` |
-| Plugin Type | `com.pingidentity.pf.tokenprocessors.jwt.JwtTokenProcessor` |
-| Allowed Issuer | `https://id.ping.darkedges.com` |
-| JWKS URL | `https://id.ping.darkedges.com/pf/JWKS` |
-| Require Audience | `false` — no audience check |
-| Require Expiration | `true` |
-| Require Issued At | `true` |
-| Clock Skew | 0 seconds |
-| JWKS Cache Duration | 720 minutes |
+| Property            | Value                                                       |
+| ------------------- | ----------------------------------------------------------- |
+| ID                  | `PFActorSubject`                                            |
+| Plugin Type         | `com.pingidentity.pf.tokenprocessors.jwt.JwtTokenProcessor` |
+| Allowed Issuer      | `https://id.ping.darkedges.com`                             |
+| JWKS URL            | `https://id.ping.darkedges.com/pf/JWKS`                     |
+| Require Audience    | `false` - no audience check                                 |
+| Require Expiration  | `true`                                                      |
+| Require Issued At   | `true`                                                      |
+| Clock Skew          | 0 seconds                                                   |
+| JWKS Cache Duration | 720 minutes                                                 |
 
 **Attribute Contract Produced:**
 
-| Claim | Type | Source |
-|---|---|---|
-| `sub` | Core | JWT `sub` claim |
-| `scope` | Extended | JWT `scope` claim |
-| `client_id` | Extended | JWT `client_id` claim — **used as `actor` in output** |
+| Claim       | Type     | Source                                                |
+| ----------- | -------- | ----------------------------------------------------- |
+| `sub`       | Core     | JWT `sub` claim                                       |
+| `scope`     | Extended | JWT `scope` claim                                     |
+| `client_id` | Extended | JWT `client_id` claim - **used as `actor` in output** |
 
 **Example actor token claims validated by this processor:**
 
@@ -293,24 +329,24 @@ Validates the **chatbot's client credentials token** (actor token).
 }
 ```
 
-> **Note**: The actor token has an empty `scope` because it was obtained via Client Credentials grant — the chatbot is authenticating as itself, not as a user.
+> **Note**: The actor token has an empty `scope` because it was obtained via Client Credentials grant - the chatbot is authenticating as itself, not as a user.
 
-### Attribute Fulfillment — Mapping 1
+### Attribute Fulfillment - Mapping 1
 
-| Output Attribute | Source | Input Claim |
-|---|---|---|
-| `actor` | `ACTOR_TOKEN` | `client_id` |
-| `vaultlocation` | `SUBJECT_TOKEN` | `vaultlocation` |
-| `subject` | `SUBJECT_TOKEN` | `sub` |
-| `scope` | `SUBJECT_TOKEN` | `scope` |
-| `groups` | `SUBJECT_TOKEN` | `groups` |
-| `given_name` | `SUBJECT_TOKEN` | `given_name` |
-| `family_name` | `SUBJECT_TOKEN` | `family_name` |
-| `email` | `SUBJECT_TOKEN` | `email` |
+| Output Attribute | Source          | Input Claim     |
+| ---------------- | --------------- | --------------- |
+| `actor`          | `ACTOR_TOKEN`   | `client_id`     |
+| `vaultlocation`  | `SUBJECT_TOKEN` | `vaultlocation` |
+| `subject`        | `SUBJECT_TOKEN` | `sub`           |
+| `scope`          | `SUBJECT_TOKEN` | `scope`         |
+| `groups`         | `SUBJECT_TOKEN` | `groups`        |
+| `given_name`     | `SUBJECT_TOKEN` | `given_name`    |
+| `family_name`    | `SUBJECT_TOKEN` | `family_name`   |
+| `email`          | `SUBJECT_TOKEN` | `email`         |
 
 ---
 
-## Processor Mapping 2 — Microsoft Entra ID ↔ PingFederate
+## Processor Mapping 2 - Microsoft Entra ID ↔ PingFederate
 
 ### Overview
 
@@ -325,76 +361,76 @@ actor_token    ──► PFTOKENPROCESSOR    (validates PF bearer token)
 
 Validates tokens issued by **Microsoft Azure AD / Entra ID**.
 
-| Property | Value |
-|---|---|
-| ID | `MSFTTOKENPROCESSOR` |
+| Property    | Value                                                       |
+| ----------- | ----------------------------------------------------------- |
+| ID          | `MSFTTOKENPROCESSOR`                                        |
 | Plugin Type | `com.pingidentity.pf.tokenprocessors.jwt.JwtTokenProcessor` |
-| Tenant ID | `4161be3f-bf2b-41d4-a02b-e6f82b529d53` |
+| Tenant ID   | `4161be3f-bf2b-41d4-a02b-e6f82b529d53`                      |
 
 **Allowed Issuers:**
 
-| Issuer | JWKS URL | Protocol |
-|---|---|---|
-| `https://sts.windows.net/4161be3f-bf2b-41d4-a02b-e6f82b529d53/` | `https://login.microsoftonline.com/common/discovery/keys` | ADFS / v1 |
-| `https://login.microsoftonline.com/4161be3f-bf2b-41d4-a02b-e6f82b529d53/v2.0` | `https://login.microsoftonline.com/4161be3f-bf2b-41d4-a02b-e6f82b529d53/discovery/v2.0/keys` | OIDC v2 |
+| Issuer                                                                        | JWKS URL                                                                                     | Protocol  |
+| ----------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | --------- |
+| `https://sts.windows.net/4161be3f-bf2b-41d4-a02b-e6f82b529d53/`               | `https://login.microsoftonline.com/common/discovery/keys`                                    | ADFS / v1 |
+| `https://login.microsoftonline.com/4161be3f-bf2b-41d4-a02b-e6f82b529d53/v2.0` | `https://login.microsoftonline.com/4161be3f-bf2b-41d4-a02b-e6f82b529d53/discovery/v2.0/keys` | OIDC v2   |
 
 **Allowed Audiences:**
 
-| Audience |
-|---|
+| Audience                                             |
+| ---------------------------------------------------- |
 | `https://fram.connectid.darkedges.com/openam/oauth2` |
-| `e83c2af3-43d1-4f62-8bff-e619c29b5026` |
+| `e83c2af3-43d1-4f62-8bff-e619c29b5026`               |
 
-| Property | Value |
-|---|---|
-| Require Audience | `true` |
-| Require Expiration | `true` |
-| Require Issued At | `false` |
-| Clock Skew | 0 seconds |
+| Property           | Value     |
+| ------------------ | --------- |
+| Require Audience   | `true`    |
+| Require Expiration | `true`    |
+| Require Issued At  | `false`   |
+| Clock Skew         | 0 seconds |
 
 **Attribute Contract Produced:**
 
-| Claim | Type | Source |
-|---|---|---|
-| `sub` | Core | JWT `sub` |
+| Claim   | Type     | Source      |
+| ------- | -------- | ----------- |
+| `sub`   | Core     | JWT `sub`   |
 | `email` | Extended | JWT `email` |
 
 ### PFTOKENPROCESSOR
 
 Validates **PingFederate bearer access tokens** by introspecting against the `AccessTokenManagement` token manager.
 
-| Property | Value |
-|---|---|
-| ID | `PFTOKENPROCESSOR` |
-| Plugin Type | `org.sourceid.wstrust.processor.oauth.BearerAccessTokenTokenProcessor` |
-| Access Token Manager | `AccessTokenManagement` |
-| Scope as single string | `false` |
+| Property               | Value                                                                  |
+| ---------------------- | ---------------------------------------------------------------------- |
+| ID                     | `PFTOKENPROCESSOR`                                                     |
+| Plugin Type            | `org.sourceid.wstrust.processor.oauth.BearerAccessTokenTokenProcessor` |
+| Access Token Manager   | `AccessTokenManagement`                                                |
+| Scope as single string | `false`                                                                |
 
 **Attribute Contract Produced (from AccessTokenManagement introspection):**
 
-| Claim | Type | Source |
-|---|---|---|
-| `aud` | Core | Token `aud` claim |
-| `expires_at` | Core | Token expiry |
-| `authorization_details` | Core | Token claim |
-| `scope` | Core | Token scope |
-| `iss` | Core | Token issuer |
-| `client_id` | Core | Token client |
-| `sub` | Extended | Token subject |
-| `email` | Extended | Token email |
+| Claim                   | Type     | Source            |
+| ----------------------- | -------- | ----------------- |
+| `aud`                   | Core     | Token `aud` claim |
+| `expires_at`            | Core     | Token expiry      |
+| `authorization_details` | Core     | Token claim       |
+| `scope`                 | Core     | Token scope       |
+| `iss`                   | Core     | Token issuer      |
+| `client_id`             | Core     | Token client      |
+| `sub`                   | Extended | Token subject     |
+| `email`                 | Extended | Token email       |
 
-### Attribute Fulfillment — Mapping 2
+### Attribute Fulfillment - Mapping 2
 
-| Output Attribute | Source | Input Claim |
-|---|---|---|
-| `actor` | `NO_MAPPING` | (not included) |
-| `vaultlocation` | `NO_MAPPING` | (not included) |
-| `subject` | `SUBJECT_TOKEN` | `sub` |
-| `scope` | `NO_MAPPING` | (not included) |
-| `groups` | `NO_MAPPING` | (not included) |
-| `given_name` | `NO_MAPPING` | (not included) |
-| `family_name` | `NO_MAPPING` | (not included) |
-| `email` | `SUBJECT_TOKEN` | `email` |
+| Output Attribute | Source          | Input Claim    |
+| ---------------- | --------------- | -------------- |
+| `actor`          | `NO_MAPPING`    | (not included) |
+| `vaultlocation`  | `NO_MAPPING`    | (not included) |
+| `subject`        | `SUBJECT_TOKEN` | `sub`          |
+| `scope`          | `NO_MAPPING`    | (not included) |
+| `groups`         | `NO_MAPPING`    | (not included) |
+| `given_name`     | `NO_MAPPING`    | (not included) |
+| `family_name`    | `NO_MAPPING`    | (not included) |
+| `email`          | `SUBJECT_TOKEN` | `email`        |
 
 > Most attributes are `NO_MAPPING` because Microsoft tokens do not contain PingFederate-specific claims such as `vaultlocation` or `groups`.
 
@@ -402,22 +438,22 @@ Validates **PingFederate bearer access tokens** by introspecting against the `Ac
 
 ## Token Processor Comparison Matrix
 
-| Property | PFSubjectProcessor | PFActorSubject | MSFTTOKENPROCESSOR | PFTOKENPROCESSOR |
-|---|---|---|---|---|
-| **Role** | Subject validator | Actor validator | Subject validator | Actor validator |
-| **Token Format** | JWT (PF-issued) | JWT (PF-issued) | JWT (Azure-issued) | Opaque Bearer |
-| **Issuer** | `id.ping.darkedges.com` | `id.ping.darkedges.com` | Azure AD (v1 + v2) | (any PF-issued) |
-| **JWKS Source** | `pf/JWKS` | `pf/JWKS` | Azure Discovery | AccessTokenManagement |
-| **Require Audience** | ✅ Yes | ❌ No | ✅ Yes | N/A |
-| **Required Audience** | `contact-hr-client` | — | Azure app audiences | N/A |
-| **Require Expiration** | ✅ Yes | ✅ Yes | ✅ Yes | N/A |
-| **Require Issued At** | ✅ Yes | ✅ Yes | ❌ No | N/A |
-| **Clock Skew** | 0s | 0s | 0s | N/A |
-| **Key Claims Extracted** | `sub`, `scope`, `groups`, `vaultlocation`, names, `email` | `client_id` | `sub`, `email` | `sub`, `scope`, `client_id` |
+| Property                 | PFSubjectProcessor                                        | PFActorSubject          | MSFTTOKENPROCESSOR  | PFTOKENPROCESSOR            |
+| ------------------------ | --------------------------------------------------------- | ----------------------- | ------------------- | --------------------------- |
+| **Role**                 | Subject validator                                         | Actor validator         | Subject validator   | Actor validator             |
+| **Token Format**         | JWT (PF-issued)                                           | JWT (PF-issued)         | JWT (Azure-issued)  | Opaque Bearer               |
+| **Issuer**               | `id.ping.darkedges.com`                                   | `id.ping.darkedges.com` | Azure AD (v1 + v2)  | (any PF-issued)             |
+| **JWKS Source**          | `pf/JWKS`                                                 | `pf/JWKS`               | Azure Discovery     | AccessTokenManagement       |
+| **Require Audience**     | ✅ Yes                                                     | ❌ No                    | ✅ Yes               | N/A                         |
+| **Required Audience**    | `contact-hr-client`                                       | -                       | Azure app audiences | N/A                         |
+| **Require Expiration**   | ✅ Yes                                                     | ✅ Yes                   | ✅ Yes               | N/A                         |
+| **Require Issued At**    | ✅ Yes                                                     | ✅ Yes                   | ❌ No                | N/A                         |
+| **Clock Skew**           | 0s                                                        | 0s                      | 0s                  | N/A                         |
+| **Key Claims Extracted** | `sub`, `scope`, `groups`, `vaultlocation`, names, `email` | `client_id`             | `sub`, `email`      | `sub`, `scope`, `client_id` |
 
 ---
 
-## Access Token Mapping — Token Exchange Context
+## Access Token Mapping - Token Exchange Context
 
 ### Mapping Identity
 
@@ -429,23 +465,23 @@ Manager: AccessTokenManagement
 
 ### Attribute Sources
 
-| Output Claim | Source Type | Value |
-|---|---|---|
-| `actor` | `EXPRESSION` | OGNL — builds JSON object `{ "sub": tepp.actor }` |
-| `vaultlocation` | `TOKEN_EXCHANGE_PROCESSOR_POLICY` | `vaultlocation` |
-| `aud` | `CONTEXT` | `ClientId` — the requesting client ID |
-| `sub` | `TOKEN_EXCHANGE_PROCESSOR_POLICY` | `subject` |
-| `scope` | `TOKEN_EXCHANGE_PROCESSOR_POLICY` | `scope` |
-| `groups` | `TOKEN_EXCHANGE_PROCESSOR_POLICY` | `given_name` ⚠️ |
-| `given_name` | `NO_MAPPING` | — |
-| `family_name` | `NO_MAPPING` | — |
-| `email` | `NO_MAPPING` | — |
+| Output Claim    | Source Type                       | Value                                             |
+| --------------- | --------------------------------- | ------------------------------------------------- |
+| `actor`         | `EXPRESSION`                      | OGNL - builds JSON object `{ "sub": tepp.actor }` |
+| `vaultlocation` | `TOKEN_EXCHANGE_PROCESSOR_POLICY` | `vaultlocation`                                   |
+| `aud`           | `CONTEXT`                         | `ClientId` - the requesting client ID             |
+| `sub`           | `TOKEN_EXCHANGE_PROCESSOR_POLICY` | `subject`                                         |
+| `scope`         | `TOKEN_EXCHANGE_PROCESSOR_POLICY` | `scope`                                           |
+| `groups`        | `TOKEN_EXCHANGE_PROCESSOR_POLICY` | `given_name` ⚠️                                    |
+| `given_name`    | `NO_MAPPING`                      | -                                                 |
+| `family_name`   | `NO_MAPPING`                      | -                                                 |
+| `email`         | `NO_MAPPING`                      | -                                                 |
 
 > ⚠️ **Note**: In the current configuration, `groups` in the Access Token Mapping reads from `given_name` in the processor policy contract. Verify this is intentional if groups are required in the issued token.
 
 ---
 
-## OGNL Expression — Actor Claim Transformation
+## OGNL Expression - Actor Claim Transformation
 
 ### The Expression
 
@@ -457,12 +493,12 @@ Manager: AccessTokenManagement
 
 ### Step-by-Step Breakdown
 
-| Step | Code | Action |
-|---|---|---|
-| 1 | `new org.json.simple.JSONObject()` | Create empty JSON object |
-| 2 | `#this.get("tepp.actor")` | Read `actor` from processor policy output |
-| 3 | `#jsonObj.put("sub", ...)` | Set the `sub` field of the JSON object |
-| 4 | `#jsonObj` | Return the constructed object as the claim value |
+| Step | Code                               | Action                                           |
+| ---- | ---------------------------------- | ------------------------------------------------ |
+| 1    | `new org.json.simple.JSONObject()` | Create empty JSON object                         |
+| 2    | `#this.get("tepp.actor")`          | Read `actor` from processor policy output        |
+| 3    | `#jsonObj.put("sub", ...)`         | Set the `sub` field of the JSON object           |
+| 4    | `#jsonObj`                         | Return the constructed object as the claim value |
 
 ### Input → Output
 
@@ -501,51 +537,51 @@ This enables:
 
 ### Settings
 
-| Setting | Value | Notes |
-|---|---|---|
-| `id` | `AccessTokenManagement` | |
-| `name` | `AccessTokenManagement` | |
-| Plugin | `JwtBearerAccessTokenManagementPlugin` | |
-| **Token Lifetime** | 120 seconds | ~2 minutes |
-| **Use Centralized Signing Key** | `true` | Uses PF global signing key |
-| **JWS Algorithm** | `RS256` | RSA + SHA-256 |
-| **Include Key ID (`kid`)** | `true` | Enables key rotation discovery |
-| **Include X.509 Thumbprint** | `false` | |
-| **JWKS Cache Duration** | 720 minutes | 12 hours |
-| **Enable Token Revocation** | `false` | No revocation endpoint |
-| **JWT ID Length** | 22 characters | Unique per token |
-| **Include Issued At** | `true` | `iat` always present |
-| **Issuer Claim Value** | `https://id.ping.darkedges.com` | |
-| **Client ID Claim Name** | `client_id` | |
-| **Scope Claim Name** | `scope` | |
-| **Space Delimit Scope Values** | `true` | |
-| **Authorization Details Claim** | `authorization_details` | |
+| Setting                         | Value                                  | Notes                          |
+| ------------------------------- | -------------------------------------- | ------------------------------ |
+| `id`                            | `AccessTokenManagement`                |                                |
+| `name`                          | `AccessTokenManagement`                |                                |
+| Plugin                          | `JwtBearerAccessTokenManagementPlugin` |                                |
+| **Token Lifetime**              | 120 seconds                            | ~2 minutes                     |
+| **Use Centralized Signing Key** | `true`                                 | Uses PF global signing key     |
+| **JWS Algorithm**               | `RS256`                                | RSA + SHA-256                  |
+| **Include Key ID (`kid`)**      | `true`                                 | Enables key rotation discovery |
+| **Include X.509 Thumbprint**    | `false`                                |                                |
+| **JWKS Cache Duration**         | 720 minutes                            | 12 hours                       |
+| **Enable Token Revocation**     | `false`                                | No revocation endpoint         |
+| **JWT ID Length**               | 22 characters                          | Unique per token               |
+| **Include Issued At**           | `true`                                 | `iat` always present           |
+| **Issuer Claim Value**          | `https://id.ping.darkedges.com`        |                                |
+| **Client ID Claim Name**        | `client_id`                            |                                |
+| **Scope Claim Name**            | `scope`                                |                                |
+| **Space Delimit Scope Values**  | `true`                                 |                                |
+| **Authorization Details Claim** | `authorization_details`                |                                |
 
 ### Signing Key
 
-| Property | Value |
-|---|---|
-| Key Pair ID | `5jqt7j8mxbwl2awtpc465yzx1` |
-| Algorithm | RSA 2048-bit |
-| Signature Algorithm | RS256 |
-| Usage | Token signing (all JWT tokens) |
-| Public JWKS | `https://id.ping.darkedges.com/pf/JWKS` |
+| Property            | Value                                   |
+| ------------------- | --------------------------------------- |
+| Key Pair ID         | `5jqt7j8mxbwl2awtpc465yzx1`             |
+| Algorithm           | RSA 2048-bit                            |
+| Signature Algorithm | RS256                                   |
+| Usage               | Token signing (all JWT tokens)          |
+| Public JWKS         | `https://id.ping.darkedges.com/pf/JWKS` |
 
 ### Attribute Contract
 
 Claims the manager can include in issued tokens:
 
-| Attribute | Multi-Valued | Notes |
-|---|---|---|
-| `vaultlocation` | No | Custom — credential vault reference |
-| `actor` | No | RFC 8693 delegation claim (JSON object) |
-| `sub` | No | Subject identifier |
-| `aud` | No | Audience (requesting client) |
-| `scope` | No | Granted scopes |
-| `groups` | Yes | Multi-valued — user's group memberships |
-| `given_name` | No | User's first name |
-| `family_name` | No | User's surname |
-| `email` | No | User's email address |
+| Attribute       | Multi-Valued | Notes                                   |
+| --------------- | ------------ | --------------------------------------- |
+| `vaultlocation` | No           | Custom - credential vault reference     |
+| `actor`         | No           | RFC 8693 delegation claim (JSON object) |
+| `sub`           | No           | Subject identifier                      |
+| `aud`           | No           | Audience (requesting client)            |
+| `scope`         | No           | Granted scopes                          |
+| `groups`        | Yes          | Multi-valued - user's group memberships |
+| `given_name`    | No           | User's first name                       |
+| `family_name`   | No           | User's surname                          |
+| `email`         | No           | User's email address                    |
 
 ### Always-Added Standard Claims
 
@@ -570,11 +606,11 @@ Regardless of attribute mapping, these claims are always added automatically:
 }
 ```
 
-This is also the global default — used for all standard OAuth flows in addition to token exchange.
+This is also the global default - used for all standard OAuth flows in addition to token exchange.
 
 ---
 
-## Real-World Example — HR Chatbot Token Exchange
+## Real-World Example - HR Chatbot Token Exchange
 
 ### Context
 
@@ -599,7 +635,7 @@ curl -s -X POST 'https://id.ping.darkedges.com/as/token.oauth2' \
   --data-urlencode 'scope=openid profile email'
 ```
 
-### Actor Token Claims (Chatbot — Client Credentials)
+### Actor Token Claims (Chatbot - Client Credentials)
 
 ```json
 {
@@ -613,9 +649,9 @@ curl -s -X POST 'https://id.ping.darkedges.com/as/token.oauth2' \
 }
 ```
 
-> Actor token has **empty scope** — obtained via Client Credentials, representing the application identity, not a user.
+> Actor token has **empty scope** - obtained via Client Credentials, representing the application identity, not a user.
 
-### Subject Token Claims (User — Authorization Code)
+### Subject Token Claims (User - Authorization Code)
 
 ```json
 {
@@ -635,7 +671,7 @@ curl -s -X POST 'https://id.ping.darkedges.com/as/token.oauth2' \
 }
 ```
 
-> Subject token has **full user scopes and claims** — obtained via Authorization Code flow, representing the user's identity.
+> Subject token has **full user scopes and claims** - obtained via Authorization Code flow, representing the user's identity.
 
 ### Exchanged Token Claims (Issued by PingFederate)
 
@@ -659,17 +695,17 @@ curl -s -X POST 'https://id.ping.darkedges.com/as/token.oauth2' \
 
 ### What Changed Between Input and Output
 
-| Property | Subject Token | Actor Token | Exchanged Token | Notes |
-|---|---|---|---|---|
-| `sub` | `user.1` | — | `user.1` | Preserved from subject |
-| `client_id` | `contact-hr-client` | `contact-hr-client` | `contact-oauth-client` | Requesting client replaces original |
-| `aud` | `contact-hr-client` | — | `contact-oauth-client` | Audience = requesting client |
-| `actor` | — | — | `{ "sub": "contact-hr-client" }` | **Added** — records delegation |
-| `scope` | `["openid","profile","email"]` | `""` | `["openid","profile","email"]` | Preserved from subject |
-| `vaultlocation` | present | — | preserved | Passed through |
-| `iat` | `1776667958` | `1776667937` | `1776667961` | New issuance time |
-| `exp` | `1776675158` | `1776675137` | `1776675161` | New: iat + 120s |
-| `jti` | unique | unique | unique | Fresh JWT ID |
+| Property        | Subject Token                  | Actor Token         | Exchanged Token                  | Notes                               |
+| --------------- | ------------------------------ | ------------------- | -------------------------------- | ----------------------------------- |
+| `sub`           | `user.1`                       | -                   | `user.1`                         | Preserved from subject              |
+| `client_id`     | `contact-hr-client`            | `contact-hr-client` | `contact-oauth-client`           | Requesting client replaces original |
+| `aud`           | `contact-hr-client`            | -                   | `contact-oauth-client`           | Audience = requesting client        |
+| `actor`         | -                              | -                   | `{ "sub": "contact-hr-client" }` | **Added** - records delegation      |
+| `scope`         | `["openid","profile","email"]` | `""`                | `["openid","profile","email"]`   | Preserved from subject              |
+| `vaultlocation` | present                        | -                   | preserved                        | Passed through                      |
+| `iat`           | `1776667958`                   | `1776667937`        | `1776667961`                     | New issuance time                   |
+| `exp`           | `1776675158`                   | `1776675137`        | `1776675161`                     | New: iat + 120s                     |
+| `jti`           | unique                         | unique              | unique                           | Fresh JWT ID                        |
 
 ### Chatbot Log Output
 
@@ -690,7 +726,7 @@ T0   User authenticates via PingFederate (Authorization Code flow)
      ├─ Lifetime: 120 seconds
      └─ Contains: sub, scope, vaultlocation, groups, email, names
 
-T1   HR Chatbot app starts — initialize_agent_token() called
+T1   HR Chatbot app starts - initialize_agent_token() called
      ├─ POST /as/token.oauth2
      ├─ grant_type: client_credentials
      ├─ client_id: contact-hr-client
@@ -698,7 +734,7 @@ T1   HR Chatbot app starts — initialize_agent_token() called
      ├─ Lifetime: 120 seconds
      └─ Cached globally in app memory + Redis
 
-T2   OAuth callback fires — user token received in session
+T2   OAuth callback fires - user token received in session
      ├─ actor_token available (from T1)
      └─ subject_token available (from OAuth callback)
 
@@ -712,11 +748,11 @@ T3   Token exchange request sent to PingFederate
      ├─ client_id: contact-oauth-client
      └─ scope: openid profile email
 
-T4   PingFederate — policy selection
+T4   PingFederate - policy selection
      ├─ PROCESSORPOLICIES selected (default policy)
      └─ Mapping 1 selected (both token types = access_token)
 
-T5   PingFederate — token validation
+T5   PingFederate - token validation
      ├─ PFSubjectProcessor validates subject_token
      │   ├─ Verify RS256 signature against pf/JWKS
      │   ├─ Check issuer = https://id.ping.darkedges.com ✓
@@ -729,7 +765,7 @@ T5   PingFederate — token validation
          ├─ Check exp not reached ✓
          └─ Extract: client_id
 
-T6   PingFederate — attribute fulfillment
+T6   PingFederate - attribute fulfillment
      ├─ actor        ← actor_token.client_id    = "contact-hr-client"
      ├─ subject      ← subject_token.sub        = "user.1"
      ├─ scope        ← subject_token.scope      = ["openid","profile","email"]
@@ -739,10 +775,10 @@ T6   PingFederate — attribute fulfillment
      ├─ family_name  ← subject_token.family_name = "Seawell"
      └─ email        ← subject_token.email      = "nirvinguk@hotmail.com"
 
-T7   Access Token Mapping — OGNL transformation
+T7   Access Token Mapping - OGNL transformation
      └─ actor → { "sub": "contact-hr-client" }  (JSON object per RFC 8693)
 
-T8   AccessTokenManagement — JWT issuance
+T8   AccessTokenManagement - JWT issuance
      ├─ Sign with RS256, key 5jqt7j8mxbwl2awtpc465yzx1
      ├─ Add: iss, iat, exp (iat+120), jti
      └─ Issued token returned
@@ -758,16 +794,16 @@ T9+120s  Exchanged token expires
 
 ## Configuration File Locations
 
-| Component | Resource Type in data.json |
-|---|---|
-| Token Exchange Policy | `/oauth/tokenExchange/processor/policies` |
+| Component              | Resource Type in data.json                |
+| ---------------------- | ----------------------------------------- |
+| Token Exchange Policy  | `/oauth/tokenExchange/processor/policies` |
 | Default Policy Setting | `/oauth/tokenExchange/processor/settings` |
-| All Token Processors | `/idp/tokenProcessors` |
-| Access Token Managers | `/oauth/accessTokenManagers` |
-| Default ATM Setting | `/oauth/accessTokenManagers/settings` |
-| Access Token Mappings | `/oauth/accessTokenMappings` |
-| Signing Key Pair | `/keyPairs/signing` |
-| OIDC Policy | `/oauth/openIdConnect/policies` |
+| All Token Processors   | `/idp/tokenProcessors`                    |
+| Access Token Managers  | `/oauth/accessTokenManagers`              |
+| Default ATM Setting    | `/oauth/accessTokenManagers/settings`     |
+| Access Token Mappings  | `/oauth/accessTokenMappings`              |
+| Signing Key Pair       | `/keyPairs/signing`                       |
+| OIDC Policy            | `/oauth/openIdConnect/policies`           |
 
 **Source file**: [profiles/pingfederate/bulk-export/shared/data.json](../profiles/pingfederate/bulk-export/shared/data.json)
 
@@ -855,22 +891,22 @@ Request Parameters:
 
 ## Troubleshooting
 
-| Symptom | Likely Cause | Resolution |
-|---|---|---|
-| `Agent access token not available, skipping token exchange` | `initialize_agent_token()` failed at startup | Check Redis connectivity; verify PF `/as/token.oauth2` is reachable; check `contact-hr-client` credentials |
-| `invalid_request` on token exchange | Missing required parameter or wrong token type | Confirm `actor_token` and `actor_token_type` present; verify token type URNs |
-| `invalid_token` on subject or actor | JWT validation failed | Check token not expired; verify issuer; confirm audience matches processor config |
-| `actor` claim missing from issued token | OGNL expression failed | Check `org.json.simple` library available; verify `tepp.actor` is populated |
-| `actor` claim is string not object | Wrong mapping — not using OGNL | Ensure Access Token Mapping uses EXPRESSION source for `actor` |
-| `vaultlocation` missing from issued token | Attribute fulfillment issue | Confirm subject token contains `vaultlocation`; check Mapping 1 contract |
-| Token exchange succeeds but groups empty | `groups` maps from `given_name` in current config | Review Access Token Mapping — `groups` attribute source currently points to `given_name` ⚠️ |
-| Timeout acquiring actor token | PingFederate slow or unreachable | 10-second timeout in chatbot; check network/TLS; check PF health |
+| Symptom                                                     | Likely Cause                                      | Resolution                                                                                                 |
+| ----------------------------------------------------------- | ------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| `Agent access token not available, skipping token exchange` | `initialize_agent_token()` failed at startup      | Check Redis connectivity; verify PF `/as/token.oauth2` is reachable; check `contact-hr-client` credentials |
+| `invalid_request` on token exchange                         | Missing required parameter or wrong token type    | Confirm `actor_token` and `actor_token_type` present; verify token type URNs                               |
+| `invalid_token` on subject or actor                         | JWT validation failed                             | Check token not expired; verify issuer; confirm audience matches processor config                          |
+| `actor` claim missing from issued token                     | OGNL expression failed                            | Check `org.json.simple` library available; verify `tepp.actor` is populated                                |
+| `actor` claim is string not object                          | Wrong mapping - not using OGNL                    | Ensure Access Token Mapping uses EXPRESSION source for `actor`                                             |
+| `vaultlocation` missing from issued token                   | Attribute fulfillment issue                       | Confirm subject token contains `vaultlocation`; check Mapping 1 contract                                   |
+| Token exchange succeeds but groups empty                    | `groups` maps from `given_name` in current config | Review Access Token Mapping - `groups` attribute source currently points to `given_name` ⚠️                 |
+| Timeout acquiring actor token                               | PingFederate slow or unreachable                  | 10-second timeout in chatbot; check network/TLS; check PF health                                           |
 
 ---
 
 ## References
 
-- **RFC 8693** — [OAuth 2.0 Token Exchange](https://datatracker.ietf.org/doc/html/rfc8693)
+- **RFC 8693** - [OAuth 2.0 Token Exchange](https://datatracker.ietf.org/doc/html/rfc8693)
   - §1.1: Delegation vs. Impersonation Semantics
   - §4.1: `act` (Actor) Claim
   - §4.2: `scope` Claim
@@ -882,7 +918,7 @@ Request Parameters:
   - [Token Processors](https://docs.pingidentity.com/pingfederate/12.3/administrators_reference_guide/pf_token_processors.html)
 
 - **Project Files**
-  - [TOKENEXCHANGE.md](../TOKENEXCHANGE.md) — Token exchange curl examples
-  - [data.json](../profiles/pingfederate/bulk-export/shared/data.json) — Full PingFederate configuration export
-  - [darkedges-hr-chatbot/app.py](../../chatbot/darkedges-hr-chatbot/app.py) — Chatbot token exchange implementation
-  - [darkedges-hr-chatbot/auth_handler.py](../../chatbot/darkedges-hr-chatbot/auth_handler.py) — `perform_token_exchange()` method
+  - [TOKENEXCHANGE.md](../TOKENEXCHANGE.md) - Token exchange curl examples
+  - [data.json](../profiles/pingfederate/bulk-export/shared/data.json) - Full PingFederate configuration export
+  - [darkedges-hr-chatbot/app.py](../../chatbot/darkedges-hr-chatbot/app.py) - Chatbot token exchange implementation
+  - [darkedges-hr-chatbot/auth_handler.py](../../chatbot/darkedges-hr-chatbot/auth_handler.py) - `perform_token_exchange()` method
