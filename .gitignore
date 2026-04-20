@@ -8,8 +8,12 @@ docker/terraform-init/.terraform.lock.hcl
 docker/terraform-init/terraform.tfstate
 docker/terraform-init/terraform.tfstate.backup
 docker/terraform-init/.terraform/
-docs/
 .github/copilot-instructions.md
 profiles/pingoneldapgateway/pingone.yaml
 profiles/pingfederate/helm/devopsconfig
 docker/pingfederate/pf.plugins.openidfederation.jar
+docs/plan.md
+docs/LAMBDA_IMPLEMENTATION.md
+docs/LAMBDA_CREATED.md
+docs/IMPLEMENTATION_CHECKLIST.md
+docs/DELIVERY_SUMMARY.md
