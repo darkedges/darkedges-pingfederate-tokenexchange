@@ -545,18 +545,38 @@
                             "validUri": "https://www.certification.openid.net/test/a/DarkEdges/",
                             "targetResourceSLO": true,
                             "targetResourceSSO": true
+                        },
+                        {
+                            "allowQueryAndFragment": false,
+                            "inErrorResource": false,
+                            "idpDiscovery": false,
+                            "validUri": "https://localhost/app/default",
+                            "targetResourceSLO": true,
+                            "targetResourceSSO": true
                         }
                     ],
-                    "whiteList": [{
-                        "validDomain": "openidfederation.ping.darkedges.com",
-                        "validPath": "",
-                        "allowQueryAndFragment": false,
-                        "requireHttps": true,
-                        "inErrorResource": true,
-                        "idpDiscovery": false,
-                        "targetResourceSLO": true,
-                        "targetResourceSSO": true
-                    }],
+                    "whiteList": [
+                        {
+                            "validDomain": "openidfederation.ping.darkedges.com",
+                            "validPath": "",
+                            "allowQueryAndFragment": false,
+                            "requireHttps": true,
+                            "inErrorResource": true,
+                            "idpDiscovery": false,
+                            "targetResourceSLO": true,
+                            "targetResourceSSO": true
+                        },
+                        {
+                            "validDomain": "localhost",
+                            "validPath": "",
+                            "allowQueryAndFragment": false,
+                            "requireHttps": true,
+                            "inErrorResource": true,
+                            "idpDiscovery": false,
+                            "targetResourceSLO": true,
+                            "targetResourceSSO": true
+                        }
+                    ],
                     "enableTargetResourceValidationForSSO": true,
                     "enableTargetResourceValidationForIdpDiscovery": true
                 },
