@@ -3593,7 +3593,27 @@
         },
         {
             "operationType": "SAVE",
-            "items": [{}],
+            "items": [{
+                "generatorMappings": [{
+                    "requestedTokenType": "urn:ietf:params:oauth:token-type:saml2",
+                    "defaultMapping": true,
+                    "tokenGenerator": {
+                        "location": "https://localhost:-1/pf-admin-api/v1/sp/tokenGenerators/MSFTSAML2",
+                        "id": "MSFTSAML2"
+                    }
+                }],
+                "resourceUris": ["https://localhost/app"],
+                "name": "TEGG",
+                "id": "TEGG"
+            }],
+            "resourceType": "/oauth/tokenExchange/generator/groups"
+        },
+        {
+            "operationType": "SAVE",
+            "items": [{"defaultGeneratorGroupRef": {
+                "location": "https://localhost:-1/pf-admin-api/v1/oauth/tokenExchange/generator/groups/TEGG",
+                "id": "TEGG"
+            }}],
             "resourceType": "/oauth/tokenExchange/generator/settings"
         },
         {
