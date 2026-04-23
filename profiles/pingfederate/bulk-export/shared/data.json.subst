@@ -2517,47 +2517,6 @@
         {
             "operationType": "SAVE",
             "items": [{
-                "sourceId": "PFSubjectProcessor",
-                "targetId": "MSFTSAML2",
-                "attributeContractFulfillment": {
-                    "vaultlocation": {
-                        "source": {"type": "TOKEN"},
-                        "value": "vaultlocation"
-                    },
-                    "scope": {
-                        "source": {"type": "TOKEN"},
-                        "value": "scope"
-                    },
-                    "groups": {
-                        "source": {"type": "TOKEN"},
-                        "value": "groups"
-                    },
-                    "given_name": {
-                        "source": {"type": "TOKEN"},
-                        "value": "given_name"
-                    },
-                    "SAML_SUBJECT": {
-                        "source": {"type": "TOKEN"},
-                        "value": "sub"
-                    },
-                    "family_name": {
-                        "source": {"type": "TOKEN"},
-                        "value": "family_name"
-                    },
-                    "email": {
-                        "source": {"type": "TOKEN"},
-                        "value": "email"
-                    }
-                },
-                "id": "PFSubjectProcessor|MSFTSAML2",
-                "attributeSources": [],
-                "issuanceCriteria": {"conditionalCriteria": []}
-            }],
-            "resourceType": "/tokenProcessorToTokenGeneratorMappings"
-        },
-        {
-            "operationType": "SAVE",
-            "items": [{
                 "idpErrorMsg": "errorDetail.idpSsoFailure",
                 "confirmIdpSlo": false
             }],
@@ -3640,7 +3599,7 @@
                     },
                     "SAML_SUBJECT": {
                         "source": {"type": "TOKEN_EXCHANGE_PROCESSOR_POLICY"},
-                        "value": "subject"
+                        "value": "email"
                     },
                     "family_name": {
                         "source": {"type": "TOKEN_EXCHANGE_PROCESSOR_POLICY"},
