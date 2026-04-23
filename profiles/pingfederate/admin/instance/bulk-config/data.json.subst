@@ -300,9 +300,9 @@
             "operationType": "SAVE",
             "items": [{
                 "federationInfo": {
-                    "saml2EntityId": "https://id.ping.darkedges.com",
-                    "saml1xIssuerId": "",
-                    "wsfedRealm": "https://id.ping.darkedges.com",
+                    "saml2EntityId": "https://ping.darkedges.com",
+                    "saml1xIssuerId": "ping.darkedges.com",
+                    "wsfedRealm": "https://ping.darkedges.com",
                     "baseUrl": "https://id.ping.darkedges.com",
                     "saml1xSourceId": ""
                 },
@@ -510,7 +510,8 @@
             "operationType": "SAVE",
             "items": [{"virtualHostNames": [
                 "id.ping.darkedges.com",
-                "openidfederation.ping.darkedges.com"
+                "openidfederation.ping.darkedges.com",
+                "ping.darkedges.com"
             ]}],
             "resourceType": "/virtualHostNames"
         },
@@ -2443,75 +2444,139 @@
         },
         {
             "operationType": "SAVE",
-            "items": [{
-                "configuration": {
-                    "tables": [],
-                    "fields": [
-                        {
-                            "name": "Minutes Before",
-                            "value": "2"
-                        },
-                        {
-                            "name": "Minutes After",
-                            "value": "2"
-                        },
-                        {
-                            "name": "Issuer",
-                            "value": "https://id.ping.darkedges.com"
-                        },
-                        {
-                            "name": "Signing Certificate",
-                            "value": "5jqt7j8mxbwl2awtpc465yzx1"
-                        },
-                        {
-                            "name": "Signing Algorithm",
-                            "value": "RSA_SHA256"
-                        },
-                        {
-                            "name": "Include Certificate in KeyInfo",
-                            "value": "true"
-                        },
-                        {
-                            "name": "Include Raw Key in KeyValue",
-                            "value": "true"
-                        },
-                        {
-                            "name": "Audience",
-                            "value": "https://login.microsoft.com"
-                        },
-                        {
-                            "name": "Confirmation Method",
-                            "value": "urn:oasis:names:tc:SAML:2.0:cm:sender-vouches"
-                        },
-                        {
-                            "name": "Encryption Certificate",
-                            "value": ""
-                        },
-                        {
-                            "name": "Message Customization Expression",
-                            "value": ""
-                        }
-                    ]
+            "items": [
+                {
+                    "configuration": {
+                        "tables": [],
+                        "fields": [
+                            {
+                                "name": "Minutes Before",
+                                "value": "1"
+                            },
+                            {
+                                "name": "Minutes After",
+                                "value": "1"
+                            },
+                            {
+                                "name": "Issuer",
+                                "value": "https://id.ping.darkedges.com"
+                            },
+                            {
+                                "name": "Signing Certificate",
+                                "value": "5jqt7j8mxbwl2awtpc465yzx1"
+                            },
+                            {
+                                "name": "Signing Algorithm",
+                                "value": "RSA_SHA256"
+                            },
+                            {
+                                "name": "Include Certificate in KeyInfo",
+                                "value": "false"
+                            },
+                            {
+                                "name": "Include Raw Key in KeyValue",
+                                "value": "false"
+                            },
+                            {
+                                "name": "Audience",
+                                "value": "https://login.microsoftonline.com/4161be3f-bf2b-41d4-a02b-e6f82b529d53"
+                            },
+                            {
+                                "name": "Confirmation Method",
+                                "value": "urn:oasis:names:tc:SAML:1.0:cm:bearer"
+                            },
+                            {
+                                "name": "Encryption Certificate",
+                                "value": ""
+                            },
+                            {
+                                "name": "Message Customization Expression",
+                                "value": ""
+                            }
+                        ]
+                    },
+                    "name": "MSFT1.1",
+                    "id": "MSFT11",
+                    "lastModified": "2026-04-23T04:38:04.246Z",
+                    "pluginDescriptorRef": {
+                        "location": "https://localhost:-1/pf-admin-api/v1/sp/tokenGenerators/descriptors/org.sourceid.wstrust.generator.saml.Saml11TokenGenerator",
+                        "id": "org.sourceid.wstrust.generator.saml.Saml11TokenGenerator"
+                    },
+                    "attributeContract": {
+                        "coreAttributes": [{"name": "SAML_SUBJECT"}],
+                        "extendedAttributes": []
+                    }
                 },
-                "name": "MSFTSAML2",
-                "id": "MSFTSAML2",
-                "lastModified": "2026-04-22T14:01:28.078Z",
-                "pluginDescriptorRef": {
-                    "location": "https://localhost:-1/pf-admin-api/v1/sp/tokenGenerators/descriptors/org.sourceid.wstrust.generator.saml.Saml20TokenGenerator",
-                    "id": "org.sourceid.wstrust.generator.saml.Saml20TokenGenerator"
-                },
-                "attributeContract": {
-                    "coreAttributes": [{"name": "SAML_SUBJECT"}],
-                    "extendedAttributes": [
-                        {"name": "vaultlocation"},
-                        {"name": "scope"},
-                        {"name": "groups"},
-                        {"name": "given_name"},
-                        {"name": "family_name"},
-                        {"name": "email"}
-                    ]
+                {
+                    "configuration": {
+                        "tables": [],
+                        "fields": [
+                            {
+                                "name": "Minutes Before",
+                                "value": "2"
+                            },
+                            {
+                                "name": "Minutes After",
+                                "value": "2"
+                            },
+                            {
+                                "name": "Issuer",
+                                "value": "https://id.ping.darkedges.com"
+                            },
+                            {
+                                "name": "Signing Certificate",
+                                "value": "5jqt7j8mxbwl2awtpc465yzx1"
+                            },
+                            {
+                                "name": "Signing Algorithm",
+                                "value": "RSA_SHA256"
+                            },
+                            {
+                                "name": "Include Certificate in KeyInfo",
+                                "value": "true"
+                            },
+                            {
+                                "name": "Include Raw Key in KeyValue",
+                                "value": "true"
+                            },
+                            {
+                                "name": "Audience",
+                                "value": "urn:federation:MicrosoftOnline"
+                            },
+                            {
+                                "name": "Confirmation Method",
+                                "value": "urn:oasis:names:tc:SAML:2.0:cm:bearer"
+                            },
+                            {
+                                "name": "Encryption Certificate",
+                                "value": ""
+                            },
+                            {
+                                "name": "Message Customization Expression",
+                                "value": ""
+                            }
+                        ]
+                    },
+                    "name": "MSFTSAML2",
+                    "id": "MSFTSAML2",
+                    "lastModified": "2026-04-23T05:17:28.898Z",
+                    "pluginDescriptorRef": {
+                        "location": "https://localhost:-1/pf-admin-api/v1/sp/tokenGenerators/descriptors/org.sourceid.wstrust.generator.saml.Saml20TokenGenerator",
+                        "id": "org.sourceid.wstrust.generator.saml.Saml20TokenGenerator"
+                    },
+                    "attributeContract": {
+                        "coreAttributes": [{"name": "SAML_SUBJECT"}],
+                        "extendedAttributes": [
+                            {"name": "vaultlocation"},
+                            {"name": "scope"},
+                            {"name": "groups"},
+                            {"name": "given_name"},
+                            {"name": "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress"},
+                            {"name": "family_name"}
+                        ]
+                    }
                 }
-            }],
+            ],
             "resourceType": "/sp/tokenGenerators"
         },
         {
@@ -2648,6 +2713,32 @@
                         {
                             "primaryVerificationCert": true,
                             "certView": {
+                                "expires": "2029-04-23T01:39:07.000Z",
+                                "serialNumber": "32355314167513990586185513131129322854",
+                                "keyAlgorithm": "RSA",
+                                "keySize": 2048,
+                                "subjectAlternativeNames": [],
+                                "issuerDN": "CN=Microsoft Azure Federated SSO Certificate",
+                                "sha1Fingerprint": "601B60B4375B5EA8EB23915E5FF874F12FEBC90A",
+                                "validFrom": "2026-04-23T01:39:07.000Z",
+                                "version": 3,
+                                "signatureAlgorithm": "SHA256withRSA",
+                                "sha256Fingerprint": "83FF50475B3F13FC3A14BF0CE34687B32ACCF64CFB4BC82F9E17386A6EE34EB7",
+                                "id": "3cks9desmd9pgtlj1yeds6nk9",
+                                "subjectDN": "CN=Microsoft Azure Federated SSO Certificate",
+                                "status": "VALID"
+                            },
+                            "secondaryVerificationCert": false,
+                            "x509File": {
+                                "fileData": "${sp_idpConnections_items_uxXlcpG9H1CGfh11FJHAT6PF_EM_credentials_certs_x509File_3cks9desmd9pgtlj1yeds6nk9_3cks9desmd9pgtlj1yeds6nk9_fileData}",
+                                "id": "3cks9desmd9pgtlj1yeds6nk9"
+                            },
+                            "encryptionCert": false,
+                            "activeVerificationCert": true
+                        },
+                        {
+                            "primaryVerificationCert": false,
+                            "certView": {
                                 "expires": "2031-03-02T12:03:40.000Z",
                                 "serialNumber": "1667647056846225520",
                                 "keyAlgorithm": "RSA",
@@ -2663,140 +2754,10 @@
                                 "subjectDN": "CN=accounts.accesscontrol.windows.net",
                                 "status": "VALID"
                             },
-                            "secondaryVerificationCert": false,
+                            "secondaryVerificationCert": true,
                             "x509File": {
                                 "fileData": "${sp_idpConnections_items_uxXlcpG9H1CGfh11FJHAT6PF_EM_credentials_certs_x509File_f7d3ij70g4vp6mh8fdaklnier_f7d3ij70g4vp6mh8fdaklnier_fileData}",
                                 "id": "f7d3ij70g4vp6mh8fdaklnier"
-                            },
-                            "encryptionCert": false,
-                            "activeVerificationCert": true
-                        },
-                        {
-                            "primaryVerificationCert": false,
-                            "certView": {
-                                "expires": "2031-03-28T00:03:49.000Z",
-                                "serialNumber": "10259954384359837040",
-                                "keyAlgorithm": "RSA",
-                                "keySize": 2048,
-                                "subjectAlternativeNames": [],
-                                "issuerDN": "CN=accounts.accesscontrol.windows.net",
-                                "sha1Fingerprint": "CDC26ADD7B90E97C60C934B40B87F28883329351",
-                                "validFrom": "2026-03-28T00:03:49.000Z",
-                                "version": 3,
-                                "signatureAlgorithm": "SHA256withRSA",
-                                "sha256Fingerprint": "CB315ECB67BDD05233BB0B8C97702FDDD892789EE17E17CBB7606934367D0280",
-                                "id": "63mfpidicdn6jiylljidmxk1b",
-                                "subjectDN": "CN=accounts.accesscontrol.windows.net",
-                                "status": "VALID"
-                            },
-                            "secondaryVerificationCert": true,
-                            "x509File": {
-                                "fileData": "${sp_idpConnections_items_uxXlcpG9H1CGfh11FJHAT6PF_EM_credentials_certs_x509File_63mfpidicdn6jiylljidmxk1b_63mfpidicdn6jiylljidmxk1b_fileData}",
-                                "id": "63mfpidicdn6jiylljidmxk1b"
-                            },
-                            "encryptionCert": false,
-                            "activeVerificationCert": true
-                        },
-                        {
-                            "primaryVerificationCert": false,
-                            "certView": {
-                                "expires": "2031-04-18T09:03:13.000Z",
-                                "serialNumber": "7109629602563221007",
-                                "keyAlgorithm": "RSA",
-                                "keySize": 2048,
-                                "subjectAlternativeNames": [],
-                                "issuerDN": "CN=accounts.accesscontrol.windows.net",
-                                "sha1Fingerprint": "5EDFA8EE10DBA6EA40CFE64F9BA1F1085592DDC2",
-                                "validFrom": "2026-04-18T09:03:13.000Z",
-                                "version": 3,
-                                "signatureAlgorithm": "SHA256withRSA",
-                                "sha256Fingerprint": "FDF95834D35EFC2C508C187D61BF605143973DA8CF1E348A88EEB44AEE03F1EA",
-                                "id": "onquzfzl9ed8h0nn3u39hydhr",
-                                "subjectDN": "CN=accounts.accesscontrol.windows.net",
-                                "status": "VALID"
-                            },
-                            "secondaryVerificationCert": false,
-                            "x509File": {
-                                "fileData": "${sp_idpConnections_items_uxXlcpG9H1CGfh11FJHAT6PF_EM_credentials_certs_x509File_onquzfzl9ed8h0nn3u39hydhr_onquzfzl9ed8h0nn3u39hydhr_fileData}",
-                                "id": "onquzfzl9ed8h0nn3u39hydhr"
-                            },
-                            "encryptionCert": false,
-                            "activeVerificationCert": true
-                        },
-                        {
-                            "primaryVerificationCert": false,
-                            "certView": {
-                                "expires": "2031-04-12T16:00:51.000Z",
-                                "serialNumber": "2335123845297084453",
-                                "keyAlgorithm": "RSA",
-                                "keySize": 2048,
-                                "subjectAlternativeNames": [],
-                                "issuerDN": "CN=login.microsoftonline.us",
-                                "sha1Fingerprint": "3162BD0BC46F6DF638A4FA4E146EB1E5A344E595",
-                                "validFrom": "2026-04-12T16:00:51.000Z",
-                                "version": 3,
-                                "signatureAlgorithm": "SHA256withRSA",
-                                "sha256Fingerprint": "66F9EAA8EBB6973F12626A5833B4E6C5F814CFF81018875358CE5012EA1D6FF4",
-                                "id": "f2v7275h8z9o2qlaoiasynznm",
-                                "subjectDN": "CN=login.microsoftonline.us",
-                                "status": "VALID"
-                            },
-                            "secondaryVerificationCert": false,
-                            "x509File": {
-                                "fileData": "${sp_idpConnections_items_uxXlcpG9H1CGfh11FJHAT6PF_EM_credentials_certs_x509File_f2v7275h8z9o2qlaoiasynznm_f2v7275h8z9o2qlaoiasynznm_fileData}",
-                                "id": "f2v7275h8z9o2qlaoiasynznm"
-                            },
-                            "encryptionCert": false,
-                            "activeVerificationCert": true
-                        },
-                        {
-                            "primaryVerificationCert": false,
-                            "certView": {
-                                "expires": "2031-03-20T13:02:39.000Z",
-                                "serialNumber": "15568913545436114952",
-                                "keyAlgorithm": "RSA",
-                                "keySize": 2048,
-                                "subjectAlternativeNames": [],
-                                "issuerDN": "CN=accounts.accesscontrol.windows.net",
-                                "sha1Fingerprint": "535B17F181474BB67A565ED51CB2334DE8DBBE3D",
-                                "validFrom": "2026-03-20T13:02:39.000Z",
-                                "version": 3,
-                                "signatureAlgorithm": "SHA256withRSA",
-                                "sha256Fingerprint": "A9470D414B61E9790C2B2E06942EB7141ADF5578E8594D3C4196F21C96277A44",
-                                "id": "1nzvdj65huspblhsr8rm778za",
-                                "subjectDN": "CN=accounts.accesscontrol.windows.net",
-                                "status": "VALID"
-                            },
-                            "secondaryVerificationCert": false,
-                            "x509File": {
-                                "fileData": "${sp_idpConnections_items_uxXlcpG9H1CGfh11FJHAT6PF_EM_credentials_certs_x509File_1nzvdj65huspblhsr8rm778za_1nzvdj65huspblhsr8rm778za_fileData}",
-                                "id": "1nzvdj65huspblhsr8rm778za"
-                            },
-                            "encryptionCert": false,
-                            "activeVerificationCert": true
-                        },
-                        {
-                            "primaryVerificationCert": false,
-                            "certView": {
-                                "expires": "2031-03-25T22:31:15.000Z",
-                                "serialNumber": "8915473735208113004",
-                                "keyAlgorithm": "RSA",
-                                "keySize": 2048,
-                                "subjectAlternativeNames": [],
-                                "issuerDN": "CN=login.microsoftonline.us",
-                                "sha1Fingerprint": "878A22E973F3B77AA3C7BA113675C29DBF30CB44",
-                                "validFrom": "2026-03-25T22:31:15.000Z",
-                                "version": 3,
-                                "signatureAlgorithm": "SHA256withRSA",
-                                "sha256Fingerprint": "ADC96036CAD9DD3C3209D1DEE5D21EEFECF2A4D8516E0C45D37CEB208B76E93E",
-                                "id": "00el4xs81s5qx9iewoxr5vtl7",
-                                "subjectDN": "CN=login.microsoftonline.us",
-                                "status": "VALID"
-                            },
-                            "secondaryVerificationCert": false,
-                            "x509File": {
-                                "fileData": "${sp_idpConnections_items_uxXlcpG9H1CGfh11FJHAT6PF_EM_credentials_certs_x509File_00el4xs81s5qx9iewoxr5vtl7_00el4xs81s5qx9iewoxr5vtl7_fileData}",
-                                "id": "00el4xs81s5qx9iewoxr5vtl7"
                             },
                             "encryptionCert": false,
                             "activeVerificationCert": true
@@ -2827,7 +2788,7 @@
                 },
                 "errorPageMsgId": "errorDetail.spSsoFailure",
                 "baseUrl": "https://login.microsoftonline.com",
-                "modificationDate": "2026-04-22T23:30:48.660Z",
+                "modificationDate": "2026-04-23T05:31:42.456Z",
                 "virtualEntityIds": [],
                 "name": "https://sts.windows.net/4161be3f-bf2b-41d4-a02b-e6f82b529d53/",
                 "id": "uxXlcpG9H1CGfh11FJHAT6PF-EM",
@@ -2985,6 +2946,153 @@
                 "licenseConnectionGroup": ""
             }],
             "resourceType": "/sp/idpConnections"
+        },
+        {
+            "operationType": "SAVE",
+            "items": [{
+                "contactInfo": {},
+                "wsTrust": {
+                    "generateKey": false,
+                    "defaultTokenType": "SAML20",
+                    "encryptSaml2Assertion": false,
+                    "partnerServiceIds": ["https://login.microsoft.com/4161be3f-bf2b-41d4-a02b-e6f82b529d53/"],
+                    "minutesAfter": 30,
+                    "oAuthAssertionProfiles": false,
+                    "tokenProcessorMappings": [{
+                        "restrictedVirtualEntityIds": [],
+                        "attributeContractFulfillment": {"TOKEN_SUBJECT": {
+                            "source": {"type": "TOKEN"},
+                            "value": "sub"
+                        }},
+                        "idpTokenProcessorRef": {
+                            "location": "https://localhost:-1/pf-admin-api/v1/idp/tokenProcessors/PFSubjectProcessor",
+                            "id": "PFSubjectProcessor"
+                        },
+                        "attributeSources": [],
+                        "issuanceCriteria": {"conditionalCriteria": []}
+                    }],
+                    "minutesBefore": 5,
+                    "attributeContract": {
+                        "coreAttributes": [{"name": "TOKEN_SUBJECT"}],
+                        "extendedAttributes": []
+                    }
+                },
+                "credentials": {
+                    "certs": [],
+                    "signingSettings": {
+                        "signingKeyPairRef": {
+                            "location": "https://localhost:-1/pf-admin-api/v1/keyPairs/signing/5jqt7j8mxbwl2awtpc465yzx1",
+                            "id": "5jqt7j8mxbwl2awtpc465yzx1"
+                        },
+                        "includeRawKeyInSignature": false,
+                        "algorithm": "SHA256withRSA"
+                    }
+                },
+                "active": true,
+                "spBrowserSso": {
+                    "protocol": "WSFED",
+                    "authenticationPolicyContractAssertionMappings": [{
+                        "abortSsoTransactionAsFailSafe": false,
+                        "authenticationPolicyContractRef": {
+                            "location": "https://localhost:-1/pf-admin-api/v1/authenticationPolicyContracts/KUzfpHBOZeqF0vVo",
+                            "id": "KUzfpHBOZeqF0vVo"
+                        },
+                        "restrictedVirtualEntityIds": [],
+                        "attributeContractFulfillment": {
+                            "UPN": {
+                                "source": {"type": "AUTHENTICATION_POLICY_CONTRACT"},
+                                "value": "mail"
+                            },
+                            "emailAddress": {
+                                "source": {"type": "AUTHENTICATION_POLICY_CONTRACT"},
+                                "value": "mail"
+                            },
+                            "telephoneNumber": {
+                                "source": {"type": "AUTHENTICATION_POLICY_CONTRACT"},
+                                "value": "telephoneNumber"
+                            },
+                            "ImmutableID": {
+                                "source": {"type": "AUTHENTICATION_POLICY_CONTRACT"},
+                                "value": "entryUUID"
+                            },
+                            "givenName": {
+                                "source": {"type": "AUTHENTICATION_POLICY_CONTRACT"},
+                                "value": "givenName"
+                            },
+                            "groups": {
+                                "source": {"type": "AUTHENTICATION_POLICY_CONTRACT"},
+                                "value": "groups"
+                            },
+                            "sn": {
+                                "source": {"type": "AUTHENTICATION_POLICY_CONTRACT"},
+                                "value": "sn"
+                            },
+                            "SAML_SUBJECT": {
+                                "source": {"type": "AUTHENTICATION_POLICY_CONTRACT"},
+                                "value": "mail"
+                            }
+                        },
+                        "restrictVirtualEntityIds": false,
+                        "attributeSources": [],
+                        "issuanceCriteria": {"conditionalCriteria": []}
+                    }],
+                    "alwaysSignArtifactResponse": false,
+                    "wsTrustVersion": "WSTRUST12",
+                    "wsFedTokenType": "SAML11",
+                    "ssoServiceEndpoints": [{"url": "https://login.microsoftonline.com/login.srf"}],
+                    "adapterMappings": [],
+                    "assertionLifetime": {
+                        "minutesAfter": 5,
+                        "minutesBefore": 5
+                    },
+                    "attributeContract": {
+                        "coreAttributes": [{"name": "SAML_SUBJECT"}],
+                        "extendedAttributes": [
+                            {
+                                "nameFormat": "http://schemas.xmlsoap.org/claims",
+                                "name": "emailAddress"
+                            },
+                            {
+                                "nameFormat": "http://schemas.xmlsoap.org/claims",
+                                "name": "UPN"
+                            },
+                            {
+                                "nameFormat": "http://schemas.microsoft.com/identity/claims",
+                                "name": "telephoneNumber"
+                            },
+                            {
+                                "nameFormat": "http://schemas.microsoft.com/LiveID/Federation/2008/05",
+                                "name": "ImmutableID"
+                            },
+                            {
+                                "nameFormat": "http://schemas.microsoft.com/identity/claims",
+                                "name": "givenName"
+                            },
+                            {
+                                "nameFormat": "http://schemas.microsoft.com/identity/claims",
+                                "name": "groups"
+                            },
+                            {
+                                "nameFormat": "http://schemas.microsoft.com/identity/claims",
+                                "name": "sn"
+                            }
+                        ]
+                    },
+                    "spWsFedIdentityMapping": "USER_PRINCIPLE_NAME"
+                },
+                "entityId": "https://login.microsoftonline.com/287d8069-6760-4536-be30-e0557a5bf7a4/",
+                "loggingMode": "STANDARD",
+                "replicationStatus": "REPLICATED",
+                "type": "SP",
+                "creationDate": "2026-04-23T03:41:51.348Z",
+                "connectionTargetType": "STANDARD",
+                "modificationDate": "2026-04-23T04:15:51.805Z",
+                "virtualEntityIds": [],
+                "name": "MSFT",
+                "id": "NnBCB0gQ0kl-wPyeFjyUHP7rFys",
+                "licenseConnectionGroup": ""
+            }],
+            "resourceType": "/idp/spConnections"
         },
         {
             "operationType": "SAVE",
@@ -3513,8 +3621,8 @@
                                 "value": "family_name"
                             },
                             "email": {
-                                "source": {"type": "SUBJECT_TOKEN"},
-                                "value": "email"
+                                "source": {"type": "TEXT"},
+                                "value": "nirving@ping.darkedges.com"
                             }
                         },
                         "actorTokenProcessor": {},
@@ -3553,14 +3661,24 @@
         {
             "operationType": "SAVE",
             "items": [{
-                "generatorMappings": [{
-                    "requestedTokenType": "urn:ietf:params:oauth:token-type:saml2",
-                    "defaultMapping": true,
-                    "tokenGenerator": {
-                        "location": "https://localhost:-1/pf-admin-api/v1/sp/tokenGenerators/MSFTSAML2",
-                        "id": "MSFTSAML2"
+                "generatorMappings": [
+                    {
+                        "requestedTokenType": "urn:ietf:params:oauth:token-type:saml2",
+                        "defaultMapping": true,
+                        "tokenGenerator": {
+                            "location": "https://localhost:-1/pf-admin-api/v1/sp/tokenGenerators/MSFTSAML2",
+                            "id": "MSFTSAML2"
+                        }
+                    },
+                    {
+                        "requestedTokenType": "urn:ietf:params:oauth:token-type:saml1",
+                        "defaultMapping": false,
+                        "tokenGenerator": {
+                            "location": "https://localhost:-1/pf-admin-api/v1/sp/tokenGenerators/MSFT11",
+                            "id": "MSFT11"
+                        }
                     }
-                }],
+                ],
                 "resourceUris": ["https://localhost/app"],
                 "name": "TEGG",
                 "id": "TEGG"
@@ -3577,43 +3695,41 @@
         },
         {
             "operationType": "SAVE",
-            "items": [{
-                "sourceId": "TEST",
-                "targetId": "MSFTSAML2",
-                "attributeContractFulfillment": {
-                    "vaultlocation": {
-                        "source": {"type": "TOKEN_EXCHANGE_PROCESSOR_POLICY"},
-                        "value": "vaultlocation"
-                    },
-                    "scope": {
-                        "source": {"type": "TOKEN_EXCHANGE_PROCESSOR_POLICY"},
-                        "value": "scope"
-                    },
-                    "groups": {
-                        "source": {"type": "TOKEN_EXCHANGE_PROCESSOR_POLICY"},
-                        "value": "groups"
-                    },
-                    "given_name": {
-                        "source": {"type": "TOKEN_EXCHANGE_PROCESSOR_POLICY"},
-                        "value": "given_name"
-                    },
-                    "SAML_SUBJECT": {
+            "items": [
+                {
+                    "sourceId": "TEST",
+                    "targetId": "MSFT11",
+                    "attributeContractFulfillment": {"SAML_SUBJECT": {
                         "source": {"type": "TOKEN_EXCHANGE_PROCESSOR_POLICY"},
                         "value": "email"
-                    },
-                    "family_name": {
-                        "source": {"type": "TOKEN_EXCHANGE_PROCESSOR_POLICY"},
-                        "value": "family_name"
-                    },
-                    "email": {
-                        "source": {"type": "TOKEN_EXCHANGE_PROCESSOR_POLICY"},
-                        "value": "email"
-                    }
+                    }},
+                    "id": "TEST|MSFT11",
+                    "attributeSources": [],
+                    "issuanceCriteria": {"conditionalCriteria": []}
                 },
-                "id": "TEST|MSFTSAML2",
-                "attributeSources": [],
-                "issuanceCriteria": {"conditionalCriteria": []}
-            }],
+                {
+                    "sourceId": "TEST",
+                    "targetId": "MSFTSAML2",
+                    "attributeContractFulfillment": {
+                        "vaultlocation": {"source": {"type": "NO_MAPPING"}},
+                        "scope": {"source": {"type": "NO_MAPPING"}},
+                        "groups": {"source": {"type": "NO_MAPPING"}},
+                        "given_name": {"source": {"type": "NO_MAPPING"}},
+                        "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress": {
+                            "source": {"type": "TOKEN_EXCHANGE_PROCESSOR_POLICY"},
+                            "value": "email"
+                        },
+                        "SAML_SUBJECT": {
+                            "source": {"type": "TOKEN_EXCHANGE_PROCESSOR_POLICY"},
+                            "value": "email"
+                        },
+                        "family_name": {"source": {"type": "NO_MAPPING"}}
+                    },
+                    "id": "TEST|MSFTSAML2",
+                    "attributeSources": [],
+                    "issuanceCriteria": {"conditionalCriteria": []}
+                }
+            ],
             "resourceType": "/oauth/tokenExchange/tokenGeneratorMappings"
         },
         {
