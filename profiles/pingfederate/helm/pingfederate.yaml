@@ -58,6 +58,7 @@ pingfederate-engine:
     PING_DEBUG: "true"
     PF_ENGINE_DEBUG: "true"
     VERBOSE: "true"
+    STARTUP_BACKGROUND_OPTS: -Dpf.idp.wstrust.samlp.resp=true
 
 pingdirectory:
   enabled: true

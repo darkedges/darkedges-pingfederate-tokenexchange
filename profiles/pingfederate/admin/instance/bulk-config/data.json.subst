@@ -2521,7 +2521,7 @@
                             },
                             {
                                 "name": "Issuer",
-                                "value": "https://id.ping.darkedges.com"
+                                "value": "https://ping.darkedges.com"
                             },
                             {
                                 "name": "Signing Certificate",
@@ -2553,13 +2553,13 @@
                             },
                             {
                                 "name": "Message Customization Expression",
-                                "value": ""
+                                "value": "#subject = AssertionType.getSubject(),\n#sc = #subject.getSubjectConfirmationArray(0),\n#sc.addNewSubjectConfirmationData(),\n#scd = #sc.getSubjectConfirmationData(),\n#scd.setRecipient(\"https://login.microsoftonline.com/4161be3f-bf2b-41d4-a02b-e6f82b529d53/oauth2/v2.0/token\"),\n#cal = @java.util.Calendar@getInstance(),\n#cal.setTime(new org.joda.time.DateTime().plusMinutes(5).toDate()),\n#scd.setNotOnOrAfter(#cal),\n#sc.setSubjectConfirmationData(#scd),\n#AssertionType\n  .getSubject()\n  .getNameID()\n  .setFormat(\"urn:oasis:names:tc:SAML:1.1:nameid-format:emailAddress\"),\n#AssertionType"
                             }
                         ]
                     },
                     "name": "MSFTSAML2",
                     "id": "MSFTSAML2",
-                    "lastModified": "2026-04-23T05:17:28.898Z",
+                    "lastModified": "2026-04-23T22:38:03.504Z",
                     "pluginDescriptorRef": {
                         "location": "https://localhost:-1/pf-admin-api/v1/sp/tokenGenerators/descriptors/org.sourceid.wstrust.generator.saml.Saml20TokenGenerator",
                         "id": "org.sourceid.wstrust.generator.saml.Saml20TokenGenerator"
@@ -2569,7 +2569,9 @@
                         "extendedAttributes": [
                             {"name": "vaultlocation"},
                             {"name": "scope"},
+                            {"name": "IDPEmail"},
                             {"name": "groups"},
+                            {"name": "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/upn"},
                             {"name": "given_name"},
                             {"name": "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress"},
                             {"name": "family_name"}
@@ -3601,8 +3603,8 @@
                                 "value": "vaultlocation"
                             },
                             "subject": {
-                                "source": {"type": "SUBJECT_TOKEN"},
-                                "value": "sub"
+                                "source": {"type": "TEXT"},
+                                "value": "nirving@ping.darkedges.com"
                             },
                             "scope": {
                                 "source": {"type": "SUBJECT_TOKEN"},
@@ -3712,8 +3714,16 @@
                     "targetId": "MSFTSAML2",
                     "attributeContractFulfillment": {
                         "vaultlocation": {"source": {"type": "NO_MAPPING"}},
+                        "IDPEmail": {
+                            "source": {"type": "TOKEN_EXCHANGE_PROCESSOR_POLICY"},
+                            "value": "email"
+                        },
                         "scope": {"source": {"type": "NO_MAPPING"}},
                         "groups": {"source": {"type": "NO_MAPPING"}},
+                        "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/upn": {
+                            "source": {"type": "TEXT"},
+                            "value": "nirving_ping.darkedges.com#EXT#@nirvingukhotmail.onmicrosoft.com"
+                        },
                         "given_name": {"source": {"type": "NO_MAPPING"}},
                         "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress": {
                             "source": {"type": "TOKEN_EXCHANGE_PROCESSOR_POLICY"},
