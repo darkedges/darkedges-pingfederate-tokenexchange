@@ -221,17 +221,8 @@
             "operationType": "SAVE",
             "subResource": "XIKWXU2tAiRLhMjbBACRL9gav",
             "items": [{
-                "fileData": "${certificates_groups_items_zs4ig05ke8m785dsyyex8guel_zs4ig05ke8m785dsyyex8guel_fileData}",
-                "id": "zs4ig05ke8m785dsyyex8guel"
-            }],
-            "resourceType": "/certificates/groups"
-        },
-        {
-            "operationType": "SAVE",
-            "subResource": "lhUwqUjy14Fs7B6zXU2VC9KvH",
-            "items": [{
-                "fileData": "${certificates_groups_items_nlesg9riwu9h34fkoyyirf2qd_nlesg9riwu9h34fkoyyirf2qd_fileData}",
-                "id": "nlesg9riwu9h34fkoyyirf2qd"
+                "fileData": "${certificates_groups_items_rskvt5d6s7igp741a3hubobl3_rskvt5d6s7igp741a3hubobl3_fileData}",
+                "id": "rskvt5d6s7igp741a3hubobl3"
             }],
             "resourceType": "/certificates/groups"
         },
@@ -2582,54 +2573,29 @@
         },
         {
             "operationType": "SAVE",
-            "items": [
-                {
-                    "validateSignature": true,
-                    "certView": {
-                        "expires": "2031-03-20T13:02:39.000Z",
-                        "serialNumber": "15568913545436114952",
-                        "keyAlgorithm": "RSA",
-                        "keySize": 2048,
-                        "subjectAlternativeNames": [],
-                        "issuerDN": "CN=accounts.accesscontrol.windows.net",
-                        "sha1Fingerprint": "535B17F181474BB67A565ED51CB2334DE8DBBE3D",
-                        "validFrom": "2026-03-20T13:02:39.000Z",
-                        "version": 3,
-                        "signatureAlgorithm": "SHA256withRSA",
-                        "sha256Fingerprint": "A9470D414B61E9790C2B2E06942EB7141ADF5578E8594D3C4196F21C96277A44",
-                        "id": "zs4ig05ke8m785dsyyex8guel",
-                        "subjectDN": "CN=accounts.accesscontrol.windows.net",
-                        "status": "VALID"
-                    },
-                    "x509File": {"fileData": "${metadataUrls_items_XIKWXU2tAiRLhMjbBACRL9gav_x509File_XIKWXU2tAiRLhMjbBACRL9gav_fileData}"},
-                    "name": "MSFT",
-                    "id": "XIKWXU2tAiRLhMjbBACRL9gav",
-                    "url": "https://login.microsoftonline.com/4161be3f-bf2b-41d4-a02b-e6f82b529d53/federationmetadata/2007-06/federationmetadata.xml"
+            "items": [{
+                "validateSignature": true,
+                "certView": {
+                    "expires": "2029-04-23T01:39:07.000Z",
+                    "serialNumber": "32355314167513990586185513131129322854",
+                    "keyAlgorithm": "RSA",
+                    "keySize": 2048,
+                    "subjectAlternativeNames": [],
+                    "issuerDN": "CN=Microsoft Azure Federated SSO Certificate",
+                    "sha1Fingerprint": "601B60B4375B5EA8EB23915E5FF874F12FEBC90A",
+                    "validFrom": "2026-04-23T01:39:07.000Z",
+                    "version": 3,
+                    "signatureAlgorithm": "SHA256withRSA",
+                    "sha256Fingerprint": "83FF50475B3F13FC3A14BF0CE34687B32ACCF64CFB4BC82F9E17386A6EE34EB7",
+                    "id": "rskvt5d6s7igp741a3hubobl3",
+                    "subjectDN": "CN=Microsoft Azure Federated SSO Certificate",
+                    "status": "VALID"
                 },
-                {
-                    "validateSignature": true,
-                    "certView": {
-                        "expires": "2031-03-20T13:02:39.000Z",
-                        "serialNumber": "15568913545436114952",
-                        "keyAlgorithm": "RSA",
-                        "keySize": 2048,
-                        "subjectAlternativeNames": [],
-                        "issuerDN": "CN=accounts.accesscontrol.windows.net",
-                        "sha1Fingerprint": "535B17F181474BB67A565ED51CB2334DE8DBBE3D",
-                        "validFrom": "2026-03-20T13:02:39.000Z",
-                        "version": 3,
-                        "signatureAlgorithm": "SHA256withRSA",
-                        "sha256Fingerprint": "A9470D414B61E9790C2B2E06942EB7141ADF5578E8594D3C4196F21C96277A44",
-                        "id": "nlesg9riwu9h34fkoyyirf2qd",
-                        "subjectDN": "CN=accounts.accesscontrol.windows.net",
-                        "status": "VALID"
-                    },
-                    "x509File": {"fileData": "${metadataUrls_items_lhUwqUjy14Fs7B6zXU2VC9KvH_x509File_lhUwqUjy14Fs7B6zXU2VC9KvH_fileData}"},
-                    "name": "MSFT App",
-                    "id": "lhUwqUjy14Fs7B6zXU2VC9KvH",
-                    "url": "https://login.microsoftonline.com/4161be3f-bf2b-41d4-a02b-e6f82b529d53/federationmetadata/2007-06/federationmetadata.xml?appid=e83c2af3-43d1-4f62-8bff-e619c29b5026"
-                }
-            ],
+                "x509File": {"fileData": "${metadataUrls_items_XIKWXU2tAiRLhMjbBACRL9gav_x509File_XIKWXU2tAiRLhMjbBACRL9gav_fileData}"},
+                "name": "MSFT",
+                "id": "XIKWXU2tAiRLhMjbBACRL9gav",
+                "url": "https://login.microsoftonline.com/4161be3f-bf2b-41d4-a02b-e6f82b529d53/federationmetadata/2007-06/federationmetadata.xml?appid=41b801a3-fe65-4c30-b349-ad8a57a81198"
+            }],
             "resourceType": "/metadataUrls"
         },
         {
