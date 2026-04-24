@@ -2951,149 +2951,266 @@
         },
         {
             "operationType": "SAVE",
-            "items": [{
-                "contactInfo": {},
-                "wsTrust": {
-                    "generateKey": false,
-                    "defaultTokenType": "SAML20",
-                    "encryptSaml2Assertion": false,
-                    "partnerServiceIds": ["https://login.microsoft.com/4161be3f-bf2b-41d4-a02b-e6f82b529d53/"],
-                    "minutesAfter": 30,
-                    "oAuthAssertionProfiles": false,
-                    "tokenProcessorMappings": [{
-                        "restrictedVirtualEntityIds": [],
-                        "attributeContractFulfillment": {"TOKEN_SUBJECT": {
-                            "source": {"type": "TOKEN"},
-                            "value": "sub"
-                        }},
-                        "idpTokenProcessorRef": {
-                            "location": "https://localhost:-1/pf-admin-api/v1/idp/tokenProcessors/PFSubjectProcessor",
-                            "id": "PFSubjectProcessor"
-                        },
-                        "attributeSources": [],
-                        "issuanceCriteria": {"conditionalCriteria": []}
-                    }],
-                    "minutesBefore": 5,
-                    "attributeContract": {
-                        "coreAttributes": [{"name": "TOKEN_SUBJECT"}],
-                        "extendedAttributes": []
-                    }
-                },
-                "credentials": {
-                    "certs": [],
-                    "signingSettings": {
-                        "signingKeyPairRef": {
-                            "location": "https://localhost:-1/pf-admin-api/v1/keyPairs/signing/opwhgw67kdfprh5rjv8efdakc",
-                            "id": "opwhgw67kdfprh5rjv8efdakc"
-                        },
-                        "includeRawKeyInSignature": false,
-                        "algorithm": "SHA256withRSA"
-                    }
-                },
-                "active": true,
-                "spBrowserSso": {
-                    "protocol": "WSFED",
-                    "authenticationPolicyContractAssertionMappings": [{
-                        "abortSsoTransactionAsFailSafe": false,
-                        "authenticationPolicyContractRef": {
-                            "location": "https://localhost:-1/pf-admin-api/v1/authenticationPolicyContracts/KUzfpHBOZeqF0vVo",
-                            "id": "KUzfpHBOZeqF0vVo"
-                        },
-                        "restrictedVirtualEntityIds": [],
-                        "attributeContractFulfillment": {
-                            "UPN": {
-                                "source": {"type": "AUTHENTICATION_POLICY_CONTRACT"},
-                                "value": "mail"
+            "items": [
+                {
+                    "contactInfo": {},
+                    "wsTrust": {
+                        "generateKey": false,
+                        "defaultTokenType": "SAML20",
+                        "encryptSaml2Assertion": false,
+                        "partnerServiceIds": ["https://login.microsoft.com/4161be3f-bf2b-41d4-a02b-e6f82b529d53/"],
+                        "minutesAfter": 30,
+                        "oAuthAssertionProfiles": false,
+                        "tokenProcessorMappings": [{
+                            "restrictedVirtualEntityIds": [],
+                            "attributeContractFulfillment": {"TOKEN_SUBJECT": {
+                                "source": {"type": "TOKEN"},
+                                "value": "sub"
+                            }},
+                            "idpTokenProcessorRef": {
+                                "location": "https://localhost:-1/pf-admin-api/v1/idp/tokenProcessors/PFSubjectProcessor",
+                                "id": "PFSubjectProcessor"
                             },
-                            "emailAddress": {
-                                "source": {"type": "AUTHENTICATION_POLICY_CONTRACT"},
-                                "value": "mail"
-                            },
-                            "telephoneNumber": {
-                                "source": {"type": "AUTHENTICATION_POLICY_CONTRACT"},
-                                "value": "telephoneNumber"
-                            },
-                            "ImmutableID": {
-                                "source": {"type": "AUTHENTICATION_POLICY_CONTRACT"},
-                                "value": "entryUUID"
-                            },
-                            "givenName": {
-                                "source": {"type": "AUTHENTICATION_POLICY_CONTRACT"},
-                                "value": "givenName"
-                            },
-                            "groups": {
-                                "source": {"type": "AUTHENTICATION_POLICY_CONTRACT"},
-                                "value": "groups"
-                            },
-                            "sn": {
-                                "source": {"type": "AUTHENTICATION_POLICY_CONTRACT"},
-                                "value": "sn"
-                            },
-                            "SAML_SUBJECT": {
-                                "source": {"type": "AUTHENTICATION_POLICY_CONTRACT"},
-                                "value": "mail"
-                            }
-                        },
-                        "restrictVirtualEntityIds": false,
-                        "attributeSources": [],
-                        "issuanceCriteria": {"conditionalCriteria": []}
-                    }],
-                    "alwaysSignArtifactResponse": false,
-                    "wsTrustVersion": "WSTRUST12",
-                    "wsFedTokenType": "SAML11",
-                    "ssoServiceEndpoints": [{"url": "https://login.microsoftonline.com/login.srf"}],
-                    "adapterMappings": [],
-                    "assertionLifetime": {
-                        "minutesAfter": 5,
-                        "minutesBefore": 5
+                            "attributeSources": [],
+                            "issuanceCriteria": {"conditionalCriteria": []}
+                        }],
+                        "minutesBefore": 5,
+                        "attributeContract": {
+                            "coreAttributes": [{"name": "TOKEN_SUBJECT"}],
+                            "extendedAttributes": []
+                        }
                     },
-                    "attributeContract": {
-                        "coreAttributes": [{"name": "SAML_SUBJECT"}],
-                        "extendedAttributes": [
-                            {
-                                "nameFormat": "http://schemas.xmlsoap.org/claims",
-                                "name": "emailAddress"
+                    "credentials": {
+                        "certs": [],
+                        "signingSettings": {
+                            "signingKeyPairRef": {
+                                "location": "https://localhost:-1/pf-admin-api/v1/keyPairs/signing/opwhgw67kdfprh5rjv8efdakc",
+                                "id": "opwhgw67kdfprh5rjv8efdakc"
                             },
-                            {
-                                "nameFormat": "http://schemas.xmlsoap.org/claims",
-                                "name": "UPN"
-                            },
-                            {
-                                "nameFormat": "http://schemas.microsoft.com/identity/claims",
-                                "name": "telephoneNumber"
-                            },
-                            {
-                                "nameFormat": "http://schemas.microsoft.com/LiveID/Federation/2008/05",
-                                "name": "ImmutableID"
-                            },
-                            {
-                                "nameFormat": "http://schemas.microsoft.com/identity/claims",
-                                "name": "givenName"
-                            },
-                            {
-                                "nameFormat": "http://schemas.microsoft.com/identity/claims",
-                                "name": "groups"
-                            },
-                            {
-                                "nameFormat": "http://schemas.microsoft.com/identity/claims",
-                                "name": "sn"
-                            }
-                        ]
+                            "includeRawKeyInSignature": false,
+                            "algorithm": "SHA256withRSA"
+                        }
                     },
-                    "spWsFedIdentityMapping": "USER_PRINCIPLE_NAME"
+                    "active": true,
+                    "spBrowserSso": {
+                        "protocol": "WSFED",
+                        "authenticationPolicyContractAssertionMappings": [{
+                            "abortSsoTransactionAsFailSafe": false,
+                            "authenticationPolicyContractRef": {
+                                "location": "https://localhost:-1/pf-admin-api/v1/authenticationPolicyContracts/KUzfpHBOZeqF0vVo",
+                                "id": "KUzfpHBOZeqF0vVo"
+                            },
+                            "restrictedVirtualEntityIds": [],
+                            "attributeContractFulfillment": {
+                                "UPN": {
+                                    "source": {"type": "AUTHENTICATION_POLICY_CONTRACT"},
+                                    "value": "mail"
+                                },
+                                "emailAddress": {
+                                    "source": {"type": "AUTHENTICATION_POLICY_CONTRACT"},
+                                    "value": "mail"
+                                },
+                                "telephoneNumber": {
+                                    "source": {"type": "AUTHENTICATION_POLICY_CONTRACT"},
+                                    "value": "telephoneNumber"
+                                },
+                                "ImmutableID": {
+                                    "source": {"type": "AUTHENTICATION_POLICY_CONTRACT"},
+                                    "value": "entryUUID"
+                                },
+                                "givenName": {
+                                    "source": {"type": "AUTHENTICATION_POLICY_CONTRACT"},
+                                    "value": "givenName"
+                                },
+                                "groups": {
+                                    "source": {"type": "AUTHENTICATION_POLICY_CONTRACT"},
+                                    "value": "groups"
+                                },
+                                "sn": {
+                                    "source": {"type": "AUTHENTICATION_POLICY_CONTRACT"},
+                                    "value": "sn"
+                                },
+                                "SAML_SUBJECT": {
+                                    "source": {"type": "AUTHENTICATION_POLICY_CONTRACT"},
+                                    "value": "mail"
+                                }
+                            },
+                            "restrictVirtualEntityIds": false,
+                            "attributeSources": [],
+                            "issuanceCriteria": {"conditionalCriteria": []}
+                        }],
+                        "alwaysSignArtifactResponse": false,
+                        "wsTrustVersion": "WSTRUST12",
+                        "wsFedTokenType": "SAML11",
+                        "ssoServiceEndpoints": [{"url": "https://login.microsoftonline.com/login.srf"}],
+                        "adapterMappings": [],
+                        "assertionLifetime": {
+                            "minutesAfter": 5,
+                            "minutesBefore": 5
+                        },
+                        "attributeContract": {
+                            "coreAttributes": [{"name": "SAML_SUBJECT"}],
+                            "extendedAttributes": [
+                                {
+                                    "nameFormat": "http://schemas.xmlsoap.org/claims",
+                                    "name": "emailAddress"
+                                },
+                                {
+                                    "nameFormat": "http://schemas.xmlsoap.org/claims",
+                                    "name": "UPN"
+                                },
+                                {
+                                    "nameFormat": "http://schemas.microsoft.com/identity/claims",
+                                    "name": "telephoneNumber"
+                                },
+                                {
+                                    "nameFormat": "http://schemas.microsoft.com/LiveID/Federation/2008/05",
+                                    "name": "ImmutableID"
+                                },
+                                {
+                                    "nameFormat": "http://schemas.microsoft.com/identity/claims",
+                                    "name": "givenName"
+                                },
+                                {
+                                    "nameFormat": "http://schemas.microsoft.com/identity/claims",
+                                    "name": "groups"
+                                },
+                                {
+                                    "nameFormat": "http://schemas.microsoft.com/identity/claims",
+                                    "name": "sn"
+                                }
+                            ]
+                        },
+                        "spWsFedIdentityMapping": "USER_PRINCIPLE_NAME"
+                    },
+                    "entityId": "WSFED",
+                    "loggingMode": "STANDARD",
+                    "replicationStatus": "REPLICATED",
+                    "type": "SP",
+                    "creationDate": "2026-04-23T03:41:51.348Z",
+                    "connectionTargetType": "STANDARD",
+                    "modificationDate": "2026-04-24T00:36:07.735Z",
+                    "virtualEntityIds": [],
+                    "name": "MSFT",
+                    "id": "NnBCB0gQ0kl-wPyeFjyUHP7rFys",
+                    "licenseConnectionGroup": ""
                 },
-                "entityId": "urn:federation:MicrosoftOnline",
-                "loggingMode": "STANDARD",
-                "replicationStatus": "REPLICATED",
-                "type": "SP",
-                "creationDate": "2026-04-23T03:41:51.348Z",
-                "connectionTargetType": "STANDARD",
-                "modificationDate": "2026-04-23T23:56:51.487Z",
-                "virtualEntityIds": [],
-                "name": "MSFT",
-                "id": "NnBCB0gQ0kl-wPyeFjyUHP7rFys",
-                "licenseConnectionGroup": ""
-            }],
+                {
+                    "contactInfo": {},
+                    "credentials": {
+                        "inboundBackChannelAuth": {
+                            "requireSsl": true,
+                            "httpBasicCredentials": {
+                                "password": "${idp_spConnections_items_guPVKZrBz4Wh_7gfCdZKVnJ_5k5_credentials_inboundBackChannelAuth_httpBasicCredentials_username_password}",
+                                "username": "username"
+                            },
+                            "digitalSignature": false,
+                            "type": "INBOUND"
+                        },
+                        "outboundBackChannelAuth": {
+                            "httpBasicCredentials": {
+                                "password": "${idp_spConnections_items_guPVKZrBz4Wh_7gfCdZKVnJ_5k5_credentials_outboundBackChannelAuth_httpBasicCredentials_username_password}",
+                                "username": "username"
+                            },
+                            "digitalSignature": false,
+                            "validatePartnerCert": true,
+                            "type": "OUTBOUND"
+                        },
+                        "certs": [],
+                        "verificationSubjectDN": "CN=localhost",
+                        "signingSettings": {
+                            "signingKeyPairRef": {
+                                "location": "https://localhost:-1/pf-admin-api/v1/keyPairs/signing/opwhgw67kdfprh5rjv8efdakc",
+                                "id": "opwhgw67kdfprh5rjv8efdakc"
+                            },
+                            "includeRawKeyInSignature": false,
+                            "algorithm": "SHA256withRSA",
+                            "includeCertInSignature": false
+                        }
+                    },
+                    "active": true,
+                    "spBrowserSso": {
+                        "requireSignedAuthnRequests": false,
+                        "authenticationPolicyContractAssertionMappings": [{
+                            "abortSsoTransactionAsFailSafe": false,
+                            "authenticationPolicyContractRef": {
+                                "location": "https://localhost:-1/pf-admin-api/v1/authenticationPolicyContracts/KUzfpHBOZeqF0vVo",
+                                "id": "KUzfpHBOZeqF0vVo"
+                            },
+                            "restrictedVirtualEntityIds": [],
+                            "attributeContractFulfillment": {"SAML_SUBJECT": {
+                                "source": {"type": "AUTHENTICATION_POLICY_CONTRACT"},
+                                "value": "mail"
+                            }},
+                            "restrictVirtualEntityIds": false,
+                            "attributeSources": [],
+                            "issuanceCriteria": {"conditionalCriteria": []}
+                        }],
+                        "alwaysSignArtifactResponse": false,
+                        "encryptionPolicy": {
+                            "encryptSloSubjectNameId": false,
+                            "encryptAssertion": false,
+                            "encryptedAttributes": [],
+                            "sloSubjectNameIDEncrypted": false
+                        },
+                        "sloServiceEndpoints": [{
+                            "responseUrl": "https://login.microsoft.com/response",
+                            "binding": "POST",
+                            "url": "https://login.microsoft.com/loign"
+                        }],
+                        "ssoApplicationEndpoint": "https://id.ping.darkedges.com/idp/startSSO.ping?PartnerSpId=urn%3Afederation%3AMicrosoftOnline",
+                        "ssoServiceEndpoints": [{
+                            "isDefault": true,
+                            "binding": "POST",
+                            "index": 0,
+                            "url": "https://login.microsoftonline.com/4161be3f-bf2b-41d4-a02b-e6f82b529d53/saml2"
+                        }],
+                        "attributeContract": {
+                            "coreAttributes": [{
+                                "nameFormat": "urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified",
+                                "name": "SAML_SUBJECT"
+                            }],
+                            "extendedAttributes": []
+                        },
+                        "incomingBindings": [
+                            "REDIRECT",
+                            "SOAP",
+                            "POST",
+                            "ARTIFACT"
+                        ],
+                        "artifact": {"resolverLocations": [{
+                            "index": 0,
+                            "url": "https://login.microsoft.com/resolve"
+                        }]},
+                        "protocol": "SAML20",
+                        "spSamlIdentityMapping": "STANDARD",
+                        "signAssertions": false,
+                        "enabledProfiles": [
+                            "SP_INITIATED_SSO",
+                            "IDP_INITIATED_SLO",
+                            "SP_INITIATED_SLO",
+                            "IDP_INITIATED_SSO"
+                        ],
+                        "signResponseAsRequired": true,
+                        "adapterMappings": [],
+                        "assertionLifetime": {
+                            "minutesAfter": 5,
+                            "minutesBefore": 5
+                        }
+                    },
+                    "entityId": "urn:federation:MicrosoftOnline",
+                    "loggingMode": "STANDARD",
+                    "replicationStatus": "REPLICATED",
+                    "type": "SP",
+                    "creationDate": "2026-04-24T00:35:52.627Z",
+                    "connectionTargetType": "STANDARD",
+                    "modificationDate": "2026-04-24T00:39:46.696Z",
+                    "virtualEntityIds": [],
+                    "name": "MSFTSAML",
+                    "id": "guPVKZrBz4Wh_7gfCdZKVnJ_5k5",
+                    "licenseConnectionGroup": ""
+                }
+            ],
             "resourceType": "/idp/spConnections"
         },
         {
