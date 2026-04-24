@@ -6,11 +6,6 @@
             "subResource": "cert-time-tracking",
             "items": [
                 {
-                    "stringValue": "1772442207",
-                    "id": "5jqt7j8mxbwl2awtpc465yzx1",
-                    "type": "STRING"
-                },
-                {
                     "stringValue": "1772158875",
                     "id": "83ekrmem82duiu6te90qd54i1",
                     "type": "STRING"
@@ -18,6 +13,11 @@
                 {
                     "stringValue": "1765310095",
                     "id": "lc6xons0ovn4erf4fh2rr3t8t",
+                    "type": "STRING"
+                },
+                {
+                    "stringValue": "1776988534",
+                    "id": "opwhgw67kdfprh5rjv8efdakc",
                     "type": "STRING"
                 },
                 {
@@ -195,10 +195,10 @@
         {
             "operationType": "SAVE",
             "items": [{
-                "password": "${keyPairs_signing_items_5jqt7j8mxbwl2awtpc465yzx1_5jqt7j8mxbwl2awtpc465yzx1_password}",
-                "fileData": "${keyPairs_signing_items_5jqt7j8mxbwl2awtpc465yzx1_5jqt7j8mxbwl2awtpc465yzx1_fileData}",
+                "password": "${keyPairs_signing_items_opwhgw67kdfprh5rjv8efdakc_opwhgw67kdfprh5rjv8efdakc_password}",
+                "fileData": "${keyPairs_signing_items_opwhgw67kdfprh5rjv8efdakc_opwhgw67kdfprh5rjv8efdakc_fileData}",
                 "format": "PKCS12",
-                "id": "5jqt7j8mxbwl2awtpc465yzx1"
+                "id": "opwhgw67kdfprh5rjv8efdakc"
             }],
             "resourceType": "/keyPairs/signing"
         },
@@ -597,8 +597,8 @@
             "operationType": "SAVE",
             "items": [{
                 "signingKeyRef": {
-                    "location": "https://localhost:-1/pf-admin-api/v1/keyPairs/signing/5jqt7j8mxbwl2awtpc465yzx1",
-                    "id": "5jqt7j8mxbwl2awtpc465yzx1"
+                    "location": "https://localhost:-1/pf-admin-api/v1/keyPairs/signing/opwhgw67kdfprh5rjv8efdakc",
+                    "id": "opwhgw67kdfprh5rjv8efdakc"
                 },
                 "signatureAlgorithm": "SHA256withRSA"
             }],
@@ -2463,7 +2463,7 @@
                             },
                             {
                                 "name": "Signing Certificate",
-                                "value": "5jqt7j8mxbwl2awtpc465yzx1"
+                                "value": "opwhgw67kdfprh5rjv8efdakc"
                             },
                             {
                                 "name": "Signing Algorithm",
@@ -2497,7 +2497,7 @@
                     },
                     "name": "MSFT1.1",
                     "id": "MSFT11",
-                    "lastModified": "2026-04-23T04:38:04.246Z",
+                    "lastModified": "2026-04-23T23:57:39.593Z",
                     "pluginDescriptorRef": {
                         "location": "https://localhost:-1/pf-admin-api/v1/sp/tokenGenerators/descriptors/org.sourceid.wstrust.generator.saml.Saml11TokenGenerator",
                         "id": "org.sourceid.wstrust.generator.saml.Saml11TokenGenerator"
@@ -2517,7 +2517,7 @@
                             },
                             {
                                 "name": "Minutes After",
-                                "value": "2"
+                                "value": "20"
                             },
                             {
                                 "name": "Issuer",
@@ -2525,7 +2525,7 @@
                             },
                             {
                                 "name": "Signing Certificate",
-                                "value": "5jqt7j8mxbwl2awtpc465yzx1"
+                                "value": "opwhgw67kdfprh5rjv8efdakc"
                             },
                             {
                                 "name": "Signing Algorithm",
@@ -2553,13 +2553,13 @@
                             },
                             {
                                 "name": "Message Customization Expression",
-                                "value": "#subject = AssertionType.getSubject(),\n#sc = #subject.getSubjectConfirmationArray(0),\n#sc.addNewSubjectConfirmationData(),\n#scd = #sc.getSubjectConfirmationData(),\n#scd.setRecipient(\"https://login.microsoftonline.com/4161be3f-bf2b-41d4-a02b-e6f82b529d53/oauth2/v2.0/token\"),\n#cal = @java.util.Calendar@getInstance(),\n#cal.setTime(new org.joda.time.DateTime().plusMinutes(5).toDate()),\n#scd.setNotOnOrAfter(#cal),\n#sc.setSubjectConfirmationData(#scd),\n#AssertionType\n  .getSubject()\n  .getNameID()\n  .setFormat(\"urn:oasis:names:tc:SAML:1.1:nameid-format:emailAddress\"),\n#AssertionType"
+                                "value": "#subject = AssertionType.getSubject(),\n#sc = #subject.getSubjectConfirmationArray(0),\n#sc.addNewSubjectConfirmationData(),\n#scd = #sc.getSubjectConfirmationData(),\n#scd.setRecipient(\"https://login.microsoftonline.com/4161be3f-bf2b-41d4-a02b-e6f82b529d53/oauth2/v2.0/token\"),\n#scd.setNotBefore(AssertionType.getConditions().getNotBefore()),\n#scd.setNotOnOrAfter(AssertionType.getConditions().getNotOnOrAfter()),\n#sc.setSubjectConfirmationData(#scd),\n#AssertionType\n  .getSubject()\n  .getNameID()\n  .setFormat(\"urn:oasis:names:tc:SAML:1.1:nameid-format:emailAddress\"),\n#AssertionType"
                             }
                         ]
                     },
                     "name": "MSFTSAML2",
                     "id": "MSFTSAML2",
-                    "lastModified": "2026-04-23T22:38:03.504Z",
+                    "lastModified": "2026-04-23T23:57:46.173Z",
                     "pluginDescriptorRef": {
                         "location": "https://localhost:-1/pf-admin-api/v1/sp/tokenGenerators/descriptors/org.sourceid.wstrust.generator.saml.Saml20TokenGenerator",
                         "id": "org.sourceid.wstrust.generator.saml.Saml20TokenGenerator"
@@ -2767,8 +2767,8 @@
                     ],
                     "signingSettings": {
                         "signingKeyPairRef": {
-                            "location": "https://localhost:-1/pf-admin-api/v1/keyPairs/signing/5jqt7j8mxbwl2awtpc465yzx1",
-                            "id": "5jqt7j8mxbwl2awtpc465yzx1"
+                            "location": "https://localhost:-1/pf-admin-api/v1/keyPairs/signing/opwhgw67kdfprh5rjv8efdakc",
+                            "id": "opwhgw67kdfprh5rjv8efdakc"
                         },
                         "includeRawKeyInSignature": false,
                         "algorithm": "SHA256withRSA",
@@ -2790,7 +2790,7 @@
                 },
                 "errorPageMsgId": "errorDetail.spSsoFailure",
                 "baseUrl": "https://login.microsoftonline.com",
-                "modificationDate": "2026-04-23T05:31:42.456Z",
+                "modificationDate": "2026-04-23T23:57:16.758Z",
                 "virtualEntityIds": [],
                 "name": "https://sts.windows.net/4161be3f-bf2b-41d4-a02b-e6f82b529d53/",
                 "id": "uxXlcpG9H1CGfh11FJHAT6PF-EM",
@@ -2983,8 +2983,8 @@
                     "certs": [],
                     "signingSettings": {
                         "signingKeyPairRef": {
-                            "location": "https://localhost:-1/pf-admin-api/v1/keyPairs/signing/5jqt7j8mxbwl2awtpc465yzx1",
-                            "id": "5jqt7j8mxbwl2awtpc465yzx1"
+                            "location": "https://localhost:-1/pf-admin-api/v1/keyPairs/signing/opwhgw67kdfprh5rjv8efdakc",
+                            "id": "opwhgw67kdfprh5rjv8efdakc"
                         },
                         "includeRawKeyInSignature": false,
                         "algorithm": "SHA256withRSA"
@@ -3082,13 +3082,13 @@
                     },
                     "spWsFedIdentityMapping": "USER_PRINCIPLE_NAME"
                 },
-                "entityId": "https://login.microsoftonline.com/287d8069-6760-4536-be30-e0557a5bf7a4/",
+                "entityId": "urn:federation:MicrosoftOnline",
                 "loggingMode": "STANDARD",
                 "replicationStatus": "REPLICATED",
                 "type": "SP",
                 "creationDate": "2026-04-23T03:41:51.348Z",
                 "connectionTargetType": "STANDARD",
-                "modificationDate": "2026-04-23T04:15:51.805Z",
+                "modificationDate": "2026-04-23T23:56:51.487Z",
                 "virtualEntityIds": [],
                 "name": "MSFT",
                 "id": "NnBCB0gQ0kl-wPyeFjyUHP7rFys",
@@ -3721,8 +3721,8 @@
                         "scope": {"source": {"type": "NO_MAPPING"}},
                         "groups": {"source": {"type": "NO_MAPPING"}},
                         "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/upn": {
-                            "source": {"type": "TEXT"},
-                            "value": "nirving_ping.darkedges.com#EXT#@nirvingukhotmail.onmicrosoft.com"
+                            "source": {"type": "TOKEN_EXCHANGE_PROCESSOR_POLICY"},
+                            "value": "email"
                         },
                         "given_name": {"source": {"type": "NO_MAPPING"}},
                         "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress": {
