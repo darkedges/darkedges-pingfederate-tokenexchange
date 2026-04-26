@@ -2451,15 +2451,15 @@
                         "fields": [
                             {
                                 "name": "Minutes Before",
-                                "value": "1"
+                                "value": "10"
                             },
                             {
                                 "name": "Minutes After",
-                                "value": "1"
+                                "value": "10"
                             },
                             {
                                 "name": "Issuer",
-                                "value": "https://id.ping.darkedges.com"
+                                "value": "https://ping.darkedges.com"
                             },
                             {
                                 "name": "Signing Certificate",
@@ -2471,7 +2471,7 @@
                             },
                             {
                                 "name": "Include Certificate in KeyInfo",
-                                "value": "false"
+                                "value": "true"
                             },
                             {
                                 "name": "Include Raw Key in KeyValue",
@@ -2479,7 +2479,7 @@
                             },
                             {
                                 "name": "Audience",
-                                "value": "https://login.microsoftonline.com/4161be3f-bf2b-41d4-a02b-e6f82b529d53"
+                                "value": "urn:federation:MicrosoftOnline"
                             },
                             {
                                 "name": "Confirmation Method",
@@ -2491,20 +2491,24 @@
                             },
                             {
                                 "name": "Message Customization Expression",
-                                "value": ""
+                                "value": "#i = 0,\n#AssertionType.getAttributeStatementArray(0).getAttributeArray().{\n#this.getAttributeName().equals(\"UPN\")?\n{#AssertionType.getAttributeStatementArray(0).getAttributeArray(i).setAttributeNamespace(\"http://schemas.xmlsoap.org/claims\")}:null,\n#this.getAttributeName().equals(\"emailaddress\")?\n{#AssertionType.getAttributeStatementArray(0).getAttributeArray(i).setAttributeNamespace(\"http://schemas.xmlsoap.org/ws/2005/05/identity/claims\")}:null,\n#this.getAttributeName().equals(\"ImmutableID\")?\n{#AssertionType.getAttributeStatementArray(0).getAttributeArray(i).setAttributeNamespace(\"http://schemas.microsoft.com/LiveID/Federation/2008/05\")}:null,\n#i = #i+1},\n#AssertionType"
                             }
                         ]
                     },
                     "name": "MSFT1.1",
                     "id": "MSFT11",
-                    "lastModified": "2026-04-24T02:06:53.851Z",
+                    "lastModified": "2026-04-25T22:45:36.249Z",
                     "pluginDescriptorRef": {
                         "location": "https://localhost:-1/pf-admin-api/v1/sp/tokenGenerators/descriptors/org.sourceid.wstrust.generator.saml.Saml11TokenGenerator",
                         "id": "org.sourceid.wstrust.generator.saml.Saml11TokenGenerator"
                     },
                     "attributeContract": {
                         "coreAttributes": [{"name": "SAML_SUBJECT"}],
-                        "extendedAttributes": []
+                        "extendedAttributes": [
+                            {"name": "UPN"},
+                            {"name": "ImmutableID"},
+                            {"name": "emailaddress"}
+                        ]
                     }
                 },
                 {
@@ -2537,7 +2541,7 @@
                             },
                             {
                                 "name": "Include Raw Key in KeyValue",
-                                "value": "true"
+                                "value": "false"
                             },
                             {
                                 "name": "Audience",
@@ -2553,13 +2557,13 @@
                             },
                             {
                                 "name": "Message Customization Expression",
-                                "value": "#subject = AssertionType.getSubject(),\n#sc = #subject.getSubjectConfirmationArray(0),\n#sc.addNewSubjectConfirmationData(),\n#scd = #sc.getSubjectConfirmationData(),\n#scd.setRecipient(\"https://login.microsoftonline.com/4161be3f-bf2b-41d4-a02b-e6f82b529d53/saml2\"),\n#scd.setNotOnOrAfter(AssertionType.getConditions().getNotOnOrAfter()),\n#sc.setSubjectConfirmationData(#scd),\n#subject.getNameID().setFormat(\"urn:oasis:names:tc:SAML:2.0:nameid-format:persistent\"),\n#i = 0,\n#AssertionType.getAttributeStatementArray(0).getAttributeArray().{#this.getName().equals(\"http://schemas.xmlsoap.org/ws/2005/05/identity/claims/IDPEmail\")?\n{#AssertionType.getAttributeStatementArray(0).getAttributeArray(i).setNameFormat(\"urn:oasis:names:tc:SAML:2.0:attrname-format:uri\")}:null,\n#this.getName().equals(\"http://schemas.xmlsoap.org/ws/2005/05/identity/claims/ImmutableID\")?\n{#AssertionType.getAttributeStatementArray(0).getAttributeArray(i).setNameFormat(\"urn:oasis:names:tc:SAML:2.0:attrname-format:uri\")}:null,\n#i = #i+1},\n#AssertionType"
+                                "value": "#subject = AssertionType.getSubject(),\n#sc = #subject.getSubjectConfirmationArray(0),\n#sc.addNewSubjectConfirmationData(),\n#scd = #sc.getSubjectConfirmationData(),\n#scd.setRecipient(\"https://login.microsoftonline.com/4161be3f-bf2b-41d4-a02b-e6f82b529d53/oauth2/v2.0/token\"),\n#scd.setNotOnOrAfter(AssertionType.getConditions().getNotOnOrAfter()),\n#sc.setSubjectConfirmationData(#scd),\n#subject.getNameID().setFormat(\"urn:oasis:names:tc:SAML:1.1:nameid-format:emailAddress\"),\n#i = 0,\n#AssertionType.getAttributeStatementArray(0).getAttributeArray().{#this.getName().equals(\"http://schemas.xmlsoap.org/ws/2005/05/identity/claims/IDPEmail\")?\n{#AssertionType.getAttributeStatementArray(0).getAttributeArray(i).setNameFormat(\"urn:oasis:names:tc:SAML:2.0:attrname-format:uri\")}:null,\n#this.getName().equals(\"http://schemas.xmlsoap.org/ws/2005/05/identity/claims/ImmutableID\")?\n{#AssertionType.getAttributeStatementArray(0).getAttributeArray(i).setNameFormat(\"urn:oasis:names:tc:SAML:2.0:attrname-format:uri\")}:null,\n#i = #i+1},\n#AssertionType"
                             }
                         ]
                     },
                     "name": "MSFTSAML2",
                     "id": "MSFTSAML2",
-                    "lastModified": "2026-04-24T06:39:33.514Z",
+                    "lastModified": "2026-04-25T23:51:39.355Z",
                     "pluginDescriptorRef": {
                         "location": "https://localhost:-1/pf-admin-api/v1/sp/tokenGenerators/descriptors/org.sourceid.wstrust.generator.saml.Saml20TokenGenerator",
                         "id": "org.sourceid.wstrust.generator.saml.Saml20TokenGenerator"
@@ -2568,12 +2572,12 @@
                         "coreAttributes": [{"name": "SAML_SUBJECT"}],
                         "extendedAttributes": [
                             {"name": "vaultlocation"},
+                            {"name": "http://schemas.microsoft.com/LiveID/Federation/2008/05/ImmutableID"},
                             {"name": "scope"},
                             {"name": "groups"},
                             {"name": "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/upn"},
                             {"name": "given_name"},
                             {"name": "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress"},
-                            {"name": "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/ImmutableID"},
                             {"name": "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/IDPEmail"},
                             {"name": "family_name"},
                             {"name": "SAML_NAME_FORMAT"}
@@ -3861,10 +3865,24 @@
                 {
                     "sourceId": "TEST",
                     "targetId": "MSFT11",
-                    "attributeContractFulfillment": {"SAML_SUBJECT": {
-                        "source": {"type": "TOKEN_EXCHANGE_PROCESSOR_POLICY"},
-                        "value": "email"
-                    }},
+                    "attributeContractFulfillment": {
+                        "UPN": {
+                            "source": {"type": "TEXT"},
+                            "value": "nirving@ping.darkedges.com"
+                        },
+                        "ImmutableID": {
+                            "source": {"type": "TEXT"},
+                            "value": "ad55a34a-763f-358f-93f9-da86f9ecd9e4"
+                        },
+                        "emailaddress": {
+                            "source": {"type": "TEXT"},
+                            "value": "nirving@ping.darkedges.com"
+                        },
+                        "SAML_SUBJECT": {
+                            "source": {"type": "TEXT"},
+                            "value": "ad55a34a-763f-358f-93f9-da86f9ecd9e4"
+                        }
+                    },
                     "id": "TEST|MSFT11",
                     "attributeSources": [],
                     "issuanceCriteria": {"conditionalCriteria": []}
@@ -3874,34 +3892,28 @@
                     "targetId": "MSFTSAML2",
                     "attributeContractFulfillment": {
                         "vaultlocation": {"source": {"type": "NO_MAPPING"}},
+                        "http://schemas.microsoft.com/LiveID/Federation/2008/05/ImmutableID": {
+                            "source": {"type": "TEXT"},
+                            "value": "ad55a34a-763f-358f-93f9-da86f9ecd9e4"
+                        },
                         "scope": {"source": {"type": "NO_MAPPING"}},
                         "groups": {"source": {"type": "NO_MAPPING"}},
                         "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/upn": {
-                            "source": {"type": "TOKEN_EXCHANGE_PROCESSOR_POLICY"},
-                            "value": "email"
+                            "source": {"type": "TEXT"},
+                            "value": "nirving@ping.darkedges.com"
                         },
                         "given_name": {"source": {"type": "NO_MAPPING"}},
-                        "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/IDPEmail": {
-                            "source": {"type": "TOKEN_EXCHANGE_PROCESSOR_POLICY"},
-                            "value": "email"
-                        },
-                        "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/ImmutableID": {
-                            "source": {"type": "TEXT"},
-                            "value": "ad55a34a-763f-358f-93f9-da86f9ecd9e4"
-                        },
+                        "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/IDPEmail": {"source": {"type": "NO_MAPPING"}},
                         "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress": {
-                            "source": {"type": "TOKEN_EXCHANGE_PROCESSOR_POLICY"},
-                            "value": "email"
+                            "source": {"type": "TEXT"},
+                            "value": "nirving@ping.darkedges.com"
                         },
                         "SAML_SUBJECT": {
                             "source": {"type": "TEXT"},
-                            "value": "ad55a34a-763f-358f-93f9-da86f9ecd9e4"
+                            "value": "nirving@ping.darkedges.com"
                         },
                         "family_name": {"source": {"type": "NO_MAPPING"}},
-                        "SAML_NAME_FORMAT": {
-                            "source": {"type": "TEXT"},
-                            "value": "urn:oasis:names:tc:SAML:2.0:nameid-format:persistent"
-                        }
+                        "SAML_NAME_FORMAT": {"source": {"type": "NO_MAPPING"}}
                     },
                     "id": "TEST|MSFTSAML2",
                     "attributeSources": [],
@@ -4301,7 +4313,7 @@
                         "name": "ReferenceID",
                         "id": "K8pmeXX7ZA0dPr36zzpfHp1TP",
                         "handleFailuresLocally": true,
-                        "enabled": false,
+                        "enabled": true,
                         "rootNode": {
                             "children": [
                                 {"action": {
