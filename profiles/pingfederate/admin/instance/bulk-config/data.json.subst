@@ -674,6 +674,13 @@
                         {"name": "family_name"},
                         {"name": "email"}
                     ]
+                },
+                {
+                    "name": "TEST",
+                    "id": "yGNySmYCbNXMUFmg",
+                    "lastModified": "2026-04-27T08:02:47.276Z",
+                    "coreAttributes": [{"name": "subject"}],
+                    "extendedAttributes": []
                 }
             ],
             "resourceType": "/authenticationPolicyContracts"
