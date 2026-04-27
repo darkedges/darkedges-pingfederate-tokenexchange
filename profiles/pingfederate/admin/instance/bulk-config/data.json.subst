@@ -205,8 +205,8 @@
         {
             "operationType": "SAVE",
             "items": [{
-                "encryptedPassword": "eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2Iiwia2lkIjoiUWVzOVR5eTV5WiIsInZlcnNpb24iOiIxMi4zLjMuMSJ9..EzB7dFtvJbb0lA1GEiLAaQ.WA_v9YZTtRqpONDNFg8b43EfWZmXV8KKcZA0bYLWVCU.DvGB9Z4lwF502N5_7WHqrA",
-                "fileData": "MIIKYAIBAzCCCgoGCSqGSIb3DQEHAaCCCfsEggn3MIIJ8zCCBaoGCSqGSIb3DQEHAaCCBZsEggWXMIIFkzCCBY8GCyqGSIb3DQEMCgECoIIFQDCCBTwwZgYJKoZIhvcNAQUNMFkwOAYJKoZIhvcNAQUMMCsEFMTbZh7DQZiw4eMYWwUmxjGwzVWBAgInEAIBIDAMBggqhkiG9w0CCQUAMB0GCWCGSAFlAwQBKgQQ3aThHoTykY88hjOPVX4qLQSCBNBbsmBXnQPb9_LatO9mejlpPJUEN8Zj8493JjFk4bdch6smfC-bVkqUFj7KQvu98bIK1kxTscCo9wbojCASSWDJMfZvIpQtdZdpbm3GoKhp4gpJUxGfsXdVEGkT1ja4FcuaRp4B8KOzscao_KSsG2ATSlA8n9xqYo5fN3LLzPWwLWD7ArWOOykZZiM48z9Ef1Tt_kA3IUnnymKvBedqb6aMTFteUFlm3NBGYv9meVuQp3xnbzwPzCXZ3Pe5yCQnmeSQwArIdc-y9836B7aoNZ00ykraqv8zfvHMHpBayn8HHxH-dzibhW0OcpD84SoWlGtOGMsB6I2GBy4BqLYT3dAM5xWR42skhLX2lPWi7quMXkKp5QK3JlDCmLjAi7_TweztcZGLGUORtWYmlz7Ch2TYdkOs1D9y5xiNC4uUB5nYtKfKTeDZwqRoznQ70wyEBmNqmc_wTkeu8grLLyygmvjUZ94S3UyQ-wuoJ4TtWmibxU4yk6FqtZ8jFFT711t3eq6dRV0oKEGDNvifEDXPWlJUERLnTgBF8ffZPorOvo0A9qXXqCLVbOVy2eIPKmhqj1tEAu-SRdxyoDpmIuVIb0eNl1Oyi7veupF3JjGXWu3Vhb07EsI4FvAXuwyJSSf9xUBHcwXiOMjUhJqHx6STYn8HJC696Sm0IcS3YKAuSRXryYMsQ4ovB2e6KnZcJDi_xR2tC-g8KY8H7m-SM-Sk2wCE7vgTRxzHs8JAPKTkxTGTFOL-q0Nwp69lK2kcX2Qbs-bWpVwyvJpK-bl4O1ktsTu92G5jvA0p9BGKo1PMKYkrXlZ2BgT4ZQbYEBEd8uJ8wUJFZFTBPh_YxKOFgEMxkcIP-oKGhLK0mwxMsXGRA5hSNhlD5oxjF2j2REyJ0tnVQQ3q41S8zzQYj0NpIMCOklPhTvirKHafKPjvUpvMBHNpSQ3kaZE16qv0E9EwdIe2tot-f_K9j433vJmjHZM_Z2gqm3Cz7ZH0RqQ4GNZtACb2qS494sMIfnPCYx9n4wg2UBshrpE_dCdxgZr-c3da2D9YK_IJo5bWckhfEf9n4NueyeWl_pR4b3QFQtzEvHJV93ssvIdIAewZHYTYRgESLeQrSF--ckMbshhnIPu4zEfr6iiI2mJ8pGGEve45zJbaBS9A_L7eZVM2sudJ1gNTVOO4p4H5BDfFjsPcw1-8fkjd1K0cCwRpojInA-nxomJNKkTcBzdyksg8mjGNkytixNQQJaTAY6GTtG887dxDt9Qjj2eKfOaW7LiiNksaKQK8tA3BF3ZrowBQjDKhjGfBxPBYLtYJEpukPDt5Awi9YNaCMNx_buoQPGTIAHbvSUS9LfQV80BNZRa1KRvjJdkWyBznJJ70Z95yp9eafSrZa4-BaNPfDEh5tYya9QA4lz-R9QmhW5QiGOdtzw4VBOBMF7Dy-LKNMltvqHQTL7klIA9WNgs0A-91n9YeA_2vpYltnHcgpuQAHRV6CjzWCr2YgtAtL3mSNWsOlr0j44Q8h19h9ASnDtXvX4zADDZkmH-Di_-ovAU2Suh1rM-wwePfmnqBPqXUf7-8vdjnIHE9fNTYQhozH4XVObinvF_BsxsKQJa9wjwm32MNvnDPBzf2t-7bhbC2Xamd4BKJ2E9uTSPU0jE8MBcGCSqGSIb3DQEJFDEKHggAcABpAG4AZzAhBgkqhkiG9w0BCRUxFAQSVGltZSAxNzc3Mjc3MzM4MjQ1MIIEQQYJKoZIhvcNAQcGoIIEMjCCBC4CAQAwggQnBgkqhkiG9w0BBwEwZgYJKoZIhvcNAQUNMFkwOAYJKoZIhvcNAQUMMCsEFPGxrZ9p-hl1xr2R4E3X72xe7ywHAgInEAIBIDAMBggqhkiG9w0CCQUAMB0GCWCGSAFlAwQBKgQQcmYyTM6lFyboanjiGYTeIYCCA7BM5eBODkP-i_feIC_gRy6KwDAMDMNNHxv11DmkrfnkGLTCmwvOrzHleGINhTS74doKo1HR-PX-klFmulJcNsfbrxKZwzr3YuPRqoxzYdK0lp15305QkdhA3YiThkEE07aTSFvVYkZSw-ASUOMeB3gOL1DRjfeO7lg3DbUAFLMCs1zijW97MMlTO1wnkKPLAw2R3qzYU_b7ZI4cufM9j45dQrJf30tEPbv_gOsDmQUpgbZQQ2UW3LO7p1La54AyS1nFKrFfimNYGL9iaiGehhYXCq_JLptUYbjVw_QrUhPaMX8HyMq46zPlpdgW8aLEot5nFa_kAhI-GKud3TINCDTDIfvl7KSxoqjaAhqhBv8E0vUUcu-lwiH5BWSb3jgu0bxJwxVzvYkkfkvoBtEKAe5hSFX0P5gG66GXqKpF2yTuHwuBHttxuRzpYheV92B16yiqptDeLBeLN1sEOonh695ItKJEMahhNARal_8ndAA_JCa2jWt72xD_d-tmRwqkmVAky4IkuL1ZNGLnDPA_L4EU0Rj0GAPuzOqFrnwp8GrikZIQNa_a4nxN_Nebf9hCoTFOp2lIMDCBvzgVHOEviAH7Vl6Q37oCWbXqsRk8epLLmRu_iJtzC3sBmp_nYc8y2oSOF041tUq3kC5CrUdy04mehTZG1bIo3YW87WQkaPcofVSCw2_oGlqrEu2-MOuxbbgZkckqil4xjtZKz7MQ0_3WaijGYnzq86me5qOcf4p_WB-YQPnMKZVG5azmcbQRBfz_lSxpXpGaHMcC4xvT6GbC9SPerdpMCETBq12Dw2tb4f1vwlIJnn6-v6q4uFc0u89YNpgTkfd_wjJVppQyPYdOF7ExYG40IQv70ETYly13Jg7ni9tOHGDqcPsp14SxX694uhynpHKYuKWQd9yfCf-rTMBpijegyVEtJRZ4BV2enR2CT7tI2PNuTiuLQ2pqldnJe0F3WQQA-iRhn-1rfG7fY3V-85aMHFfxhkBM88JqLxqnDdM24BBGUqF66mLMQTxb1QOD2rp7IBBeAiTM4bSq_ABXW4JgLxh9zij2eb6QaHl3T7RKsyOBd6_V1lE84BvL8oDxA7PeDFjYc7HUxDQkK186VyrT3izehoE_kyh8XoSrApWXFR2lI_65THJ91722PzHJ6h2gAaNCej8Y3LRuR1TxdYvUMKwerKi2tttLdsy0qywb2R6kCYGA91NUtOPT-3ohriAZrK3qTZY1q_bGXe9h7TCUQET7flqyjDbIJjBNMDEwDQYJYIZIAWUDBAIBBQAEIHJFW5j8ZZzuK9H0bsKMTYc6oBduhg300cM63XrQ-eqqBBSiHHL9ANpMwFY55UUdvUtZES-L5AICJxA=",
+                "fileData": "MIIKYAIBAzCCCgoGCSqGSIb3DQEHAaCCCfsEggn3MIIJ8zCCBaoGCSqGSIb3DQEHAaCCBZsEggWXMIIFkzCCBY8GCyqGSIb3DQEMCgECoIIFQDCCBTwwZgYJKoZIhvcNAQUNMFkwOAYJKoZIhvcNAQUMMCsEFMCaYXkqDHxrXYACjyFaLxMmWpWmAgInEAIBIDAMBggqhkiG9w0CCQUAMB0GCWCGSAFlAwQBKgQQ0uWXkjhDIT7TgCB69LQjHQSCBNAUxXxHPv7Euuz4gUA_cYkb6G5gVRmwgRkPJbjUOdRQL3KqLJ29RSB80ArQ5tv9gLgw8gx2bUboVRrbSjPggqYZVvM1nt8D_CkoKHpuObbb-X7P7_HorxDaW3Qt5s7Wt1BgXzrkpNJn9hkBxhSAMNPPlB-XWkIBYTLaf8H-he1na6dI7M9JLXaGkVnpk_eJpWyZjnXjI0Pq2CR4jtfpEucCRlHwV8_2WP1cndYoxIoEw8tgIdaUM49_gCfaAZlBnYnfMnPNEg4pWpgEaWpAuUxN3JfUea8oXSyoOPnySwxW18Kbmwm61ajeAS3wJiIU-g-Q2apXjI2v_DLuQSNgSwk8l0BAA3e6bfhzqHGUHVpwc0L_XyQjIDt5d23LWBXfYwEyRAAN2wSN9fOkR51OV6ROglfRuthtgIBAPC4BUyTibusS-fELaIwsfuTSboyJ_9Rb5cO3cCpyJ-XLTO6I2fsAsYn3e2f0PRMnJehM0PtGRxsmG6-djGI1ByIM3NgJorkFUZ20Wvbwz0HrHxIoxlxnY18Db8U3rfugvr3pqzf_UzIZjBHRFie4jc3V2m6r1Lxo2s2YSIvUj5R2Rq9Iddr61X26bgXaLnI3G8TM0wCxOYVSpAm_Lmc3x5J0EIsCtvWlcUg4ZsO2wBPDeKM3j9kAPCcXTEusi0KhCWn5CleuXitR_qx6ALvF-lgbbfC9-z-bQfwxsWmykrDAuTEwelInF88k2k-VEqG5PavG99jyzAKr9GoR0qRULhM85Bldj_2-MXVRTt-y7l-1FJLmN3yGnd8FBpyZZqVLF9kUz7EoiT6xiFm_5SMH6wHGWF6Merl5HPR36tPEtIVMsmiPF48_v4tNzFn0qHKBxqXBhio9-4yRKN_gUgkgE55S5Ru7fV6JVmpbJOA1DZtJpf-mEyJXWjmMkr1vYbXxC_y3dDMOf_7rCLSoCkgFZsCV-qVeY_r0dLaTnJsfIb03AD1OfUihbk7yA-Q4htZQT4vRCeUGc3qu_mfuMP3jgk3ggxqgan1iMr8F5K9DRQYO5I1QCV_GUkySONWVOUR_Fxmu_DD443cRzCQCRTBftAxO9IoNOayWrMyf8LbMpt9RpAA3BPvJajz3_t7NJ1B9NQwR48PIR1-jWoZWAc21f_Fhpg9YJWHcFudypHID7aIUmPHKo8FeH5fZHOzzT6vFHyPQZYXygrZKBXK_pDlT0P8EJj_5tHt5mLZRzuKqbsBPE2CHXMc7-8_uZm-TWLSyjNfowyRzcA8M6-ua-X9YRhwTQolzaus656O8S8MTSDOXN8HIOEiBWZTtt2Bf-k9C_J-N5HE49Bj6zol6Py01Q6Y4BAfX7ZXhGEJYOpI09eYx62PdnYiE8buL2Wq_VVxhyWx2osH5hCthNECoGvdGc5nzCwq3UmEsXmG1DPmv7i2z03BICat84gNMfqm2K1Iegq6B0Jj4WvgxpURsxHDalI9uyhRKeEdZw3PoCsCn55e36tfckUyIj26Vy-kO87ZksPHALRslAadiSbTDdf-QKNlznMwxZy-wqkD0JWCwSiBb7XbDWANV1TVxRHvwiESah5z3mSjFEPflk6oTaZiPprDQkjpKU0qYik2sIHk_kMORLwZH6H1ZbhmKEWit5cwbKMcpvJODJjE8MBcGCSqGSIb3DQEJFDEKHggAcABpAG4AZzAhBgkqhkiG9w0BCRUxFAQSVGltZSAxNzc3Mjg4NzcxODE4MIIEQQYJKoZIhvcNAQcGoIIEMjCCBC4CAQAwggQnBgkqhkiG9w0BBwEwZgYJKoZIhvcNAQUNMFkwOAYJKoZIhvcNAQUMMCsEFNUcwSED5wAPSVq1VxzkKa9x2Zu5AgInEAIBIDAMBggqhkiG9w0CCQUAMB0GCWCGSAFlAwQBKgQQX3Gkrp-ItQ1ue-d-JAEyw4CCA7BdWKFn2npE5GHryY4fNPD5kcxTTTi4hCKIFFZeWiso097l0bMainkNtfRlqB-mnUou5FkwcRNU7jjiw0SM0Rj-BsUghMj7AseO3YZjDXokJ0HgPskAjavTRYyvmTHZh-JQjfRSaLlPLAls69cRPqWEVuMAfD9He3tF4pclTi-KDubcDS3WORf6FzRL_h6qZIeKL2-MM9sxbBMT8gs-JL4RWtcnlyC_SslWJHYmB-Oh5VbmFU9LJwRsPZ5s1PqTKtLj_9gSn3T29_2BO_H3I3OqZ_xW3zYF2OeQ4GRPV6aGT7lz7hsLr_iT1iUFJ3-2RVS1cWTQKCnmPi8E5bEum2lD38O2zcMqpbIcsSeMInnFb8GBTdXkYmqdK9B6n3rGjQrTG2gfp-gdijQqO2lqMGHJiM_LTV4dkYp14UjufhnY88D3pAbyIjlA2xI5MH23XrfOwhPQr6sOMCzKkiypMydVbd0XzB1lpN_12Yy-ZsoHDBSLSf6NpSHiRy05-C6GdZzr8c7sXG0-OkK8GvMVX5mzQ3TMhdJ65LwMwe8djGYZThwdjHjoyaqlS6b2tJ43bNANNTwEuIvLEVtiq8PaabR5Wqiht-N7ukk7etJ9r-m0Xo1qlpWWeUO4QMbWWC3OkR0RWgu48J9f4oqL_JBND84aE9RRFhDw-lKSdJVQy94f_yyLKLyW2Oc28jCxzM4Lm47MeIT9vTa4EBjkWMHeGY95cvSmgGjLMWPZi44KAR9XYdiOkz3m7g3VAgGm4sDI_rX6izRsBmAzoK5U3uX3gzi22Dbn9ILDxqddHLVuBNhrP4jkY0wefjpWxqlQYE8wzleiX8NIXHgrWGmuWmC4vqBcyncF0wL-cmQAneIOA1BTWWGxutDjTGZ0ztLbd-XXbMSBJMZTsjouHiMx-l1rgHN7yOGIqzN5sj5KZ-bJyZ5xntmF2oCb10Dq3_0pPr6ccKGzk8arKRUSs5y7I9PnNjyII-xd33Uc1yngErtbiDEx_trPYgr2yP1g3NSxFZuA28B8hWPXXd3dJdemI4YYHEvnldsQUAyE2rGVC-OpgkX_cCPYIfrDpIs6jOwIfQyc4bKDVebx22l-Ke_lcJosFpq-tJtVzO9_mNis1jvP_tZOpP7e12Z9Nfu3qovoUKZqcIqpQgq0oxg0ENkiFvMw_6ThLDXoNmbq4ovIL5OMskk0mWjWcwTZvYt-u04RIi9SQHfeO4P0c6Wecl01zHV7HcfZj0kqXB3Dfq2NfkLNpba7SDBNMDEwDQYJYIZIAWUDBAIBBQAEIHAdDrR8T0THUJsybW1H5rHTpcntGfT_6AU1Y22L4dBcBBT9gIKZSYq6__7YH6XzUBU8aatGSgICJxA=",
+                "encryptedPassword": "eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2Iiwia2lkIjoiUWVzOVR5eTV5WiIsInZlcnNpb24iOiIxMi4zLjMuMSJ9..eJcQ4L8Zh6UQK3Pv6veXPQ.rQj3xTneKycFHQyuLVWiC4y05oIZpir0n1sT_4EZC10.hVcinz_2TdDmTrGSkYYx1w",
                 "format": "PKCS12",
                 "id": "opwhgw67kdfprh5rjv8efdakc"
             }],
@@ -269,7 +269,7 @@
                     "readTimeout": 3000,
                     "name": "PingDirectory",
                     "useStartTLS": false,
-                    "lastModified": "2026-04-24T02:06:52.927Z",
+                    "lastModified": "2026-04-27T08:44:31.348Z",
                     "retryFailedOperations": false,
                     "userDN": "cn=administrator"
                 },
@@ -289,7 +289,7 @@
                     "name": "ProvisionerDS (sa)",
                     "connectionUrl": "jdbc:hsqldb:${pf.server.data.dir}${/}hypersonic${/}ProvisionerDefaultDB;hsqldb.lock_file=false",
                     "id": "ProvisionerDS",
-                    "lastModified": "2026-04-24T02:06:52.937Z",
+                    "lastModified": "2026-04-27T08:44:31.362Z",
                     "maxPoolSize": 100,
                     "blockingTimeout": 5000
                 }
@@ -475,10 +475,10 @@
                     "password": "${PING_IDENTITY_PASSWORD}",
                     "roles": [
                         "DATA_COLLECTION_ADMINISTRATOR",
+                        "CRYPTO_ADMINISTRATOR",
                         "ADMINISTRATOR",
                         "USER_ADMINISTRATOR",
-                        "EXPRESSION_ADMINISTRATOR",
-                        "CRYPTO_ADMINISTRATOR"
+                        "EXPRESSION_ADMINISTRATOR"
                     ],
                     "auditor": false,
                     "description": "Initial administrator user",
@@ -489,10 +489,10 @@
                     "password": "${administrativeAccounts_items_nirving_password}",
                     "roles": [
                         "DATA_COLLECTION_ADMINISTRATOR",
+                        "CRYPTO_ADMINISTRATOR",
                         "ADMINISTRATOR",
                         "USER_ADMINISTRATOR",
-                        "EXPRESSION_ADMINISTRATOR",
-                        "CRYPTO_ADMINISTRATOR"
+                        "EXPRESSION_ADMINISTRATOR"
                     ],
                     "auditor": false,
                     "description": "description",
@@ -641,7 +641,7 @@
                 {
                     "name": "POLICYCONTRACT",
                     "id": "KUzfpHBOZeqF0vVo",
-                    "lastModified": "2026-04-27T05:35:01.823Z",
+                    "lastModified": "2026-04-27T08:44:31.757Z",
                     "coreAttributes": [{"name": "subject"}],
                     "extendedAttributes": [
                         {"name": "entryUUID"},
@@ -658,17 +658,18 @@
                 {
                     "name": "WSFED",
                     "id": "atadCwboug6WtQml",
-                    "lastModified": "2026-04-24T02:06:53.268Z",
+                    "lastModified": "2026-04-27T08:44:31.762Z",
                     "coreAttributes": [{"name": "subject"}],
                     "extendedAttributes": []
                 },
                 {
                     "name": "MSFTPolicyContract",
                     "id": "hjtq1ujmcrCb1Unp",
-                    "lastModified": "2026-04-27T07:38:39.654Z",
+                    "lastModified": "2026-04-27T11:02:09.575Z",
                     "coreAttributes": [{"name": "subject"}],
                     "extendedAttributes": [
                         {"name": "name"},
+                        {"name": "groups"},
                         {"name": "given_name"},
                         {"name": "accessToken"},
                         {"name": "family_name"},
@@ -678,7 +679,7 @@
                 {
                     "name": "TEST",
                     "id": "yGNySmYCbNXMUFmg",
-                    "lastModified": "2026-04-27T08:02:47.276Z",
+                    "lastModified": "2026-04-27T08:44:31.764Z",
                     "coreAttributes": [{"name": "subject"}],
                     "extendedAttributes": []
                 }
@@ -889,7 +890,7 @@
                     },
                     "name": "AccessTokenManagement",
                     "id": "AccessTokenManagement",
-                    "lastModified": "2026-04-24T02:06:53.352Z",
+                    "lastModified": "2026-04-27T08:44:31.854Z",
                     "pluginDescriptorRef": {
                         "location": "https://localhost:-1/pf-admin-api/v1/oauth/accessTokenManagers/descriptors/com.pingidentity.pf.access.token.management.plugins.JwtBearerAccessTokenManagementPlugin",
                         "id": "com.pingidentity.pf.access.token.management.plugins.JwtBearerAccessTokenManagementPlugin"
@@ -924,6 +925,260 @@
                             {
                                 "name": "groups",
                                 "multiValued": true
+                            },
+                            {
+                                "name": "given_name",
+                                "multiValued": false
+                            },
+                            {
+                                "name": "family_name",
+                                "multiValued": false
+                            },
+                            {
+                                "name": "email",
+                                "multiValued": false
+                            }
+                        ]
+                    },
+                    "selectionSettings": {"resourceUris": []}
+                },
+                {
+                    "sequenceNumber": 1195845,
+                    "sessionValidationSettings": {
+                        "updateAuthnSessionActivity": false,
+                        "checkValidAuthnSession": false,
+                        "includeSessionId": false,
+                        "checkSessionRevocationStatus": false
+                    },
+                    "configuration": {
+                        "tables": [
+                            {
+                                "name": "Symmetric Keys",
+                                "rows": []
+                            },
+                            {
+                                "name": "Certificates",
+                                "rows": []
+                            }
+                        ],
+                        "fields": [
+                            {
+                                "name": "Token Lifetime",
+                                "value": "120"
+                            },
+                            {
+                                "name": "Use Centralized Signing Key",
+                                "value": "true"
+                            },
+                            {
+                                "name": "JWS Algorithm",
+                                "value": "RS256"
+                            },
+                            {
+                                "name": "Active Symmetric Key ID",
+                                "value": ""
+                            },
+                            {
+                                "name": "Active Signing Certificate Key ID",
+                                "value": ""
+                            },
+                            {
+                                "name": "JWE Algorithm",
+                                "value": ""
+                            },
+                            {
+                                "name": "JWE Content Encryption Algorithm",
+                                "value": ""
+                            },
+                            {
+                                "name": "Active Symmetric Encryption Key ID",
+                                "value": ""
+                            },
+                            {
+                                "name": "Asymmetric Encryption Key",
+                                "value": ""
+                            },
+                            {
+                                "name": "Asymmetric Encryption JWKS URL",
+                                "value": ""
+                            },
+                            {
+                                "name": "Enable Token Revocation",
+                                "value": "false"
+                            },
+                            {
+                                "name": "Include Key ID Header Parameter",
+                                "value": "true"
+                            },
+                            {
+                                "name": "Include X.509 Thumbprint Header Parameter",
+                                "value": ""
+                            },
+                            {
+                                "name": "Default JWKS URL Cache Duration",
+                                "value": "720"
+                            },
+                            {
+                                "name": "Include JWE Key ID Header Parameter",
+                                "value": "true"
+                            },
+                            {
+                                "name": "Include JWE X.509 Thumbprint Header Parameter",
+                                "value": ""
+                            },
+                            {
+                                "name": "Client ID Claim Name",
+                                "value": "client_id"
+                            },
+                            {
+                                "name": "Scope Claim Name",
+                                "value": "scope"
+                            },
+                            {
+                                "name": "Space Delimit Scope Values",
+                                "value": "true"
+                            },
+                            {
+                                "name": "Authorization Details Claim Name",
+                                "value": "authorization_details"
+                            },
+                            {
+                                "name": "Issuer Claim Value",
+                                "value": ""
+                            },
+                            {
+                                "name": "Audience Claim Value",
+                                "value": ""
+                            },
+                            {
+                                "name": "Not Before Claim Offset",
+                                "value": ""
+                            },
+                            {
+                                "name": "Include Issued At Claim",
+                                "value": "true"
+                            },
+                            {
+                                "name": "JWT ID Claim Length",
+                                "value": "22"
+                            },
+                            {
+                                "name": "Access Grant GUID Claim Name",
+                                "value": ""
+                            },
+                            {
+                                "name": "Publish Keys to the PingFederate JWKS Endpoint",
+                                "value": "false"
+                            },
+                            {
+                                "name": "JWKS Endpoint Path",
+                                "value": ""
+                            },
+                            {
+                                "name": "JWKS Endpoint Cache Duration",
+                                "value": "720"
+                            },
+                            {
+                                "name": "Publish Key ID X.509 URL",
+                                "value": ""
+                            },
+                            {
+                                "name": "Publish Thumbprint X.509 URL",
+                                "value": ""
+                            },
+                            {
+                                "name": "Expand Scope Groups",
+                                "value": "false"
+                            },
+                            {
+                                "name": "Type Header Value",
+                                "value": ""
+                            }
+                        ]
+                    },
+                    "tokenEndpointAttributeContract": {
+                        "inherited": false,
+                        "attributes": [
+                            {
+                                "name": "sub",
+                                "multiValued": false,
+                                "mappedScopes": []
+                            },
+                            {
+                                "name": "aud",
+                                "multiValued": false,
+                                "mappedScopes": []
+                            },
+                            {
+                                "name": "scope",
+                                "multiValued": false,
+                                "mappedScopes": []
+                            },
+                            {
+                                "name": "name",
+                                "multiValued": false,
+                                "mappedScopes": []
+                            },
+                            {
+                                "name": "groups",
+                                "multiValued": false,
+                                "mappedScopes": []
+                            },
+                            {
+                                "name": "given_name",
+                                "multiValued": false,
+                                "mappedScopes": []
+                            },
+                            {
+                                "name": "family_name",
+                                "multiValued": false,
+                                "mappedScopes": []
+                            },
+                            {
+                                "name": "email",
+                                "multiValued": false,
+                                "mappedScopes": []
+                            }
+                        ]
+                    },
+                    "name": "MSFTACCESSTOKEN",
+                    "id": "MSFTACCESSTOKEN",
+                    "lastModified": "2026-04-27T10:23:37.510Z",
+                    "pluginDescriptorRef": {
+                        "location": "https://localhost:-1/pf-admin-api/v1/oauth/accessTokenManagers/descriptors/com.pingidentity.pf.access.token.management.plugins.JwtBearerAccessTokenManagementPlugin",
+                        "id": "com.pingidentity.pf.access.token.management.plugins.JwtBearerAccessTokenManagementPlugin"
+                    },
+                    "accessControlSettings": {
+                        "restrictClients": false,
+                        "allowedClients": []
+                    },
+                    "attributeContract": {
+                        "defaultSubjectAttribute": "sub",
+                        "coreAttributes": [],
+                        "extendedAttributes": [
+                            {
+                                "name": "sub",
+                                "multiValued": false
+                            },
+                            {
+                                "name": "aud",
+                                "multiValued": false
+                            },
+                            {
+                                "name": "msftAccessToken",
+                                "multiValued": false
+                            },
+                            {
+                                "name": "scope",
+                                "multiValued": false
+                            },
+                            {
+                                "name": "name",
+                                "multiValued": false
+                            },
+                            {
+                                "name": "groups",
+                                "multiValued": false
                             },
                             {
                                 "name": "given_name",
@@ -1112,7 +1367,7 @@
                     },
                     "name": "JSON Web Tokens",
                     "id": "jwt",
-                    "lastModified": "2026-04-24T02:06:53.342Z",
+                    "lastModified": "2026-04-27T08:44:31.844Z",
                     "pluginDescriptorRef": {
                         "location": "https://localhost:-1/pf-admin-api/v1/oauth/accessTokenManagers/descriptors/com.pingidentity.pf.access.token.management.plugins.JwtBearerAccessTokenManagementPlugin",
                         "id": "com.pingidentity.pf.access.token.management.plugins.JwtBearerAccessTokenManagementPlugin"
@@ -1278,7 +1533,7 @@
                     },
                     "name": "IDENTIFIERFIRST",
                     "id": "IDENTIFIERFIRST",
-                    "lastModified": "2026-04-24T02:06:53.459Z",
+                    "lastModified": "2026-04-27T08:44:31.965Z",
                     "pluginDescriptorRef": {
                         "location": "https://localhost:-1/pf-admin-api/v1/idp/adapters/descriptors/com.pingidentity.adapters.identifierfirst.idp.IdentifierFirstAdapter",
                         "id": "com.pingidentity.adapters.identifierfirst.idp.IdentifierFirstAdapter"
@@ -1592,7 +1847,7 @@
                     },
                     "name": "PINGID",
                     "id": "PINGID",
-                    "lastModified": "2026-04-24T02:06:53.494Z",
+                    "lastModified": "2026-04-27T08:44:32.004Z",
                     "pluginDescriptorRef": {
                         "location": "https://localhost:-1/pf-admin-api/v1/idp/adapters/descriptors/com.pingidentity.adapters.pingid.PingIDAdapter",
                         "id": "com.pingidentity.adapters.pingid.PingIDAdapter"
@@ -1905,7 +2160,7 @@
                     },
                     "name": "ReferenceID",
                     "id": "ReferenceID",
-                    "lastModified": "2026-04-24T02:06:53.723Z",
+                    "lastModified": "2026-04-27T08:44:32.252Z",
                     "pluginDescriptorRef": {
                         "location": "https://localhost:-1/pf-admin-api/v1/idp/adapters/descriptors/com.pingidentity.pf.adapters.referenceid.IdpBackchannelReferenceAuthnAdapter",
                         "id": "com.pingidentity.pf.adapters.referenceid.IdpBackchannelReferenceAuthnAdapter"
@@ -2079,7 +2334,7 @@
                 },
                 "name": "OPENTOKEN",
                 "id": "OPENTOKEN",
-                "lastModified": "2026-04-24T02:06:53.754Z",
+                "lastModified": "2026-04-27T08:44:32.278Z",
                 "targetApplicationInfo": {},
                 "pluginDescriptorRef": {
                     "location": "https://localhost:-1/pf-admin-api/v1/sp/adapters/descriptors/com.pingidentity.adapters.opentoken.SpAuthnAdapter",
@@ -2195,7 +2450,7 @@
                     },
                     "name": "MSFTTOKENPROCESSOR",
                     "id": "MSFTTOKENPROCESSOR",
-                    "lastModified": "2026-04-24T02:06:53.777Z",
+                    "lastModified": "2026-04-27T08:44:32.330Z",
                     "pluginDescriptorRef": {
                         "location": "https://localhost:-1/pf-admin-api/v1/idp/tokenProcessors/descriptors/com.pingidentity.pf.tokenprocessors.jwt.JwtTokenProcessor",
                         "id": "com.pingidentity.pf.tokenprocessors.jwt.JwtTokenProcessor"
@@ -2279,7 +2534,7 @@
                     },
                     "name": "PFActorSubject",
                     "id": "PFActorSubject",
-                    "lastModified": "2026-04-24T02:06:53.815Z",
+                    "lastModified": "2026-04-27T08:44:32.346Z",
                     "pluginDescriptorRef": {
                         "location": "https://localhost:-1/pf-admin-api/v1/idp/tokenProcessors/descriptors/com.pingidentity.pf.tokenprocessors.jwt.JwtTokenProcessor",
                         "id": "com.pingidentity.pf.tokenprocessors.jwt.JwtTokenProcessor"
@@ -2369,7 +2624,7 @@
                     },
                     "name": "PFSubjectProcessor",
                     "id": "PFSubjectProcessor",
-                    "lastModified": "2026-04-24T02:06:53.830Z",
+                    "lastModified": "2026-04-27T08:44:32.355Z",
                     "pluginDescriptorRef": {
                         "location": "https://localhost:-1/pf-admin-api/v1/idp/tokenProcessors/descriptors/com.pingidentity.pf.tokenprocessors.jwt.JwtTokenProcessor",
                         "id": "com.pingidentity.pf.tokenprocessors.jwt.JwtTokenProcessor"
@@ -2424,7 +2679,7 @@
                     },
                     "name": "PFTOKENPROCESSOR",
                     "id": "PFTOKENPROCESSOR",
-                    "lastModified": "2026-04-24T02:06:53.839Z",
+                    "lastModified": "2026-04-27T08:44:32.364Z",
                     "pluginDescriptorRef": {
                         "location": "https://localhost:-1/pf-admin-api/v1/idp/tokenProcessors/descriptors/org.sourceid.wstrust.processor.oauth.BearerAccessTokenTokenProcessor",
                         "id": "org.sourceid.wstrust.processor.oauth.BearerAccessTokenTokenProcessor"
@@ -2527,7 +2782,7 @@
                     },
                     "name": "MSFT1.1",
                     "id": "MSFT11",
-                    "lastModified": "2026-04-25T22:45:36.249Z",
+                    "lastModified": "2026-04-27T08:44:32.379Z",
                     "pluginDescriptorRef": {
                         "location": "https://localhost:-1/pf-admin-api/v1/sp/tokenGenerators/descriptors/org.sourceid.wstrust.generator.saml.Saml11TokenGenerator",
                         "id": "org.sourceid.wstrust.generator.saml.Saml11TokenGenerator"
@@ -2593,7 +2848,7 @@
                     },
                     "name": "MSFTSAML2",
                     "id": "MSFTSAML2",
-                    "lastModified": "2026-04-25T23:51:39.355Z",
+                    "lastModified": "2026-04-27T08:44:32.388Z",
                     "pluginDescriptorRef": {
                         "location": "https://localhost:-1/pf-admin-api/v1/sp/tokenGenerators/descriptors/org.sourceid.wstrust.generator.saml.Saml20TokenGenerator",
                         "id": "org.sourceid.wstrust.generator.saml.Saml20TokenGenerator"
@@ -2743,7 +2998,7 @@
                 {
                     "oidcClientCredentials": {
                         "clientId": "edd9f241-d550-4de8-845d-3fa299090014",
-                        "encryptedSecret": "eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2Iiwia2lkIjoiUWVzOVR5eTV5WiIsInZlcnNpb24iOiIxMi4zLjMuMSJ9..dPrCPn5WWrd9VvY1jEnKgQ.7dE3LJVe-OGR1oxLBFunO_qVRJ3tecECMjj8rCMqhMEYW6TZOzUJHG5uIgb4aUsW.DBww73Bzx5fYs-cbiQMzXQ"
+                        "secret": "${sp_idpConnections_items_DE1tYZvaS4_owYq4rswyLPA3cNP_oidcClientCredentials_edd9f241_d550_4de8_845d_3fa299090014_secret}"
                     },
                     "additionalAllowedEntitiesConfiguration": {
                         "additionalAllowedEntities": [],
@@ -2756,46 +3011,75 @@
                     "loggingMode": "STANDARD",
                     "replicationStatus": "REPLICATED",
                     "type": "IDP",
-                    "creationDate": "2026-04-27T07:00:03.513Z",
+                    "creationDate": "2026-04-27T08:44:32.575Z",
                     "errorPageMsgId": "errorDetail.spSsoFailure",
-                    "modificationDate": "2026-04-27T07:54:23.106Z",
+                    "modificationDate": "2026-04-27T11:09:33.451Z",
                     "name": "MSFTOAuth",
                     "id": "DE1tYZvaS4-owYq4rswyLPA3cNP",
                     "idpBrowserSso": {
                         "protocol": "OIDC",
                         "oauthAuthenticationPolicyContractRef": {
-                            "location": "https://localhost:-1/pf-admin-api/v1/authenticationPolicyContracts/KUzfpHBOZeqF0vVo",
-                            "id": "KUzfpHBOZeqF0vVo"
+                            "location": "https://localhost:-1/pf-admin-api/v1/authenticationPolicyContracts/hjtq1ujmcrCb1Unp",
+                            "id": "hjtq1ujmcrCb1Unp"
                         },
                         "authenticationPolicyContractMappings": [{
                             "restrictedVirtualServerIds": [],
                             "authenticationPolicyContractRef": {
-                                "location": "https://localhost:-1/pf-admin-api/v1/authenticationPolicyContracts/KUzfpHBOZeqF0vVo",
-                                "id": "KUzfpHBOZeqF0vVo"
+                                "location": "https://localhost:-1/pf-admin-api/v1/authenticationPolicyContracts/hjtq1ujmcrCb1Unp",
+                                "id": "hjtq1ujmcrCb1Unp"
                             },
                             "restrictVirtualServerIds": false,
                             "attributeContractFulfillment": {
-                                "entryUUID": {"source": {"type": "NO_MAPPING"}},
-                                "vaultlocation": {
+                                "subject": {
+                                    "source": {"type": "CLAIMS"},
+                                    "value": "email"
+                                },
+                                "name": {
+                                    "source": {"type": "LDAP_DATA_STORE"},
+                                    "value": "cn"
+                                },
+                                "groups": {
+                                    "source": {"type": "EXPRESSION"},
+                                    "value": "#log = @org.apache.commons.logging.LogFactory@getLog(\"com.pingidentity.ognl.logger\"),\n#groupList = new java.util.ArrayList(),\n#groups = #this.get(\"ds.isMemberOf\")!=null?#this.get(\"ds.isMemberOf\").getValues():{},\n#groups.{\n    #group = #this, #group = new javax.naming.ldap.LdapName(#group),\n    #cn = #group.getRdn(#group.size() - 1).getValue().toString(),\n    #group = #cn.toLowerCase(),\n    #groupList.add(#cn)\n},\n#log.debug(\"groups: \"+#groupList),\n#groupList"
+                                },
+                                "accessToken": {
                                     "source": {"type": "CONTEXT"},
                                     "value": "accessToken"
                                 },
-                                "uid": {
-                                    "source": {"type": "CLAIMS"},
-                                    "value": "sub"
+                                "given_name": {
+                                    "source": {"type": "LDAP_DATA_STORE"},
+                                    "value": "givenName"
                                 },
-                                "telephoneNumber": {"source": {"type": "NO_MAPPING"}},
-                                "mail": {"source": {"type": "NO_MAPPING"}},
-                                "subject": {
-                                    "source": {"type": "CLAIMS"},
-                                    "value": "sub"
+                                "family_name": {
+                                    "source": {"type": "LDAP_DATA_STORE"},
+                                    "value": "sn"
                                 },
-                                "givenName": {"source": {"type": "NO_MAPPING"}},
-                                "groups": {"source": {"type": "NO_MAPPING"}},
-                                "cn": {"source": {"type": "NO_MAPPING"}},
-                                "sn": {"source": {"type": "NO_MAPPING"}}
+                                "email": {
+                                    "source": {"type": "CLAIMS"},
+                                    "value": "email"
+                                }
                             },
-                            "attributeSources": [],
+                            "attributeSources": [{
+                                "memberOfNestedGroup": false,
+                                "binaryAttributeSettings": {},
+                                "searchScope": "SUBTREE",
+                                "dataStoreRef": {
+                                    "location": "https://localhost:-1/pf-admin-api/v1/dataStores/LDAP-4D65BD30F2946A712E86940F0F7442EDCDC16646",
+                                    "id": "LDAP-4D65BD30F2946A712E86940F0F7442EDCDC16646"
+                                },
+                                "description": "LDAP",
+                                "searchAttributes": [
+                                    "cn",
+                                    "givenName",
+                                    "isMemberOf",
+                                    "sn",
+                                    "Subject DN",
+                                    "telephoneNumber"
+                                ],
+                                "type": "LDAP",
+                                "baseDn": "ou=people,dc=example,dc=com",
+                                "searchFilter": "mail=${email}"
+                            }],
                             "issuanceCriteria": {"conditionalCriteria": []}
                         }],
                         "oidcProviderSettings": {
@@ -2856,6 +3140,10 @@
                                 },
                                 {
                                     "masked": false,
+                                    "name": "given_name"
+                                },
+                                {
+                                    "masked": false,
                                     "name": "nonce"
                                 },
                                 {
@@ -2893,6 +3181,10 @@
                                 {
                                     "masked": false,
                                     "name": "iat"
+                                },
+                                {
+                                    "masked": false,
+                                    "name": "family_name"
                                 },
                                 {
                                     "masked": false,
@@ -2980,7 +3272,7 @@
                     "loggingMode": "STANDARD",
                     "replicationStatus": "REPLICATED",
                     "type": "IDP",
-                    "creationDate": "2026-04-24T02:06:54.052Z",
+                    "creationDate": "2026-04-27T08:44:32.708Z",
                     "metadataReloadSettings": {
                         "metadataUrlRef": {
                             "location": "https://localhost:-1/pf-admin-api/v1/metadataUrls/XIKWXU2tAiRLhMjbBACRL9gav",
@@ -2990,7 +3282,7 @@
                     },
                     "errorPageMsgId": "errorDetail.spSsoFailure",
                     "baseUrl": "https://login.microsoftonline.com",
-                    "modificationDate": "2026-04-27T06:44:48.485Z",
+                    "modificationDate": "2026-04-27T08:44:32.708Z",
                     "virtualEntityIds": [],
                     "name": "https://sts.windows.net/4161be3f-bf2b-41d4-a02b-e6f82b529d53/",
                     "id": "uxXlcpG9H1CGfh11FJHAT6PF-EM",
@@ -3081,22 +3373,21 @@
                             }]
                         },
                         "incomingBindings": [
-                            "REDIRECT",
+                            "SOAP",
                             "POST",
-                            "SOAP"
+                            "REDIRECT"
                         ],
                         "protocol": "SAML20",
                         "assertionsSigned": false,
                         "signAuthnRequests": false,
                         "enabledProfiles": [
-                            "SP_INITIATED_SSO",
-                            "SP_INITIATED_SLO",
                             "IDP_INITIATED_SSO",
-                            "IDP_INITIATED_SLO"
+                            "IDP_INITIATED_SLO",
+                            "SP_INITIATED_SLO",
+                            "SP_INITIATED_SSO"
                         ],
                         "adapterMappings": []
-                    },
-                    "licenseConnectionGroup": ""
+                    }
                 }
             ],
             "resourceType": "/sp/idpConnections"
@@ -3239,9 +3530,9 @@
                     "loggingMode": "STANDARD",
                     "replicationStatus": "REPLICATED",
                     "type": "SP",
-                    "creationDate": "2026-04-24T02:06:54.609Z",
+                    "creationDate": "2026-04-27T08:44:33.273Z",
                     "connectionTargetType": "STANDARD",
-                    "modificationDate": "2026-04-24T02:06:54.609Z",
+                    "modificationDate": "2026-04-27T08:44:33.273Z",
                     "virtualEntityIds": [],
                     "name": "MSFT",
                     "id": "NnBCB0gQ0kl-wPyeFjyUHP7rFys"
@@ -3367,10 +3658,10 @@
                             ]
                         },
                         "incomingBindings": [
-                            "REDIRECT",
+                            "SOAP",
                             "POST",
                             "ARTIFACT",
-                            "SOAP"
+                            "REDIRECT"
                         ],
                         "artifact": {"resolverLocations": [{
                             "index": 0,
@@ -3380,10 +3671,10 @@
                         "spSamlIdentityMapping": "STANDARD",
                         "signAssertions": true,
                         "enabledProfiles": [
-                            "SP_INITIATED_SSO",
-                            "SP_INITIATED_SLO",
                             "IDP_INITIATED_SSO",
-                            "IDP_INITIATED_SLO"
+                            "IDP_INITIATED_SLO",
+                            "SP_INITIATED_SLO",
+                            "SP_INITIATED_SSO"
                         ],
                         "signResponseAsRequired": true,
                         "adapterMappings": [],
@@ -3396,13 +3687,12 @@
                     "loggingMode": "STANDARD",
                     "replicationStatus": "REPLICATED",
                     "type": "SP",
-                    "creationDate": "2026-04-24T02:06:54.736Z",
+                    "creationDate": "2026-04-27T08:44:33.358Z",
                     "connectionTargetType": "STANDARD",
-                    "modificationDate": "2026-04-27T05:59:42.863Z",
+                    "modificationDate": "2026-04-27T08:44:33.358Z",
                     "virtualEntityIds": [],
                     "name": "MSFTSAML",
-                    "id": "guPVKZrBz4Wh_7gfCdZKVnJ_5k5",
-                    "licenseConnectionGroup": ""
+                    "id": "guPVKZrBz4Wh_7gfCdZKVnJ_5k5"
                 }
             ],
             "resourceType": "/idp/spConnections"
@@ -3498,25 +3788,46 @@
         },
         {
             "operationType": "SAVE",
-            "items": [{
-                "authenticationPolicyContractRef": {
-                    "location": "https://localhost:-1/pf-admin-api/v1/authenticationPolicyContracts/KUzfpHBOZeqF0vVo",
-                    "id": "KUzfpHBOZeqF0vVo"
-                },
-                "attributeContractFulfillment": {
-                    "USER_NAME": {
-                        "source": {"type": "AUTHENTICATION_POLICY_CONTRACT"},
-                        "value": "subject"
+            "items": [
+                {
+                    "authenticationPolicyContractRef": {
+                        "location": "https://localhost:-1/pf-admin-api/v1/authenticationPolicyContracts/KUzfpHBOZeqF0vVo",
+                        "id": "KUzfpHBOZeqF0vVo"
                     },
-                    "USER_KEY": {
-                        "source": {"type": "AUTHENTICATION_POLICY_CONTRACT"},
-                        "value": "subject"
-                    }
+                    "attributeContractFulfillment": {
+                        "USER_NAME": {
+                            "source": {"type": "AUTHENTICATION_POLICY_CONTRACT"},
+                            "value": "subject"
+                        },
+                        "USER_KEY": {
+                            "source": {"type": "AUTHENTICATION_POLICY_CONTRACT"},
+                            "value": "subject"
+                        }
+                    },
+                    "id": "KUzfpHBOZeqF0vVo",
+                    "attributeSources": [],
+                    "issuanceCriteria": {"conditionalCriteria": []}
                 },
-                "id": "KUzfpHBOZeqF0vVo",
-                "attributeSources": [],
-                "issuanceCriteria": {"conditionalCriteria": []}
-            }],
+                {
+                    "authenticationPolicyContractRef": {
+                        "location": "https://localhost:-1/pf-admin-api/v1/authenticationPolicyContracts/hjtq1ujmcrCb1Unp",
+                        "id": "hjtq1ujmcrCb1Unp"
+                    },
+                    "attributeContractFulfillment": {
+                        "USER_NAME": {
+                            "source": {"type": "AUTHENTICATION_POLICY_CONTRACT"},
+                            "value": "subject"
+                        },
+                        "USER_KEY": {
+                            "source": {"type": "AUTHENTICATION_POLICY_CONTRACT"},
+                            "value": "subject"
+                        }
+                    },
+                    "id": "hjtq1ujmcrCb1Unp",
+                    "attributeSources": [],
+                    "issuanceCriteria": {"conditionalCriteria": []}
+                }
+            ],
             "resourceType": "/oauth/authenticationPolicyContractMappings"
         },
         {
@@ -3526,266 +3837,486 @@
         },
         {
             "operationType": "SAVE",
-            "items": [{
-                "returnIdTokenOnTokenExchangeGrant": true,
-                "idTokenTypHeaderValue": "",
-                "scopeAttributeMappings": {"profile": {"values": [
-                    "birthdate",
-                    "email",
-                    "family_name",
-                    "gender",
-                    "given_name",
-                    "groups",
-                    "locale",
-                    "middle_name",
-                    "name",
-                    "nickname",
-                    "phone_number",
-                    "picture",
-                    "preferred_username",
-                    "profile",
-                    "updated_at",
-                    "vaultlocation",
-                    "website",
-                    "zoneinfo"
-                ]}},
-                "returnIdTokenOnRefreshGrant": false,
-                "includeSriInIdToken": false,
-                "includeSHashInIdToken": false,
-                "includeUserInfoInIdToken": false,
-                "attributeContract": {
-                    "coreAttributes": [{
-                        "name": "sub",
-                        "multiValued": false
-                    }],
-                    "extendedAttributes": [
-                        {
-                            "includeInUserInfo": true,
-                            "name": "zoneinfo",
-                            "includeInIdToken": true,
+            "items": [
+                {
+                    "returnIdTokenOnTokenExchangeGrant": false,
+                    "idTokenTypHeaderValue": "",
+                    "scopeAttributeMappings": {"profile": {"values": [
+                        "birthdate",
+                        "family_name",
+                        "gender",
+                        "given_name",
+                        "groups",
+                        "locale",
+                        "middle_name",
+                        "name",
+                        "nickname",
+                        "phone_number",
+                        "picture",
+                        "preferred_username",
+                        "profile",
+                        "updated_at",
+                        "website",
+                        "zoneinfo"
+                    ]}},
+                    "returnIdTokenOnRefreshGrant": false,
+                    "includeSriInIdToken": false,
+                    "includeSHashInIdToken": false,
+                    "includeUserInfoInIdToken": true,
+                    "attributeContract": {
+                        "coreAttributes": [{
+                            "name": "sub",
                             "multiValued": false
-                        },
-                        {
-                            "name": "address.locality",
-                            "multiValued": false
-                        },
-                        {
-                            "name": "birthdate",
-                            "multiValued": false
-                        },
-                        {
-                            "name": "gender",
-                            "multiValued": false
-                        },
-                        {
-                            "name": "preferred_username",
-                            "multiValued": false
-                        },
-                        {
-                            "name": "locale",
-                            "multiValued": false
-                        },
-                        {
-                            "name": "address.country",
-                            "multiValued": false
-                        },
-                        {
-                            "name": "updated_at",
-                            "multiValued": false
-                        },
-                        {
-                            "name": "address.postal_code",
-                            "multiValued": false
-                        },
-                        {
-                            "name": "address.region",
-                            "multiValued": false
-                        },
-                        {
-                            "name": "nickname",
-                            "multiValued": false
-                        },
-                        {
-                            "includeInUserInfo": true,
-                            "name": "email",
-                            "includeInIdToken": true,
-                            "multiValued": false
-                        },
-                        {
-                            "includeInUserInfo": true,
-                            "name": "vaultlocation",
-                            "includeInIdToken": true,
-                            "multiValued": false
-                        },
-                        {
-                            "name": "website",
-                            "multiValued": false
-                        },
-                        {
-                            "name": "email_verified",
-                            "multiValued": false
-                        },
-                        {
-                            "name": "profile",
-                            "multiValued": false
-                        },
-                        {
-                            "includeInUserInfo": true,
-                            "name": "groups",
-                            "includeInIdToken": true,
-                            "multiValued": false
-                        },
-                        {
-                            "name": "phone_number_verified",
-                            "multiValued": false
-                        },
-                        {
-                            "includeInUserInfo": true,
-                            "name": "given_name",
-                            "includeInIdToken": true,
-                            "multiValued": false
-                        },
-                        {
-                            "name": "middle_name",
-                            "multiValued": false
-                        },
-                        {
-                            "name": "picture",
-                            "multiValued": false
-                        },
-                        {
-                            "includeInUserInfo": true,
-                            "name": "name",
-                            "includeInIdToken": true,
-                            "multiValued": false
-                        },
-                        {
-                            "includeInUserInfo": true,
-                            "name": "phone_number",
-                            "includeInIdToken": true,
-                            "multiValued": false
-                        },
-                        {
-                            "name": "address.formatted",
-                            "multiValued": false
-                        },
-                        {
-                            "includeInUserInfo": true,
-                            "name": "family_name",
-                            "includeInIdToken": true,
-                            "multiValued": false
-                        },
-                        {
-                            "name": "address.street_address",
-                            "multiValued": false
-                        }
-                    ]
-                },
-                "attributeMapping": {
-                    "attributeContractFulfillment": {
-                        "sub": {
-                            "source": {"type": "TOKEN"},
-                            "value": "sub"
-                        },
-                        "zoneinfo": {"source": {"type": "NO_MAPPING"}},
-                        "address.locality": {"source": {"type": "NO_MAPPING"}},
-                        "birthdate": {"source": {"type": "NO_MAPPING"}},
-                        "gender": {"source": {"type": "NO_MAPPING"}},
-                        "preferred_username": {"source": {"type": "NO_MAPPING"}},
-                        "locale": {"source": {"type": "NO_MAPPING"}},
-                        "address.country": {"source": {"type": "NO_MAPPING"}},
-                        "updated_at": {"source": {"type": "NO_MAPPING"}},
-                        "address.postal_code": {"source": {"type": "NO_MAPPING"}},
-                        "address.region": {"source": {"type": "NO_MAPPING"}},
-                        "nickname": {"source": {"type": "NO_MAPPING"}},
-                        "email": {
-                            "source": {
-                                "id": "PINGDIRECTORY",
-                                "type": "LDAP_DATA_STORE"
+                        }],
+                        "extendedAttributes": [
+                            {
+                                "name": "zoneinfo",
+                                "multiValued": false
                             },
-                            "value": "mail"
-                        },
-                        "vaultlocation": {
-                            "source": {"type": "TOKEN"},
-                            "value": "vaultlocation"
-                        },
-                        "website": {"source": {"type": "NO_MAPPING"}},
-                        "email_verified": {"source": {"type": "NO_MAPPING"}},
-                        "profile": {"source": {"type": "NO_MAPPING"}},
-                        "groups": {
-                            "source": {"type": "TOKEN"},
-                            "value": "groups"
-                        },
-                        "phone_number_verified": {"source": {"type": "NO_MAPPING"}},
-                        "given_name": {
-                            "source": {
-                                "id": "PINGDIRECTORY",
-                                "type": "LDAP_DATA_STORE"
+                            {
+                                "name": "address.locality",
+                                "multiValued": false
                             },
-                            "value": "givenName"
-                        },
-                        "middle_name": {"source": {"type": "NO_MAPPING"}},
-                        "picture": {"source": {"type": "NO_MAPPING"}},
-                        "name": {
-                            "source": {
-                                "id": "PINGDIRECTORY",
-                                "type": "LDAP_DATA_STORE"
+                            {
+                                "name": "birthdate",
+                                "multiValued": false
                             },
-                            "value": "cn"
-                        },
-                        "phone_number": {
-                            "source": {
-                                "id": "PINGDIRECTORY",
-                                "type": "LDAP_DATA_STORE"
+                            {
+                                "name": "gender",
+                                "multiValued": false
                             },
-                            "value": "telephoneNumber"
-                        },
-                        "address.formatted": {"source": {"type": "NO_MAPPING"}},
-                        "family_name": {
-                            "source": {
-                                "id": "PINGDIRECTORY",
-                                "type": "LDAP_DATA_STORE"
+                            {
+                                "name": "preferred_username",
+                                "multiValued": false
                             },
-                            "value": "sn"
-                        },
-                        "address.street_address": {"source": {"type": "NO_MAPPING"}}
+                            {
+                                "name": "locale",
+                                "multiValued": false
+                            },
+                            {
+                                "name": "address.country",
+                                "multiValued": false
+                            },
+                            {
+                                "name": "updated_at",
+                                "multiValued": false
+                            },
+                            {
+                                "name": "address.postal_code",
+                                "multiValued": false
+                            },
+                            {
+                                "name": "address.region",
+                                "multiValued": false
+                            },
+                            {
+                                "name": "nickname",
+                                "multiValued": false
+                            },
+                            {
+                                "name": "email",
+                                "multiValued": false
+                            },
+                            {
+                                "name": "website",
+                                "multiValued": false
+                            },
+                            {
+                                "name": "email_verified",
+                                "multiValued": false
+                            },
+                            {
+                                "name": "profile",
+                                "multiValued": false
+                            },
+                            {
+                                "name": "groups",
+                                "multiValued": false
+                            },
+                            {
+                                "name": "phone_number_verified",
+                                "multiValued": false
+                            },
+                            {
+                                "name": "given_name",
+                                "multiValued": false
+                            },
+                            {
+                                "name": "middle_name",
+                                "multiValued": false
+                            },
+                            {
+                                "name": "picture",
+                                "multiValued": false
+                            },
+                            {
+                                "name": "name",
+                                "multiValued": false
+                            },
+                            {
+                                "name": "phone_number",
+                                "multiValued": false
+                            },
+                            {
+                                "name": "address.formatted",
+                                "multiValued": false
+                            },
+                            {
+                                "name": "family_name",
+                                "multiValued": false
+                            },
+                            {
+                                "name": "address.street_address",
+                                "multiValued": false
+                            }
+                        ]
                     },
-                    "attributeSources": [{
-                        "memberOfNestedGroup": false,
-                        "binaryAttributeSettings": {},
-                        "searchScope": "SUBTREE",
-                        "dataStoreRef": {
-                            "location": "https://localhost:-1/pf-admin-api/v1/dataStores/LDAP-4D65BD30F2946A712E86940F0F7442EDCDC16646",
-                            "id": "LDAP-4D65BD30F2946A712E86940F0F7442EDCDC16646"
+                    "attributeMapping": {
+                        "attributeContractFulfillment": {
+                            "sub": {
+                                "source": {"type": "TOKEN"},
+                                "value": "sub"
+                            },
+                            "zoneinfo": {"source": {"type": "NO_MAPPING"}},
+                            "address.locality": {"source": {"type": "NO_MAPPING"}},
+                            "birthdate": {"source": {"type": "NO_MAPPING"}},
+                            "gender": {"source": {"type": "NO_MAPPING"}},
+                            "preferred_username": {"source": {"type": "NO_MAPPING"}},
+                            "locale": {"source": {"type": "NO_MAPPING"}},
+                            "address.country": {"source": {"type": "NO_MAPPING"}},
+                            "updated_at": {"source": {"type": "NO_MAPPING"}},
+                            "address.postal_code": {"source": {"type": "NO_MAPPING"}},
+                            "address.region": {"source": {"type": "NO_MAPPING"}},
+                            "nickname": {"source": {"type": "NO_MAPPING"}},
+                            "email": {
+                                "source": {"type": "TOKEN"},
+                                "value": "email"
+                            },
+                            "website": {"source": {"type": "NO_MAPPING"}},
+                            "email_verified": {"source": {"type": "NO_MAPPING"}},
+                            "profile": {"source": {"type": "NO_MAPPING"}},
+                            "groups": {
+                                "source": {"type": "TOKEN"},
+                                "value": "groups"
+                            },
+                            "phone_number_verified": {"source": {"type": "NO_MAPPING"}},
+                            "given_name": {
+                                "source": {"type": "TOKEN"},
+                                "value": "given_name"
+                            },
+                            "middle_name": {"source": {"type": "NO_MAPPING"}},
+                            "picture": {"source": {"type": "NO_MAPPING"}},
+                            "name": {
+                                "source": {"type": "TOKEN"},
+                                "value": "name"
+                            },
+                            "phone_number": {
+                                "source": {
+                                    "id": "PINGDIRECTORY",
+                                    "type": "LDAP_DATA_STORE"
+                                },
+                                "value": "telephoneNumber"
+                            },
+                            "address.formatted": {"source": {"type": "NO_MAPPING"}},
+                            "family_name": {
+                                "source": {"type": "TOKEN"},
+                                "value": "family_name"
+                            },
+                            "address.street_address": {"source": {"type": "NO_MAPPING"}}
                         },
-                        "description": "PINGDIRECTORY",
-                        "id": "PINGDIRECTORY",
-                        "searchAttributes": [
-                            "Subject DN",
-                            "cn",
-                            "givenName",
-                            "mail",
-                            "sn",
-                            "telephoneNumber"
-                        ],
-                        "type": "LDAP",
-                        "baseDn": "ou=People,dc=example,dc=com",
-                        "searchFilter": "uid=${sub}"
-                    }],
-                    "issuanceCriteria": {"conditionalCriteria": []}
+                        "attributeSources": [{
+                            "memberOfNestedGroup": false,
+                            "binaryAttributeSettings": {},
+                            "searchScope": "SUBTREE",
+                            "dataStoreRef": {
+                                "location": "https://localhost:-1/pf-admin-api/v1/dataStores/LDAP-4D65BD30F2946A712E86940F0F7442EDCDC16646",
+                                "id": "LDAP-4D65BD30F2946A712E86940F0F7442EDCDC16646"
+                            },
+                            "description": "PINGDIRECTORY",
+                            "id": "PINGDIRECTORY",
+                            "searchAttributes": [
+                                "Subject DN",
+                                "telephoneNumber"
+                            ],
+                            "type": "LDAP",
+                            "baseDn": "ou=People,dc=example,dc=com",
+                            "searchFilter": "mail=${email}"
+                        }],
+                        "issuanceCriteria": {"conditionalCriteria": []}
+                    },
+                    "includeX5tInIdToken": false,
+                    "name": "MSFTOIDCPOLICYMANAGEMENT",
+                    "allowIdTokenIntrospection": false,
+                    "id": "MSFTOIDCPOLICYMANAGEMENT",
+                    "reissueIdTokenInHybridFlow": false,
+                    "lastModified": "2026-04-27T11:18:19.784Z",
+                    "idTokenLifetime": 5,
+                    "accessTokenManagerRef": {
+                        "location": "https://localhost:-1/pf-admin-api/v1/oauth/accessTokenManagers/MSFTACCESSTOKEN",
+                        "id": "MSFTACCESSTOKEN"
+                    }
                 },
-                "includeX5tInIdToken": false,
-                "name": "OPENIDCONNECTPOLICYMANAGEMENT",
-                "allowIdTokenIntrospection": false,
-                "id": "OPENIDCONNECTPOLICYMANAGEMENT",
-                "reissueIdTokenInHybridFlow": false,
-                "lastModified": "2026-04-24T02:06:54.957Z",
-                "idTokenLifetime": 5,
-                "accessTokenManagerRef": {
-                    "location": "https://localhost:-1/pf-admin-api/v1/oauth/accessTokenManagers/AccessTokenManagement",
-                    "id": "AccessTokenManagement"
+                {
+                    "returnIdTokenOnTokenExchangeGrant": true,
+                    "idTokenTypHeaderValue": "",
+                    "scopeAttributeMappings": {"profile": {"values": [
+                        "birthdate",
+                        "email",
+                        "family_name",
+                        "gender",
+                        "given_name",
+                        "groups",
+                        "locale",
+                        "middle_name",
+                        "name",
+                        "nickname",
+                        "phone_number",
+                        "picture",
+                        "preferred_username",
+                        "profile",
+                        "updated_at",
+                        "vaultlocation",
+                        "website",
+                        "zoneinfo"
+                    ]}},
+                    "returnIdTokenOnRefreshGrant": false,
+                    "includeSriInIdToken": false,
+                    "includeSHashInIdToken": false,
+                    "includeUserInfoInIdToken": false,
+                    "attributeContract": {
+                        "coreAttributes": [{
+                            "name": "sub",
+                            "multiValued": false
+                        }],
+                        "extendedAttributes": [
+                            {
+                                "includeInUserInfo": true,
+                                "name": "zoneinfo",
+                                "includeInIdToken": true,
+                                "multiValued": false
+                            },
+                            {
+                                "name": "address.locality",
+                                "multiValued": false
+                            },
+                            {
+                                "name": "birthdate",
+                                "multiValued": false
+                            },
+                            {
+                                "name": "gender",
+                                "multiValued": false
+                            },
+                            {
+                                "name": "preferred_username",
+                                "multiValued": false
+                            },
+                            {
+                                "name": "locale",
+                                "multiValued": false
+                            },
+                            {
+                                "name": "address.country",
+                                "multiValued": false
+                            },
+                            {
+                                "name": "updated_at",
+                                "multiValued": false
+                            },
+                            {
+                                "name": "address.postal_code",
+                                "multiValued": false
+                            },
+                            {
+                                "name": "address.region",
+                                "multiValued": false
+                            },
+                            {
+                                "name": "nickname",
+                                "multiValued": false
+                            },
+                            {
+                                "includeInUserInfo": true,
+                                "name": "email",
+                                "includeInIdToken": true,
+                                "multiValued": false
+                            },
+                            {
+                                "includeInUserInfo": true,
+                                "name": "vaultlocation",
+                                "includeInIdToken": true,
+                                "multiValued": false
+                            },
+                            {
+                                "name": "website",
+                                "multiValued": false
+                            },
+                            {
+                                "name": "email_verified",
+                                "multiValued": false
+                            },
+                            {
+                                "name": "profile",
+                                "multiValued": false
+                            },
+                            {
+                                "includeInUserInfo": true,
+                                "name": "groups",
+                                "includeInIdToken": true,
+                                "multiValued": false
+                            },
+                            {
+                                "name": "phone_number_verified",
+                                "multiValued": false
+                            },
+                            {
+                                "includeInUserInfo": true,
+                                "name": "given_name",
+                                "includeInIdToken": true,
+                                "multiValued": false
+                            },
+                            {
+                                "name": "middle_name",
+                                "multiValued": false
+                            },
+                            {
+                                "name": "picture",
+                                "multiValued": false
+                            },
+                            {
+                                "includeInUserInfo": true,
+                                "name": "name",
+                                "includeInIdToken": true,
+                                "multiValued": false
+                            },
+                            {
+                                "includeInUserInfo": true,
+                                "name": "phone_number",
+                                "includeInIdToken": true,
+                                "multiValued": false
+                            },
+                            {
+                                "name": "address.formatted",
+                                "multiValued": false
+                            },
+                            {
+                                "includeInUserInfo": true,
+                                "name": "family_name",
+                                "includeInIdToken": true,
+                                "multiValued": false
+                            },
+                            {
+                                "name": "address.street_address",
+                                "multiValued": false
+                            }
+                        ]
+                    },
+                    "attributeMapping": {
+                        "attributeContractFulfillment": {
+                            "sub": {
+                                "source": {"type": "TOKEN"},
+                                "value": "sub"
+                            },
+                            "zoneinfo": {"source": {"type": "NO_MAPPING"}},
+                            "address.locality": {"source": {"type": "NO_MAPPING"}},
+                            "birthdate": {"source": {"type": "NO_MAPPING"}},
+                            "gender": {"source": {"type": "NO_MAPPING"}},
+                            "preferred_username": {"source": {"type": "NO_MAPPING"}},
+                            "locale": {"source": {"type": "NO_MAPPING"}},
+                            "address.country": {"source": {"type": "NO_MAPPING"}},
+                            "updated_at": {"source": {"type": "NO_MAPPING"}},
+                            "address.postal_code": {"source": {"type": "NO_MAPPING"}},
+                            "address.region": {"source": {"type": "NO_MAPPING"}},
+                            "nickname": {"source": {"type": "NO_MAPPING"}},
+                            "email": {
+                                "source": {
+                                    "id": "PINGDIRECTORY",
+                                    "type": "LDAP_DATA_STORE"
+                                },
+                                "value": "mail"
+                            },
+                            "vaultlocation": {
+                                "source": {"type": "TOKEN"},
+                                "value": "vaultlocation"
+                            },
+                            "website": {"source": {"type": "NO_MAPPING"}},
+                            "email_verified": {"source": {"type": "NO_MAPPING"}},
+                            "profile": {"source": {"type": "NO_MAPPING"}},
+                            "groups": {
+                                "source": {"type": "TOKEN"},
+                                "value": "groups"
+                            },
+                            "phone_number_verified": {"source": {"type": "NO_MAPPING"}},
+                            "given_name": {
+                                "source": {
+                                    "id": "PINGDIRECTORY",
+                                    "type": "LDAP_DATA_STORE"
+                                },
+                                "value": "givenName"
+                            },
+                            "middle_name": {"source": {"type": "NO_MAPPING"}},
+                            "picture": {"source": {"type": "NO_MAPPING"}},
+                            "name": {
+                                "source": {
+                                    "id": "PINGDIRECTORY",
+                                    "type": "LDAP_DATA_STORE"
+                                },
+                                "value": "cn"
+                            },
+                            "phone_number": {
+                                "source": {
+                                    "id": "PINGDIRECTORY",
+                                    "type": "LDAP_DATA_STORE"
+                                },
+                                "value": "telephoneNumber"
+                            },
+                            "address.formatted": {"source": {"type": "NO_MAPPING"}},
+                            "family_name": {
+                                "source": {
+                                    "id": "PINGDIRECTORY",
+                                    "type": "LDAP_DATA_STORE"
+                                },
+                                "value": "sn"
+                            },
+                            "address.street_address": {"source": {"type": "NO_MAPPING"}}
+                        },
+                        "attributeSources": [{
+                            "memberOfNestedGroup": false,
+                            "binaryAttributeSettings": {},
+                            "searchScope": "SUBTREE",
+                            "dataStoreRef": {
+                                "location": "https://localhost:-1/pf-admin-api/v1/dataStores/LDAP-4D65BD30F2946A712E86940F0F7442EDCDC16646",
+                                "id": "LDAP-4D65BD30F2946A712E86940F0F7442EDCDC16646"
+                            },
+                            "description": "PINGDIRECTORY",
+                            "id": "PINGDIRECTORY",
+                            "searchAttributes": [
+                                "Subject DN",
+                                "cn",
+                                "givenName",
+                                "mail",
+                                "sn",
+                                "telephoneNumber"
+                            ],
+                            "type": "LDAP",
+                            "baseDn": "ou=People,dc=example,dc=com",
+                            "searchFilter": "uid=${sub}"
+                        }],
+                        "issuanceCriteria": {"conditionalCriteria": []}
+                    },
+                    "includeX5tInIdToken": false,
+                    "name": "OPENIDCONNECTPOLICYMANAGEMENT",
+                    "allowIdTokenIntrospection": false,
+                    "id": "OPENIDCONNECTPOLICYMANAGEMENT",
+                    "reissueIdTokenInHybridFlow": false,
+                    "lastModified": "2026-04-27T08:44:33.558Z",
+                    "idTokenLifetime": 5,
+                    "accessTokenManagerRef": {
+                        "location": "https://localhost:-1/pf-admin-api/v1/oauth/accessTokenManagers/AccessTokenManagement",
+                        "id": "AccessTokenManagement"
+                    }
                 }
-            }],
+            ],
             "resourceType": "/oauth/openIdConnect/policies"
         },
         {
@@ -4107,7 +4638,7 @@
                 },
                 "name": "OpenID",
                 "id": "OpenID",
-                "lastModified": "2026-04-24T02:06:55.098Z",
+                "lastModified": "2026-04-27T08:44:33.717Z",
                 "pluginDescriptorRef": {
                     "location": "https://localhost:-1/pf-admin-api/v1/oauth/clientRegistrationPolicies/descriptors/com.pingidentity.clientregistration.OpenIDFederationPlugin",
                     "id": "com.pingidentity.clientregistration.OpenIDFederationPlugin"
@@ -4202,6 +4733,60 @@
                     "accessTokenManagerRef": {
                         "location": "https://localhost:-1/pf-admin-api/v1/oauth/accessTokenManagers/AccessTokenManagement",
                         "id": "AccessTokenManagement"
+                    }
+                },
+                {
+                    "context": {
+                        "contextRef": {
+                            "location": "https://localhost:-1/pf-admin-api/v1/authenticationPolicyContracts/hjtq1ujmcrCb1Unp",
+                            "id": "hjtq1ujmcrCb1Unp"
+                        },
+                        "type": "AUTHENTICATION_POLICY_CONTRACT"
+                    },
+                    "attributeContractFulfillment": {
+                        "aud": {
+                            "source": {"type": "CONTEXT"},
+                            "value": "ClientId"
+                        },
+                        "sub": {
+                            "source": {"type": "AUTHENTICATION_POLICY_CONTRACT"},
+                            "value": "subject"
+                        },
+                        "msftAccessToken": {
+                            "source": {"type": "AUTHENTICATION_POLICY_CONTRACT"},
+                            "value": "accessToken"
+                        },
+                        "scope": {
+                            "source": {"type": "CONTEXT"},
+                            "value": "OAuthScopes"
+                        },
+                        "name": {
+                            "source": {"type": "AUTHENTICATION_POLICY_CONTRACT"},
+                            "value": "name"
+                        },
+                        "groups": {
+                            "source": {"type": "AUTHENTICATION_POLICY_CONTRACT"},
+                            "value": "groups"
+                        },
+                        "given_name": {
+                            "source": {"type": "AUTHENTICATION_POLICY_CONTRACT"},
+                            "value": "given_name"
+                        },
+                        "family_name": {
+                            "source": {"type": "AUTHENTICATION_POLICY_CONTRACT"},
+                            "value": "family_name"
+                        },
+                        "email": {
+                            "source": {"type": "AUTHENTICATION_POLICY_CONTRACT"},
+                            "value": "email"
+                        }
+                    },
+                    "id": "authz_req|apc.hjtq1ujmcrCb1Unp|MSFTACCESSTOKEN",
+                    "attributeSources": [],
+                    "issuanceCriteria": {"conditionalCriteria": []},
+                    "accessTokenManagerRef": {
+                        "location": "https://localhost:-1/pf-admin-api/v1/oauth/accessTokenManagers/MSFTACCESSTOKEN",
+                        "id": "MSFTACCESSTOKEN"
                     }
                 },
                 {
@@ -4400,38 +4985,63 @@
         },
         {
             "operationType": "SAVE",
-            "items": [{
-                "configuration": {
-                    "tables": [{
-                        "name": "Clients",
-                        "rows": [
-                            {
+            "items": [
+                {
+                    "configuration": {
+                        "tables": [{
+                            "name": "Clients",
+                            "rows": [{
                                 "defaultRow": false,
                                 "fields": [{
                                     "name": "Client ID",
-                                    "value": "contact-oauth-client"
+                                    "value": "contact-hr-msft-client"
                                 }]
-                            },
-                            {
-                                "defaultRow": false,
-                                "fields": [{
-                                    "name": "Client ID",
-                                    "value": "contact-hr-client"
-                                }]
-                            }
-                        ]
-                    }],
-                    "fields": []
+                            }]
+                        }],
+                        "fields": []
+                    },
+                    "name": "MSFT",
+                    "id": "MSFT",
+                    "lastModified": "2026-04-27T09:53:15.612Z",
+                    "pluginDescriptorRef": {
+                        "location": "https://localhost:-1/pf-admin-api/v1/authenticationSelectors/descriptors/com.pingidentity.pf.selectors.oauthclient.OAuthClientAdapterSelector",
+                        "id": "com.pingidentity.pf.selectors.oauthclient.OAuthClientAdapterSelector"
+                    },
+                    "attributeContract": {}
                 },
-                "name": "OAUTHCLIENTSELECTOR",
-                "id": "OAUTHCLIENTSELECTOR",
-                "lastModified": "2026-04-24T02:06:55.512Z",
-                "pluginDescriptorRef": {
-                    "location": "https://localhost:-1/pf-admin-api/v1/authenticationSelectors/descriptors/com.pingidentity.pf.selectors.oauthclient.OAuthClientAdapterSelector",
-                    "id": "com.pingidentity.pf.selectors.oauthclient.OAuthClientAdapterSelector"
-                },
-                "attributeContract": {}
-            }],
+                {
+                    "configuration": {
+                        "tables": [{
+                            "name": "Clients",
+                            "rows": [
+                                {
+                                    "defaultRow": false,
+                                    "fields": [{
+                                        "name": "Client ID",
+                                        "value": "contact-oauth-client"
+                                    }]
+                                },
+                                {
+                                    "defaultRow": false,
+                                    "fields": [{
+                                        "name": "Client ID",
+                                        "value": "contact-hr-client"
+                                    }]
+                                }
+                            ]
+                        }],
+                        "fields": []
+                    },
+                    "name": "OAUTHCLIENTSELECTOR",
+                    "id": "OAUTHCLIENTSELECTOR",
+                    "lastModified": "2026-04-27T08:44:34.151Z",
+                    "pluginDescriptorRef": {
+                        "location": "https://localhost:-1/pf-admin-api/v1/authenticationSelectors/descriptors/com.pingidentity.pf.selectors.oauthclient.OAuthClientAdapterSelector",
+                        "id": "com.pingidentity.pf.selectors.oauthclient.OAuthClientAdapterSelector"
+                    },
+                    "attributeContract": {}
+                }
+            ],
             "resourceType": "/authenticationSelectors"
         },
         {
@@ -4457,10 +5067,54 @@
                 "failIfNoSelection": false,
                 "authnSelectionTrees": [
                     {
+                        "name": "MSFTOAuth",
+                        "id": "Us0d2N3zBI4IYCJg2ShLjKJhL",
+                        "handleFailuresLocally": false,
+                        "enabled": true,
+                        "rootNode": {
+                            "children": [
+                                {"action": {
+                                    "context": "No",
+                                    "type": "CONTINUE"
+                                }},
+                                {
+                                    "children": [
+                                        {"action": {
+                                            "context": "Fail",
+                                            "type": "DONE"
+                                        }},
+                                        {"action": {
+                                            "context": "Success",
+                                            "type": "DONE"
+                                        }}
+                                    ],
+                                    "action": {
+                                        "authenticationSource": {
+                                            "type": "IDP_CONNECTION",
+                                            "sourceRef": {
+                                                "location": "https://localhost:-1/pf-admin-api/v1/sp/idpConnections/DE1tYZvaS4-owYq4rswyLPA3cNP",
+                                                "id": "DE1tYZvaS4-owYq4rswyLPA3cNP"
+                                            }
+                                        },
+                                        "context": "Yes",
+                                        "type": "AUTHN_SOURCE"
+                                    }
+                                }
+                            ],
+                            "action": {
+                                "authenticationSelectorRef": {
+                                    "location": "https://localhost:-1/pf-admin-api/v1/authenticationSelectors/MSFT",
+                                    "id": "MSFT"
+                                },
+                                "type": "AUTHN_SELECTOR"
+                            }
+                        }
+                    },
+                    {
                         "name": "ReferenceID",
                         "id": "K8pmeXX7ZA0dPr36zzpfHp1TP",
                         "handleFailuresLocally": true,
-                        "enabled": false,
+                        "enabled": true,
                         "rootNode": {
                             "children": [
                                 {"action": {
@@ -4584,7 +5238,7 @@
                         "name": "Generic",
                         "id": "EdKQEuNtO7sRTJElCyJtooK3A",
                         "handleFailuresLocally": true,
-                        "enabled": false,
+                        "enabled": true,
                         "rootNode": {
                             "children": [
                                 {"action": {
@@ -4676,34 +5330,6 @@
                                     "sourceRef": {
                                         "location": "https://localhost:-1/pf-admin-api/v1/idp/adapters/IDENTIFIERFIRST",
                                         "id": "IDENTIFIERFIRST"
-                                    }
-                                },
-                                "type": "AUTHN_SOURCE"
-                            }
-                        }
-                    },
-                    {
-                        "name": "MSFTOAuth",
-                        "id": "Us0d2N3zBI4IYCJg2ShLjKJhL",
-                        "handleFailuresLocally": false,
-                        "enabled": true,
-                        "rootNode": {
-                            "children": [
-                                {"action": {
-                                    "context": "Fail",
-                                    "type": "DONE"
-                                }},
-                                {"action": {
-                                    "context": "Success",
-                                    "type": "DONE"
-                                }}
-                            ],
-                            "action": {
-                                "authenticationSource": {
-                                    "type": "IDP_CONNECTION",
-                                    "sourceRef": {
-                                        "location": "https://localhost:-1/pf-admin-api/v1/sp/idpConnections/DE1tYZvaS4-owYq4rswyLPA3cNP",
-                                        "id": "DE1tYZvaS4-owYq4rswyLPA3cNP"
                                     }
                                 },
                                 "type": "AUTHN_SOURCE"
