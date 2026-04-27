@@ -3097,7 +3097,7 @@
                             "tokenEndpoint": "https://login.microsoftonline.com/4161be3f-bf2b-41d4-a02b-e6f82b529d53/oauth2/v2.0/token",
                             "authenticationScheme": "BASIC",
                             "enablePKCE": false,
-                            "scopes": "openid profile email offline_access",
+                            "scopes": "api://e83c2af3-43d1-4f62-8bff-e619c29b5026/access_as_user openid profile email offline_access",
                             "jwtSecuredAuthorizationResponseModeType": "DISABLED",
                             "userInfoEndpoint": ""
                         },
