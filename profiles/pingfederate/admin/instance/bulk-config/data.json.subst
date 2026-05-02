@@ -2591,13 +2591,26 @@
                             },
                             {
                                 "name": "Allowed Audiences",
-                                "rows": [{
-                                    "defaultRow": false,
-                                    "fields": [{
-                                        "name": "Audience",
-                                        "value": "contact-hr-client"
-                                    }]
-                                }]
+                                "rows": [
+                                    {
+                                        "fields": [
+                                            {
+                                                "name": "Audience",
+                                                "value": "contact-hr-client"
+                                            }
+                                        ],
+                                        "defaultRow": false
+                                    },
+                                    {
+                                        "fields": [
+                                            {
+                                                "name": "Audience",
+                                                "value": "contact-hr-saml-client"
+                                            }
+                                        ],
+                                        "defaultRow": false
+                                    }
+                                ]
                             }
                         ],
                         "fields": [
