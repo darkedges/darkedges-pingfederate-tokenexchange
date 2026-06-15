@@ -39,7 +39,7 @@ RUN mkdir -p /opt/server/server/default/deploy /opt/server/server/default/conf/l
 #     find /opt/server/server/default -type f -exec chmod 0660 {} \;
 COPY pf.plugins.openidfederation.jar /opt/server/server/default/deploy/
 
-FROM pingidentity/pingfederate:edge
+FROM pingidentity/pingfederate:12.3.3-edge
 ARG PINGID_ADAPTER_VERSION
 ARG PINGID_INTEGRATION_KIT_VERSION
 RUN rm -rf /opt/server/server/default/deploy/pingid-web.war && \

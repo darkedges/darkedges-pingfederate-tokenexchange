@@ -5016,6 +5016,67 @@
         },
         {
             "operationType": "SAVE",
+            "items": [
+                {
+                    "configuration": {
+                        "tables": [{
+                            "name": "Clients",
+                            "rows": [{
+                                "defaultRow": false,
+                                "fields": [{
+                                    "name": "Client ID",
+                                    "value": "contact-hr-msft-client"
+                                }]
+                            }]
+                        }],
+                        "fields": []
+                    },
+                    "name": "MSFT",
+                    "id": "MSFT",
+                    "lastModified": "2026-05-01T10:05:11.540Z",
+                    "pluginDescriptorRef": {
+                        "location": "https://localhost:-1/pf-admin-api/v1/authenticationSelectors/descriptors/com.pingidentity.pf.selectors.oauthclient.OAuthClientAdapterSelector",
+                        "id": "com.pingidentity.pf.selectors.oauthclient.OAuthClientAdapterSelector"
+                    },
+                    "attributeContract": {}
+                },
+                {
+                    "configuration": {
+                        "tables": [{
+                            "name": "Clients",
+                            "rows": [
+                                {
+                                    "defaultRow": false,
+                                    "fields": [{
+                                        "name": "Client ID",
+                                        "value": "contact-oauth-client"
+                                    }]
+                                },
+                                {
+                                    "defaultRow": false,
+                                    "fields": [{
+                                        "name": "Client ID",
+                                        "value": "contact-hr-client"
+                                    }]
+                                }
+                            ]
+                        }],
+                        "fields": []
+                    },
+                    "name": "OAUTHCLIENTSELECTOR",
+                    "id": "OAUTHCLIENTSELECTOR",
+                    "lastModified": "2026-05-01T10:05:11.557Z",
+                    "pluginDescriptorRef": {
+                        "location": "https://localhost:-1/pf-admin-api/v1/authenticationSelectors/descriptors/com.pingidentity.pf.selectors.oauthclient.OAuthClientAdapterSelector",
+                        "id": "com.pingidentity.pf.selectors.oauthclient.OAuthClientAdapterSelector"
+                    },
+                    "attributeContract": {}
+                }
+            ],
+            "resourceType": "/authenticationSelectors"
+        },
+        {
+            "operationType": "SAVE",
             "items": [{
                 "apiEnabled": true,
                 "restrictAccessToRedirectlessMode": true,
