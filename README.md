@@ -23,8 +23,8 @@ kubectl apply -f devops.yaml
 # Deploy
 helm upgrade --install pingfederate pingidentity/ping-devops \
   --create-namespace --namespace pingfed \
-  -f pingfederate/helm/pingfederate.yaml \
-  -f pingfederate/helm/ingress.yaml
+  -f profiles/pingfederate/helm/pingfederate.yaml \
+  -f profiles/pingfederate/helm/ingress.yaml
 ```
 
 ## Component Documentation
