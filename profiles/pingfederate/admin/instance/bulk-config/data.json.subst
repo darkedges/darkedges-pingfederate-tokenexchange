@@ -3023,7 +3023,7 @@
                 {
                     "oidcClientCredentials": {
                         "clientId": "edd9f241-d550-4de8-845d-3fa299090014",
-                        "secret": "${sp_idpConnections_items_DE1tYZvaS4_owYq4rswyLPA3cNP_oidcClientCredentials_edd9f241_d550_4de8_845d_3fa299090014_secret}"
+                        "encryptedSecret": "eyJhbGciOiJkaXIiLCJlbmMiOiJBMTI4Q0JDLUhTMjU2Iiwia2lkIjoiUWVzOVR5eTV5WiIsInZlcnNpb24iOiIxMi4zLjMuMSJ9..AbBImyJ1wlGZiaSJJUGw6A.-wj4NpjsS7iWay7rhec3eUNHokeiWhXqTQp4NkuRy4MWnAh30Xb1NuG90gs0O2kg.-D3HHPsAN_UCuayrZK7LYw"
                     },
                     "additionalAllowedEntitiesConfiguration": {
                         "additionalAllowedEntities": [],
