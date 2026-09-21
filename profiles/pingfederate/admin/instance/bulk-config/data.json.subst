@@ -4171,6 +4171,7 @@
                     "returnIdTokenOnTokenExchangeGrant": true,
                     "idTokenTypHeaderValue": "",
                     "scopeAttributeMappings": {"profile": {"values": [
+                        "app_profile",
                         "birthdate",
                         "email",
                         "family_name",
@@ -4244,6 +4245,10 @@
                             },
                             {
                                 "name": "nickname",
+                                "multiValued": false
+                            },
+                            {
+                                "name": "app_profile",
                                 "multiValued": false
                             },
                             {
@@ -4339,6 +4344,13 @@
                             "address.postal_code": {"source": {"type": "NO_MAPPING"}},
                             "address.region": {"source": {"type": "NO_MAPPING"}},
                             "nickname": {"source": {"type": "NO_MAPPING"}},
+                            "app_profile": {
+                                "source": {
+                                    "id": "PINGDIRECTORY",
+                                    "type": "LDAP_DATA_STORE"
+                                },
+                                "value": "businessCategory"
+                            },
                             "email": {
                                 "source": {
                                     "id": "PINGDIRECTORY",
@@ -4402,11 +4414,12 @@
                             "description": "PINGDIRECTORY",
                             "id": "PINGDIRECTORY",
                             "searchAttributes": [
-                                "Subject DN",
+                                "businessCategory",
                                 "cn",
                                 "givenName",
                                 "mail",
                                 "sn",
+                                "Subject DN",
                                 "telephoneNumber"
                             ],
                             "type": "LDAP",
@@ -4420,7 +4433,7 @@
                     "allowIdTokenIntrospection": false,
                     "id": "OPENIDCONNECTPOLICYMANAGEMENT",
                     "reissueIdTokenInHybridFlow": false,
-                    "lastModified": "2026-09-16T22:47:47.909Z",
+                    "lastModified": "2026-09-20T23:56:46.632Z",
                     "idTokenLifetime": 5,
                     "accessTokenManagerRef": {
                         "location": "https://localhost:-1/pf-admin-api/v1/oauth/accessTokenManagers/AccessTokenManagement",
